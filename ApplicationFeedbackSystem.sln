@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationFeedbackSystem", "ApplicationFeedbackSystem\ApplicationFeedbackSystem.csproj", "{D433D9DE-B913-4089-A787-F9CAE05C5615}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestApplicationFeedbackSystem", "UnitTestApplicationFeedbackSystem\UnitTestApplicationFeedbackSystem.csproj", "{9F314F9C-FC0C-4753-B6EB-441F95844BB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D433D9DE-B913-4089-A787-F9CAE05C5615}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D433D9DE-B913-4089-A787-F9CAE05C5615}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D433D9DE-B913-4089-A787-F9CAE05C5615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F314F9C-FC0C-4753-B6EB-441F95844BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F314F9C-FC0C-4753-B6EB-441F95844BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F314F9C-FC0C-4753-B6EB-441F95844BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F314F9C-FC0C-4753-B6EB-441F95844BB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
