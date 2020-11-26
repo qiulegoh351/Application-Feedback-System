@@ -16,6 +16,5 @@ namespace ApplicationFeedbackSystem
         {
             InitializeComponent();
         }
-
     }
 }
