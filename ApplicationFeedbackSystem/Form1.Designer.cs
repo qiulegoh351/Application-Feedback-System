@@ -125,9 +125,24 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
+            this.completeFeedPanel = new System.Windows.Forms.Panel();
+            this.label69 = new System.Windows.Forms.Label();
+            this.cvButton = new System.Windows.Forms.Button();
+            this.interviewButton = new System.Windows.Forms.Button();
+            this.technicalInterButton = new System.Windows.Forms.Button();
+            this.cvFeedbackPanel = new System.Windows.Forms.Panel();
+            this.label51 = new System.Windows.Forms.Label();
+            this.interviewFeedPanel = new System.Windows.Forms.Panel();
+            this.label52 = new System.Windows.Forms.Label();
+            this.technicalFeedPanel = new System.Windows.Forms.Panel();
+            this.label53 = new System.Windows.Forms.Label();
             this.editPanel.SuspendLayout();
             this.feedbackRightPanel.SuspendLayout();
             this.createPanel.SuspendLayout();
+            this.completeFeedPanel.SuspendLayout();
+            this.cvFeedbackPanel.SuspendLayout();
+            this.interviewFeedPanel.SuspendLayout();
+            this.technicalFeedPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // backbutton
@@ -225,7 +240,7 @@
             this.editPanel.Controls.Add(this.label48);
             this.editPanel.Controls.Add(this.label49);
             this.editPanel.Controls.Add(this.label50);
-            this.editPanel.Location = new System.Drawing.Point(3, 3);
+            this.editPanel.Location = new System.Drawing.Point(117, 97);
             this.editPanel.Name = "editPanel";
             this.editPanel.Size = new System.Drawing.Size(779, 629);
             this.editPanel.TabIndex = 53;
@@ -756,7 +771,6 @@
             // 
             // createPanel
             // 
-            this.createPanel.Controls.Add(this.editPanel);
             this.createPanel.Controls.Add(this.cFeedbackTextBox);
             this.createPanel.Controls.Add(this.label13);
             this.createPanel.Controls.Add(this.cLastNameTextBox2);
@@ -793,7 +807,7 @@
             this.createPanel.Controls.Add(this.label29);
             this.createPanel.Controls.Add(this.label30);
             this.createPanel.Controls.Add(this.label31);
-            this.createPanel.Location = new System.Drawing.Point(3, 97);
+            this.createPanel.Location = new System.Drawing.Point(3, 23);
             this.createPanel.Name = "createPanel";
             this.createPanel.Size = new System.Drawing.Size(779, 629);
             this.createPanel.TabIndex = 54;
@@ -1140,11 +1154,132 @@
             this.label31.Text = "Create Template";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // completeFeedPanel
+            // 
+            this.completeFeedPanel.Controls.Add(this.technicalFeedPanel);
+            this.completeFeedPanel.Controls.Add(this.interviewFeedPanel);
+            this.completeFeedPanel.Controls.Add(this.cvFeedbackPanel);
+            this.completeFeedPanel.Controls.Add(this.technicalInterButton);
+            this.completeFeedPanel.Controls.Add(this.interviewButton);
+            this.completeFeedPanel.Controls.Add(this.cvButton);
+            this.completeFeedPanel.Controls.Add(this.label69);
+            this.completeFeedPanel.Location = new System.Drawing.Point(905, 3);
+            this.completeFeedPanel.Name = "completeFeedPanel";
+            this.completeFeedPanel.Size = new System.Drawing.Size(779, 629);
+            this.completeFeedPanel.TabIndex = 54;
+            // 
+            // label69
+            // 
+            this.label69.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label69.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label69.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Location = new System.Drawing.Point(0, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(779, 89);
+            this.label69.TabIndex = 17;
+            this.label69.Text = "Complete Feedback List";
+            this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cvButton
+            // 
+            this.cvButton.BackColor = System.Drawing.Color.White;
+            this.cvButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cvButton.Location = new System.Drawing.Point(40, 115);
+            this.cvButton.Name = "cvButton";
+            this.cvButton.Size = new System.Drawing.Size(75, 23);
+            this.cvButton.TabIndex = 18;
+            this.cvButton.Text = "CV";
+            this.cvButton.UseVisualStyleBackColor = false;
+            this.cvButton.Click += new System.EventHandler(this.cvButton_Click);
+            // 
+            // interviewButton
+            // 
+            this.interviewButton.BackColor = System.Drawing.Color.White;
+            this.interviewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.interviewButton.Location = new System.Drawing.Point(143, 115);
+            this.interviewButton.Name = "interviewButton";
+            this.interviewButton.Size = new System.Drawing.Size(97, 23);
+            this.interviewButton.TabIndex = 19;
+            this.interviewButton.Text = "Interview";
+            this.interviewButton.UseVisualStyleBackColor = false;
+            this.interviewButton.Click += new System.EventHandler(this.interviewButton_Click);
+            // 
+            // technicalInterButton
+            // 
+            this.technicalInterButton.BackColor = System.Drawing.Color.White;
+            this.technicalInterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.technicalInterButton.Location = new System.Drawing.Point(259, 114);
+            this.technicalInterButton.Name = "technicalInterButton";
+            this.technicalInterButton.Size = new System.Drawing.Size(164, 23);
+            this.technicalInterButton.TabIndex = 20;
+            this.technicalInterButton.Text = "Technical Interview";
+            this.technicalInterButton.UseVisualStyleBackColor = false;
+            this.technicalInterButton.Click += new System.EventHandler(this.technicalInterButton_Click);
+            // 
+            // cvFeedbackPanel
+            // 
+            this.cvFeedbackPanel.Controls.Add(this.label51);
+            this.cvFeedbackPanel.Location = new System.Drawing.Point(40, 187);
+            this.cvFeedbackPanel.Name = "cvFeedbackPanel";
+            this.cvFeedbackPanel.Size = new System.Drawing.Size(707, 427);
+            this.cvFeedbackPanel.TabIndex = 21;
+            // 
+            // label51
+            // 
+            this.label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(32, 18);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(210, 34);
+            this.label51.TabIndex = 0;
+            this.label51.Text = "CV Feedback";
+            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // interviewFeedPanel
+            // 
+            this.interviewFeedPanel.Controls.Add(this.label52);
+            this.interviewFeedPanel.Location = new System.Drawing.Point(24, 184);
+            this.interviewFeedPanel.Name = "interviewFeedPanel";
+            this.interviewFeedPanel.Size = new System.Drawing.Size(723, 427);
+            this.interviewFeedPanel.TabIndex = 22;
+            // 
+            // label52
+            // 
+            this.label52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(30, 19);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(213, 59);
+            this.label52.TabIndex = 0;
+            this.label52.Text = "Interview Feedback";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // technicalFeedPanel
+            // 
+            this.technicalFeedPanel.Controls.Add(this.label53);
+            this.technicalFeedPanel.Location = new System.Drawing.Point(24, 176);
+            this.technicalFeedPanel.Name = "technicalFeedPanel";
+            this.technicalFeedPanel.Size = new System.Drawing.Size(720, 438);
+            this.technicalFeedPanel.TabIndex = 23;
+            // 
+            // label53
+            // 
+            this.label53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(19, 19);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(334, 57);
+            this.label53.TabIndex = 0;
+            this.label53.Text = "Technical Interview Feedback";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1741, 641);
+            this.Controls.Add(this.editPanel);
+            this.Controls.Add(this.completeFeedPanel);
             this.Controls.Add(this.logOutButton);
             this.Controls.Add(this.feedbackRightPanel);
             this.Controls.Add(this.backbutton);
@@ -1161,6 +1296,10 @@
             this.feedbackRightPanel.PerformLayout();
             this.createPanel.ResumeLayout(false);
             this.createPanel.PerformLayout();
+            this.completeFeedPanel.ResumeLayout(false);
+            this.cvFeedbackPanel.ResumeLayout(false);
+            this.interviewFeedPanel.ResumeLayout(false);
+            this.technicalFeedPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1263,6 +1402,17 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Panel completeFeedPanel;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Button technicalInterButton;
+        private System.Windows.Forms.Button interviewButton;
+        private System.Windows.Forms.Button cvButton;
+        private System.Windows.Forms.Panel cvFeedbackPanel;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Panel technicalFeedPanel;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Panel interviewFeedPanel;
+        private System.Windows.Forms.Label label52;
     }
 }
 

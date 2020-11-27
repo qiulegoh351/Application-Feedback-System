@@ -41,9 +41,14 @@ namespace ApplicationFeedbackSystem
             editPanel.Height = 629;
             editPanel.Location = new Point(117, 0);
 
+            completeFeedPanel.Width = 779;
+            completeFeedPanel.Height = 629;
+            completeFeedPanel.Location = new Point(905, 3);
+
             homeButton.Width = 80;
             homeButton.Height = 50;
             homeButton.Location = new Point(24, 121);
+
 
             saveConvertButton.Width = 80;
             saveConvertButton.Height = 59;
@@ -103,6 +108,54 @@ namespace ApplicationFeedbackSystem
             saveButton.Show();
             backbutton.Show();
             logOutButton.Show();
+        }
+
+        private void cvButton_Click(object sender, EventArgs e)
+        {
+            homeButton.Show();
+            feedbackRightPanel.Hide();
+            createPanel.Hide();
+            editPanel.Hide();
+            saveConvertButton.Show();
+            clearButton.Hide();
+            saveButton.Show();
+            backbutton.Show();
+            logOutButton.Show();
+            cvFeedbackPanel.Show();
+            interviewFeedPanel.Hide();
+            technicalFeedPanel.Hide();
+        }
+
+        private void interviewButton_Click(object sender, EventArgs e)
+        {
+            homeButton.Show();
+            feedbackRightPanel.Hide();
+            createPanel.Hide();
+            editPanel.Hide();
+            saveConvertButton.Show();
+            clearButton.Hide();
+            saveButton.Show();
+            backbutton.Show();
+            logOutButton.Show();
+            cvFeedbackPanel.Hide();
+            interviewFeedPanel.Show();
+            technicalFeedPanel.Hide();
+        }
+
+        private void technicalInterButton_Click(object sender, EventArgs e)
+        {
+            homeButton.Show();
+            feedbackRightPanel.Hide();
+            createPanel.Hide();
+            editPanel.Hide();
+            saveConvertButton.Show();
+            clearButton.Hide();
+            saveButton.Show();
+            backbutton.Show();
+            logOutButton.Show();
+            cvFeedbackPanel.Hide();
+            interviewFeedPanel.Hide();
+            technicalFeedPanel.Show();
         }
     }
     
