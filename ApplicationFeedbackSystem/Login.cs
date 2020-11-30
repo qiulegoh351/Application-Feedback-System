@@ -40,7 +40,7 @@ namespace ApplicationFeedbackSystem
                 {
                     if(dt.Rows[x]["role"].ToString() == "1" )
                     {
-                        MainScreen MainScreen = new MainScreen();
+                        AdminScreen MainScreen = new AdminScreen();
                         MainScreen.Show();
                         this.Hide();
                     }

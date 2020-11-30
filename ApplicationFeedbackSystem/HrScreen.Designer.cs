@@ -87,20 +87,20 @@
             this.completeFeedPanel.Controls.Add(this.interviewButton);
             this.completeFeedPanel.Controls.Add(this.cvButton);
             this.completeFeedPanel.Controls.Add(this.label69);
-            this.completeFeedPanel.Location = new System.Drawing.Point(253, 1);
+            this.completeFeedPanel.Location = new System.Drawing.Point(190, 1);
             this.completeFeedPanel.Margin = new System.Windows.Forms.Padding(2);
             this.completeFeedPanel.Name = "completeFeedPanel";
-            this.completeFeedPanel.Size = new System.Drawing.Size(712, 533);
+            this.completeFeedPanel.Size = new System.Drawing.Size(534, 433);
             this.completeFeedPanel.TabIndex = 57;
             // 
             // technicalFeedPanel
             // 
             this.technicalFeedPanel.Controls.Add(this.dataGridView1);
             this.technicalFeedPanel.Controls.Add(this.label53);
-            this.technicalFeedPanel.Location = new System.Drawing.Point(127, 123);
+            this.technicalFeedPanel.Location = new System.Drawing.Point(95, 100);
             this.technicalFeedPanel.Margin = new System.Windows.Forms.Padding(2);
             this.technicalFeedPanel.Name = "technicalFeedPanel";
-            this.technicalFeedPanel.Size = new System.Drawing.Size(583, 356);
+            this.technicalFeedPanel.Size = new System.Drawing.Size(437, 289);
             this.technicalFeedPanel.TabIndex = 23;
             // 
             // dataGridView1
@@ -110,11 +110,12 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(36, 107);
+            this.dataGridView1.Location = new System.Drawing.Point(27, 87);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(480, 226);
+            this.dataGridView1.Size = new System.Drawing.Size(360, 184);
             this.dataGridView1.TabIndex = 1;
             // 
             // Column1
@@ -142,10 +143,10 @@
             // 
             this.label53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(14, 15);
+            this.label53.Location = new System.Drawing.Point(10, 12);
             this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(251, 47);
+            this.label53.Size = new System.Drawing.Size(189, 39);
             this.label53.TabIndex = 0;
             this.label53.Text = "Technical Interview Feedback";
             this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,20 +154,20 @@
             // interviewFeedPanel
             // 
             this.interviewFeedPanel.Controls.Add(this.label52);
-            this.interviewFeedPanel.Location = new System.Drawing.Point(43, 132);
+            this.interviewFeedPanel.Location = new System.Drawing.Point(32, 107);
             this.interviewFeedPanel.Margin = new System.Windows.Forms.Padding(2);
             this.interviewFeedPanel.Name = "interviewFeedPanel";
-            this.interviewFeedPanel.Size = new System.Drawing.Size(542, 347);
+            this.interviewFeedPanel.Size = new System.Drawing.Size(406, 282);
             this.interviewFeedPanel.TabIndex = 22;
             // 
             // label52
             // 
             this.label52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(22, 15);
+            this.label52.Location = new System.Drawing.Point(16, 12);
             this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(160, 48);
+            this.label52.Size = new System.Drawing.Size(120, 39);
             this.label52.TabIndex = 0;
             this.label52.Text = "Interview Feedback";
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -174,20 +175,20 @@
             // cvFeedbackPanel
             // 
             this.cvFeedbackPanel.Controls.Add(this.label51);
-            this.cvFeedbackPanel.Location = new System.Drawing.Point(30, 152);
+            this.cvFeedbackPanel.Location = new System.Drawing.Point(22, 124);
             this.cvFeedbackPanel.Margin = new System.Windows.Forms.Padding(2);
             this.cvFeedbackPanel.Name = "cvFeedbackPanel";
-            this.cvFeedbackPanel.Size = new System.Drawing.Size(530, 347);
+            this.cvFeedbackPanel.Size = new System.Drawing.Size(398, 282);
             this.cvFeedbackPanel.TabIndex = 21;
             // 
             // label51
             // 
             this.label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(24, 15);
+            this.label51.Location = new System.Drawing.Point(18, 12);
             this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(158, 28);
+            this.label51.Size = new System.Drawing.Size(119, 23);
             this.label51.TabIndex = 0;
             this.label51.Text = "CV Feedback";
             this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,10 +197,10 @@
             // 
             this.technicalInterButton.BackColor = System.Drawing.Color.White;
             this.technicalInterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.technicalInterButton.Location = new System.Drawing.Point(218, 92);
+            this.technicalInterButton.Location = new System.Drawing.Point(164, 75);
             this.technicalInterButton.Margin = new System.Windows.Forms.Padding(2);
             this.technicalInterButton.Name = "technicalInterButton";
-            this.technicalInterButton.Size = new System.Drawing.Size(163, 26);
+            this.technicalInterButton.Size = new System.Drawing.Size(122, 21);
             this.technicalInterButton.TabIndex = 20;
             this.technicalInterButton.Text = "Technical Interview";
             this.technicalInterButton.UseVisualStyleBackColor = false;
@@ -208,10 +209,10 @@
             // 
             this.interviewButton.BackColor = System.Drawing.Color.White;
             this.interviewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.interviewButton.Location = new System.Drawing.Point(107, 93);
+            this.interviewButton.Location = new System.Drawing.Point(80, 76);
             this.interviewButton.Margin = new System.Windows.Forms.Padding(2);
             this.interviewButton.Name = "interviewButton";
-            this.interviewButton.Size = new System.Drawing.Size(73, 26);
+            this.interviewButton.Size = new System.Drawing.Size(55, 21);
             this.interviewButton.TabIndex = 19;
             this.interviewButton.Text = "Interview";
             this.interviewButton.UseVisualStyleBackColor = false;
@@ -220,10 +221,10 @@
             // 
             this.cvButton.BackColor = System.Drawing.Color.White;
             this.cvButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cvButton.Location = new System.Drawing.Point(30, 93);
+            this.cvButton.Location = new System.Drawing.Point(22, 76);
             this.cvButton.Margin = new System.Windows.Forms.Padding(2);
             this.cvButton.Name = "cvButton";
-            this.cvButton.Size = new System.Drawing.Size(56, 26);
+            this.cvButton.Size = new System.Drawing.Size(42, 21);
             this.cvButton.TabIndex = 18;
             this.cvButton.Text = "CV";
             this.cvButton.UseVisualStyleBackColor = false;
@@ -236,7 +237,7 @@
             this.label69.Location = new System.Drawing.Point(0, 0);
             this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(585, 73);
+            this.label69.Size = new System.Drawing.Size(439, 60);
             this.label69.TabIndex = 17;
             this.label69.Text = "Complete Feedback List";
             this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -246,37 +247,38 @@
             this.sendBtnPanel.Controls.Add(this.button15);
             this.sendBtnPanel.Controls.Add(this.Send);
             this.sendBtnPanel.Controls.Add(this.button19);
-            this.sendBtnPanel.Location = new System.Drawing.Point(2, 148);
+            this.sendBtnPanel.Location = new System.Drawing.Point(2, 120);
+            this.sendBtnPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.sendBtnPanel.Name = "sendBtnPanel";
-            this.sendBtnPanel.Size = new System.Drawing.Size(104, 382);
+            this.sendBtnPanel.Size = new System.Drawing.Size(78, 310);
             this.sendBtnPanel.TabIndex = 58;
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(19, 86);
+            this.button15.Location = new System.Drawing.Point(14, 70);
             this.button15.Margin = new System.Windows.Forms.Padding(2);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(66, 49);
+            this.button15.Size = new System.Drawing.Size(50, 40);
             this.button15.TabIndex = 16;
             this.button15.Text = "Back";
             this.button15.UseVisualStyleBackColor = true;
             // 
             // Send
             // 
-            this.Send.Location = new System.Drawing.Point(19, 18);
+            this.Send.Location = new System.Drawing.Point(14, 15);
             this.Send.Margin = new System.Windows.Forms.Padding(2);
             this.Send.Name = "Send";
-            this.Send.Size = new System.Drawing.Size(66, 49);
+            this.Send.Size = new System.Drawing.Size(50, 40);
             this.Send.TabIndex = 10;
             this.Send.Text = "Send";
             this.Send.UseVisualStyleBackColor = true;
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(11, 328);
+            this.button19.Location = new System.Drawing.Point(8, 266);
             this.button19.Margin = new System.Windows.Forms.Padding(2);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(81, 42);
+            this.button19.Size = new System.Drawing.Size(61, 34);
             this.button19.TabIndex = 7;
             this.button19.Text = "Log Out";
             this.button19.UseVisualStyleBackColor = true;
@@ -286,18 +288,19 @@
             this.hrBtnPanel.Controls.Add(this.button10);
             this.hrBtnPanel.Controls.Add(this.button4);
             this.hrBtnPanel.Controls.Add(this.button8);
-            this.hrBtnPanel.Location = new System.Drawing.Point(21, 98);
+            this.hrBtnPanel.Location = new System.Drawing.Point(45, 80);
+            this.hrBtnPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.hrBtnPanel.Name = "hrBtnPanel";
-            this.hrBtnPanel.Size = new System.Drawing.Size(104, 382);
+            this.hrBtnPanel.Size = new System.Drawing.Size(78, 310);
             this.hrBtnPanel.TabIndex = 59;
             // 
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(11, 82);
+            this.button10.Location = new System.Drawing.Point(8, 67);
             this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(84, 51);
+            this.button10.Size = new System.Drawing.Size(63, 41);
             this.button10.TabIndex = 14;
             this.button10.Text = "Complete Feedback";
             this.button10.UseVisualStyleBackColor = true;
@@ -305,20 +308,20 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(11, 12);
+            this.button4.Location = new System.Drawing.Point(8, 10);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 51);
+            this.button4.Size = new System.Drawing.Size(63, 41);
             this.button4.TabIndex = 9;
             this.button4.Text = "Feedback";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(11, 328);
+            this.button8.Location = new System.Drawing.Point(8, 266);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(81, 42);
+            this.button8.Size = new System.Drawing.Size(61, 34);
             this.button8.TabIndex = 7;
             this.button8.Text = "Log Out";
             this.button8.UseVisualStyleBackColor = true;
@@ -341,39 +344,39 @@
             this.feedbackPanel.Controls.Add(this.label3);
             this.feedbackPanel.Controls.Add(this.label2);
             this.feedbackPanel.Controls.Add(this.label13);
-            this.feedbackPanel.Location = new System.Drawing.Point(169, 180);
+            this.feedbackPanel.Location = new System.Drawing.Point(127, 146);
             this.feedbackPanel.Margin = new System.Windows.Forms.Padding(2);
             this.feedbackPanel.Name = "feedbackPanel";
-            this.feedbackPanel.Size = new System.Drawing.Size(585, 514);
+            this.feedbackPanel.Size = new System.Drawing.Size(439, 418);
             this.feedbackPanel.TabIndex = 60;
             // 
             // label12
             // 
             this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(370, 483);
+            this.label12.Location = new System.Drawing.Point(278, 392);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(123, 19);
+            this.label12.Size = new System.Drawing.Size(92, 15);
             this.label12.TabIndex = 15;
             // 
             // label11
             // 
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(370, 453);
+            this.label11.Location = new System.Drawing.Point(278, 368);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(123, 19);
+            this.label11.Size = new System.Drawing.Size(92, 15);
             this.label11.TabIndex = 14;
             // 
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(264, 479);
+            this.label10.Location = new System.Drawing.Point(198, 389);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(102, 19);
+            this.label10.Size = new System.Drawing.Size(76, 15);
             this.label10.TabIndex = 13;
             this.label10.Text = "Interviewer : ";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -381,20 +384,20 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(261, 453);
+            this.label9.Location = new System.Drawing.Point(196, 368);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 19);
+            this.label9.Size = new System.Drawing.Size(79, 15);
             this.label9.TabIndex = 12;
             this.label9.Text = "Feedback Type :";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(64, 276);
+            this.richTextBox1.Location = new System.Drawing.Point(48, 224);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(435, 162);
+            this.richTextBox1.Size = new System.Drawing.Size(327, 132);
             this.richTextBox1.TabIndex = 11;
             this.richTextBox1.Text = "";
             // 
@@ -402,10 +405,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(62, 240);
+            this.label8.Location = new System.Drawing.Point(46, 195);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(203, 20);
+            this.label8.Size = new System.Drawing.Size(172, 17);
             this.label8.TabIndex = 10;
             this.label8.Text = "Describe Your Feedback :";
             // 
@@ -413,10 +416,10 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(418, 206);
+            this.checkBox3.Location = new System.Drawing.Point(314, 167);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(107, 24);
+            this.checkBox3.Size = new System.Drawing.Size(91, 21);
             this.checkBox3.TabIndex = 9;
             this.checkBox3.Text = "Questions";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -425,10 +428,10 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(264, 206);
+            this.checkBox2.Location = new System.Drawing.Point(198, 167);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(114, 24);
+            this.checkBox2.Size = new System.Drawing.Size(98, 21);
             this.checkBox2.TabIndex = 8;
             this.checkBox2.Text = "Suggestion";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -437,10 +440,10 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(98, 206);
+            this.checkBox1.Location = new System.Drawing.Point(74, 167);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(112, 24);
+            this.checkBox1.Size = new System.Drawing.Size(93, 21);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Comments";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -449,39 +452,39 @@
             // 
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(146, 165);
+            this.label7.Location = new System.Drawing.Point(110, 134);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(140, 19);
+            this.label7.Size = new System.Drawing.Size(105, 15);
             this.label7.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(146, 131);
+            this.label6.Location = new System.Drawing.Point(110, 106);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 19);
+            this.label6.Size = new System.Drawing.Size(105, 15);
             this.label6.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(146, 100);
+            this.label5.Location = new System.Drawing.Point(110, 81);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 19);
+            this.label5.Size = new System.Drawing.Size(105, 15);
             this.label5.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(58, 161);
+            this.label4.Location = new System.Drawing.Point(44, 131);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 19);
+            this.label4.Size = new System.Drawing.Size(56, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "Email : ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -489,10 +492,10 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(48, 127);
+            this.label3.Location = new System.Drawing.Point(36, 103);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 19);
+            this.label3.Size = new System.Drawing.Size(64, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Interviewee :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -500,10 +503,10 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(58, 96);
+            this.label2.Location = new System.Drawing.Point(44, 78);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 19);
+            this.label2.Size = new System.Drawing.Size(56, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Code : ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -516,20 +519,22 @@
             this.label13.Location = new System.Drawing.Point(0, 2);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(585, 73);
+            this.label13.Size = new System.Drawing.Size(439, 60);
             this.label13.TabIndex = 0;
             this.label13.Text = "Feedback";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HrScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(965, 533);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(959, 561);
             this.Controls.Add(this.feedbackPanel);
             this.Controls.Add(this.hrBtnPanel);
             this.Controls.Add(this.sendBtnPanel);
             this.Controls.Add(this.completeFeedPanel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "HrScreen";
             this.Text = "HrScreen";
             this.completeFeedPanel.ResumeLayout(false);

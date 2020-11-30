@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ApplicationFeedbackSystem
 {
-    public partial class MainScreen : Form
+    public partial class Form1 : Form
     {
-        public MainScreen()
+        public Form1()
         {
             InitializeComponent();
         }
