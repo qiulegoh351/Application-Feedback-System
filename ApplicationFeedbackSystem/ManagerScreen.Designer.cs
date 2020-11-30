@@ -28,33 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.test2Button = new System.Windows.Forms.Button();
+            this.managerBtnPanel = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.managerBtnPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // test2Button
+            // managerBtnPanel
             // 
-            this.test2Button.Location = new System.Drawing.Point(335, 173);
-            this.test2Button.Name = "test2Button";
-            this.test2Button.Size = new System.Drawing.Size(75, 23);
-            this.test2Button.TabIndex = 0;
-            this.test2Button.Text = "Try Me";
-            this.test2Button.UseVisualStyleBackColor = true;
-            this.test2Button.Click += new System.EventHandler(this.test2Button_Click);
+            this.managerBtnPanel.Controls.Add(this.button5);
+            this.managerBtnPanel.Controls.Add(this.button6);
+            this.managerBtnPanel.Location = new System.Drawing.Point(1, 71);
+            this.managerBtnPanel.Name = "managerBtnPanel";
+            this.managerBtnPanel.Size = new System.Drawing.Size(104, 382);
+            this.managerBtnPanel.TabIndex = 13;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(19, 21);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(66, 49);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Delete";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(11, 328);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(81, 42);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "Log Out";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // ManagerScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.test2Button);
+            this.Controls.Add(this.managerBtnPanel);
             this.Name = "ManagerScreen";
             this.Text = "ManagerScreen";
+            this.managerBtnPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button test2Button;
+        private System.Windows.Forms.Panel managerBtnPanel;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
