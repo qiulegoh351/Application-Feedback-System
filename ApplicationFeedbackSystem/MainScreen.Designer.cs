@@ -122,6 +122,18 @@
             this.cvButton = new System.Windows.Forms.Button();
             this.label69 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
@@ -144,18 +156,10 @@
             this.label31 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.sendBtnPanel.SuspendLayout();
             this.feedbackBtnPanel.SuspendLayout();
@@ -174,6 +178,7 @@
             this.cvFeedbackPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // logOutButton
@@ -199,7 +204,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(115, 492);
+            this.panel1.Size = new System.Drawing.Size(115, 616);
             this.panel1.TabIndex = 8;
             // 
             // sendBtnPanel
@@ -556,7 +561,7 @@
             this.eFeedbackTextBox.Location = new System.Drawing.Point(398, 417);
             this.eFeedbackTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.eFeedbackTextBox.Name = "eFeedbackTextBox";
-            this.eFeedbackTextBox.Size = new System.Drawing.Size(175, 27);
+            this.eFeedbackTextBox.Size = new System.Drawing.Size(175, 32);
             this.eFeedbackTextBox.TabIndex = 52;
             this.eFeedbackTextBox.Text = "Technical Interview";
             // 
@@ -576,7 +581,7 @@
             this.eLastNameTextBox2.Location = new System.Drawing.Point(200, 417);
             this.eLastNameTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.eLastNameTextBox2.Name = "eLastNameTextBox2";
-            this.eLastNameTextBox2.Size = new System.Drawing.Size(175, 27);
+            this.eLastNameTextBox2.Size = new System.Drawing.Size(175, 32);
             this.eLastNameTextBox2.TabIndex = 50;
             this.eLastNameTextBox2.Text = "Ng";
             // 
@@ -596,7 +601,7 @@
             this.eFirstNameTextBox2.Location = new System.Drawing.Point(8, 417);
             this.eFirstNameTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.eFirstNameTextBox2.Name = "eFirstNameTextBox2";
-            this.eFirstNameTextBox2.Size = new System.Drawing.Size(175, 27);
+            this.eFirstNameTextBox2.Size = new System.Drawing.Size(175, 32);
             this.eFirstNameTextBox2.TabIndex = 48;
             this.eFirstNameTextBox2.Text = "Weng";
             // 
@@ -645,7 +650,7 @@
             this.eDateOfBirth.Location = new System.Drawing.Point(503, 125);
             this.eDateOfBirth.Margin = new System.Windows.Forms.Padding(2);
             this.eDateOfBirth.Name = "eDateOfBirth";
-            this.eDateOfBirth.Size = new System.Drawing.Size(66, 27);
+            this.eDateOfBirth.Size = new System.Drawing.Size(66, 32);
             this.eDateOfBirth.TabIndex = 43;
             this.eDateOfBirth.Text = "1/4/1997";
             // 
@@ -655,7 +660,7 @@
             this.eAgeTextBox.Location = new System.Drawing.Point(454, 125);
             this.eAgeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.eAgeTextBox.Name = "eAgeTextBox";
-            this.eAgeTextBox.Size = new System.Drawing.Size(32, 27);
+            this.eAgeTextBox.Size = new System.Drawing.Size(32, 32);
             this.eAgeTextBox.TabIndex = 42;
             this.eAgeTextBox.Text = "20";
             // 
@@ -668,7 +673,7 @@
             this.eGenderComboBox.Location = new System.Drawing.Point(398, 125);
             this.eGenderComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.eGenderComboBox.Name = "eGenderComboBox";
-            this.eGenderComboBox.Size = new System.Drawing.Size(41, 28);
+            this.eGenderComboBox.Size = new System.Drawing.Size(41, 33);
             this.eGenderComboBox.TabIndex = 41;
             // 
             // label37
@@ -727,7 +732,7 @@
             this.eAttachmentTextBox.Location = new System.Drawing.Point(200, 218);
             this.eAttachmentTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.eAttachmentTextBox.Name = "eAttachmentTextBox";
-            this.eAttachmentTextBox.Size = new System.Drawing.Size(175, 27);
+            this.eAttachmentTextBox.Size = new System.Drawing.Size(175, 32);
             this.eAttachmentTextBox.TabIndex = 35;
             this.eAttachmentTextBox.Text = "Attachment";
             // 
@@ -747,7 +752,7 @@
             this.eEmailTextBox.Location = new System.Drawing.Point(200, 170);
             this.eEmailTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.eEmailTextBox.Name = "eEmailTextBox";
-            this.eEmailTextBox.Size = new System.Drawing.Size(175, 27);
+            this.eEmailTextBox.Size = new System.Drawing.Size(175, 32);
             this.eEmailTextBox.TabIndex = 33;
             this.eEmailTextBox.Text = "abc@gmail.com";
             // 
@@ -767,7 +772,7 @@
             this.eLastNameTextBox.Location = new System.Drawing.Point(200, 125);
             this.eLastNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.eLastNameTextBox.Name = "eLastNameTextBox";
-            this.eLastNameTextBox.Size = new System.Drawing.Size(175, 27);
+            this.eLastNameTextBox.Size = new System.Drawing.Size(175, 32);
             this.eLastNameTextBox.TabIndex = 31;
             this.eLastNameTextBox.Text = "Ng";
             // 
@@ -786,7 +791,7 @@
             this.ePositionTextBox2.Location = new System.Drawing.Point(7, 267);
             this.ePositionTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.ePositionTextBox2.Name = "ePositionTextBox2";
-            this.ePositionTextBox2.Size = new System.Drawing.Size(175, 27);
+            this.ePositionTextBox2.Size = new System.Drawing.Size(175, 32);
             this.ePositionTextBox2.TabIndex = 27;
             // 
             // label45
@@ -805,7 +810,7 @@
             this.eApplicationTextBox.Location = new System.Drawing.Point(8, 219);
             this.eApplicationTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.eApplicationTextBox.Name = "eApplicationTextBox";
-            this.eApplicationTextBox.Size = new System.Drawing.Size(174, 27);
+            this.eApplicationTextBox.Size = new System.Drawing.Size(174, 32);
             this.eApplicationTextBox.TabIndex = 24;
             this.eApplicationTextBox.Text = "Technical Inteview";
             // 
@@ -825,7 +830,7 @@
             this.eContactTextBox.Location = new System.Drawing.Point(7, 170);
             this.eContactTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.eContactTextBox.Name = "eContactTextBox";
-            this.eContactTextBox.Size = new System.Drawing.Size(175, 27);
+            this.eContactTextBox.Size = new System.Drawing.Size(175, 32);
             this.eContactTextBox.TabIndex = 22;
             this.eContactTextBox.Text = "0123456789";
             // 
@@ -845,7 +850,7 @@
             this.eFirstNameTextBox.Location = new System.Drawing.Point(7, 125);
             this.eFirstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.eFirstNameTextBox.Name = "eFirstNameTextBox";
-            this.eFirstNameTextBox.Size = new System.Drawing.Size(175, 27);
+            this.eFirstNameTextBox.Size = new System.Drawing.Size(175, 32);
             this.eFirstNameTextBox.TabIndex = 20;
             this.eFirstNameTextBox.Text = "Weng";
             // 
@@ -951,7 +956,7 @@
             this.label8.Location = new System.Drawing.Point(62, 240);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(172, 17);
+            this.label8.Size = new System.Drawing.Size(203, 20);
             this.label8.TabIndex = 10;
             this.label8.Text = "Describe Your Feedback :";
             // 
@@ -962,7 +967,7 @@
             this.checkBox3.Location = new System.Drawing.Point(418, 206);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(91, 21);
+            this.checkBox3.Size = new System.Drawing.Size(107, 24);
             this.checkBox3.TabIndex = 9;
             this.checkBox3.Text = "Questions";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -974,7 +979,7 @@
             this.checkBox2.Location = new System.Drawing.Point(264, 206);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(98, 21);
+            this.checkBox2.Size = new System.Drawing.Size(114, 24);
             this.checkBox2.TabIndex = 8;
             this.checkBox2.Text = "Suggestion";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -986,7 +991,7 @@
             this.checkBox1.Location = new System.Drawing.Point(98, 206);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(93, 21);
+            this.checkBox1.Size = new System.Drawing.Size(112, 24);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Comments";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -1076,7 +1081,7 @@
             this.completeFeedPanel.Controls.Add(this.interviewButton);
             this.completeFeedPanel.Controls.Add(this.cvButton);
             this.completeFeedPanel.Controls.Add(this.label69);
-            this.completeFeedPanel.Location = new System.Drawing.Point(132, 347);
+            this.completeFeedPanel.Location = new System.Drawing.Point(218, 50);
             this.completeFeedPanel.Margin = new System.Windows.Forms.Padding(2);
             this.completeFeedPanel.Name = "completeFeedPanel";
             this.completeFeedPanel.Size = new System.Drawing.Size(584, 511);
@@ -1084,6 +1089,7 @@
             // 
             // technicalFeedPanel
             // 
+            this.technicalFeedPanel.Controls.Add(this.dataGridView1);
             this.technicalFeedPanel.Controls.Add(this.label53);
             this.technicalFeedPanel.Location = new System.Drawing.Point(18, 143);
             this.technicalFeedPanel.Margin = new System.Windows.Forms.Padding(2);
@@ -1149,10 +1155,10 @@
             // 
             this.technicalInterButton.BackColor = System.Drawing.Color.White;
             this.technicalInterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.technicalInterButton.Location = new System.Drawing.Point(194, 93);
+            this.technicalInterButton.Location = new System.Drawing.Point(218, 92);
             this.technicalInterButton.Margin = new System.Windows.Forms.Padding(2);
             this.technicalInterButton.Name = "technicalInterButton";
-            this.technicalInterButton.Size = new System.Drawing.Size(123, 19);
+            this.technicalInterButton.Size = new System.Drawing.Size(163, 26);
             this.technicalInterButton.TabIndex = 20;
             this.technicalInterButton.Text = "Technical Interview";
             this.technicalInterButton.UseVisualStyleBackColor = false;
@@ -1164,7 +1170,7 @@
             this.interviewButton.Location = new System.Drawing.Point(107, 93);
             this.interviewButton.Margin = new System.Windows.Forms.Padding(2);
             this.interviewButton.Name = "interviewButton";
-            this.interviewButton.Size = new System.Drawing.Size(73, 19);
+            this.interviewButton.Size = new System.Drawing.Size(73, 26);
             this.interviewButton.TabIndex = 19;
             this.interviewButton.Text = "Interview";
             this.interviewButton.UseVisualStyleBackColor = false;
@@ -1176,7 +1182,7 @@
             this.cvButton.Location = new System.Drawing.Point(30, 93);
             this.cvButton.Margin = new System.Windows.Forms.Padding(2);
             this.cvButton.Name = "cvButton";
-            this.cvButton.Size = new System.Drawing.Size(56, 19);
+            this.cvButton.Size = new System.Drawing.Size(56, 26);
             this.cvButton.TabIndex = 18;
             this.cvButton.Text = "CV";
             this.cvButton.UseVisualStyleBackColor = false;
@@ -1186,7 +1192,7 @@
             this.label69.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label69.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label69.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.Location = new System.Drawing.Point(0, 0);
+            this.label69.Location = new System.Drawing.Point(2, 0);
             this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(585, 73);
@@ -1236,6 +1242,131 @@
             this.panel3.Size = new System.Drawing.Size(663, 521);
             this.panel3.TabIndex = 57;
             // 
+            // textBox2
+            // 
+            this.textBox2.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox2.Location = new System.Drawing.Point(530, 201);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(96, 27);
+            this.textBox2.TabIndex = 66;
+            this.textBox2.Text = "20";
+            // 
+            // label55
+            // 
+            this.label55.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(537, 176);
+            this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(45, 24);
+            this.label55.TabIndex = 65;
+            this.label55.Text = "State";
+            // 
+            // textBox1
+            // 
+            this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox1.Location = new System.Drawing.Point(419, 202);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(88, 27);
+            this.textBox1.TabIndex = 64;
+            this.textBox1.Text = "20";
+            // 
+            // label28
+            // 
+            this.label28.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(416, 175);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(45, 24);
+            this.label28.TabIndex = 63;
+            this.label28.Text = "City";
+            // 
+            // label18
+            // 
+            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(509, 124);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(130, 22);
+            this.label18.TabIndex = 62;
+            this.label18.Text = "Qiu Le";
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(509, 100);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(130, 22);
+            this.label17.TabIndex = 61;
+            this.label17.Text = "Tehnical Interview";
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(420, 124);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(87, 24);
+            this.label14.TabIndex = 60;
+            this.label14.Text = "Interviewer :";
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(405, 100);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(110, 24);
+            this.label16.TabIndex = 58;
+            this.label16.Text = "Feedback Type :";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox3.Location = new System.Drawing.Point(13, 105);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(190, 47);
+            this.textBox3.TabIndex = 57;
+            this.textBox3.Text = "Weng";
+            // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(14, 73);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(161, 45);
+            this.label19.TabIndex = 56;
+            this.label19.Text = "Interviewee";
+            // 
+            // label21
+            // 
+            this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(511, 77);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(39, 13);
+            this.label21.TabIndex = 55;
+            this.label21.Text = "A1001";
+            // 
+            // label22
+            // 
+            this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(464, 75);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(53, 24);
+            this.label22.TabIndex = 54;
+            this.label22.Text = "Code : ";
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label15);
@@ -1283,7 +1414,7 @@
             this.textBox4.Location = new System.Drawing.Point(216, 423);
             this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 27);
+            this.textBox4.Size = new System.Drawing.Size(167, 32);
             this.textBox4.TabIndex = 43;
             this.textBox4.Text = "1/4/1997";
             // 
@@ -1307,7 +1438,7 @@
             this.comboBox1.Location = new System.Drawing.Point(214, 345);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(74, 28);
+            this.comboBox1.Size = new System.Drawing.Size(74, 33);
             this.comboBox1.TabIndex = 41;
             // 
             // label23
@@ -1464,137 +1595,47 @@
             this.label54.TabIndex = 19;
             this.label54.Text = "Name";
             // 
-            // label16
+            // dataGridView1
             // 
-            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(405, 100);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(110, 24);
-            this.label16.TabIndex = 58;
-            this.label16.Text = "Feedback Type :";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridView1.Location = new System.Drawing.Point(36, 107);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(480, 226);
+            this.dataGridView1.TabIndex = 1;
             // 
-            // textBox3
+            // Column1
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox3.Location = new System.Drawing.Point(13, 105);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(190, 47);
-            this.textBox3.TabIndex = 57;
-            this.textBox3.Text = "Weng";
+            this.Column1.HeaderText = "Select";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
-            // label19
+            // Column2
             // 
-            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(14, 73);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(161, 45);
-            this.label19.TabIndex = 56;
-            this.label19.Text = "Interviewee";
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "File Name";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
             // 
-            // label21
+            // Column3
             // 
-            this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(511, 77);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(39, 13);
-            this.label21.TabIndex = 55;
-            this.label21.Text = "A1001";
-            // 
-            // label22
-            // 
-            this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(464, 75);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(53, 24);
-            this.label22.TabIndex = 54;
-            this.label22.Text = "Code : ";
-            // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(420, 124);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(87, 24);
-            this.label14.TabIndex = 60;
-            this.label14.Text = "Interviewer :";
-            // 
-            // label17
-            // 
-            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(509, 100);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(130, 22);
-            this.label17.TabIndex = 61;
-            this.label17.Text = "Tehnical Interview";
-            // 
-            // label18
-            // 
-            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(509, 124);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(130, 22);
-            this.label18.TabIndex = 62;
-            this.label18.Text = "Qiu Le";
-            // 
-            // textBox1
-            // 
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Location = new System.Drawing.Point(419, 202);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(88, 27);
-            this.textBox1.TabIndex = 64;
-            this.textBox1.Text = "20";
-            // 
-            // label28
-            // 
-            this.label28.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(416, 175);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(45, 24);
-            this.label28.TabIndex = 63;
-            this.label28.Text = "City";
-            // 
-            // textBox2
-            // 
-            this.textBox2.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox2.Location = new System.Drawing.Point(530, 201);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(96, 27);
-            this.textBox2.TabIndex = 66;
-            this.textBox2.Text = "20";
-            // 
-            // label55
-            // 
-            this.label55.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(537, 176);
-            this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(45, 24);
-            this.label55.TabIndex = 65;
-            this.label55.Text = "State";
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Email";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
             // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(761, 492);
+            this.ClientSize = new System.Drawing.Size(1095, 616);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.completeFeedPanel);
             this.Controls.Add(this.feedbackPanel);
@@ -1626,6 +1667,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1759,5 +1801,9 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
