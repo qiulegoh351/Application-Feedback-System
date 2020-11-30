@@ -34,15 +34,33 @@ namespace ApplicationFeedbackSystem
             da.Fill(dt);
             x = Convert.ToInt32(dt.Rows.Count.ToString());
 
-            if(x==0)
+            if(dt.Rows.Count>0)
             {
-                MessageBox.Show("Please try again!");
+                for(x=0; x<dt.Rows.Count; x++)
+                {
+                    if(dt.Rows[x]["role"].ToString() == "1" )
+                    {
+                        MainScreen MainScreen = new MainScreen();
+                        MainScreen.Show();
+                        this.Hide();
+                    }
+                    else if (dt.Rows[x]["role"].ToString() == "2")
+                    {
+                        ManagerScreen managerScreen = new ManagerScreen();
+                        managerScreen.Show();
+                        this.Hide();
+                    }
+                    else if (dt.Rows[x]["role"].ToString() == "3")
+                    {
+                        HrScreen hrScreen = new HrScreen();
+                        hrScreen.Show();
+                        this.Hide();
+                    }
+                }
             }
             else
             {
-                MainScreen MainScreen = new MainScreen();
-                MainScreen.Show();
-                this.Hide();
+                MessageBox.Show("Please try again!");
             }
             
             con.Close();  
