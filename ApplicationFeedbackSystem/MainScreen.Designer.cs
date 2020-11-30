@@ -112,6 +112,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.completeFeedPanel = new System.Windows.Forms.Panel();
             this.technicalFeedPanel = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label53 = new System.Windows.Forms.Label();
             this.interviewFeedPanel = new System.Windows.Forms.Panel();
             this.label52 = new System.Windows.Forms.Label();
@@ -156,10 +160,6 @@
             this.label31 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.sendBtnPanel.SuspendLayout();
             this.feedbackBtnPanel.SuspendLayout();
@@ -174,11 +174,11 @@
             this.feedbackPanel.SuspendLayout();
             this.completeFeedPanel.SuspendLayout();
             this.technicalFeedPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.interviewFeedPanel.SuspendLayout();
             this.cvFeedbackPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // logOutButton
@@ -892,7 +892,7 @@
             this.feedbackPanel.Controls.Add(this.label3);
             this.feedbackPanel.Controls.Add(this.label2);
             this.feedbackPanel.Controls.Add(this.label13);
-            this.feedbackPanel.Location = new System.Drawing.Point(504, 47);
+            this.feedbackPanel.Location = new System.Drawing.Point(789, 30);
             this.feedbackPanel.Margin = new System.Windows.Forms.Padding(2);
             this.feedbackPanel.Name = "feedbackPanel";
             this.feedbackPanel.Size = new System.Drawing.Size(585, 514);
@@ -1081,7 +1081,7 @@
             this.completeFeedPanel.Controls.Add(this.interviewButton);
             this.completeFeedPanel.Controls.Add(this.cvButton);
             this.completeFeedPanel.Controls.Add(this.label69);
-            this.completeFeedPanel.Location = new System.Drawing.Point(218, 50);
+            this.completeFeedPanel.Location = new System.Drawing.Point(124, 27);
             this.completeFeedPanel.Margin = new System.Windows.Forms.Padding(2);
             this.completeFeedPanel.Name = "completeFeedPanel";
             this.completeFeedPanel.Size = new System.Drawing.Size(584, 511);
@@ -1096,6 +1096,41 @@
             this.technicalFeedPanel.Name = "technicalFeedPanel";
             this.technicalFeedPanel.Size = new System.Drawing.Size(540, 356);
             this.technicalFeedPanel.TabIndex = 23;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridView1.Location = new System.Drawing.Point(36, 107);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(480, 226);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Select";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "File Name";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Email";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
             // 
             // label53
             // 
@@ -1595,41 +1630,6 @@
             this.label54.TabIndex = 19;
             this.label54.Text = "Name";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(36, 107);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(480, 226);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Select";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "File Name";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Email";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
@@ -1662,12 +1662,12 @@
             this.feedbackPanel.PerformLayout();
             this.completeFeedPanel.ResumeLayout(false);
             this.technicalFeedPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.interviewFeedPanel.ResumeLayout(false);
             this.cvFeedbackPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
