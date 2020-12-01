@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelCompleteFeedback = new ApplicationFeedbackSystem.PanelGradientColor();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,15 +36,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelGradientColor9 = new ApplicationFeedbackSystem.labelGradientColor();
             this.labelGradientColor10 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.panelCreateTemplateBtn = new ApplicationFeedbackSystem.PanelGradientColor();
-            this.logOutBtn2 = new System.Windows.Forms.Button();
-            this.backBtn = new System.Windows.Forms.Button();
-            this.ClearBtn = new System.Windows.Forms.Button();
             this.panelFeedback = new ApplicationFeedbackSystem.PanelGradientColor();
-            this.panelAdminBtn = new ApplicationFeedbackSystem.PanelGradientColor();
-            this.logoutBtn = new System.Windows.Forms.Button();
-            this.editBtn = new System.Windows.Forms.Button();
-            this.createBtn = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.labelGradientColor7 = new ApplicationFeedbackSystem.labelGradientColor();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -74,21 +66,29 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelAdminRight = new ApplicationFeedbackSystem.PanelGradientColor();
+            this.panelAdminBtn = new ApplicationFeedbackSystem.PanelGradientColor();
+            this.logoutBtn = new System.Windows.Forms.Button();
+            this.editBtn = new System.Windows.Forms.Button();
+            this.createBtn = new System.Windows.Forms.Button();
             this.panelFeedCompleteBtn = new ApplicationFeedbackSystem.PanelGradientColor();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.panelCreateTemplateBtn = new ApplicationFeedbackSystem.PanelGradientColor();
+            this.logOutBtn2 = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.ClearBtn = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new ApplicationFeedbackSystem.PictureBoxGradientColor();
             this.panelCompleteFeedback.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panelCreateTemplateBtn.SuspendLayout();
             this.panelFeedback.SuspendLayout();
-            this.panelAdminBtn.SuspendLayout();
             this.PanelViewTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panelAdminRight.SuspendLayout();
+            this.panelAdminBtn.SuspendLayout();
             this.panelFeedCompleteBtn.SuspendLayout();
+            this.panelCreateTemplateBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,49 +173,6 @@
             this.labelGradientColor10.Text = "Complete Feedback List";
             this.labelGradientColor10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelCreateTemplateBtn
-            // 
-            this.panelCreateTemplateBtn.ColorBottom = System.Drawing.Color.Empty;
-            this.panelCreateTemplateBtn.ColorTop = System.Drawing.Color.Empty;
-            this.panelCreateTemplateBtn.Controls.Add(this.logOutBtn2);
-            this.panelCreateTemplateBtn.Controls.Add(this.backBtn);
-            this.panelCreateTemplateBtn.Controls.Add(this.ClearBtn);
-            this.panelCreateTemplateBtn.Location = new System.Drawing.Point(10, 189);
-            this.panelCreateTemplateBtn.Name = "panelCreateTemplateBtn";
-            this.panelCreateTemplateBtn.Size = new System.Drawing.Size(114, 430);
-            this.panelCreateTemplateBtn.TabIndex = 1;
-            // 
-            // logOutBtn2
-            // 
-            this.logOutBtn2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logOutBtn2.Location = new System.Drawing.Point(14, 372);
-            this.logOutBtn2.Name = "logOutBtn2";
-            this.logOutBtn2.Size = new System.Drawing.Size(86, 45);
-            this.logOutBtn2.TabIndex = 2;
-            this.logOutBtn2.Text = "LogOut";
-            this.logOutBtn2.UseVisualStyleBackColor = true;
-            // 
-            // backBtn
-            // 
-            this.backBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backBtn.Location = new System.Drawing.Point(14, 91);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(75, 45);
-            this.backBtn.TabIndex = 1;
-            this.backBtn.Text = "Back";
-            this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
-            // 
-            // ClearBtn
-            // 
-            this.ClearBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearBtn.Location = new System.Drawing.Point(14, 21);
-            this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Size = new System.Drawing.Size(75, 45);
-            this.ClearBtn.TabIndex = 0;
-            this.ClearBtn.Text = "Send";
-            this.ClearBtn.UseVisualStyleBackColor = true;
-            // 
             // panelFeedback
             // 
             this.panelFeedback.ColorBottom = System.Drawing.Color.Empty;
@@ -242,50 +199,6 @@
             this.panelFeedback.Name = "panelFeedback";
             this.panelFeedback.Size = new System.Drawing.Size(866, 561);
             this.panelFeedback.TabIndex = 68;
-            // 
-            // panelAdminBtn
-            // 
-            this.panelAdminBtn.ColorBottom = System.Drawing.Color.Empty;
-            this.panelAdminBtn.ColorTop = System.Drawing.Color.Empty;
-            this.panelAdminBtn.Controls.Add(this.logoutBtn);
-            this.panelAdminBtn.Controls.Add(this.editBtn);
-            this.panelAdminBtn.Controls.Add(this.createBtn);
-            this.panelAdminBtn.Location = new System.Drawing.Point(50, 128);
-            this.panelAdminBtn.Name = "panelAdminBtn";
-            this.panelAdminBtn.Size = new System.Drawing.Size(116, 430);
-            this.panelAdminBtn.TabIndex = 2;
-            // 
-            // logoutBtn
-            // 
-            this.logoutBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBtn.Location = new System.Drawing.Point(8, 374);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(88, 45);
-            this.logoutBtn.TabIndex = 2;
-            this.logoutBtn.Text = "LogOut";
-            this.logoutBtn.UseVisualStyleBackColor = true;
-            // 
-            // editBtn
-            // 
-            this.editBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editBtn.Location = new System.Drawing.Point(8, 87);
-            this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(103, 46);
-            this.editBtn.TabIndex = 1;
-            this.editBtn.Text = "Complete\r\nFeedback";
-            this.editBtn.UseVisualStyleBackColor = true;
-            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
-            // 
-            // createBtn
-            // 
-            this.createBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createBtn.Location = new System.Drawing.Point(8, 18);
-            this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(103, 45);
-            this.createBtn.TabIndex = 0;
-            this.createBtn.Text = "Feedback";
-            this.createBtn.UseVisualStyleBackColor = true;
-            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // textBox4
             // 
@@ -556,15 +469,15 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dataGridView.Location = new System.Drawing.Point(1, 139);
             this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
@@ -627,7 +540,6 @@
             // 
             this.panelAdminRight.ColorBottom = System.Drawing.Color.Empty;
             this.panelAdminRight.ColorTop = System.Drawing.Color.Empty;
-            this.panelAdminRight.Controls.Add(this.panelAdminBtn);
             this.panelAdminRight.Controls.Add(this.panelFeedCompleteBtn);
             this.panelAdminRight.Controls.Add(this.panelCreateTemplateBtn);
             this.panelAdminRight.Controls.Add(this.pictureBoxLogo);
@@ -636,6 +548,50 @@
             this.panelAdminRight.Name = "panelAdminRight";
             this.panelAdminRight.Size = new System.Drawing.Size(124, 561);
             this.panelAdminRight.TabIndex = 1;
+            // 
+            // panelAdminBtn
+            // 
+            this.panelAdminBtn.ColorBottom = System.Drawing.Color.Empty;
+            this.panelAdminBtn.ColorTop = System.Drawing.Color.Empty;
+            this.panelAdminBtn.Controls.Add(this.logoutBtn);
+            this.panelAdminBtn.Controls.Add(this.editBtn);
+            this.panelAdminBtn.Controls.Add(this.createBtn);
+            this.panelAdminBtn.Location = new System.Drawing.Point(140, 102);
+            this.panelAdminBtn.Name = "panelAdminBtn";
+            this.panelAdminBtn.Size = new System.Drawing.Size(116, 430);
+            this.panelAdminBtn.TabIndex = 2;
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.Location = new System.Drawing.Point(8, 374);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(88, 45);
+            this.logoutBtn.TabIndex = 2;
+            this.logoutBtn.Text = "LogOut";
+            this.logoutBtn.UseVisualStyleBackColor = true;
+            // 
+            // editBtn
+            // 
+            this.editBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editBtn.Location = new System.Drawing.Point(8, 87);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(103, 46);
+            this.editBtn.TabIndex = 1;
+            this.editBtn.Text = "Complete\r\nFeedback";
+            this.editBtn.UseVisualStyleBackColor = true;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
+            // 
+            // createBtn
+            // 
+            this.createBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createBtn.Location = new System.Drawing.Point(8, 18);
+            this.createBtn.Name = "createBtn";
+            this.createBtn.Size = new System.Drawing.Size(103, 45);
+            this.createBtn.TabIndex = 0;
+            this.createBtn.Text = "Feedback";
+            this.createBtn.UseVisualStyleBackColor = true;
+            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // panelFeedCompleteBtn
             // 
@@ -691,6 +647,49 @@
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // panelCreateTemplateBtn
+            // 
+            this.panelCreateTemplateBtn.ColorBottom = System.Drawing.Color.Empty;
+            this.panelCreateTemplateBtn.ColorTop = System.Drawing.Color.Empty;
+            this.panelCreateTemplateBtn.Controls.Add(this.logOutBtn2);
+            this.panelCreateTemplateBtn.Controls.Add(this.backBtn);
+            this.panelCreateTemplateBtn.Controls.Add(this.ClearBtn);
+            this.panelCreateTemplateBtn.Location = new System.Drawing.Point(10, 189);
+            this.panelCreateTemplateBtn.Name = "panelCreateTemplateBtn";
+            this.panelCreateTemplateBtn.Size = new System.Drawing.Size(114, 430);
+            this.panelCreateTemplateBtn.TabIndex = 1;
+            // 
+            // logOutBtn2
+            // 
+            this.logOutBtn2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOutBtn2.Location = new System.Drawing.Point(14, 372);
+            this.logOutBtn2.Name = "logOutBtn2";
+            this.logOutBtn2.Size = new System.Drawing.Size(86, 45);
+            this.logOutBtn2.TabIndex = 2;
+            this.logOutBtn2.Text = "LogOut";
+            this.logOutBtn2.UseVisualStyleBackColor = true;
+            // 
+            // backBtn
+            // 
+            this.backBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backBtn.Location = new System.Drawing.Point(14, 91);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(75, 45);
+            this.backBtn.TabIndex = 1;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
+            // ClearBtn
+            // 
+            this.ClearBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearBtn.Location = new System.Drawing.Point(14, 21);
+            this.ClearBtn.Name = "ClearBtn";
+            this.ClearBtn.Size = new System.Drawing.Size(75, 45);
+            this.ClearBtn.TabIndex = 0;
+            this.ClearBtn.Text = "Send";
+            this.ClearBtn.UseVisualStyleBackColor = true;
+            // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.ColorBottom = System.Drawing.Color.Empty;
@@ -710,6 +709,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(990, 561);
+            this.Controls.Add(this.panelAdminBtn);
             this.Controls.Add(this.panelCompleteFeedback);
             this.Controls.Add(this.panelFeedback);
             this.Controls.Add(this.PanelViewTemplate);
@@ -720,14 +720,14 @@
             this.Load += new System.EventHandler(this.HrScreen_Load);
             this.panelCompleteFeedback.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panelCreateTemplateBtn.ResumeLayout(false);
             this.panelFeedback.ResumeLayout(false);
             this.panelFeedback.PerformLayout();
-            this.panelAdminBtn.ResumeLayout(false);
             this.PanelViewTemplate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.panelAdminRight.ResumeLayout(false);
+            this.panelAdminBtn.ResumeLayout(false);
             this.panelFeedCompleteBtn.ResumeLayout(false);
+            this.panelCreateTemplateBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 

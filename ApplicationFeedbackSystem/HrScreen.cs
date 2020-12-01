@@ -66,14 +66,16 @@ namespace ApplicationFeedbackSystem
         {
             panelAdminBtn.Hide();
             panelCompleteFeedback.Show();
-            panelFeedCompleteBtn.Show();
+            panelFeedCompleteBtn.Hide();
+            panelCreateTemplateBtn.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             panelFeedCompleteBtn.Hide();
             panelAdminBtn.Hide();
-            panelCreateTemplateBtn.Show();
+            panelCreateTemplateBtn.Hide();
+            panelAdminBtn.Show();
             PanelViewTemplate.Show();
             panelCompleteFeedback.Hide();
             panelFeedback.Hide();
@@ -83,7 +85,8 @@ namespace ApplicationFeedbackSystem
         {
             panelAdminBtn.Show();
             panelCreateTemplateBtn.Hide();
-            PanelViewTemplate.Hide();
+            PanelViewTemplate.Show();
+            panelCompleteFeedback.Hide();
            
         }
     }
