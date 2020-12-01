@@ -17,9 +17,30 @@ namespace ApplicationFeedbackSystem
             InitializeComponent();
         }
 
-        private void test2Button_Click(object sender, EventArgs e)
+        private void ManagerScreen_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Welcome 秋乐大爷 和 峰仔大爷, 你们是在Manager 的Screen.");
+            panelAdminBtn.Show();
+            panelGradientColor1.Hide();
+            PanelViewTemplate.Show();
+
+            panelAdminBtn.Width = 114;
+            panelAdminBtn.Height = 457;
+            panelAdminBtn.Location = new Point(3, 119);
+
+            PanelViewTemplate.Width = 866;
+            PanelViewTemplate.Height = 561;
+            PanelViewTemplate.Location = new Point(130, 9);
+
+            panelGradientColor1.Width = 866;
+            panelGradientColor1.Height = 561;
+            panelGradientColor1.Location = new Point(130, 9);
+
+
+
+
         }
+
+        
+        
     }
 }

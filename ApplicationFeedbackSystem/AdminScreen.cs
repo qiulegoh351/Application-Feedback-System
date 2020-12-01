@@ -17,18 +17,78 @@ namespace ApplicationFeedbackSystem
             InitializeComponent();
         }
 
+        private void AdminScreen_Load(object sender, EventArgs e)
+        {
+            panelAdminBtn.Show();
+            panelCreateTemplateBtn.Hide();
+            panelCreateAndEdit.Hide();
+            panelGradientColor1.Hide();
+            PanelViewTemplate.Show();
+
+
+            panelAdminBtn.Width = 114;
+            panelAdminBtn.Height = 457;
+            panelAdminBtn.Location = new Point(3, 119);
+
+            panelCreateTemplateBtn.Width = 114;
+            panelCreateTemplateBtn.Height = 457;
+            panelCreateTemplateBtn.Location = new Point(3, 119);
+
+            panelCreateAndEdit.Width = 866;
+            panelCreateAndEdit.Height = 561;
+            panelCreateAndEdit.Location = new Point(130, 9);
+
+            panelGradientColor1.Width = 866;
+            panelGradientColor1.Height = 561;
+            panelGradientColor1.Location = new Point(130, 9);
+
+            PanelViewTemplate.Width = 866;
+            PanelViewTemplate.Height = 561;
+            PanelViewTemplate.Location = new Point(130, 9);
+
+
+        }
+
         private void createBtn_Click(object sender, EventArgs e)
         {
+            panelCreateTemplateBtn.Show();
+            panelAdminBtn.Hide();
             panelCreateAndEdit.Show();
             LabelCreateTemplate.Show();
             labelEditTemplate.Hide();
+
+            LabelCreateTemplate.Width = 866;
+            LabelCreateTemplate.Height = 85;
+            LabelCreateTemplate.Location = new Point(-3, 0);
         }
 
         private void editBtn_Click(object sender, EventArgs e)
         {
+            panelCreateTemplateBtn.Show();
+            panelAdminBtn.Hide();
             panelCreateAndEdit.Show();
             LabelCreateTemplate.Hide();
             labelEditTemplate.Show();
+
+            labelEditTemplate.Width = 866;
+            labelEditTemplate.Height = 85;
+            labelEditTemplate.Location = new Point(-3, 0);
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            panelCreateTemplateBtn.Hide();
+            panelAdminBtn.Show();
+            PanelViewTemplate.Show();
+            panelCreateAndEdit.Hide();
+          
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panelAdminBtn.Show();
+            PanelViewTemplate.Show();
+            panelCreateAndEdit.Hide();
         }
     }
 }

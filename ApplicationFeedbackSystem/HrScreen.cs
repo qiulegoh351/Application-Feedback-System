@@ -17,9 +17,74 @@ namespace ApplicationFeedbackSystem
             InitializeComponent();
         }
 
-        private void test1Button_Click(object sender, EventArgs e)
+        private void HrScreen_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("You are in HR Screen! Welcome 秋乐大爷 和 峰仔大爷!");
+            panelAdminBtn.Show();
+            panelCreateTemplateBtn.Hide();
+            panelFeedCompleteBtn.Hide();
+
+            PanelViewTemplate.Show();
+            panelCompleteFeedback.Hide(); 
+            panelFeedback.Hide();
+
+
+            panelAdminBtn.Width = 116;
+            panelAdminBtn.Height = 430;
+            panelAdminBtn.Location = new Point(3, 119);
+
+            panelCreateTemplateBtn.Width = 114;
+            panelCreateTemplateBtn.Height = 430;
+            panelCreateTemplateBtn.Location = new Point(3, 119);
+
+            panelFeedCompleteBtn.Width = 114;
+            panelFeedCompleteBtn.Height = 430;
+            panelFeedCompleteBtn.Location = new Point(3, 119);
+
+            PanelViewTemplate.Width = 866;
+            PanelViewTemplate.Height = 561;
+            PanelViewTemplate.Location = new Point(130, 9);
+
+            panelCompleteFeedback.Width = 866;
+            panelCompleteFeedback.Height = 561;
+            panelCompleteFeedback.Location = new Point(130, 9);
+
+            panelFeedback.Width = 866;
+            panelFeedback.Height = 561;
+            panelFeedback.Location = new Point(130, 9);
+
+        }
+
+        private void createBtn_Click(object sender, EventArgs e)
+        {
+            panelFeedCompleteBtn.Show();
+            panelAdminBtn.Hide();
+            panelFeedback.Show();
+            
+        }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            panelAdminBtn.Hide();
+            panelCompleteFeedback.Show();
+            panelFeedCompleteBtn.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panelFeedCompleteBtn.Hide();
+            panelAdminBtn.Hide();
+            panelCreateTemplateBtn.Show();
+            PanelViewTemplate.Show();
+            panelCompleteFeedback.Hide();
+            panelFeedback.Hide();
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            panelAdminBtn.Show();
+            panelCreateTemplateBtn.Hide();
+            PanelViewTemplate.Hide();
+           
         }
     }
 }

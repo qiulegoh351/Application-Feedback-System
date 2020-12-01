@@ -28,28 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panelAdminRight = new ApplicationFeedbackSystem.PanelGradientColor();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panelCompleteFeedback = new ApplicationFeedbackSystem.PanelGradientColor();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelGradientColor9 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.labelGradientColor10 = new ApplicationFeedbackSystem.labelGradientColor();
             this.panelCreateTemplateBtn = new ApplicationFeedbackSystem.PanelGradientColor();
             this.logOutBtn2 = new System.Windows.Forms.Button();
-            this.SaveBtn = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
             this.ClearBtn = new System.Windows.Forms.Button();
+            this.panelFeedback = new ApplicationFeedbackSystem.PanelGradientColor();
             this.panelAdminBtn = new ApplicationFeedbackSystem.PanelGradientColor();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
             this.createBtn = new System.Windows.Forms.Button();
-            this.pictureBoxLogo = new ApplicationFeedbackSystem.PictureBoxGradientColor();
-            this.PanelViewTemplate = new ApplicationFeedbackSystem.PanelGradientColor();
-            this.labelTemplateList = new ApplicationFeedbackSystem.labelGradientColor();
-            this.LabelViewTemplate = new ApplicationFeedbackSystem.labelGradientColor();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelGradientColor1 = new ApplicationFeedbackSystem.PanelGradientColor();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.labelGradientColor7 = new ApplicationFeedbackSystem.labelGradientColor();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -68,82 +63,185 @@
             this.labelGradientColor1 = new ApplicationFeedbackSystem.labelGradientColor();
             this.labelGradientColor38 = new ApplicationFeedbackSystem.labelGradientColor();
             this.labelGradientColor8 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.panelGradientColor2 = new ApplicationFeedbackSystem.PanelGradientColor();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labelGradientColor9 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.labelGradientColor10 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.panelGradientColor3 = new ApplicationFeedbackSystem.PanelGradientColor();
+            this.PanelViewTemplate = new ApplicationFeedbackSystem.PanelGradientColor();
+            this.labelTemplateList = new ApplicationFeedbackSystem.labelGradientColor();
+            this.LabelViewTemplate = new ApplicationFeedbackSystem.labelGradientColor();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelAdminRight = new ApplicationFeedbackSystem.PanelGradientColor();
+            this.panelFeedCompleteBtn = new ApplicationFeedbackSystem.PanelGradientColor();
+            this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panelAdminRight.SuspendLayout();
+            this.pictureBoxLogo = new ApplicationFeedbackSystem.PictureBoxGradientColor();
+            this.panelCompleteFeedback.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelCreateTemplateBtn.SuspendLayout();
+            this.panelFeedback.SuspendLayout();
             this.panelAdminBtn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.PanelViewTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.panelGradientColor1.SuspendLayout();
-            this.panelGradientColor2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panelGradientColor3.SuspendLayout();
+            this.panelAdminRight.SuspendLayout();
+            this.panelFeedCompleteBtn.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelAdminRight
+            // panelCompleteFeedback
             // 
-            this.panelAdminRight.ColorBottom = System.Drawing.Color.Empty;
-            this.panelAdminRight.ColorTop = System.Drawing.Color.Empty;
-            this.panelAdminRight.Controls.Add(this.panelGradientColor3);
-            this.panelAdminRight.Controls.Add(this.panelCreateTemplateBtn);
-            this.panelAdminRight.Controls.Add(this.pictureBoxLogo);
-            this.panelAdminRight.Controls.Add(this.panelAdminBtn);
-            this.panelAdminRight.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelAdminRight.Location = new System.Drawing.Point(0, 0);
-            this.panelAdminRight.Name = "panelAdminRight";
-            this.panelAdminRight.Size = new System.Drawing.Size(124, 561);
-            this.panelAdminRight.TabIndex = 1;
+            this.panelCompleteFeedback.ColorBottom = System.Drawing.Color.Empty;
+            this.panelCompleteFeedback.ColorTop = System.Drawing.Color.Empty;
+            this.panelCompleteFeedback.Controls.Add(this.dataGridView1);
+            this.panelCompleteFeedback.Controls.Add(this.labelGradientColor9);
+            this.panelCompleteFeedback.Controls.Add(this.labelGradientColor10);
+            this.panelCompleteFeedback.Location = new System.Drawing.Point(548, 122);
+            this.panelCompleteFeedback.Name = "panelCompleteFeedback";
+            this.panelCompleteFeedback.Size = new System.Drawing.Size(866, 561);
+            this.panelCompleteFeedback.TabIndex = 70;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeight = 40;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.dataGridView1.Location = new System.Drawing.Point(1, 140);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 40;
+            this.dataGridView1.Size = new System.Drawing.Size(866, 421);
+            this.dataGridView1.TabIndex = 11;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Code";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "File Name";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 400;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 350;
+            // 
+            // labelGradientColor9
+            // 
+            this.labelGradientColor9.BackColor = System.Drawing.Color.White;
+            this.labelGradientColor9.ColorBottom = System.Drawing.Color.Indigo;
+            this.labelGradientColor9.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.labelGradientColor9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelGradientColor9.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor9.ForeColor = System.Drawing.Color.White;
+            this.labelGradientColor9.Location = new System.Drawing.Point(0, 85);
+            this.labelGradientColor9.Name = "labelGradientColor9";
+            this.labelGradientColor9.Size = new System.Drawing.Size(866, 55);
+            this.labelGradientColor9.TabIndex = 10;
+            this.labelGradientColor9.Text = "Feedback List";
+            this.labelGradientColor9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGradientColor10
+            // 
+            this.labelGradientColor10.ColorBottom = System.Drawing.Color.Gainsboro;
+            this.labelGradientColor10.ColorTop = System.Drawing.SystemColors.Control;
+            this.labelGradientColor10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelGradientColor10.Font = new System.Drawing.Font("Century Schoolbook", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor10.Location = new System.Drawing.Point(0, 0);
+            this.labelGradientColor10.Name = "labelGradientColor10";
+            this.labelGradientColor10.Size = new System.Drawing.Size(866, 85);
+            this.labelGradientColor10.TabIndex = 6;
+            this.labelGradientColor10.Text = "Complete Feedback List";
+            this.labelGradientColor10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelCreateTemplateBtn
             // 
             this.panelCreateTemplateBtn.ColorBottom = System.Drawing.Color.Empty;
             this.panelCreateTemplateBtn.ColorTop = System.Drawing.Color.Empty;
             this.panelCreateTemplateBtn.Controls.Add(this.logOutBtn2);
-            this.panelCreateTemplateBtn.Controls.Add(this.SaveBtn);
+            this.panelCreateTemplateBtn.Controls.Add(this.backBtn);
             this.panelCreateTemplateBtn.Controls.Add(this.ClearBtn);
-            this.panelCreateTemplateBtn.Location = new System.Drawing.Point(44, 269);
+            this.panelCreateTemplateBtn.Location = new System.Drawing.Point(10, 189);
             this.panelCreateTemplateBtn.Name = "panelCreateTemplateBtn";
-            this.panelCreateTemplateBtn.Size = new System.Drawing.Size(105, 430);
+            this.panelCreateTemplateBtn.Size = new System.Drawing.Size(114, 430);
             this.panelCreateTemplateBtn.TabIndex = 1;
             // 
             // logOutBtn2
             // 
-            this.logOutBtn2.Location = new System.Drawing.Point(14, 382);
+            this.logOutBtn2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOutBtn2.Location = new System.Drawing.Point(14, 372);
             this.logOutBtn2.Name = "logOutBtn2";
-            this.logOutBtn2.Size = new System.Drawing.Size(75, 45);
+            this.logOutBtn2.Size = new System.Drawing.Size(86, 45);
             this.logOutBtn2.TabIndex = 2;
             this.logOutBtn2.Text = "LogOut";
             this.logOutBtn2.UseVisualStyleBackColor = true;
             // 
-            // SaveBtn
+            // backBtn
             // 
-            this.SaveBtn.Location = new System.Drawing.Point(14, 91);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(75, 45);
-            this.SaveBtn.TabIndex = 1;
-            this.SaveBtn.Text = "Back";
-            this.SaveBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backBtn.Location = new System.Drawing.Point(14, 91);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(75, 45);
+            this.backBtn.TabIndex = 1;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // ClearBtn
             // 
+            this.ClearBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearBtn.Location = new System.Drawing.Point(14, 21);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(75, 45);
             this.ClearBtn.TabIndex = 0;
             this.ClearBtn.Text = "Send";
             this.ClearBtn.UseVisualStyleBackColor = true;
+            // 
+            // panelFeedback
+            // 
+            this.panelFeedback.ColorBottom = System.Drawing.Color.Empty;
+            this.panelFeedback.ColorTop = System.Drawing.Color.Empty;
+            this.panelFeedback.Controls.Add(this.textBox4);
+            this.panelFeedback.Controls.Add(this.labelGradientColor7);
+            this.panelFeedback.Controls.Add(this.textBox3);
+            this.panelFeedback.Controls.Add(this.labelGradientColor5);
+            this.panelFeedback.Controls.Add(this.textBox5);
+            this.panelFeedback.Controls.Add(this.labelGradientColor6);
+            this.panelFeedback.Controls.Add(this.labelGradientColor4);
+            this.panelFeedback.Controls.Add(this.checkBox3);
+            this.panelFeedback.Controls.Add(this.checkBox2);
+            this.panelFeedback.Controls.Add(this.checkBox1);
+            this.panelFeedback.Controls.Add(this.textBox2);
+            this.panelFeedback.Controls.Add(this.labelGradientColor3);
+            this.panelFeedback.Controls.Add(this.textBox1);
+            this.panelFeedback.Controls.Add(this.labelGradientColor2);
+            this.panelFeedback.Controls.Add(this.eFirstNameTextBox);
+            this.panelFeedback.Controls.Add(this.labelGradientColor1);
+            this.panelFeedback.Controls.Add(this.labelGradientColor38);
+            this.panelFeedback.Controls.Add(this.labelGradientColor8);
+            this.panelFeedback.Location = new System.Drawing.Point(207, 28);
+            this.panelFeedback.Name = "panelFeedback";
+            this.panelFeedback.Size = new System.Drawing.Size(866, 561);
+            this.panelFeedback.TabIndex = 68;
             // 
             // panelAdminBtn
             // 
@@ -152,15 +250,15 @@
             this.panelAdminBtn.Controls.Add(this.logoutBtn);
             this.panelAdminBtn.Controls.Add(this.editBtn);
             this.panelAdminBtn.Controls.Add(this.createBtn);
-            this.panelAdminBtn.Location = new System.Drawing.Point(12, 406);
+            this.panelAdminBtn.Location = new System.Drawing.Point(50, 128);
             this.panelAdminBtn.Name = "panelAdminBtn";
-            this.panelAdminBtn.Size = new System.Drawing.Size(105, 430);
+            this.panelAdminBtn.Size = new System.Drawing.Size(116, 430);
             this.panelAdminBtn.TabIndex = 2;
             // 
             // logoutBtn
             // 
             this.logoutBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBtn.Location = new System.Drawing.Point(8, 382);
+            this.logoutBtn.Location = new System.Drawing.Point(8, 374);
             this.logoutBtn.Name = "logoutBtn";
             this.logoutBtn.Size = new System.Drawing.Size(88, 45);
             this.logoutBtn.TabIndex = 2;
@@ -170,175 +268,24 @@
             // editBtn
             // 
             this.editBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editBtn.Location = new System.Drawing.Point(8, 91);
+            this.editBtn.Location = new System.Drawing.Point(8, 87);
             this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(88, 46);
+            this.editBtn.Size = new System.Drawing.Size(103, 46);
             this.editBtn.TabIndex = 1;
             this.editBtn.Text = "Complete\r\nFeedback";
             this.editBtn.UseVisualStyleBackColor = true;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // createBtn
             // 
             this.createBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createBtn.Location = new System.Drawing.Point(8, 21);
+            this.createBtn.Location = new System.Drawing.Point(8, 18);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(88, 45);
+            this.createBtn.Size = new System.Drawing.Size(103, 45);
             this.createBtn.TabIndex = 0;
             this.createBtn.Text = "Feedback";
             this.createBtn.UseVisualStyleBackColor = true;
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.ColorBottom = System.Drawing.Color.Empty;
-            this.pictureBoxLogo.ColorTop = System.Drawing.Color.Empty;
-            this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBoxLogo.Image = global::ApplicationFeedbackSystem.Properties.Resources.Helio;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(124, 113);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 0;
-            this.pictureBoxLogo.TabStop = false;
-            // 
-            // PanelViewTemplate
-            // 
-            this.PanelViewTemplate.ColorBottom = System.Drawing.Color.Empty;
-            this.PanelViewTemplate.ColorTop = System.Drawing.Color.Empty;
-            this.PanelViewTemplate.Controls.Add(this.labelTemplateList);
-            this.PanelViewTemplate.Controls.Add(this.LabelViewTemplate);
-            this.PanelViewTemplate.Controls.Add(this.dataGridView);
-            this.PanelViewTemplate.Location = new System.Drawing.Point(155, 364);
-            this.PanelViewTemplate.Name = "PanelViewTemplate";
-            this.PanelViewTemplate.Size = new System.Drawing.Size(866, 561);
-            this.PanelViewTemplate.TabIndex = 67;
-            // 
-            // labelTemplateList
-            // 
-            this.labelTemplateList.BackColor = System.Drawing.Color.White;
-            this.labelTemplateList.ColorBottom = System.Drawing.Color.Indigo;
-            this.labelTemplateList.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelTemplateList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelTemplateList.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTemplateList.ForeColor = System.Drawing.Color.White;
-            this.labelTemplateList.Location = new System.Drawing.Point(0, 85);
-            this.labelTemplateList.Name = "labelTemplateList";
-            this.labelTemplateList.Size = new System.Drawing.Size(866, 55);
-            this.labelTemplateList.TabIndex = 8;
-            this.labelTemplateList.Text = "Template List";
-            this.labelTemplateList.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LabelViewTemplate
-            // 
-            this.LabelViewTemplate.ColorBottom = System.Drawing.Color.Gainsboro;
-            this.LabelViewTemplate.ColorTop = System.Drawing.SystemColors.Control;
-            this.LabelViewTemplate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LabelViewTemplate.Font = new System.Drawing.Font("Century Schoolbook", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelViewTemplate.Location = new System.Drawing.Point(0, 0);
-            this.LabelViewTemplate.Name = "LabelViewTemplate";
-            this.LabelViewTemplate.Size = new System.Drawing.Size(866, 85);
-            this.LabelViewTemplate.TabIndex = 6;
-            this.LabelViewTemplate.Text = "View Template";
-            this.LabelViewTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dataGridView
-            // 
-            this.dataGridView.AllowUserToAddRows = false;
-            this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dataGridView.Location = new System.Drawing.Point(1, 139);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.ReadOnly = true;
-            this.dataGridView.RowTemplate.Height = 40;
-            this.dataGridView.Size = new System.Drawing.Size(866, 420);
-            this.dataGridView.TabIndex = 7;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Code";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 75;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Interviewee";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Email";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Interviewer";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Feedback Type";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 150;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Applied Position";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 150;
-            // 
-            // panelGradientColor1
-            // 
-            this.panelGradientColor1.ColorBottom = System.Drawing.Color.Empty;
-            this.panelGradientColor1.ColorTop = System.Drawing.Color.Empty;
-            this.panelGradientColor1.Controls.Add(this.textBox4);
-            this.panelGradientColor1.Controls.Add(this.labelGradientColor7);
-            this.panelGradientColor1.Controls.Add(this.textBox3);
-            this.panelGradientColor1.Controls.Add(this.labelGradientColor5);
-            this.panelGradientColor1.Controls.Add(this.textBox5);
-            this.panelGradientColor1.Controls.Add(this.labelGradientColor6);
-            this.panelGradientColor1.Controls.Add(this.labelGradientColor4);
-            this.panelGradientColor1.Controls.Add(this.checkBox3);
-            this.panelGradientColor1.Controls.Add(this.checkBox2);
-            this.panelGradientColor1.Controls.Add(this.checkBox1);
-            this.panelGradientColor1.Controls.Add(this.textBox2);
-            this.panelGradientColor1.Controls.Add(this.labelGradientColor3);
-            this.panelGradientColor1.Controls.Add(this.textBox1);
-            this.panelGradientColor1.Controls.Add(this.labelGradientColor2);
-            this.panelGradientColor1.Controls.Add(this.eFirstNameTextBox);
-            this.panelGradientColor1.Controls.Add(this.labelGradientColor1);
-            this.panelGradientColor1.Controls.Add(this.labelGradientColor38);
-            this.panelGradientColor1.Controls.Add(this.labelGradientColor8);
-            this.panelGradientColor1.Location = new System.Drawing.Point(310, 212);
-            this.panelGradientColor1.Name = "panelGradientColor1";
-            this.panelGradientColor1.Size = new System.Drawing.Size(866, 561);
-            this.panelGradientColor1.TabIndex = 68;
+            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // textBox4
             // 
@@ -556,124 +503,156 @@
             this.labelGradientColor8.Text = "Feedback";
             this.labelGradientColor8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelGradientColor2
+            // PanelViewTemplate
             // 
-            this.panelGradientColor2.ColorBottom = System.Drawing.Color.Empty;
-            this.panelGradientColor2.ColorTop = System.Drawing.Color.Empty;
-            this.panelGradientColor2.Controls.Add(this.dataGridView1);
-            this.panelGradientColor2.Controls.Add(this.labelGradientColor9);
-            this.panelGradientColor2.Controls.Add(this.labelGradientColor10);
-            this.panelGradientColor2.Location = new System.Drawing.Point(548, 122);
-            this.panelGradientColor2.Name = "panelGradientColor2";
-            this.panelGradientColor2.Size = new System.Drawing.Size(866, 561);
-            this.panelGradientColor2.TabIndex = 70;
+            this.PanelViewTemplate.ColorBottom = System.Drawing.Color.Empty;
+            this.PanelViewTemplate.ColorTop = System.Drawing.Color.Empty;
+            this.PanelViewTemplate.Controls.Add(this.labelTemplateList);
+            this.PanelViewTemplate.Controls.Add(this.LabelViewTemplate);
+            this.PanelViewTemplate.Controls.Add(this.dataGridView);
+            this.PanelViewTemplate.Location = new System.Drawing.Point(130, 346);
+            this.PanelViewTemplate.Name = "PanelViewTemplate";
+            this.PanelViewTemplate.Size = new System.Drawing.Size(866, 561);
+            this.PanelViewTemplate.TabIndex = 67;
             // 
-            // dataGridView1
+            // labelTemplateList
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeight = 40;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.dataGridView1.Location = new System.Drawing.Point(1, 140);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(866, 421);
-            this.dataGridView1.TabIndex = 11;
+            this.labelTemplateList.BackColor = System.Drawing.Color.White;
+            this.labelTemplateList.ColorBottom = System.Drawing.Color.Indigo;
+            this.labelTemplateList.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.labelTemplateList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelTemplateList.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTemplateList.ForeColor = System.Drawing.Color.White;
+            this.labelTemplateList.Location = new System.Drawing.Point(0, 85);
+            this.labelTemplateList.Name = "labelTemplateList";
+            this.labelTemplateList.Size = new System.Drawing.Size(866, 55);
+            this.labelTemplateList.TabIndex = 8;
+            this.labelTemplateList.Text = "Template List";
+            this.labelTemplateList.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridViewTextBoxColumn1
+            // LabelViewTemplate
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Code";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.LabelViewTemplate.ColorBottom = System.Drawing.Color.Gainsboro;
+            this.LabelViewTemplate.ColorTop = System.Drawing.SystemColors.Control;
+            this.LabelViewTemplate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LabelViewTemplate.Font = new System.Drawing.Font("Century Schoolbook", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelViewTemplate.Location = new System.Drawing.Point(0, 0);
+            this.LabelViewTemplate.Name = "LabelViewTemplate";
+            this.LabelViewTemplate.Size = new System.Drawing.Size(866, 85);
+            this.LabelViewTemplate.TabIndex = 6;
+            this.LabelViewTemplate.Text = "View Template";
+            this.LabelViewTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridViewTextBoxColumn2
+            // dataGridView
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "File Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 400;
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.dataGridView.Location = new System.Drawing.Point(1, 139);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 40;
+            this.dataGridView.Size = new System.Drawing.Size(866, 420);
+            this.dataGridView.TabIndex = 7;
             // 
-            // dataGridViewTextBoxColumn3
+            // Column1
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 350;
+            this.Column1.HeaderText = "Code";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 75;
             // 
-            // labelGradientColor9
+            // Column2
             // 
-            this.labelGradientColor9.BackColor = System.Drawing.Color.White;
-            this.labelGradientColor9.ColorBottom = System.Drawing.Color.Indigo;
-            this.labelGradientColor9.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelGradientColor9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelGradientColor9.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor9.ForeColor = System.Drawing.Color.White;
-            this.labelGradientColor9.Location = new System.Drawing.Point(0, 85);
-            this.labelGradientColor9.Name = "labelGradientColor9";
-            this.labelGradientColor9.Size = new System.Drawing.Size(866, 55);
-            this.labelGradientColor9.TabIndex = 10;
-            this.labelGradientColor9.Text = "Feedback List";
-            this.labelGradientColor9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Column2.HeaderText = "Interviewee";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
             // 
-            // labelGradientColor10
+            // Column3
             // 
-            this.labelGradientColor10.ColorBottom = System.Drawing.Color.Gainsboro;
-            this.labelGradientColor10.ColorTop = System.Drawing.SystemColors.Control;
-            this.labelGradientColor10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelGradientColor10.Font = new System.Drawing.Font("Century Schoolbook", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor10.Location = new System.Drawing.Point(0, 0);
-            this.labelGradientColor10.Name = "labelGradientColor10";
-            this.labelGradientColor10.Size = new System.Drawing.Size(866, 85);
-            this.labelGradientColor10.TabIndex = 6;
-            this.labelGradientColor10.Text = "Complete Feedback List";
-            this.labelGradientColor10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Column3.HeaderText = "Email";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
             // 
-            // panelGradientColor3
+            // Column4
             // 
-            this.panelGradientColor3.ColorBottom = System.Drawing.Color.Empty;
-            this.panelGradientColor3.ColorTop = System.Drawing.Color.Empty;
-            this.panelGradientColor3.Controls.Add(this.button4);
-            this.panelGradientColor3.Controls.Add(this.button1);
-            this.panelGradientColor3.Controls.Add(this.button2);
-            this.panelGradientColor3.Controls.Add(this.button3);
-            this.panelGradientColor3.Location = new System.Drawing.Point(76, 212);
-            this.panelGradientColor3.Name = "panelGradientColor3";
-            this.panelGradientColor3.Size = new System.Drawing.Size(105, 430);
-            this.panelGradientColor3.TabIndex = 71;
+            this.Column4.HeaderText = "Interviewer";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
             // 
-            // button1
+            // Column5
             // 
-            this.button1.Location = new System.Drawing.Point(14, 382);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 45);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "LogOut";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Column5.HeaderText = "Feedback Type";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
             // 
-            // button2
+            // Column6
             // 
-            this.button2.Location = new System.Drawing.Point(15, 161);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 45);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Column6.HeaderText = "Applied Position";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 150;
             // 
-            // button3
+            // panelAdminRight
             // 
-            this.button3.Location = new System.Drawing.Point(15, 91);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 45);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = true;
+            this.panelAdminRight.ColorBottom = System.Drawing.Color.Empty;
+            this.panelAdminRight.ColorTop = System.Drawing.Color.Empty;
+            this.panelAdminRight.Controls.Add(this.panelAdminBtn);
+            this.panelAdminRight.Controls.Add(this.panelFeedCompleteBtn);
+            this.panelAdminRight.Controls.Add(this.panelCreateTemplateBtn);
+            this.panelAdminRight.Controls.Add(this.pictureBoxLogo);
+            this.panelAdminRight.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelAdminRight.Location = new System.Drawing.Point(0, 0);
+            this.panelAdminRight.Name = "panelAdminRight";
+            this.panelAdminRight.Size = new System.Drawing.Size(124, 561);
+            this.panelAdminRight.TabIndex = 1;
+            // 
+            // panelFeedCompleteBtn
+            // 
+            this.panelFeedCompleteBtn.ColorBottom = System.Drawing.Color.Empty;
+            this.panelFeedCompleteBtn.ColorTop = System.Drawing.Color.Empty;
+            this.panelFeedCompleteBtn.Controls.Add(this.button4);
+            this.panelFeedCompleteBtn.Controls.Add(this.button1);
+            this.panelFeedCompleteBtn.Controls.Add(this.button2);
+            this.panelFeedCompleteBtn.Controls.Add(this.button3);
+            this.panelFeedCompleteBtn.Location = new System.Drawing.Point(36, 159);
+            this.panelFeedCompleteBtn.Name = "panelFeedCompleteBtn";
+            this.panelFeedCompleteBtn.Size = new System.Drawing.Size(114, 430);
+            this.panelFeedCompleteBtn.TabIndex = 71;
             // 
             // button4
             // 
+            this.button4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(15, 21);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 45);
@@ -681,30 +660,75 @@
             this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(14, 382);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 45);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "LogOut";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(15, 161);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 45);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Back";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(15, 91);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 45);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Save";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.ColorBottom = System.Drawing.Color.Empty;
+            this.pictureBoxLogo.ColorTop = System.Drawing.Color.Empty;
+            this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBoxLogo.Image = global::ApplicationFeedbackSystem.Properties.Resources.Helio;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(124, 113);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 0;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // HrScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(990, 561);
-            this.Controls.Add(this.panelGradientColor2);
-            this.Controls.Add(this.panelGradientColor1);
+            this.Controls.Add(this.panelCompleteFeedback);
+            this.Controls.Add(this.panelFeedback);
             this.Controls.Add(this.PanelViewTemplate);
             this.Controls.Add(this.panelAdminRight);
             this.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "HrScreen";
             this.Text = "HrScreen";
-            this.panelAdminRight.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.HrScreen_Load);
+            this.panelCompleteFeedback.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelCreateTemplateBtn.ResumeLayout(false);
+            this.panelFeedback.ResumeLayout(false);
+            this.panelFeedback.PerformLayout();
             this.panelAdminBtn.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.PanelViewTemplate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.panelGradientColor1.ResumeLayout(false);
-            this.panelGradientColor1.PerformLayout();
-            this.panelGradientColor2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panelGradientColor3.ResumeLayout(false);
+            this.panelAdminRight.ResumeLayout(false);
+            this.panelFeedCompleteBtn.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -714,7 +738,7 @@
         private PanelGradientColor panelAdminRight;
         private PanelGradientColor panelCreateTemplateBtn;
         private System.Windows.Forms.Button logOutBtn2;
-        private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Button ClearBtn;
         private PanelGradientColor panelAdminBtn;
         private System.Windows.Forms.Button logoutBtn;
@@ -731,7 +755,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private PanelGradientColor panelGradientColor1;
+        private PanelGradientColor panelFeedback;
         private System.Windows.Forms.TextBox textBox4;
         private labelGradientColor labelGradientColor7;
         private System.Windows.Forms.TextBox textBox3;
@@ -750,14 +774,14 @@
         private labelGradientColor labelGradientColor1;
         private labelGradientColor labelGradientColor38;
         private labelGradientColor labelGradientColor8;
-        private PanelGradientColor panelGradientColor2;
+        private PanelGradientColor panelCompleteFeedback;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private labelGradientColor labelGradientColor9;
         private labelGradientColor labelGradientColor10;
-        private PanelGradientColor panelGradientColor3;
+        private PanelGradientColor panelFeedCompleteBtn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
