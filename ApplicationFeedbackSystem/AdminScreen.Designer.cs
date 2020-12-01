@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelAdminRight = new ApplicationFeedbackSystem.PanelGradientColor();
             this.panelCreateTemplateBtn = new ApplicationFeedbackSystem.PanelGradientColor();
-            this.ClearBtn = new System.Windows.Forms.Button();
-            this.SaveBtn = new System.Windows.Forms.Button();
-            this.logOutBtn2 = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
+            this.logOutBtn2 = new System.Windows.Forms.Button();
+            this.SaveBtn = new System.Windows.Forms.Button();
+            this.ClearBtn = new System.Windows.Forms.Button();
+            this.pictureBoxLogo = new ApplicationFeedbackSystem.PictureBoxGradientColor();
             this.panelAdminBtn = new ApplicationFeedbackSystem.PanelGradientColor();
             this.button5 = new System.Windows.Forms.Button();
             this.logoutBtn = new System.Windows.Forms.Button();
@@ -50,8 +51,11 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBoxLogo = new ApplicationFeedbackSystem.PictureBoxGradientColor();
             this.panelCreateAndEdit = new ApplicationFeedbackSystem.PanelGradientColor();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.labelGradientColor17 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.labelGradientColor13 = new ApplicationFeedbackSystem.labelGradientColor();
             this.labelEditTemplate = new ApplicationFeedbackSystem.labelGradientColor();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.labelGradientColor16 = new ApplicationFeedbackSystem.labelGradientColor();
@@ -86,10 +90,6 @@
             this.LabelCreateTemplate = new ApplicationFeedbackSystem.labelGradientColor();
             this.labelInterviewer = new ApplicationFeedbackSystem.labelGradientColor();
             this.labelInterviewee = new ApplicationFeedbackSystem.labelGradientColor();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.labelGradientColor13 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.labelGradientColor17 = new ApplicationFeedbackSystem.labelGradientColor();
             this.panelGradientColor1 = new ApplicationFeedbackSystem.PanelGradientColor();
             this.labelGradientColor19 = new ApplicationFeedbackSystem.labelGradientColor();
             this.labelGradientColor20 = new ApplicationFeedbackSystem.labelGradientColor();
@@ -128,10 +128,10 @@
             this.labelGradientColor38 = new ApplicationFeedbackSystem.labelGradientColor();
             this.panelAdminRight.SuspendLayout();
             this.panelCreateTemplateBtn.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelAdminBtn.SuspendLayout();
             this.PanelViewTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelCreateAndEdit.SuspendLayout();
             this.panelGradientColor1.SuspendLayout();
             this.SuspendLayout();
@@ -142,11 +142,10 @@
             this.panelAdminRight.ColorTop = System.Drawing.Color.Empty;
             this.panelAdminRight.Controls.Add(this.panelCreateTemplateBtn);
             this.panelAdminRight.Controls.Add(this.pictureBoxLogo);
-            this.panelAdminRight.Controls.Add(this.panelAdminBtn);
             this.panelAdminRight.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAdminRight.Location = new System.Drawing.Point(0, 0);
             this.panelAdminRight.Name = "panelAdminRight";
-            this.panelAdminRight.Size = new System.Drawing.Size(124, 561);
+            this.panelAdminRight.Size = new System.Drawing.Size(124, 595);
             this.panelAdminRight.TabIndex = 0;
             // 
             // panelCreateTemplateBtn
@@ -162,23 +161,14 @@
             this.panelCreateTemplateBtn.Size = new System.Drawing.Size(105, 430);
             this.panelCreateTemplateBtn.TabIndex = 1;
             // 
-            // ClearBtn
+            // ExitBtn
             // 
-            this.ClearBtn.Location = new System.Drawing.Point(14, 21);
-            this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Size = new System.Drawing.Size(75, 45);
-            this.ClearBtn.TabIndex = 0;
-            this.ClearBtn.Text = "Clear";
-            this.ClearBtn.UseVisualStyleBackColor = true;
-            // 
-            // SaveBtn
-            // 
-            this.SaveBtn.Location = new System.Drawing.Point(14, 91);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(75, 45);
-            this.SaveBtn.TabIndex = 1;
-            this.SaveBtn.Text = "Save";
-            this.SaveBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.Location = new System.Drawing.Point(14, 161);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(75, 45);
+            this.ExitBtn.TabIndex = 3;
+            this.ExitBtn.Text = "Exit";
+            this.ExitBtn.UseVisualStyleBackColor = true;
             // 
             // logOutBtn2
             // 
@@ -189,14 +179,36 @@
             this.logOutBtn2.Text = "LogOut";
             this.logOutBtn2.UseVisualStyleBackColor = true;
             // 
-            // ExitBtn
+            // SaveBtn
             // 
-            this.ExitBtn.Location = new System.Drawing.Point(14, 161);
-            this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(75, 45);
-            this.ExitBtn.TabIndex = 3;
-            this.ExitBtn.Text = "Exit";
-            this.ExitBtn.UseVisualStyleBackColor = true;
+            this.SaveBtn.Location = new System.Drawing.Point(14, 91);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(75, 45);
+            this.SaveBtn.TabIndex = 1;
+            this.SaveBtn.Text = "Save";
+            this.SaveBtn.UseVisualStyleBackColor = true;
+            // 
+            // ClearBtn
+            // 
+            this.ClearBtn.Location = new System.Drawing.Point(14, 21);
+            this.ClearBtn.Name = "ClearBtn";
+            this.ClearBtn.Size = new System.Drawing.Size(75, 45);
+            this.ClearBtn.TabIndex = 0;
+            this.ClearBtn.Text = "Clear";
+            this.ClearBtn.UseVisualStyleBackColor = true;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.ColorBottom = System.Drawing.Color.Empty;
+            this.pictureBoxLogo.ColorTop = System.Drawing.Color.Empty;
+            this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBoxLogo.Image = global::ApplicationFeedbackSystem.Properties.Resources.Helio;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(124, 113);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 0;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // panelAdminBtn
             // 
@@ -206,7 +218,7 @@
             this.panelAdminBtn.Controls.Add(this.logoutBtn);
             this.panelAdminBtn.Controls.Add(this.editBtn);
             this.panelAdminBtn.Controls.Add(this.createBtn);
-            this.panelAdminBtn.Location = new System.Drawing.Point(12, 381);
+            this.panelAdminBtn.Location = new System.Drawing.Point(175, 131);
             this.panelAdminBtn.Name = "panelAdminBtn";
             this.panelAdminBtn.Size = new System.Drawing.Size(105, 430);
             this.panelAdminBtn.TabIndex = 2;
@@ -237,6 +249,7 @@
             this.editBtn.TabIndex = 1;
             this.editBtn.Text = "Edit";
             this.editBtn.UseVisualStyleBackColor = true;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // createBtn
             // 
@@ -246,6 +259,7 @@
             this.createBtn.TabIndex = 0;
             this.createBtn.Text = "Create";
             this.createBtn.UseVisualStyleBackColor = true;
+            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // PanelViewTemplate
             // 
@@ -300,15 +314,15 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dataGridView.Location = new System.Drawing.Point(1, 139);
             this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
@@ -360,23 +374,11 @@
             this.Column6.ReadOnly = true;
             this.Column6.Width = 150;
             // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.ColorBottom = System.Drawing.Color.Empty;
-            this.pictureBoxLogo.ColorTop = System.Drawing.Color.Empty;
-            this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBoxLogo.Image = global::ApplicationFeedbackSystem.Properties.Resources.Helio;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(124, 113);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 0;
-            this.pictureBoxLogo.TabStop = false;
-            // 
             // panelCreateAndEdit
             // 
             this.panelCreateAndEdit.ColorBottom = System.Drawing.Color.White;
             this.panelCreateAndEdit.ColorTop = System.Drawing.Color.Empty;
+            this.panelCreateAndEdit.Controls.Add(this.panelGradientColor1);
             this.panelCreateAndEdit.Controls.Add(this.textBox13);
             this.panelCreateAndEdit.Controls.Add(this.labelGradientColor17);
             this.panelCreateAndEdit.Controls.Add(this.textBox12);
@@ -415,10 +417,60 @@
             this.panelCreateAndEdit.Controls.Add(this.LabelCreateTemplate);
             this.panelCreateAndEdit.Controls.Add(this.labelInterviewer);
             this.panelCreateAndEdit.Controls.Add(this.labelInterviewee);
-            this.panelCreateAndEdit.Location = new System.Drawing.Point(442, 203);
+            this.panelCreateAndEdit.Location = new System.Drawing.Point(472, 83);
             this.panelCreateAndEdit.Name = "panelCreateAndEdit";
-            this.panelCreateAndEdit.Size = new System.Drawing.Size(866, 561);
+            this.panelCreateAndEdit.Size = new System.Drawing.Size(1381, 561);
             this.panelCreateAndEdit.TabIndex = 63;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox13.Location = new System.Drawing.Point(648, 230);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox13.Multiline = true;
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(200, 28);
+            this.textBox13.TabIndex = 100;
+            this.textBox13.Text = "012345678";
+            // 
+            // labelGradientColor17
+            // 
+            this.labelGradientColor17.ColorBottom = System.Drawing.Color.Empty;
+            this.labelGradientColor17.ColorTop = System.Drawing.Color.Empty;
+            this.labelGradientColor17.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor17.ForeColor = System.Drawing.Color.Black;
+            this.labelGradientColor17.Location = new System.Drawing.Point(644, 200);
+            this.labelGradientColor17.Name = "labelGradientColor17";
+            this.labelGradientColor17.Size = new System.Drawing.Size(50, 28);
+            this.labelGradientColor17.TabIndex = 99;
+            this.labelGradientColor17.Text = "State";
+            this.labelGradientColor17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox12.Location = new System.Drawing.Point(472, 230);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox12.Multiline = true;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(159, 28);
+            this.textBox12.TabIndex = 98;
+            this.textBox12.Text = "012345678";
+            // 
+            // labelGradientColor13
+            // 
+            this.labelGradientColor13.ColorBottom = System.Drawing.Color.Empty;
+            this.labelGradientColor13.ColorTop = System.Drawing.Color.Empty;
+            this.labelGradientColor13.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor13.ForeColor = System.Drawing.Color.Black;
+            this.labelGradientColor13.Location = new System.Drawing.Point(468, 200);
+            this.labelGradientColor13.Name = "labelGradientColor13";
+            this.labelGradientColor13.Size = new System.Drawing.Size(51, 28);
+            this.labelGradientColor13.TabIndex = 97;
+            this.labelGradientColor13.Text = "City";
+            this.labelGradientColor13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelEditTemplate
             // 
@@ -580,7 +632,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(472, 171);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(81, 28);
+            this.comboBox1.Size = new System.Drawing.Size(81, 33);
             this.comboBox1.TabIndex = 84;
             // 
             // dateTimePicker1
@@ -588,7 +640,7 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(648, 171);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 32);
             this.dateTimePicker1.TabIndex = 83;
             // 
             // labelGradientColor9
@@ -843,56 +895,6 @@
             this.labelInterviewee.Text = "Interviewee";
             this.labelInterviewee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox12
-            // 
-            this.textBox12.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox12.Location = new System.Drawing.Point(472, 230);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(159, 28);
-            this.textBox12.TabIndex = 98;
-            this.textBox12.Text = "012345678";
-            // 
-            // labelGradientColor13
-            // 
-            this.labelGradientColor13.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor13.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor13.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor13.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor13.Location = new System.Drawing.Point(468, 200);
-            this.labelGradientColor13.Name = "labelGradientColor13";
-            this.labelGradientColor13.Size = new System.Drawing.Size(51, 28);
-            this.labelGradientColor13.TabIndex = 97;
-            this.labelGradientColor13.Text = "City";
-            this.labelGradientColor13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox13.Location = new System.Drawing.Point(648, 230);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(200, 28);
-            this.textBox13.TabIndex = 100;
-            this.textBox13.Text = "012345678";
-            // 
-            // labelGradientColor17
-            // 
-            this.labelGradientColor17.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor17.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor17.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor17.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor17.Location = new System.Drawing.Point(644, 200);
-            this.labelGradientColor17.Name = "labelGradientColor17";
-            this.labelGradientColor17.Size = new System.Drawing.Size(50, 28);
-            this.labelGradientColor17.TabIndex = 99;
-            this.labelGradientColor17.Text = "State";
-            this.labelGradientColor17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // panelGradientColor1
             // 
             this.panelGradientColor1.ColorBottom = System.Drawing.Color.White;
@@ -932,7 +934,7 @@
             this.panelGradientColor1.Controls.Add(this.labelGradientColor37);
             this.panelGradientColor1.Controls.Add(this.LabelTemplate);
             this.panelGradientColor1.Controls.Add(this.labelGradientColor38);
-            this.panelGradientColor1.Location = new System.Drawing.Point(702, 28);
+            this.panelGradientColor1.Location = new System.Drawing.Point(863, 230);
             this.panelGradientColor1.Name = "panelGradientColor1";
             this.panelGradientColor1.Size = new System.Drawing.Size(866, 561);
             this.panelGradientColor1.TabIndex = 64;
@@ -1131,7 +1133,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(473, 174);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(81, 28);
+            this.comboBox2.Size = new System.Drawing.Size(81, 33);
             this.comboBox2.TabIndex = 84;
             // 
             // dateTimePicker2
@@ -1139,7 +1141,7 @@
             this.dateTimePicker2.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Location = new System.Drawing.Point(649, 174);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 27);
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 32);
             this.dateTimePicker2.TabIndex = 83;
             // 
             // labelGradientColor29
@@ -1384,12 +1386,12 @@
             // 
             // AdminScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(990, 561);
-            this.Controls.Add(this.panelGradientColor1);
+            this.ClientSize = new System.Drawing.Size(1436, 595);
             this.Controls.Add(this.panelCreateAndEdit);
+            this.Controls.Add(this.panelAdminBtn);
             this.Controls.Add(this.PanelViewTemplate);
             this.Controls.Add(this.panelAdminRight);
             this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1399,10 +1401,10 @@
             this.Text = "Application Feedback System";
             this.panelAdminRight.ResumeLayout(false);
             this.panelCreateTemplateBtn.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelAdminBtn.ResumeLayout(false);
             this.PanelViewTemplate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelCreateAndEdit.ResumeLayout(false);
             this.panelCreateAndEdit.PerformLayout();
             this.panelGradientColor1.ResumeLayout(false);

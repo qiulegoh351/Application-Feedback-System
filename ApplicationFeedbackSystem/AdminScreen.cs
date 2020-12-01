@@ -16,5 +16,19 @@ namespace ApplicationFeedbackSystem
         {
             InitializeComponent();
         }
+
+        private void createBtn_Click(object sender, EventArgs e)
+        {
+            panelCreateAndEdit.Show();
+            LabelCreateTemplate.Show();
+            labelEditTemplate.Hide();
+        }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            panelCreateAndEdit.Show();
+            LabelCreateTemplate.Hide();
+            labelEditTemplate.Show();
+        }
     }
 }
