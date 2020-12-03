@@ -30,9 +30,9 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.logoutPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.PanelViewTemplate = new ApplicationFeedbackSystem.PanelGradientColor();
             this.labelTemplateList = new ApplicationFeedbackSystem.labelGradientColor();
             this.LabelViewTemplate = new ApplicationFeedbackSystem.labelGradientColor();
@@ -95,7 +95,8 @@
             // 
             // logoutPanel
             // 
-            this.logoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.logoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.logoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.logoutPanel.Controls.Add(this.button2);
             this.logoutPanel.Controls.Add(this.button1);
             this.logoutPanel.Controls.Add(this.label1);
@@ -104,18 +105,20 @@
             this.logoutPanel.Size = new System.Drawing.Size(262, 117);
             this.logoutPanel.TabIndex = 67;
             // 
-            // label1
+            // button2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Are you sure ?";
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(156, 56);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Cancel";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(26, 56);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 26);
@@ -124,16 +127,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // label1
             // 
-            this.button2.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(158, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(72, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Are you sure ?";
             // 
             // PanelViewTemplate
             // 
@@ -165,10 +168,12 @@
             // 
             // LabelViewTemplate
             // 
+            this.LabelViewTemplate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.LabelViewTemplate.ColorBottom = System.Drawing.Color.Gainsboro;
             this.LabelViewTemplate.ColorTop = System.Drawing.SystemColors.Control;
             this.LabelViewTemplate.Dock = System.Windows.Forms.DockStyle.Top;
             this.LabelViewTemplate.Font = new System.Drawing.Font("Century Schoolbook", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelViewTemplate.ForeColor = System.Drawing.Color.Black;
             this.LabelViewTemplate.Location = new System.Drawing.Point(0, 0);
             this.LabelViewTemplate.Name = "LabelViewTemplate";
             this.LabelViewTemplate.Size = new System.Drawing.Size(866, 85);
@@ -494,7 +499,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(473, 174);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(81, 33);
+            this.comboBox2.Size = new System.Drawing.Size(81, 28);
             this.comboBox2.TabIndex = 84;
             // 
             // dateTimePicker2
@@ -502,7 +507,7 @@
             this.dateTimePicker2.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Location = new System.Drawing.Point(649, 174);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 32);
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 27);
             this.dateTimePicker2.TabIndex = 83;
             // 
             // labelGradientColor29
@@ -747,6 +752,7 @@
             // 
             // panelAdminRight
             // 
+            this.panelAdminRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelAdminRight.ColorBottom = System.Drawing.Color.Empty;
             this.panelAdminRight.ColorTop = System.Drawing.Color.Empty;
             this.panelAdminRight.Controls.Add(this.panelAdminBtn);
@@ -759,11 +765,12 @@
             // 
             // panelAdminBtn
             // 
+            this.panelAdminBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelAdminBtn.ColorBottom = System.Drawing.Color.Empty;
             this.panelAdminBtn.ColorTop = System.Drawing.Color.Empty;
             this.panelAdminBtn.Controls.Add(this.logoutBtn);
             this.panelAdminBtn.Controls.Add(this.createBtn);
-            this.panelAdminBtn.Location = new System.Drawing.Point(7, 115);
+            this.panelAdminBtn.Location = new System.Drawing.Point(7, 127);
             this.panelAdminBtn.Name = "panelAdminBtn";
             this.panelAdminBtn.Size = new System.Drawing.Size(114, 457);
             this.panelAdminBtn.TabIndex = 2;
@@ -789,10 +796,10 @@
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.ColorBottom = System.Drawing.Color.Empty;
-            this.pictureBoxLogo.ColorTop = System.Drawing.Color.Empty;
+            this.pictureBoxLogo.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.pictureBoxLogo.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBoxLogo.Image = global::ApplicationFeedbackSystem.Properties.Resources.Helio;
+            this.pictureBoxLogo.Image = global::ApplicationFeedbackSystem.Properties.Resources.logo1;
             this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(124, 113);
@@ -802,14 +809,15 @@
             // 
             // ManagerScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(997, 584);
             this.Controls.Add(this.PanelViewTemplate);
             this.Controls.Add(this.panelGradientColor1);
             this.Controls.Add(this.panelAdminRight);
             this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManagerScreen";
             this.Text = "ManagerScreen";
             this.Load += new System.EventHandler(this.ManagerScreen_Load);

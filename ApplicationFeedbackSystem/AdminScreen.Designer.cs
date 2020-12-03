@@ -115,12 +115,12 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelAdminRight = new ApplicationFeedbackSystem.PanelGradientColor();
-            this.panelAdminBtn = new ApplicationFeedbackSystem.PanelGradientColor();
             this.panelCreateTemplateBtn = new ApplicationFeedbackSystem.PanelGradientColor();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.logOutBtn2 = new System.Windows.Forms.Button();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.ClearBtn = new System.Windows.Forms.Button();
+            this.panelAdminBtn = new ApplicationFeedbackSystem.PanelGradientColor();
             this.button5 = new System.Windows.Forms.Button();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
@@ -135,8 +135,8 @@
             this.PanelViewTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panelAdminRight.SuspendLayout();
-            this.panelAdminBtn.SuspendLayout();
             this.panelCreateTemplateBtn.SuspendLayout();
+            this.panelAdminBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.logoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -398,7 +398,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(472, 171);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(81, 33);
+            this.comboBox1.Size = new System.Drawing.Size(81, 28);
             this.comboBox1.TabIndex = 84;
             // 
             // dateTimePicker1
@@ -406,7 +406,7 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(648, 171);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 32);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
             this.dateTimePicker1.TabIndex = 83;
             // 
             // labelGradientColor9
@@ -899,7 +899,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(473, 174);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(81, 33);
+            this.comboBox2.Size = new System.Drawing.Size(81, 28);
             this.comboBox2.TabIndex = 84;
             // 
             // dateTimePicker2
@@ -907,7 +907,7 @@
             this.dateTimePicker2.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Location = new System.Drawing.Point(649, 174);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 32);
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 27);
             this.dateTimePicker2.TabIndex = 83;
             // 
             // labelGradientColor29
@@ -1272,8 +1272,10 @@
             // 
             // panelAdminRight
             // 
+            this.panelAdminRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelAdminRight.ColorBottom = System.Drawing.Color.Empty;
             this.panelAdminRight.ColorTop = System.Drawing.Color.Empty;
+            this.panelAdminRight.Controls.Add(this.panelCreateTemplateBtn);
             this.panelAdminRight.Controls.Add(this.panelAdminBtn);
             this.panelAdminRight.Controls.Add(this.pictureBoxLogo);
             this.panelAdminRight.Dock = System.Windows.Forms.DockStyle.Left;
@@ -1282,28 +1284,16 @@
             this.panelAdminRight.Size = new System.Drawing.Size(124, 588);
             this.panelAdminRight.TabIndex = 0;
             // 
-            // panelAdminBtn
-            // 
-            this.panelAdminBtn.ColorBottom = System.Drawing.Color.Empty;
-            this.panelAdminBtn.ColorTop = System.Drawing.Color.Empty;
-            this.panelAdminBtn.Controls.Add(this.button5);
-            this.panelAdminBtn.Controls.Add(this.logoutBtn);
-            this.panelAdminBtn.Controls.Add(this.editBtn);
-            this.panelAdminBtn.Controls.Add(this.createBtn);
-            this.panelAdminBtn.Location = new System.Drawing.Point(12, 128);
-            this.panelAdminBtn.Name = "panelAdminBtn";
-            this.panelAdminBtn.Size = new System.Drawing.Size(114, 457);
-            this.panelAdminBtn.TabIndex = 2;
-            // 
             // panelCreateTemplateBtn
             // 
+            this.panelCreateTemplateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelCreateTemplateBtn.ColorBottom = System.Drawing.Color.Empty;
             this.panelCreateTemplateBtn.ColorTop = System.Drawing.Color.Empty;
             this.panelCreateTemplateBtn.Controls.Add(this.ExitBtn);
             this.panelCreateTemplateBtn.Controls.Add(this.logOutBtn2);
             this.panelCreateTemplateBtn.Controls.Add(this.SaveBtn);
             this.panelCreateTemplateBtn.Controls.Add(this.ClearBtn);
-            this.panelCreateTemplateBtn.Location = new System.Drawing.Point(133, 12);
+            this.panelCreateTemplateBtn.Location = new System.Drawing.Point(46, 147);
             this.panelCreateTemplateBtn.Name = "panelCreateTemplateBtn";
             this.panelCreateTemplateBtn.Size = new System.Drawing.Size(114, 457);
             this.panelCreateTemplateBtn.TabIndex = 1;
@@ -1345,6 +1335,19 @@
             this.ClearBtn.TabIndex = 0;
             this.ClearBtn.Text = "Clear";
             this.ClearBtn.UseVisualStyleBackColor = true;
+            // 
+            // panelAdminBtn
+            // 
+            this.panelAdminBtn.ColorBottom = System.Drawing.Color.Empty;
+            this.panelAdminBtn.ColorTop = System.Drawing.Color.Empty;
+            this.panelAdminBtn.Controls.Add(this.button5);
+            this.panelAdminBtn.Controls.Add(this.logoutBtn);
+            this.panelAdminBtn.Controls.Add(this.editBtn);
+            this.panelAdminBtn.Controls.Add(this.createBtn);
+            this.panelAdminBtn.Location = new System.Drawing.Point(20, 303);
+            this.panelAdminBtn.Name = "panelAdminBtn";
+            this.panelAdminBtn.Size = new System.Drawing.Size(114, 457);
+            this.panelAdminBtn.TabIndex = 2;
             // 
             // button5
             // 
@@ -1391,7 +1394,7 @@
             this.pictureBoxLogo.ColorBottom = System.Drawing.Color.Empty;
             this.pictureBoxLogo.ColorTop = System.Drawing.Color.Empty;
             this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBoxLogo.Image = global::ApplicationFeedbackSystem.Properties.Resources.Helio;
+            this.pictureBoxLogo.Image = global::ApplicationFeedbackSystem.Properties.Resources.logo2;
             this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(124, 113);
@@ -1401,7 +1404,8 @@
             // 
             // logoutPanel3
             // 
-            this.logoutPanel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.logoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.logoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.logoutPanel3.Controls.Add(this.cancelLogOutButton2);
             this.logoutPanel3.Controls.Add(this.cLogOutButton2);
             this.logoutPanel3.Controls.Add(this.label1);
@@ -1412,10 +1416,10 @@
             // 
             // cancelLogOutButton2
             // 
-            this.cancelLogOutButton2.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelLogOutButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelLogOutButton2.Location = new System.Drawing.Point(158, 56);
             this.cancelLogOutButton2.Name = "cancelLogOutButton2";
-            this.cancelLogOutButton2.Size = new System.Drawing.Size(75, 23);
+            this.cancelLogOutButton2.Size = new System.Drawing.Size(75, 29);
             this.cancelLogOutButton2.TabIndex = 2;
             this.cancelLogOutButton2.Text = "Cancel";
             this.cancelLogOutButton2.UseVisualStyleBackColor = true;
@@ -1423,10 +1427,10 @@
             // 
             // cLogOutButton2
             // 
-            this.cLogOutButton2.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cLogOutButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cLogOutButton2.Location = new System.Drawing.Point(26, 56);
             this.cLogOutButton2.Name = "cLogOutButton2";
-            this.cLogOutButton2.Size = new System.Drawing.Size(75, 26);
+            this.cLogOutButton2.Size = new System.Drawing.Size(75, 29);
             this.cLogOutButton2.TabIndex = 1;
             this.cLogOutButton2.Text = "Log out";
             this.cLogOutButton2.UseVisualStyleBackColor = true;
@@ -1435,25 +1439,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 15);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(65, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 23);
+            this.label1.Size = new System.Drawing.Size(132, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Are you sure ?";
             // 
             // AdminScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(990, 588);
-            this.Controls.Add(this.panelCreateTemplateBtn);
             this.Controls.Add(this.logoutPanel3);
             this.Controls.Add(this.panelCreateAndEdit);
             this.Controls.Add(this.panelGradientColor1);
             this.Controls.Add(this.PanelViewTemplate);
             this.Controls.Add(this.panelAdminRight);
             this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdminScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1466,8 +1472,8 @@
             this.PanelViewTemplate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.panelAdminRight.ResumeLayout(false);
-            this.panelAdminBtn.ResumeLayout(false);
             this.panelCreateTemplateBtn.ResumeLayout(false);
+            this.panelAdminBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.logoutPanel3.ResumeLayout(false);
             this.logoutPanel3.PerformLayout();
