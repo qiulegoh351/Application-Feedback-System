@@ -25,6 +25,8 @@ namespace ApplicationFeedbackSystem
             panelGradientColor1.Hide();
             PanelViewTemplate.Show();
 
+            logoutPanel3.Hide();
+
 
             panelAdminBtn.Width = 114;
             panelAdminBtn.Height = 457;
@@ -46,6 +48,7 @@ namespace ApplicationFeedbackSystem
             PanelViewTemplate.Height = 561;
             PanelViewTemplate.Location = new Point(130, 9);
 
+            logoutPanel3.Location = new Point(314, 161);
 
         }
 
@@ -73,6 +76,8 @@ namespace ApplicationFeedbackSystem
             labelEditTemplate.Width = 866;
             labelEditTemplate.Height = 85;
             labelEditTemplate.Location = new Point(-3, 0);
+
+           
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -89,6 +94,28 @@ namespace ApplicationFeedbackSystem
             panelAdminBtn.Show();
             PanelViewTemplate.Show();
             panelCreateAndEdit.Hide();
+        }
+
+        private void logOutBtn2_Click(object sender, EventArgs e)
+        {
+            logoutPanel3.Show();
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            logoutPanel3.Show();
+        }
+
+        private void cLogOutButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            login_form loginForm = new login_form();
+            loginForm.Show();
+        }
+
+        private void cancelLogOutButton2_Click(object sender, EventArgs e)
+        {
+            logoutPanel3.Hide();
         }
     }
 }

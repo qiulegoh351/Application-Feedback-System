@@ -22,6 +22,7 @@ namespace ApplicationFeedbackSystem
             panelAdminBtn.Show();
             panelGradientColor1.Hide();
             PanelViewTemplate.Show();
+            logoutPanel.Hide();
 
             panelAdminBtn.Width = 114;
             panelAdminBtn.Height = 457;
@@ -36,11 +37,25 @@ namespace ApplicationFeedbackSystem
             panelGradientColor1.Location = new Point(130, 9);
 
 
-
+            logoutPanel.Location = new Point(314, 161);
 
         }
 
-        
-        
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            logoutPanel.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            login_form loginForm = new login_form();
+            loginForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            logoutPanel.Hide();
+        }
     }
 }
