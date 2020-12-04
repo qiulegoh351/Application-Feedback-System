@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbConnector.cs" />
+    <Compile Include="FeedBackPage.cs" />
     <Compile Include="gradienColorLabel.cs">
       <SubType>Component</SubType>
     </Compile>

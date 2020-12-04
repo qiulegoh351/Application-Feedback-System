@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace ApplicationFeedbackSystem
 {
@@ -24,7 +26,7 @@ namespace ApplicationFeedbackSystem
             panelFeedCompleteBtn.Hide();
 
             PanelViewTemplate.Show();
-            panelCompleteFeedback.Hide(); 
+            panelCompleteFeedback.Hide();
             panelFeedback.Hide();
 
             logoutPanel2.Hide();
@@ -61,7 +63,7 @@ namespace ApplicationFeedbackSystem
             panelFeedCompleteBtn.Show();
             panelAdminBtn.Hide();
             panelFeedback.Show();
-            
+
         }
 
         private void editBtn_Click(object sender, EventArgs e)
@@ -89,7 +91,7 @@ namespace ApplicationFeedbackSystem
             panelCreateTemplateBtn.Hide();
             PanelViewTemplate.Show();
             panelCompleteFeedback.Hide();
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -117,6 +119,61 @@ namespace ApplicationFeedbackSystem
         private void cancelLogOutButton_Click(object sender, EventArgs e)
         {
             logoutPanel2.Hide();
+
+        }
+
+        private void eFirstNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection("server=localhost;user=dbcli;database=se_assignment;port=3306;password=dbcli123");
+            con.Open();
+            if (eFirstNameTextBox.Text != " ")
+            {
+                MySqlCommand cmd = new MySqlCommand("Select Interviewee, Email, Description, FeedbackType, Interviewer from feedback where Code =@Code", con);
+                cmd.Parameters.AddWithValue("@Code", (eFirstNameTextBox.Text));
+                MySqlDataReader da = cmd.ExecuteReader();
+                while (da.Read())
+                {
+                    textBox1.Text = da.GetValue(0).ToString();
+                    textBox2.Text = da.GetValue(1).ToString();
+                    textBox5.Text = da.GetValue(2).ToString();
+                    textBox3.Text = da.GetValue(3).ToString();
+                    textBox4.Text = da.GetValue(4).ToString();
+                }
+                con.Close();
+            }
+        }
+
+        private void feedbackPrint_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            FeedBackPage afeedback = new FeedBackPage();
+
+            afeedback.Code = eFirstNameTextBox.Text;
+            afeedback.Interviewee = textBox1.Text;
+            afeedback.Email = textBox2.Text;
+            afeedback.Describe = textBox5.Text;
+            afeedback.FeedbackType = textBox3.Text;
+            afeedback.Interviewer = textBox4.Text;
+
+            e.Graphics.DrawString(labelGradientColor8.Text, new Font("Arial", 50, FontStyle.Regular), Brushes.Black, new Point(2, 0));
+            e.Graphics.DrawString(labelGradientColor4.Text, new Font("Arial", 20, FontStyle.Regular), Brushes.Black, new Point(2, 84));
+
+            e.Graphics.DrawString("Code: " + afeedback.Code, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(37, 142));
+            e.Graphics.DrawString("Interviewee: " + afeedback.Interviewee, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(322, 142));
+            e.Graphics.DrawString("Email: " + afeedback.Email, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(600, 142));
+            e.Graphics.DrawString(labelGradientColor38.Text, new Font("Arial", 20, FontStyle.Regular), Brushes.Black, new Point(0, 299));
+
+            e.Graphics.DrawString("Description: " + afeedback.Describe, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(41, 369));
+            e.Graphics.DrawString("FeedbackType: " + afeedback.FeedbackType, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(488, 476));
+            e.Graphics.DrawString("Interviewer: " + afeedback.Interviewer, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(488, 508));
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            feedbackPrint.Print();
+
+            
         }
     }
+       
 }

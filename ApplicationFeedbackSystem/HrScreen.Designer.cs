@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.logoutPanel2 = new System.Windows.Forms.Panel();
-            this.cancelLogOutButton = new System.Windows.Forms.Button();
-            this.cLogOutButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.feedbackPrint = new System.Drawing.Printing.PrintDocument();
+            this.panelFeedback = new ApplicationFeedbackSystem.PanelGradientColor();
             this.panelCompleteFeedback = new ApplicationFeedbackSystem.PanelGradientColor();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,7 +38,10 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelGradientColor9 = new ApplicationFeedbackSystem.labelGradientColor();
             this.labelGradientColor10 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.panelFeedback = new ApplicationFeedbackSystem.PanelGradientColor();
+            this.logoutPanel2 = new System.Windows.Forms.Panel();
+            this.cancelLogOutButton = new System.Windows.Forms.Button();
+            this.cLogOutButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.labelGradientColor7 = new ApplicationFeedbackSystem.labelGradientColor();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -84,10 +85,10 @@
             this.backBtn = new System.Windows.Forms.Button();
             this.ClearBtn = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new ApplicationFeedbackSystem.PictureBoxGradientColor();
-            this.logoutPanel2.SuspendLayout();
+            this.panelFeedback.SuspendLayout();
             this.panelCompleteFeedback.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panelFeedback.SuspendLayout();
+            this.logoutPanel2.SuspendLayout();
             this.PanelViewTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panelAdminRight.SuspendLayout();
@@ -97,52 +98,38 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // logoutPanel2
+            // feedbackPrint
             // 
-            this.logoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.logoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.logoutPanel2.Controls.Add(this.cancelLogOutButton);
-            this.logoutPanel2.Controls.Add(this.cLogOutButton);
-            this.logoutPanel2.Controls.Add(this.label1);
-            this.logoutPanel2.Location = new System.Drawing.Point(138, 90);
-            this.logoutPanel2.Name = "logoutPanel2";
-            this.logoutPanel2.Size = new System.Drawing.Size(262, 117);
-            this.logoutPanel2.TabIndex = 71;
+            this.feedbackPrint.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.feedbackPrint_PrintPage);
             // 
-            // cancelLogOutButton
+            // panelFeedback
             // 
-            this.cancelLogOutButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelLogOutButton.ForeColor = System.Drawing.Color.Black;
-            this.cancelLogOutButton.Location = new System.Drawing.Point(158, 56);
-            this.cancelLogOutButton.Name = "cancelLogOutButton";
-            this.cancelLogOutButton.Size = new System.Drawing.Size(75, 26);
-            this.cancelLogOutButton.TabIndex = 2;
-            this.cancelLogOutButton.Text = "Cancel";
-            this.cancelLogOutButton.UseVisualStyleBackColor = true;
-            this.cancelLogOutButton.Click += new System.EventHandler(this.cancelLogOutButton_Click);
-            // 
-            // cLogOutButton
-            // 
-            this.cLogOutButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cLogOutButton.ForeColor = System.Drawing.Color.Black;
-            this.cLogOutButton.Location = new System.Drawing.Point(26, 56);
-            this.cLogOutButton.Name = "cLogOutButton";
-            this.cLogOutButton.Size = new System.Drawing.Size(75, 26);
-            this.cLogOutButton.TabIndex = 1;
-            this.cLogOutButton.Text = "Log out";
-            this.cLogOutButton.UseVisualStyleBackColor = true;
-            this.cLogOutButton.Click += new System.EventHandler(this.cLogOutButton_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(62, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Are you sure ?";
+            this.panelFeedback.ColorBottom = System.Drawing.Color.Empty;
+            this.panelFeedback.ColorTop = System.Drawing.Color.Empty;
+            this.panelFeedback.Controls.Add(this.panelCompleteFeedback);
+            this.panelFeedback.Controls.Add(this.logoutPanel2);
+            this.panelFeedback.Controls.Add(this.textBox4);
+            this.panelFeedback.Controls.Add(this.labelGradientColor7);
+            this.panelFeedback.Controls.Add(this.textBox3);
+            this.panelFeedback.Controls.Add(this.labelGradientColor5);
+            this.panelFeedback.Controls.Add(this.textBox5);
+            this.panelFeedback.Controls.Add(this.labelGradientColor6);
+            this.panelFeedback.Controls.Add(this.labelGradientColor4);
+            this.panelFeedback.Controls.Add(this.checkBox3);
+            this.panelFeedback.Controls.Add(this.checkBox2);
+            this.panelFeedback.Controls.Add(this.checkBox1);
+            this.panelFeedback.Controls.Add(this.textBox2);
+            this.panelFeedback.Controls.Add(this.labelGradientColor3);
+            this.panelFeedback.Controls.Add(this.textBox1);
+            this.panelFeedback.Controls.Add(this.labelGradientColor2);
+            this.panelFeedback.Controls.Add(this.eFirstNameTextBox);
+            this.panelFeedback.Controls.Add(this.labelGradientColor1);
+            this.panelFeedback.Controls.Add(this.labelGradientColor38);
+            this.panelFeedback.Controls.Add(this.labelGradientColor8);
+            this.panelFeedback.Location = new System.Drawing.Point(133, 12);
+            this.panelFeedback.Name = "panelFeedback";
+            this.panelFeedback.Size = new System.Drawing.Size(866, 561);
+            this.panelFeedback.TabIndex = 68;
             // 
             // panelCompleteFeedback
             // 
@@ -151,7 +138,7 @@
             this.panelCompleteFeedback.Controls.Add(this.dataGridView1);
             this.panelCompleteFeedback.Controls.Add(this.labelGradientColor9);
             this.panelCompleteFeedback.Controls.Add(this.labelGradientColor10);
-            this.panelCompleteFeedback.Location = new System.Drawing.Point(548, 122);
+            this.panelCompleteFeedback.Location = new System.Drawing.Point(112, 526);
             this.panelCompleteFeedback.Name = "panelCompleteFeedback";
             this.panelCompleteFeedback.Size = new System.Drawing.Size(866, 561);
             this.panelCompleteFeedback.TabIndex = 70;
@@ -225,32 +212,52 @@
             this.labelGradientColor10.Text = "Complete Feedback List";
             this.labelGradientColor10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelFeedback
+            // logoutPanel2
             // 
-            this.panelFeedback.ColorBottom = System.Drawing.Color.Empty;
-            this.panelFeedback.ColorTop = System.Drawing.Color.Empty;
-            this.panelFeedback.Controls.Add(this.textBox4);
-            this.panelFeedback.Controls.Add(this.labelGradientColor7);
-            this.panelFeedback.Controls.Add(this.textBox3);
-            this.panelFeedback.Controls.Add(this.labelGradientColor5);
-            this.panelFeedback.Controls.Add(this.textBox5);
-            this.panelFeedback.Controls.Add(this.labelGradientColor6);
-            this.panelFeedback.Controls.Add(this.labelGradientColor4);
-            this.panelFeedback.Controls.Add(this.checkBox3);
-            this.panelFeedback.Controls.Add(this.checkBox2);
-            this.panelFeedback.Controls.Add(this.checkBox1);
-            this.panelFeedback.Controls.Add(this.textBox2);
-            this.panelFeedback.Controls.Add(this.labelGradientColor3);
-            this.panelFeedback.Controls.Add(this.textBox1);
-            this.panelFeedback.Controls.Add(this.labelGradientColor2);
-            this.panelFeedback.Controls.Add(this.eFirstNameTextBox);
-            this.panelFeedback.Controls.Add(this.labelGradientColor1);
-            this.panelFeedback.Controls.Add(this.labelGradientColor38);
-            this.panelFeedback.Controls.Add(this.labelGradientColor8);
-            this.panelFeedback.Location = new System.Drawing.Point(207, 28);
-            this.panelFeedback.Name = "panelFeedback";
-            this.panelFeedback.Size = new System.Drawing.Size(866, 561);
-            this.panelFeedback.TabIndex = 68;
+            this.logoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.logoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.logoutPanel2.Controls.Add(this.cancelLogOutButton);
+            this.logoutPanel2.Controls.Add(this.cLogOutButton);
+            this.logoutPanel2.Controls.Add(this.label1);
+            this.logoutPanel2.Location = new System.Drawing.Point(61, 109);
+            this.logoutPanel2.Name = "logoutPanel2";
+            this.logoutPanel2.Size = new System.Drawing.Size(262, 117);
+            this.logoutPanel2.TabIndex = 71;
+            // 
+            // cancelLogOutButton
+            // 
+            this.cancelLogOutButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelLogOutButton.ForeColor = System.Drawing.Color.Black;
+            this.cancelLogOutButton.Location = new System.Drawing.Point(158, 56);
+            this.cancelLogOutButton.Name = "cancelLogOutButton";
+            this.cancelLogOutButton.Size = new System.Drawing.Size(75, 26);
+            this.cancelLogOutButton.TabIndex = 2;
+            this.cancelLogOutButton.Text = "Cancel";
+            this.cancelLogOutButton.UseVisualStyleBackColor = true;
+            this.cancelLogOutButton.Click += new System.EventHandler(this.cancelLogOutButton_Click);
+            // 
+            // cLogOutButton
+            // 
+            this.cLogOutButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cLogOutButton.ForeColor = System.Drawing.Color.Black;
+            this.cLogOutButton.Location = new System.Drawing.Point(26, 56);
+            this.cLogOutButton.Name = "cLogOutButton";
+            this.cLogOutButton.Size = new System.Drawing.Size(75, 26);
+            this.cLogOutButton.TabIndex = 1;
+            this.cLogOutButton.Text = "Log out";
+            this.cLogOutButton.UseVisualStyleBackColor = true;
+            this.cLogOutButton.Click += new System.EventHandler(this.cLogOutButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(62, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Are you sure ?";
             // 
             // textBox4
             // 
@@ -269,9 +276,9 @@
             this.labelGradientColor7.ColorTop = System.Drawing.Color.Empty;
             this.labelGradientColor7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGradientColor7.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor7.Location = new System.Drawing.Point(510, 509);
+            this.labelGradientColor7.Location = new System.Drawing.Point(450, 506);
             this.labelGradientColor7.Name = "labelGradientColor7";
-            this.labelGradientColor7.Size = new System.Drawing.Size(110, 28);
+            this.labelGradientColor7.Size = new System.Drawing.Size(121, 28);
             this.labelGradientColor7.TabIndex = 88;
             this.labelGradientColor7.Text = "Interviewer:";
             this.labelGradientColor7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -293,9 +300,9 @@
             this.labelGradientColor5.ColorTop = System.Drawing.Color.Empty;
             this.labelGradientColor5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGradientColor5.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor5.Location = new System.Drawing.Point(488, 476);
+            this.labelGradientColor5.Location = new System.Drawing.Point(425, 478);
             this.labelGradientColor5.Name = "labelGradientColor5";
-            this.labelGradientColor5.Size = new System.Drawing.Size(130, 28);
+            this.labelGradientColor5.Size = new System.Drawing.Size(174, 28);
             this.labelGradientColor5.TabIndex = 86;
             this.labelGradientColor5.Text = "Feedback Type:";
             this.labelGradientColor5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -343,7 +350,7 @@
             this.checkBox3.Location = new System.Drawing.Point(367, 296);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(142, 28);
+            this.checkBox3.Size = new System.Drawing.Size(142, 36);
             this.checkBox3.TabIndex = 82;
             this.checkBox3.Text = "Questions";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -351,10 +358,10 @@
             // checkBox2
             // 
             this.checkBox2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(693, 296);
+            this.checkBox2.Location = new System.Drawing.Point(641, 296);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(131, 28);
+            this.checkBox2.Size = new System.Drawing.Size(183, 36);
             this.checkBox2.TabIndex = 81;
             this.checkBox2.Text = "Suggestion";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -365,7 +372,7 @@
             this.checkBox1.Location = new System.Drawing.Point(41, 296);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(141, 28);
+            this.checkBox1.Size = new System.Drawing.Size(168, 36);
             this.checkBox1.TabIndex = 80;
             this.checkBox1.Text = "Comments";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -413,7 +420,7 @@
             this.labelGradientColor2.ForeColor = System.Drawing.Color.Black;
             this.labelGradientColor2.Location = new System.Drawing.Point(322, 142);
             this.labelGradientColor2.Name = "labelGradientColor2";
-            this.labelGradientColor2.Size = new System.Drawing.Size(89, 28);
+            this.labelGradientColor2.Size = new System.Drawing.Size(137, 28);
             this.labelGradientColor2.TabIndex = 76;
             this.labelGradientColor2.Text = "Interviewee";
             this.labelGradientColor2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -428,6 +435,7 @@
             this.eFirstNameTextBox.Name = "eFirstNameTextBox";
             this.eFirstNameTextBox.Size = new System.Drawing.Size(220, 32);
             this.eFirstNameTextBox.TabIndex = 75;
+            this.eFirstNameTextBox.TextChanged += new System.EventHandler(this.eFirstNameTextBox_TextChanged);
             // 
             // labelGradientColor1
             // 
@@ -521,15 +529,15 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dataGridView.Location = new System.Drawing.Point(1, 139);
             this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
@@ -658,6 +666,7 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panelAdminBtn
             // 
@@ -766,12 +775,10 @@
             // 
             // HrScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(990, 561);
-            this.Controls.Add(this.logoutPanel2);
-            this.Controls.Add(this.panelCompleteFeedback);
             this.Controls.Add(this.panelFeedback);
             this.Controls.Add(this.PanelViewTemplate);
             this.Controls.Add(this.panelAdminRight);
@@ -780,12 +787,12 @@
             this.Name = "HrScreen";
             this.Text = "HrScreen";
             this.Load += new System.EventHandler(this.HrScreen_Load);
-            this.logoutPanel2.ResumeLayout(false);
-            this.logoutPanel2.PerformLayout();
-            this.panelCompleteFeedback.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelFeedback.ResumeLayout(false);
             this.panelFeedback.PerformLayout();
+            this.panelCompleteFeedback.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.logoutPanel2.ResumeLayout(false);
+            this.logoutPanel2.PerformLayout();
             this.PanelViewTemplate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.panelAdminRight.ResumeLayout(false);
@@ -854,5 +861,6 @@
         private System.Windows.Forms.Button cancelLogOutButton;
         private System.Windows.Forms.Button cLogOutButton;
         private System.Windows.Forms.Label label1;
+        private System.Drawing.Printing.PrintDocument feedbackPrint;
     }
 }
