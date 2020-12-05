@@ -14,8 +14,8 @@ namespace ApplicationFeedbackSystem
     {
         public int addNewTemplate(MySqlConnection conn, Template ad)
         {
-            string sql = "INSERT INTO template (code, first_name, last_name, gender, age, date_of_birth, email, contact_number" +
-                         " , city, state, address, type, position, interviewer_first, interviewer_last) "
+            string sql = "INSERT INTO template (code, interviewee, gender, age, date_of_birth, email, contact_number" +
+                         " , city, state, address, type, position, interviewer) "
                             + " VALUES (" + ad.Code + ", '" + ad.Interviewee + "', '" + ad.Gender
                             + "', " + ad.Age + " ,'" + ad.DateOfBirth.ToString("yyyy-MM-dd HH:mm:ss") + "' , '" + ad.Email
                             + "', '" + ad.ContactNum + "', '" + ad.City + "', '" + ad.State + "', '" + ad.Address
@@ -28,8 +28,8 @@ namespace ApplicationFeedbackSystem
 
         public int editTemplate(MySqlConnection conn, Template ad)
         {
-            string sql = "UPDATE template set (code, first_name, last_name, gender, age, date_of_birth, email, contact_number" +
-                         " , city, state, address, type, position, interviewer_first, interviewer_last) "
+            string sql = "UPDATE template set (code, interviewee, gender, age, date_of_birth, email, contact_number" +
+                         " , city, state, address, type, position, interviewer) "
                             + " VALUES (" + ad.Code + ", '" + ad.Interviewee + "', '" + ad.Gender
                             + "', " + ad.Age + " ,'" + ad.DateOfBirth.ToString("yyyy-MM-dd HH:mm:ss") + "' , '" + ad.Email
                             + "', '" + ad.ContactNum + "', '" + ad.City + "', '" + ad.State + "', '" + ad.Address
