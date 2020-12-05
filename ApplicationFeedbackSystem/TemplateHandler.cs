@@ -28,12 +28,10 @@ namespace ApplicationFeedbackSystem
 
         public int editTemplate(MySqlConnection conn, Template ad)
         {
-            string sql = "UPDATE template set (code, interviewee, gender, age, date_of_birth, email, contact_number" +
-                         " , city, state, address, type, position, interviewer) "
-                            + " VALUES (" + ad.Code + ", '" + ad.Interviewee + "', '" + ad.Gender
-                            + "', " + ad.Age + " ,'" + ad.DateOfBirth.ToString("yyyy-MM-dd HH:mm:ss") + "' , '" + ad.Email
-                            + "', '" + ad.ContactNum + "', '" + ad.City + "', '" + ad.State + "', '" + ad.Address
-                            + "', '" + ad.Type + "', '" + ad.Position + "', '" + ad.Interviewer + "')";
+            string sql = "UPDATE template set code=" + ad.Code + ",Interviewee='" + ad.Interviewee + "',gender='" +
+                ad.Gender + "',Age='" + ad.Age + "',date_of_birth='" + ad.DateOfBirth.ToString("yyyy-MM-dd HH:mm:ss") + "',email='" + ad.Email 
+                + "',contact_number='" + ad.ContactNum + "',city='" + ad.City + "',state='" + ad.State + "',address='" + ad.Address
+                + "',type='" + ad.Type + "',position='" + ad.Position + "',interviewer='" + ad.Interviewer + "' where code='"+ ad.Code + "';"; 
 
             MySqlCommand sqlComm = new MySqlCommand(sql, conn);
 
