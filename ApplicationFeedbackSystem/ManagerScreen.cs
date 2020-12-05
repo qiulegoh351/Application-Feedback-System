@@ -57,5 +57,42 @@ namespace ApplicationFeedbackSystem
         {
             logoutPanel.Hide();
         }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+            Template Ad = new Template();
+            
+            TemplateHandler tempHnd = new TemplateHandler();
+
+            
+        }
+
+        private void dataGridViewTemplate_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+
+            TemplateHandler tempHnd = new TemplateHandler();
+            
+        }
+
+        int selectedCode = 0;
+        private void dataGridViewTemplate_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedCode = e.RowIndex;
+        }
+
+        private void displayBtn_Click(object sender, EventArgs e)
+        {
+            Template temp = new Template();
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+
+            TemplateHandler tempHnd = new TemplateHandler();
+
+            dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
+        }
     }
 }

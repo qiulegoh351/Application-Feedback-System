@@ -29,45 +29,10 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panelCreateAndEdit = new ApplicationFeedbackSystem.PanelGradientColor();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.labelGradientColor17 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.labelGradientColor13 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.labelEditTemplate = new ApplicationFeedbackSystem.labelGradientColor();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.labelGradientColor16 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.labelGradientColor14 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.labelGradientColor15 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.labelCode = new ApplicationFeedbackSystem.labelGradientColor();
-            this.labelGradientColor12 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.labelGradientColor11 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.labelGradientColor10 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.labelGradientColor9 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.labelGradientColor8 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.eFirstNameTextBox = new System.Windows.Forms.TextBox();
-            this.labelGradientColor7 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.labelGradientColor6 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.labelGradientColor5 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.labelGradientColor4 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.labelGradientColor3 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.labelGradientColor2 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.labelGradientColor1 = new ApplicationFeedbackSystem.labelGradientColor();
-            this.LabelCreateTemplate = new ApplicationFeedbackSystem.labelGradientColor();
-            this.labelInterviewer = new ApplicationFeedbackSystem.labelGradientColor();
-            this.labelInterviewee = new ApplicationFeedbackSystem.labelGradientColor();
+            this.logoutPanel3 = new System.Windows.Forms.Panel();
+            this.cancelLogOutButton2 = new System.Windows.Forms.Button();
+            this.cLogOutButton2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelGradientColor1 = new ApplicationFeedbackSystem.PanelGradientColor();
             this.labelGradientColor19 = new ApplicationFeedbackSystem.labelGradientColor();
             this.labelGradientColor20 = new ApplicationFeedbackSystem.labelGradientColor();
@@ -107,18 +72,11 @@
             this.PanelViewTemplate = new ApplicationFeedbackSystem.PanelGradientColor();
             this.labelTemplateList = new ApplicationFeedbackSystem.labelGradientColor();
             this.LabelViewTemplate = new ApplicationFeedbackSystem.labelGradientColor();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelAdminRight = new ApplicationFeedbackSystem.PanelGradientColor();
             this.panelCreateTemplateBtn = new ApplicationFeedbackSystem.PanelGradientColor();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.logOutBtn2 = new System.Windows.Forms.Button();
-            this.SaveBtn = new System.Windows.Forms.Button();
+            this.SaveCreateBtn = new System.Windows.Forms.Button();
             this.ClearBtn = new System.Windows.Forms.Button();
             this.panelAdminBtn = new ApplicationFeedbackSystem.PanelGradientColor();
             this.button5 = new System.Windows.Forms.Button();
@@ -126,540 +84,94 @@
             this.editBtn = new System.Windows.Forms.Button();
             this.createBtn = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new ApplicationFeedbackSystem.PictureBoxGradientColor();
-            this.logoutPanel3 = new System.Windows.Forms.Panel();
-            this.cancelLogOutButton2 = new System.Windows.Forms.Button();
-            this.cLogOutButton2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelCreateAndEdit.SuspendLayout();
+            this.panelCreateAndEdit = new ApplicationFeedbackSystem.PanelGradientColor();
+            this.stateText = new System.Windows.Forms.TextBox();
+            this.labelGradientColor17 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.cityText = new System.Windows.Forms.TextBox();
+            this.labelGradientColor13 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.labelEditTemplate = new ApplicationFeedbackSystem.labelGradientColor();
+            this.interviewerText = new System.Windows.Forms.TextBox();
+            this.labelGradientColor15 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.labelGradientColor12 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.addressText = new System.Windows.Forms.TextBox();
+            this.labelGradientColor11 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.labelGradientColor10 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.genderText = new System.Windows.Forms.ComboBox();
+            this.dateOfBirth = new System.Windows.Forms.DateTimePicker();
+            this.labelGradientColor9 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.ageText = new System.Windows.Forms.TextBox();
+            this.labelGradientColor8 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.typeText = new System.Windows.Forms.TextBox();
+            this.positionText = new System.Windows.Forms.TextBox();
+            this.contactText = new System.Windows.Forms.TextBox();
+            this.emailText = new System.Windows.Forms.TextBox();
+            this.intervieweeText = new System.Windows.Forms.TextBox();
+            this.labelGradientColor7 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.labelGradientColor5 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.labelGradientColor4 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.labelGradientColor3 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.labelGradientColor1 = new ApplicationFeedbackSystem.labelGradientColor();
+            this.LabelCreateTemplate = new ApplicationFeedbackSystem.labelGradientColor();
+            this.labelInterviewer = new ApplicationFeedbackSystem.labelGradientColor();
+            this.labelInterviewee = new ApplicationFeedbackSystem.labelGradientColor();
+            this.codeText = new System.Windows.Forms.TextBox();
+            this.displayBtn = new System.Windows.Forms.Button();
+            this.dgvList = new System.Windows.Forms.DataGridView();
+            this.logoutPanel3.SuspendLayout();
             this.panelGradientColor1.SuspendLayout();
             this.PanelViewTemplate.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panelAdminRight.SuspendLayout();
             this.panelCreateTemplateBtn.SuspendLayout();
             this.panelAdminBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            this.logoutPanel3.SuspendLayout();
+            this.panelCreateAndEdit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelCreateAndEdit
-            // 
-            this.panelCreateAndEdit.ColorBottom = System.Drawing.Color.White;
-            this.panelCreateAndEdit.ColorTop = System.Drawing.Color.Empty;
-            this.panelCreateAndEdit.Controls.Add(this.textBox13);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor17);
-            this.panelCreateAndEdit.Controls.Add(this.textBox12);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor13);
-            this.panelCreateAndEdit.Controls.Add(this.labelEditTemplate);
-            this.panelCreateAndEdit.Controls.Add(this.textBox11);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor16);
-            this.panelCreateAndEdit.Controls.Add(this.textBox9);
-            this.panelCreateAndEdit.Controls.Add(this.textBox10);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor14);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor15);
-            this.panelCreateAndEdit.Controls.Add(this.labelCode);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor12);
-            this.panelCreateAndEdit.Controls.Add(this.textBox8);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor11);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor10);
-            this.panelCreateAndEdit.Controls.Add(this.comboBox1);
-            this.panelCreateAndEdit.Controls.Add(this.dateTimePicker1);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor9);
-            this.panelCreateAndEdit.Controls.Add(this.textBox7);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor8);
-            this.panelCreateAndEdit.Controls.Add(this.textBox6);
-            this.panelCreateAndEdit.Controls.Add(this.textBox5);
-            this.panelCreateAndEdit.Controls.Add(this.textBox4);
-            this.panelCreateAndEdit.Controls.Add(this.textBox3);
-            this.panelCreateAndEdit.Controls.Add(this.textBox2);
-            this.panelCreateAndEdit.Controls.Add(this.textBox1);
-            this.panelCreateAndEdit.Controls.Add(this.eFirstNameTextBox);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor7);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor6);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor5);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor4);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor3);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor2);
-            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor1);
-            this.panelCreateAndEdit.Controls.Add(this.LabelCreateTemplate);
-            this.panelCreateAndEdit.Controls.Add(this.labelInterviewer);
-            this.panelCreateAndEdit.Controls.Add(this.labelInterviewee);
-            this.panelCreateAndEdit.Location = new System.Drawing.Point(140, 15);
-            this.panelCreateAndEdit.Name = "panelCreateAndEdit";
-            this.panelCreateAndEdit.Size = new System.Drawing.Size(866, 561);
-            this.panelCreateAndEdit.TabIndex = 65;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox13.Location = new System.Drawing.Point(648, 230);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(200, 28);
-            this.textBox13.TabIndex = 100;
-            this.textBox13.Text = "012345678";
-            // 
-            // labelGradientColor17
-            // 
-            this.labelGradientColor17.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor17.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor17.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor17.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor17.Location = new System.Drawing.Point(644, 200);
-            this.labelGradientColor17.Name = "labelGradientColor17";
-            this.labelGradientColor17.Size = new System.Drawing.Size(50, 28);
-            this.labelGradientColor17.TabIndex = 99;
-            this.labelGradientColor17.Text = "State";
-            this.labelGradientColor17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox12.Location = new System.Drawing.Point(472, 230);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(159, 28);
-            this.textBox12.TabIndex = 98;
-            this.textBox12.Text = "012345678";
-            // 
-            // labelGradientColor13
-            // 
-            this.labelGradientColor13.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor13.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor13.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor13.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor13.Location = new System.Drawing.Point(468, 200);
-            this.labelGradientColor13.Name = "labelGradientColor13";
-            this.labelGradientColor13.Size = new System.Drawing.Size(51, 28);
-            this.labelGradientColor13.TabIndex = 97;
-            this.labelGradientColor13.Text = "City";
-            this.labelGradientColor13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelEditTemplate
-            // 
-            this.labelEditTemplate.ColorBottom = System.Drawing.Color.Gainsboro;
-            this.labelEditTemplate.ColorTop = System.Drawing.SystemColors.Control;
-            this.labelEditTemplate.Font = new System.Drawing.Font("Century Schoolbook", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEditTemplate.Location = new System.Drawing.Point(304, 0);
-            this.labelEditTemplate.Name = "labelEditTemplate";
-            this.labelEditTemplate.Size = new System.Drawing.Size(866, 85);
-            this.labelEditTemplate.TabIndex = 96;
-            this.labelEditTemplate.Text = "Edit Template";
-            this.labelEditTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox11.Location = new System.Drawing.Point(473, 515);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(375, 28);
-            this.textBox11.TabIndex = 95;
-            this.textBox11.Text = "Tehnical Interview";
-            // 
-            // labelGradientColor16
-            // 
-            this.labelGradientColor16.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor16.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor16.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor16.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor16.Location = new System.Drawing.Point(473, 485);
-            this.labelGradientColor16.Name = "labelGradientColor16";
-            this.labelGradientColor16.Size = new System.Drawing.Size(147, 28);
-            this.labelGradientColor16.TabIndex = 94;
-            this.labelGradientColor16.Text = "Applicaation Type";
-            this.labelGradientColor16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox9.Location = new System.Drawing.Point(242, 515);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(195, 28);
-            this.textBox9.TabIndex = 93;
-            this.textBox9.Text = "Weng";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox10.Location = new System.Drawing.Point(12, 515);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(195, 28);
-            this.textBox10.TabIndex = 92;
-            this.textBox10.Text = "Chee";
-            // 
-            // labelGradientColor14
-            // 
-            this.labelGradientColor14.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor14.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor14.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor14.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor14.Location = new System.Drawing.Point(239, 485);
-            this.labelGradientColor14.Name = "labelGradientColor14";
-            this.labelGradientColor14.Size = new System.Drawing.Size(122, 28);
-            this.labelGradientColor14.TabIndex = 91;
-            this.labelGradientColor14.Text = "Last Name";
-            this.labelGradientColor14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelGradientColor15
-            // 
-            this.labelGradientColor15.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor15.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor15.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor15.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor15.Location = new System.Drawing.Point(8, 485);
-            this.labelGradientColor15.Name = "labelGradientColor15";
-            this.labelGradientColor15.Size = new System.Drawing.Size(89, 28);
-            this.labelGradientColor15.TabIndex = 90;
-            this.labelGradientColor15.Text = "First Name";
-            this.labelGradientColor15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelCode
-            // 
-            this.labelCode.ColorBottom = System.Drawing.Color.Indigo;
-            this.labelCode.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelCode.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCode.ForeColor = System.Drawing.Color.White;
-            this.labelCode.Location = new System.Drawing.Point(51, 94);
-            this.labelCode.Name = "labelCode";
-            this.labelCode.Size = new System.Drawing.Size(122, 28);
-            this.labelCode.TabIndex = 89;
-            this.labelCode.Text = "A1001";
-            this.labelCode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelGradientColor12
-            // 
-            this.labelGradientColor12.ColorBottom = System.Drawing.Color.Indigo;
-            this.labelGradientColor12.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelGradientColor12.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor12.ForeColor = System.Drawing.Color.White;
-            this.labelGradientColor12.Location = new System.Drawing.Point(4, 94);
-            this.labelGradientColor12.Name = "labelGradientColor12";
-            this.labelGradientColor12.Size = new System.Drawing.Size(49, 28);
-            this.labelGradientColor12.TabIndex = 88;
-            this.labelGradientColor12.Text = "Code:";
-            this.labelGradientColor12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox8.Location = new System.Drawing.Point(473, 290);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(375, 124);
-            this.textBox8.TabIndex = 87;
-            this.textBox8.Text = "Address..................................................";
-            // 
-            // labelGradientColor11
-            // 
-            this.labelGradientColor11.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor11.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor11.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor11.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor11.Location = new System.Drawing.Point(470, 260);
-            this.labelGradientColor11.Name = "labelGradientColor11";
-            this.labelGradientColor11.Size = new System.Drawing.Size(71, 28);
-            this.labelGradientColor11.TabIndex = 86;
-            this.labelGradientColor11.Text = "Address";
-            this.labelGradientColor11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelGradientColor10
-            // 
-            this.labelGradientColor10.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor10.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor10.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor10.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor10.Location = new System.Drawing.Point(644, 141);
-            this.labelGradientColor10.Name = "labelGradientColor10";
-            this.labelGradientColor10.Size = new System.Drawing.Size(107, 28);
-            this.labelGradientColor10.TabIndex = 85;
-            this.labelGradientColor10.Text = "Date Of Birth";
-            this.labelGradientColor10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
-            "Male",
-            "Female"});
-            this.comboBox1.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(472, 171);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(81, 28);
-            this.comboBox1.TabIndex = 84;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(648, 171);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
-            this.dateTimePicker1.TabIndex = 83;
-            // 
-            // labelGradientColor9
-            // 
-            this.labelGradientColor9.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor9.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor9.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor9.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor9.Location = new System.Drawing.Point(567, 141);
-            this.labelGradientColor9.Name = "labelGradientColor9";
-            this.labelGradientColor9.Size = new System.Drawing.Size(64, 28);
-            this.labelGradientColor9.TabIndex = 82;
-            this.labelGradientColor9.Text = "Age";
-            this.labelGradientColor9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox7.Location = new System.Drawing.Point(571, 171);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(60, 28);
-            this.textBox7.TabIndex = 81;
-            this.textBox7.Text = "22";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // labelGradientColor8
-            // 
-            this.labelGradientColor8.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor8.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor8.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor8.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor8.Location = new System.Drawing.Point(468, 141);
-            this.labelGradientColor8.Name = "labelGradientColor8";
-            this.labelGradientColor8.Size = new System.Drawing.Size(64, 28);
-            this.labelGradientColor8.TabIndex = 80;
-            this.labelGradientColor8.Text = "Gender";
-            this.labelGradientColor8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox6.Location = new System.Drawing.Point(8, 290);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(195, 28);
-            this.textBox6.TabIndex = 79;
-            this.textBox6.Text = "Tehnical Interview";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox5.Location = new System.Drawing.Point(8, 350);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(427, 64);
-            this.textBox5.TabIndex = 78;
-            this.textBox5.Text = "file";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox4.Location = new System.Drawing.Point(238, 290);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(195, 28);
-            this.textBox4.TabIndex = 77;
-            this.textBox4.Text = "Software Engineer";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox3.Location = new System.Drawing.Point(239, 230);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(195, 28);
-            this.textBox3.TabIndex = 76;
-            this.textBox3.Text = "012345678";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox2.Location = new System.Drawing.Point(8, 230);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 28);
-            this.textBox2.TabIndex = 75;
-            this.textBox2.Text = "abc@gmail.com";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Location = new System.Drawing.Point(238, 171);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 28);
-            this.textBox1.TabIndex = 74;
-            this.textBox1.Text = "Le";
-            // 
-            // eFirstNameTextBox
-            // 
-            this.eFirstNameTextBox.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eFirstNameTextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.eFirstNameTextBox.Location = new System.Drawing.Point(8, 171);
-            this.eFirstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.eFirstNameTextBox.Multiline = true;
-            this.eFirstNameTextBox.Name = "eFirstNameTextBox";
-            this.eFirstNameTextBox.Size = new System.Drawing.Size(195, 28);
-            this.eFirstNameTextBox.TabIndex = 73;
-            this.eFirstNameTextBox.Text = "Qiu";
-            // 
-            // labelGradientColor7
-            // 
-            this.labelGradientColor7.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor7.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor7.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor7.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor7.Location = new System.Drawing.Point(234, 260);
-            this.labelGradientColor7.Name = "labelGradientColor7";
-            this.labelGradientColor7.Size = new System.Drawing.Size(159, 28);
-            this.labelGradientColor7.TabIndex = 72;
-            this.labelGradientColor7.Text = "Position Application";
-            this.labelGradientColor7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelGradientColor6
-            // 
-            this.labelGradientColor6.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor6.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor6.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor6.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor6.Location = new System.Drawing.Point(4, 320);
-            this.labelGradientColor6.Name = "labelGradientColor6";
-            this.labelGradientColor6.Size = new System.Drawing.Size(423, 28);
-            this.labelGradientColor6.TabIndex = 71;
-            this.labelGradientColor6.Text = "Application Attachment";
-            this.labelGradientColor6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelGradientColor5
-            // 
-            this.labelGradientColor5.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor5.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor5.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor5.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor5.Location = new System.Drawing.Point(8, 260);
-            this.labelGradientColor5.Name = "labelGradientColor5";
-            this.labelGradientColor5.Size = new System.Drawing.Size(147, 28);
-            this.labelGradientColor5.TabIndex = 70;
-            this.labelGradientColor5.Text = "Applicaation Type";
-            this.labelGradientColor5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelGradientColor4
-            // 
-            this.labelGradientColor4.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor4.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor4.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor4.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor4.Location = new System.Drawing.Point(4, 200);
-            this.labelGradientColor4.Name = "labelGradientColor4";
-            this.labelGradientColor4.Size = new System.Drawing.Size(57, 28);
-            this.labelGradientColor4.TabIndex = 69;
-            this.labelGradientColor4.Text = "Email";
-            this.labelGradientColor4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelGradientColor3
-            // 
-            this.labelGradientColor3.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor3.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor3.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor3.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor3.Location = new System.Drawing.Point(235, 200);
-            this.labelGradientColor3.Name = "labelGradientColor3";
-            this.labelGradientColor3.Size = new System.Drawing.Size(140, 28);
-            this.labelGradientColor3.TabIndex = 68;
-            this.labelGradientColor3.Text = "Contact Number";
-            this.labelGradientColor3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelGradientColor2
-            // 
-            this.labelGradientColor2.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor2.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor2.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor2.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor2.Location = new System.Drawing.Point(235, 141);
-            this.labelGradientColor2.Name = "labelGradientColor2";
-            this.labelGradientColor2.Size = new System.Drawing.Size(122, 28);
-            this.labelGradientColor2.TabIndex = 67;
-            this.labelGradientColor2.Text = "Last Name";
-            this.labelGradientColor2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelGradientColor1
-            // 
-            this.labelGradientColor1.ColorBottom = System.Drawing.Color.Empty;
-            this.labelGradientColor1.ColorTop = System.Drawing.Color.Empty;
-            this.labelGradientColor1.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGradientColor1.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor1.Location = new System.Drawing.Point(4, 141);
-            this.labelGradientColor1.Name = "labelGradientColor1";
-            this.labelGradientColor1.Size = new System.Drawing.Size(89, 28);
-            this.labelGradientColor1.TabIndex = 66;
-            this.labelGradientColor1.Text = "First Name";
-            this.labelGradientColor1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // LabelCreateTemplate
-            // 
-            this.LabelCreateTemplate.ColorBottom = System.Drawing.Color.Gainsboro;
-            this.LabelCreateTemplate.ColorTop = System.Drawing.SystemColors.Control;
-            this.LabelCreateTemplate.Font = new System.Drawing.Font("Century Schoolbook", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCreateTemplate.Location = new System.Drawing.Point(-257, 0);
-            this.LabelCreateTemplate.Name = "LabelCreateTemplate";
-            this.LabelCreateTemplate.Size = new System.Drawing.Size(866, 85);
-            this.LabelCreateTemplate.TabIndex = 63;
-            this.LabelCreateTemplate.Text = "Create Template";
-            this.LabelCreateTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelInterviewer
-            // 
-            this.labelInterviewer.ColorBottom = System.Drawing.Color.Indigo;
-            this.labelInterviewer.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelInterviewer.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInterviewer.ForeColor = System.Drawing.Color.White;
-            this.labelInterviewer.Location = new System.Drawing.Point(0, 428);
-            this.labelInterviewer.Name = "labelInterviewer";
-            this.labelInterviewer.Size = new System.Drawing.Size(866, 44);
-            this.labelInterviewer.TabIndex = 65;
-            this.labelInterviewer.Text = "Interviewer";
-            this.labelInterviewer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelInterviewee
-            // 
-            this.labelInterviewee.ColorBottom = System.Drawing.Color.Indigo;
-            this.labelInterviewee.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelInterviewee.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInterviewee.ForeColor = System.Drawing.Color.White;
-            this.labelInterviewee.Location = new System.Drawing.Point(0, 85);
-            this.labelInterviewee.Name = "labelInterviewee";
-            this.labelInterviewee.Size = new System.Drawing.Size(866, 44);
-            this.labelInterviewee.TabIndex = 64;
-            this.labelInterviewee.Text = "Interviewee";
-            this.labelInterviewee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // logoutPanel3
+            // 
+            this.logoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.logoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.logoutPanel3.Controls.Add(this.cancelLogOutButton2);
+            this.logoutPanel3.Controls.Add(this.cLogOutButton2);
+            this.logoutPanel3.Controls.Add(this.label1);
+            this.logoutPanel3.Location = new System.Drawing.Point(735, 31);
+            this.logoutPanel3.Name = "logoutPanel3";
+            this.logoutPanel3.Size = new System.Drawing.Size(262, 117);
+            this.logoutPanel3.TabIndex = 72;
+            // 
+            // cancelLogOutButton2
+            // 
+            this.cancelLogOutButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelLogOutButton2.Location = new System.Drawing.Point(158, 56);
+            this.cancelLogOutButton2.Name = "cancelLogOutButton2";
+            this.cancelLogOutButton2.Size = new System.Drawing.Size(75, 29);
+            this.cancelLogOutButton2.TabIndex = 2;
+            this.cancelLogOutButton2.Text = "Cancel";
+            this.cancelLogOutButton2.UseVisualStyleBackColor = true;
+            this.cancelLogOutButton2.Click += new System.EventHandler(this.cancelLogOutButton2_Click);
+            // 
+            // cLogOutButton2
+            // 
+            this.cLogOutButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cLogOutButton2.Location = new System.Drawing.Point(26, 56);
+            this.cLogOutButton2.Name = "cLogOutButton2";
+            this.cLogOutButton2.Size = new System.Drawing.Size(75, 29);
+            this.cLogOutButton2.TabIndex = 1;
+            this.cLogOutButton2.Text = "Log out";
+            this.cLogOutButton2.UseVisualStyleBackColor = true;
+            this.cLogOutButton2.Click += new System.EventHandler(this.cLogOutButton2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(65, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Are you sure ?";
             // 
             // panelGradientColor1
             // 
@@ -700,7 +212,7 @@
             this.panelGradientColor1.Controls.Add(this.labelGradientColor37);
             this.panelGradientColor1.Controls.Add(this.LabelTemplate);
             this.panelGradientColor1.Controls.Add(this.labelGradientColor38);
-            this.panelGradientColor1.Location = new System.Drawing.Point(161, 24);
+            this.panelGradientColor1.Location = new System.Drawing.Point(349, 188);
             this.panelGradientColor1.Name = "panelGradientColor1";
             this.panelGradientColor1.Size = new System.Drawing.Size(866, 561);
             this.panelGradientColor1.TabIndex = 64;
@@ -1156,8 +668,8 @@
             this.PanelViewTemplate.ColorTop = System.Drawing.Color.Empty;
             this.PanelViewTemplate.Controls.Add(this.labelTemplateList);
             this.PanelViewTemplate.Controls.Add(this.LabelViewTemplate);
-            this.PanelViewTemplate.Controls.Add(this.dataGridView);
-            this.PanelViewTemplate.Location = new System.Drawing.Point(130, 303);
+            this.PanelViewTemplate.Controls.Add(this.dgvList);
+            this.PanelViewTemplate.Location = new System.Drawing.Point(144, 53);
             this.PanelViewTemplate.Name = "PanelViewTemplate";
             this.PanelViewTemplate.Size = new System.Drawing.Size(866, 561);
             this.PanelViewTemplate.TabIndex = 1;
@@ -1190,86 +702,6 @@
             this.LabelViewTemplate.Text = "View Template";
             this.LabelViewTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView
-            // 
-            this.dataGridView.AllowUserToAddRows = false;
-            this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dataGridView.Location = new System.Drawing.Point(1, 139);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.ReadOnly = true;
-            this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.RowTemplate.Height = 40;
-            this.dataGridView.Size = new System.Drawing.Size(866, 420);
-            this.dataGridView.TabIndex = 7;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Code";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 75;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Interviewee";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Email";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Interviewer";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Feedback Type";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 150;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Applied Position";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 150;
-            // 
             // panelAdminRight
             // 
             this.panelAdminRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -1291,7 +723,7 @@
             this.panelCreateTemplateBtn.ColorTop = System.Drawing.Color.Empty;
             this.panelCreateTemplateBtn.Controls.Add(this.ExitBtn);
             this.panelCreateTemplateBtn.Controls.Add(this.logOutBtn2);
-            this.panelCreateTemplateBtn.Controls.Add(this.SaveBtn);
+            this.panelCreateTemplateBtn.Controls.Add(this.SaveCreateBtn);
             this.panelCreateTemplateBtn.Controls.Add(this.ClearBtn);
             this.panelCreateTemplateBtn.Location = new System.Drawing.Point(46, 147);
             this.panelCreateTemplateBtn.Name = "panelCreateTemplateBtn";
@@ -1318,14 +750,15 @@
             this.logOutBtn2.UseVisualStyleBackColor = true;
             this.logOutBtn2.Click += new System.EventHandler(this.logOutBtn2_Click);
             // 
-            // SaveBtn
+            // SaveCreateBtn
             // 
-            this.SaveBtn.Location = new System.Drawing.Point(14, 91);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(75, 45);
-            this.SaveBtn.TabIndex = 1;
-            this.SaveBtn.Text = "Save";
-            this.SaveBtn.UseVisualStyleBackColor = true;
+            this.SaveCreateBtn.Location = new System.Drawing.Point(14, 91);
+            this.SaveCreateBtn.Name = "SaveCreateBtn";
+            this.SaveCreateBtn.Size = new System.Drawing.Size(75, 45);
+            this.SaveCreateBtn.TabIndex = 1;
+            this.SaveCreateBtn.Text = "Save";
+            this.SaveCreateBtn.UseVisualStyleBackColor = true;
+            this.SaveCreateBtn.Click += new System.EventHandler(this.SaveCreateBtn_Click);
             // 
             // ClearBtn
             // 
@@ -1340,11 +773,12 @@
             // 
             this.panelAdminBtn.ColorBottom = System.Drawing.Color.Empty;
             this.panelAdminBtn.ColorTop = System.Drawing.Color.Empty;
+            this.panelAdminBtn.Controls.Add(this.displayBtn);
             this.panelAdminBtn.Controls.Add(this.button5);
             this.panelAdminBtn.Controls.Add(this.logoutBtn);
             this.panelAdminBtn.Controls.Add(this.editBtn);
             this.panelAdminBtn.Controls.Add(this.createBtn);
-            this.panelAdminBtn.Location = new System.Drawing.Point(20, 303);
+            this.panelAdminBtn.Location = new System.Drawing.Point(12, 203);
             this.panelAdminBtn.Name = "panelAdminBtn";
             this.panelAdminBtn.Size = new System.Drawing.Size(114, 457);
             this.panelAdminBtn.TabIndex = 2;
@@ -1402,50 +836,457 @@
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // logoutPanel3
+            // panelCreateAndEdit
             // 
-            this.logoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.logoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.logoutPanel3.Controls.Add(this.cancelLogOutButton2);
-            this.logoutPanel3.Controls.Add(this.cLogOutButton2);
-            this.logoutPanel3.Controls.Add(this.label1);
-            this.logoutPanel3.Location = new System.Drawing.Point(382, 12);
-            this.logoutPanel3.Name = "logoutPanel3";
-            this.logoutPanel3.Size = new System.Drawing.Size(262, 117);
-            this.logoutPanel3.TabIndex = 72;
+            this.panelCreateAndEdit.ColorBottom = System.Drawing.Color.White;
+            this.panelCreateAndEdit.ColorTop = System.Drawing.Color.Empty;
+            this.panelCreateAndEdit.Controls.Add(this.codeText);
+            this.panelCreateAndEdit.Controls.Add(this.stateText);
+            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor17);
+            this.panelCreateAndEdit.Controls.Add(this.cityText);
+            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor13);
+            this.panelCreateAndEdit.Controls.Add(this.labelEditTemplate);
+            this.panelCreateAndEdit.Controls.Add(this.interviewerText);
+            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor15);
+            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor12);
+            this.panelCreateAndEdit.Controls.Add(this.addressText);
+            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor11);
+            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor10);
+            this.panelCreateAndEdit.Controls.Add(this.genderText);
+            this.panelCreateAndEdit.Controls.Add(this.dateOfBirth);
+            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor9);
+            this.panelCreateAndEdit.Controls.Add(this.ageText);
+            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor8);
+            this.panelCreateAndEdit.Controls.Add(this.typeText);
+            this.panelCreateAndEdit.Controls.Add(this.positionText);
+            this.panelCreateAndEdit.Controls.Add(this.contactText);
+            this.panelCreateAndEdit.Controls.Add(this.emailText);
+            this.panelCreateAndEdit.Controls.Add(this.intervieweeText);
+            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor7);
+            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor5);
+            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor4);
+            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor3);
+            this.panelCreateAndEdit.Controls.Add(this.labelGradientColor1);
+            this.panelCreateAndEdit.Controls.Add(this.LabelCreateTemplate);
+            this.panelCreateAndEdit.Controls.Add(this.labelInterviewer);
+            this.panelCreateAndEdit.Controls.Add(this.labelInterviewee);
+            this.panelCreateAndEdit.Location = new System.Drawing.Point(203, 12);
+            this.panelCreateAndEdit.Name = "panelCreateAndEdit";
+            this.panelCreateAndEdit.Size = new System.Drawing.Size(866, 561);
+            this.panelCreateAndEdit.TabIndex = 73;
             // 
-            // cancelLogOutButton2
+            // stateText
             // 
-            this.cancelLogOutButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelLogOutButton2.Location = new System.Drawing.Point(158, 56);
-            this.cancelLogOutButton2.Name = "cancelLogOutButton2";
-            this.cancelLogOutButton2.Size = new System.Drawing.Size(75, 29);
-            this.cancelLogOutButton2.TabIndex = 2;
-            this.cancelLogOutButton2.Text = "Cancel";
-            this.cancelLogOutButton2.UseVisualStyleBackColor = true;
-            this.cancelLogOutButton2.Click += new System.EventHandler(this.cancelLogOutButton2_Click);
+            this.stateText.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stateText.ForeColor = System.Drawing.Color.Black;
+            this.stateText.Location = new System.Drawing.Point(238, 350);
+            this.stateText.Margin = new System.Windows.Forms.Padding(2);
+            this.stateText.Multiline = true;
+            this.stateText.Name = "stateText";
+            this.stateText.Size = new System.Drawing.Size(195, 28);
+            this.stateText.TabIndex = 100;
+            this.stateText.Text = "012345678";
             // 
-            // cLogOutButton2
+            // labelGradientColor17
             // 
-            this.cLogOutButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cLogOutButton2.Location = new System.Drawing.Point(26, 56);
-            this.cLogOutButton2.Name = "cLogOutButton2";
-            this.cLogOutButton2.Size = new System.Drawing.Size(75, 29);
-            this.cLogOutButton2.TabIndex = 1;
-            this.cLogOutButton2.Text = "Log out";
-            this.cLogOutButton2.UseVisualStyleBackColor = true;
-            this.cLogOutButton2.Click += new System.EventHandler(this.cLogOutButton2_Click);
+            this.labelGradientColor17.ColorBottom = System.Drawing.Color.Empty;
+            this.labelGradientColor17.ColorTop = System.Drawing.Color.Empty;
+            this.labelGradientColor17.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor17.ForeColor = System.Drawing.Color.Black;
+            this.labelGradientColor17.Location = new System.Drawing.Point(234, 320);
+            this.labelGradientColor17.Name = "labelGradientColor17";
+            this.labelGradientColor17.Size = new System.Drawing.Size(45, 28);
+            this.labelGradientColor17.TabIndex = 99;
+            this.labelGradientColor17.Text = "State";
+            this.labelGradientColor17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // cityText
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(65, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Are you sure ?";
+            this.cityText.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityText.ForeColor = System.Drawing.Color.Black;
+            this.cityText.Location = new System.Drawing.Point(8, 350);
+            this.cityText.Margin = new System.Windows.Forms.Padding(2);
+            this.cityText.Multiline = true;
+            this.cityText.Name = "cityText";
+            this.cityText.Size = new System.Drawing.Size(195, 28);
+            this.cityText.TabIndex = 98;
+            this.cityText.Text = "012345678";
+            // 
+            // labelGradientColor13
+            // 
+            this.labelGradientColor13.ColorBottom = System.Drawing.Color.Empty;
+            this.labelGradientColor13.ColorTop = System.Drawing.Color.Empty;
+            this.labelGradientColor13.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor13.ForeColor = System.Drawing.Color.Black;
+            this.labelGradientColor13.Location = new System.Drawing.Point(4, 320);
+            this.labelGradientColor13.Name = "labelGradientColor13";
+            this.labelGradientColor13.Size = new System.Drawing.Size(51, 28);
+            this.labelGradientColor13.TabIndex = 97;
+            this.labelGradientColor13.Text = "City";
+            this.labelGradientColor13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelEditTemplate
+            // 
+            this.labelEditTemplate.ColorBottom = System.Drawing.Color.Gainsboro;
+            this.labelEditTemplate.ColorTop = System.Drawing.SystemColors.Control;
+            this.labelEditTemplate.Font = new System.Drawing.Font("Century Schoolbook", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEditTemplate.Location = new System.Drawing.Point(304, 0);
+            this.labelEditTemplate.Name = "labelEditTemplate";
+            this.labelEditTemplate.Size = new System.Drawing.Size(866, 85);
+            this.labelEditTemplate.TabIndex = 96;
+            this.labelEditTemplate.Text = "Edit Template";
+            this.labelEditTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // interviewerText
+            // 
+            this.interviewerText.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.interviewerText.ForeColor = System.Drawing.Color.Black;
+            this.interviewerText.Location = new System.Drawing.Point(24, 502);
+            this.interviewerText.Margin = new System.Windows.Forms.Padding(2);
+            this.interviewerText.Multiline = true;
+            this.interviewerText.Name = "interviewerText";
+            this.interviewerText.Size = new System.Drawing.Size(409, 28);
+            this.interviewerText.TabIndex = 92;
+            this.interviewerText.Text = "Chee Weng";
+            // 
+            // labelGradientColor15
+            // 
+            this.labelGradientColor15.ColorBottom = System.Drawing.Color.Empty;
+            this.labelGradientColor15.ColorTop = System.Drawing.Color.Empty;
+            this.labelGradientColor15.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor15.ForeColor = System.Drawing.Color.Black;
+            this.labelGradientColor15.Location = new System.Drawing.Point(20, 472);
+            this.labelGradientColor15.Name = "labelGradientColor15";
+            this.labelGradientColor15.Size = new System.Drawing.Size(108, 28);
+            this.labelGradientColor15.TabIndex = 90;
+            this.labelGradientColor15.Text = "Interviewer";
+            this.labelGradientColor15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelGradientColor12
+            // 
+            this.labelGradientColor12.ColorBottom = System.Drawing.Color.Indigo;
+            this.labelGradientColor12.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.labelGradientColor12.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor12.ForeColor = System.Drawing.Color.White;
+            this.labelGradientColor12.Location = new System.Drawing.Point(4, 95);
+            this.labelGradientColor12.Name = "labelGradientColor12";
+            this.labelGradientColor12.Size = new System.Drawing.Size(49, 28);
+            this.labelGradientColor12.TabIndex = 88;
+            this.labelGradientColor12.Text = "Code:";
+            this.labelGradientColor12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // addressText
+            // 
+            this.addressText.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressText.ForeColor = System.Drawing.Color.Black;
+            this.addressText.Location = new System.Drawing.Point(472, 230);
+            this.addressText.Margin = new System.Windows.Forms.Padding(2);
+            this.addressText.Multiline = true;
+            this.addressText.Name = "addressText";
+            this.addressText.Size = new System.Drawing.Size(375, 148);
+            this.addressText.TabIndex = 87;
+            this.addressText.Text = "Address..................................................";
+            // 
+            // labelGradientColor11
+            // 
+            this.labelGradientColor11.ColorBottom = System.Drawing.Color.Empty;
+            this.labelGradientColor11.ColorTop = System.Drawing.Color.Empty;
+            this.labelGradientColor11.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor11.ForeColor = System.Drawing.Color.Black;
+            this.labelGradientColor11.Location = new System.Drawing.Point(469, 200);
+            this.labelGradientColor11.Name = "labelGradientColor11";
+            this.labelGradientColor11.Size = new System.Drawing.Size(71, 28);
+            this.labelGradientColor11.TabIndex = 86;
+            this.labelGradientColor11.Text = "Address";
+            this.labelGradientColor11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelGradientColor10
+            // 
+            this.labelGradientColor10.ColorBottom = System.Drawing.Color.Empty;
+            this.labelGradientColor10.ColorTop = System.Drawing.Color.Empty;
+            this.labelGradientColor10.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor10.ForeColor = System.Drawing.Color.Black;
+            this.labelGradientColor10.Location = new System.Drawing.Point(644, 141);
+            this.labelGradientColor10.Name = "labelGradientColor10";
+            this.labelGradientColor10.Size = new System.Drawing.Size(107, 28);
+            this.labelGradientColor10.TabIndex = 85;
+            this.labelGradientColor10.Text = "Date Of Birth";
+            this.labelGradientColor10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // genderText
+            // 
+            this.genderText.AutoCompleteCustomSource.AddRange(new string[] {
+            "Male",
+            "Female"});
+            this.genderText.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderText.ForeColor = System.Drawing.Color.Black;
+            this.genderText.FormattingEnabled = true;
+            this.genderText.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.genderText.Location = new System.Drawing.Point(472, 171);
+            this.genderText.Name = "genderText";
+            this.genderText.Size = new System.Drawing.Size(81, 28);
+            this.genderText.TabIndex = 84;
+            // 
+            // dateOfBirth
+            // 
+            this.dateOfBirth.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateOfBirth.Location = new System.Drawing.Point(648, 171);
+            this.dateOfBirth.Name = "dateOfBirth";
+            this.dateOfBirth.Size = new System.Drawing.Size(200, 27);
+            this.dateOfBirth.TabIndex = 83;
+            // 
+            // labelGradientColor9
+            // 
+            this.labelGradientColor9.ColorBottom = System.Drawing.Color.Empty;
+            this.labelGradientColor9.ColorTop = System.Drawing.Color.Empty;
+            this.labelGradientColor9.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor9.ForeColor = System.Drawing.Color.Black;
+            this.labelGradientColor9.Location = new System.Drawing.Point(567, 141);
+            this.labelGradientColor9.Name = "labelGradientColor9";
+            this.labelGradientColor9.Size = new System.Drawing.Size(64, 28);
+            this.labelGradientColor9.TabIndex = 82;
+            this.labelGradientColor9.Text = "Age";
+            this.labelGradientColor9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ageText
+            // 
+            this.ageText.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ageText.ForeColor = System.Drawing.Color.Black;
+            this.ageText.Location = new System.Drawing.Point(571, 171);
+            this.ageText.Margin = new System.Windows.Forms.Padding(2);
+            this.ageText.Multiline = true;
+            this.ageText.Name = "ageText";
+            this.ageText.Size = new System.Drawing.Size(60, 28);
+            this.ageText.TabIndex = 81;
+            this.ageText.Text = "22";
+            this.ageText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelGradientColor8
+            // 
+            this.labelGradientColor8.ColorBottom = System.Drawing.Color.Empty;
+            this.labelGradientColor8.ColorTop = System.Drawing.Color.Empty;
+            this.labelGradientColor8.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor8.ForeColor = System.Drawing.Color.Black;
+            this.labelGradientColor8.Location = new System.Drawing.Point(468, 141);
+            this.labelGradientColor8.Name = "labelGradientColor8";
+            this.labelGradientColor8.Size = new System.Drawing.Size(64, 28);
+            this.labelGradientColor8.TabIndex = 80;
+            this.labelGradientColor8.Text = "Gender";
+            this.labelGradientColor8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // typeText
+            // 
+            this.typeText.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeText.ForeColor = System.Drawing.Color.Black;
+            this.typeText.Location = new System.Drawing.Point(8, 290);
+            this.typeText.Margin = new System.Windows.Forms.Padding(2);
+            this.typeText.Multiline = true;
+            this.typeText.Name = "typeText";
+            this.typeText.Size = new System.Drawing.Size(195, 28);
+            this.typeText.TabIndex = 79;
+            this.typeText.Text = "Tehnical Interview";
+            // 
+            // positionText
+            // 
+            this.positionText.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.positionText.ForeColor = System.Drawing.Color.Black;
+            this.positionText.Location = new System.Drawing.Point(238, 290);
+            this.positionText.Margin = new System.Windows.Forms.Padding(2);
+            this.positionText.Multiline = true;
+            this.positionText.Name = "positionText";
+            this.positionText.Size = new System.Drawing.Size(195, 28);
+            this.positionText.TabIndex = 77;
+            this.positionText.Text = "Software Engineer";
+            // 
+            // contactText
+            // 
+            this.contactText.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactText.ForeColor = System.Drawing.Color.Black;
+            this.contactText.Location = new System.Drawing.Point(239, 230);
+            this.contactText.Margin = new System.Windows.Forms.Padding(2);
+            this.contactText.Multiline = true;
+            this.contactText.Name = "contactText";
+            this.contactText.Size = new System.Drawing.Size(195, 28);
+            this.contactText.TabIndex = 76;
+            this.contactText.Text = "012345678";
+            // 
+            // emailText
+            // 
+            this.emailText.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailText.ForeColor = System.Drawing.Color.Black;
+            this.emailText.Location = new System.Drawing.Point(8, 230);
+            this.emailText.Margin = new System.Windows.Forms.Padding(2);
+            this.emailText.Multiline = true;
+            this.emailText.Name = "emailText";
+            this.emailText.Size = new System.Drawing.Size(195, 28);
+            this.emailText.TabIndex = 75;
+            this.emailText.Text = "abc@gmail.com";
+            // 
+            // intervieweeText
+            // 
+            this.intervieweeText.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.intervieweeText.ForeColor = System.Drawing.Color.Black;
+            this.intervieweeText.Location = new System.Drawing.Point(8, 171);
+            this.intervieweeText.Margin = new System.Windows.Forms.Padding(2);
+            this.intervieweeText.Multiline = true;
+            this.intervieweeText.Name = "intervieweeText";
+            this.intervieweeText.Size = new System.Drawing.Size(426, 28);
+            this.intervieweeText.TabIndex = 73;
+            this.intervieweeText.Text = "Qiu";
+            // 
+            // labelGradientColor7
+            // 
+            this.labelGradientColor7.ColorBottom = System.Drawing.Color.Empty;
+            this.labelGradientColor7.ColorTop = System.Drawing.Color.Empty;
+            this.labelGradientColor7.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor7.ForeColor = System.Drawing.Color.Black;
+            this.labelGradientColor7.Location = new System.Drawing.Point(234, 260);
+            this.labelGradientColor7.Name = "labelGradientColor7";
+            this.labelGradientColor7.Size = new System.Drawing.Size(159, 28);
+            this.labelGradientColor7.TabIndex = 72;
+            this.labelGradientColor7.Text = "Position Application";
+            this.labelGradientColor7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelGradientColor5
+            // 
+            this.labelGradientColor5.ColorBottom = System.Drawing.Color.Empty;
+            this.labelGradientColor5.ColorTop = System.Drawing.Color.Empty;
+            this.labelGradientColor5.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor5.ForeColor = System.Drawing.Color.Black;
+            this.labelGradientColor5.Location = new System.Drawing.Point(8, 260);
+            this.labelGradientColor5.Name = "labelGradientColor5";
+            this.labelGradientColor5.Size = new System.Drawing.Size(147, 28);
+            this.labelGradientColor5.TabIndex = 70;
+            this.labelGradientColor5.Text = "Applicaation Type";
+            this.labelGradientColor5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelGradientColor4
+            // 
+            this.labelGradientColor4.ColorBottom = System.Drawing.Color.Empty;
+            this.labelGradientColor4.ColorTop = System.Drawing.Color.Empty;
+            this.labelGradientColor4.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor4.ForeColor = System.Drawing.Color.Black;
+            this.labelGradientColor4.Location = new System.Drawing.Point(4, 200);
+            this.labelGradientColor4.Name = "labelGradientColor4";
+            this.labelGradientColor4.Size = new System.Drawing.Size(57, 28);
+            this.labelGradientColor4.TabIndex = 69;
+            this.labelGradientColor4.Text = "Email";
+            this.labelGradientColor4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelGradientColor3
+            // 
+            this.labelGradientColor3.ColorBottom = System.Drawing.Color.Empty;
+            this.labelGradientColor3.ColorTop = System.Drawing.Color.Empty;
+            this.labelGradientColor3.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor3.ForeColor = System.Drawing.Color.Black;
+            this.labelGradientColor3.Location = new System.Drawing.Point(235, 200);
+            this.labelGradientColor3.Name = "labelGradientColor3";
+            this.labelGradientColor3.Size = new System.Drawing.Size(140, 28);
+            this.labelGradientColor3.TabIndex = 68;
+            this.labelGradientColor3.Text = "Contact Number";
+            this.labelGradientColor3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelGradientColor1
+            // 
+            this.labelGradientColor1.ColorBottom = System.Drawing.Color.Empty;
+            this.labelGradientColor1.ColorTop = System.Drawing.Color.Empty;
+            this.labelGradientColor1.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGradientColor1.ForeColor = System.Drawing.Color.Black;
+            this.labelGradientColor1.Location = new System.Drawing.Point(4, 141);
+            this.labelGradientColor1.Name = "labelGradientColor1";
+            this.labelGradientColor1.Size = new System.Drawing.Size(116, 28);
+            this.labelGradientColor1.TabIndex = 66;
+            this.labelGradientColor1.Text = "Interviewee";
+            this.labelGradientColor1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LabelCreateTemplate
+            // 
+            this.LabelCreateTemplate.ColorBottom = System.Drawing.Color.Gainsboro;
+            this.LabelCreateTemplate.ColorTop = System.Drawing.SystemColors.Control;
+            this.LabelCreateTemplate.Font = new System.Drawing.Font("Century Schoolbook", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCreateTemplate.Location = new System.Drawing.Point(-257, 0);
+            this.LabelCreateTemplate.Name = "LabelCreateTemplate";
+            this.LabelCreateTemplate.Size = new System.Drawing.Size(866, 85);
+            this.LabelCreateTemplate.TabIndex = 63;
+            this.LabelCreateTemplate.Text = "Create Template";
+            this.LabelCreateTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelInterviewer
+            // 
+            this.labelInterviewer.ColorBottom = System.Drawing.Color.Indigo;
+            this.labelInterviewer.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.labelInterviewer.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInterviewer.ForeColor = System.Drawing.Color.White;
+            this.labelInterviewer.Location = new System.Drawing.Point(0, 405);
+            this.labelInterviewer.Name = "labelInterviewer";
+            this.labelInterviewer.Size = new System.Drawing.Size(866, 44);
+            this.labelInterviewer.TabIndex = 65;
+            this.labelInterviewer.Text = "Interviewer";
+            this.labelInterviewer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelInterviewee
+            // 
+            this.labelInterviewee.ColorBottom = System.Drawing.Color.Indigo;
+            this.labelInterviewee.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.labelInterviewee.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInterviewee.ForeColor = System.Drawing.Color.White;
+            this.labelInterviewee.Location = new System.Drawing.Point(0, 85);
+            this.labelInterviewee.Name = "labelInterviewee";
+            this.labelInterviewee.Size = new System.Drawing.Size(866, 44);
+            this.labelInterviewee.TabIndex = 64;
+            this.labelInterviewee.Text = "Interviewee";
+            this.labelInterviewee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // codeText
+            // 
+            this.codeText.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.codeText.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codeText.ForeColor = System.Drawing.Color.Black;
+            this.codeText.Location = new System.Drawing.Point(53, 95);
+            this.codeText.Margin = new System.Windows.Forms.Padding(2);
+            this.codeText.Multiline = true;
+            this.codeText.Name = "codeText";
+            this.codeText.Size = new System.Drawing.Size(67, 25);
+            this.codeText.TabIndex = 101;
+            this.codeText.Text = "A1001";
+            this.codeText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // displayBtn
+            // 
+            this.displayBtn.Location = new System.Drawing.Point(14, 231);
+            this.displayBtn.Name = "displayBtn";
+            this.displayBtn.Size = new System.Drawing.Size(75, 45);
+            this.displayBtn.TabIndex = 4;
+            this.displayBtn.Text = "Display";
+            this.displayBtn.UseVisualStyleBackColor = true;
+            this.displayBtn.Click += new System.EventHandler(this.displayBtn_Click);
+            // 
+            // dgvList
+            // 
+            this.dgvList.AllowUserToAddRows = false;
+            this.dgvList.AllowUserToDeleteRows = false;
+            this.dgvList.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvList.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.dgvList.Location = new System.Drawing.Point(1, 139);
+            this.dgvList.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvList.Name = "dgvList";
+            this.dgvList.ReadOnly = true;
+            this.dgvList.RowHeadersWidth = 51;
+            this.dgvList.RowTemplate.Height = 40;
+            this.dgvList.Size = new System.Drawing.Size(866, 420);
+            this.dgvList.TabIndex = 7;
             // 
             // AdminScreen
             // 
@@ -1453,8 +1294,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(990, 588);
-            this.Controls.Add(this.logoutPanel3);
             this.Controls.Add(this.panelCreateAndEdit);
+            this.Controls.Add(this.logoutPanel3);
             this.Controls.Add(this.panelGradientColor1);
             this.Controls.Add(this.PanelViewTemplate);
             this.Controls.Add(this.panelAdminRight);
@@ -1465,18 +1306,18 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Application Feedback System";
             this.Load += new System.EventHandler(this.AdminScreen_Load);
-            this.panelCreateAndEdit.ResumeLayout(false);
-            this.panelCreateAndEdit.PerformLayout();
+            this.logoutPanel3.ResumeLayout(false);
+            this.logoutPanel3.PerformLayout();
             this.panelGradientColor1.ResumeLayout(false);
             this.panelGradientColor1.PerformLayout();
             this.PanelViewTemplate.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.panelAdminRight.ResumeLayout(false);
             this.panelCreateTemplateBtn.ResumeLayout(false);
             this.panelAdminBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            this.logoutPanel3.ResumeLayout(false);
-            this.logoutPanel3.PerformLayout();
+            this.panelCreateAndEdit.ResumeLayout(false);
+            this.panelCreateAndEdit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1488,7 +1329,7 @@
         private PanelGradientColor panelCreateTemplateBtn;
         private System.Windows.Forms.Button ClearBtn;
         private System.Windows.Forms.Button logOutBtn2;
-        private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.Button SaveCreateBtn;
         private System.Windows.Forms.Button ExitBtn;
         private PanelGradientColor panelAdminBtn;
         private System.Windows.Forms.Button button5;
@@ -1498,13 +1339,6 @@
         private PanelGradientColor PanelViewTemplate;
         private labelGradientColor labelTemplateList;
         private labelGradientColor LabelViewTemplate;
-        private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private PanelGradientColor panelGradientColor1;
         private labelGradientColor labelGradientColor19;
         private labelGradientColor labelGradientColor20;
@@ -1541,48 +1375,42 @@
         private labelGradientColor labelGradientColor37;
         private labelGradientColor LabelTemplate;
         private labelGradientColor labelGradientColor38;
-        private PanelGradientColor panelCreateAndEdit;
-        private System.Windows.Forms.TextBox textBox13;
-        private labelGradientColor labelGradientColor17;
-        private System.Windows.Forms.TextBox textBox12;
-        private labelGradientColor labelGradientColor13;
-        private labelGradientColor labelEditTemplate;
-        private System.Windows.Forms.TextBox textBox11;
-        private labelGradientColor labelGradientColor16;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private labelGradientColor labelGradientColor14;
-        private labelGradientColor labelGradientColor15;
-        private labelGradientColor labelCode;
-        private labelGradientColor labelGradientColor12;
-        private System.Windows.Forms.TextBox textBox8;
-        private labelGradientColor labelGradientColor11;
-        private labelGradientColor labelGradientColor10;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private labelGradientColor labelGradientColor9;
-        private System.Windows.Forms.TextBox textBox7;
-        private labelGradientColor labelGradientColor8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox eFirstNameTextBox;
-        private labelGradientColor labelGradientColor7;
-        private labelGradientColor labelGradientColor6;
-        private labelGradientColor labelGradientColor5;
-        private labelGradientColor labelGradientColor4;
-        private labelGradientColor labelGradientColor3;
-        private labelGradientColor labelGradientColor2;
-        private labelGradientColor labelGradientColor1;
-        private labelGradientColor LabelCreateTemplate;
-        private labelGradientColor labelInterviewer;
-        private labelGradientColor labelInterviewee;
         private System.Windows.Forms.Panel logoutPanel3;
         private System.Windows.Forms.Button cancelLogOutButton2;
         private System.Windows.Forms.Button cLogOutButton2;
         private System.Windows.Forms.Label label1;
+        private PanelGradientColor panelCreateAndEdit;
+        private System.Windows.Forms.TextBox stateText;
+        private labelGradientColor labelGradientColor17;
+        private System.Windows.Forms.TextBox cityText;
+        private labelGradientColor labelGradientColor13;
+        private labelGradientColor labelEditTemplate;
+        private System.Windows.Forms.TextBox interviewerText;
+        private labelGradientColor labelGradientColor15;
+        private labelGradientColor labelGradientColor12;
+        private System.Windows.Forms.TextBox addressText;
+        private labelGradientColor labelGradientColor11;
+        private labelGradientColor labelGradientColor10;
+        private System.Windows.Forms.ComboBox genderText;
+        private System.Windows.Forms.DateTimePicker dateOfBirth;
+        private labelGradientColor labelGradientColor9;
+        private System.Windows.Forms.TextBox ageText;
+        private labelGradientColor labelGradientColor8;
+        private System.Windows.Forms.TextBox typeText;
+        private System.Windows.Forms.TextBox positionText;
+        private System.Windows.Forms.TextBox contactText;
+        private System.Windows.Forms.TextBox emailText;
+        private System.Windows.Forms.TextBox intervieweeText;
+        private labelGradientColor labelGradientColor7;
+        private labelGradientColor labelGradientColor5;
+        private labelGradientColor labelGradientColor4;
+        private labelGradientColor labelGradientColor3;
+        private labelGradientColor labelGradientColor1;
+        private labelGradientColor LabelCreateTemplate;
+        private labelGradientColor labelInterviewer;
+        private labelGradientColor labelInterviewee;
+        private System.Windows.Forms.TextBox codeText;
+        private System.Windows.Forms.Button displayBtn;
+        private System.Windows.Forms.DataGridView dgvList;
     }
 }

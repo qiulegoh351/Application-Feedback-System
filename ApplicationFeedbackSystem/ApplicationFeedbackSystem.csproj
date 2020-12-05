@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Template.cs" />
     <Compile Include="DbConnector.cs" />
     <Compile Include="FeedBackPage.cs" />
     <Compile Include="gradienColorLabel.cs">
@@ -78,6 +79,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemplateHandler.cs" />
+    <Compile Include="TemplateList.cs" />
     <Compile Include="Test.cs">
       <SubType>Form</SubType>
     </Compile>

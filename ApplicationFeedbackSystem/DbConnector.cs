@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace ApplicationFeedbackSystem
 {
@@ -21,9 +22,9 @@ namespace ApplicationFeedbackSystem
                 conn.Open();
                 //Perform database operations
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return ex.ToString();
+                MessageBox.Show("Error in Database Connection!");
             }
             return "Done";
         }

@@ -174,6 +174,17 @@ namespace ApplicationFeedbackSystem
 
             
         }
+
+        private void displayBtn_Click(object sender, EventArgs e)
+        {
+            Template temp = new Template();
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+
+            TemplateHandler tempHnd = new TemplateHandler();
+
+            dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
+        }
     }
        
 }

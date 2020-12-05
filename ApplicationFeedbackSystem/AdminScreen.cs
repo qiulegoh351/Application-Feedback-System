@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace ApplicationFeedbackSystem
 {
     public partial class AdminScreen : Form
     {
+        DataTable table = new DataTable();
         public AdminScreen()
         {
             InitializeComponent();
@@ -24,7 +27,7 @@ namespace ApplicationFeedbackSystem
             panelCreateAndEdit.Hide();
             panelGradientColor1.Hide();
             PanelViewTemplate.Show();
-
+            
             logoutPanel3.Hide();
 
 
@@ -65,20 +68,7 @@ namespace ApplicationFeedbackSystem
             LabelCreateTemplate.Location = new Point(-3, 0);
         }
 
-        private void editBtn_Click(object sender, EventArgs e)
-        {
-            panelCreateTemplateBtn.Show();
-            panelAdminBtn.Hide();
-            panelCreateAndEdit.Show();
-            LabelCreateTemplate.Hide();
-            labelEditTemplate.Show();
-
-            labelEditTemplate.Width = 866;
-            labelEditTemplate.Height = 85;
-            labelEditTemplate.Location = new Point(-3, 0);
-
-           
-        }
+        
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
@@ -116,6 +106,55 @@ namespace ApplicationFeedbackSystem
         private void cancelLogOutButton2_Click(object sender, EventArgs e)
         {
             logoutPanel3.Hide();
+        }
+
+        private void SaveCreateBtn_Click(object sender, EventArgs e)
+        {
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+
+            Template Ad = new Template();
+            Ad.Code = int.Parse(codeText.Text);
+            Ad.Interviewee = intervieweeText.Text;
+            Ad.Gender = genderText.Text;
+            Ad.Age = int.Parse(ageText.Text);
+            Ad.DateOfBirth = DateTime.Parse(dateOfBirth.Text);
+            Ad.Email = emailText.Text;
+            Ad.ContactNum = contactText.Text;
+            Ad.Type = typeText.Text;
+            Ad.Position = positionText.Text;
+            Ad.City = cityText.Text;
+            Ad.State = stateText.Text;
+            Ad.Address = addressText.Text;
+            Ad.Interviewer = interviewerText.Text;
+
+            TemplateHandler ADHandler = new TemplateHandler();
+            int recordAdd = ADHandler.addNewTemplate(dbConn.getConn(), Ad);
+            MessageBox.Show(recordAdd + " New Template has been Added !!");
+        }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            panelCreateTemplateBtn.Show();
+            panelAdminBtn.Hide();
+            panelCreateAndEdit.Show();
+            LabelCreateTemplate.Hide();
+            labelEditTemplate.Show();
+
+            labelEditTemplate.Width = 866;
+            labelEditTemplate.Height = 85;
+            labelEditTemplate.Location = new Point(-3, 0);
+        }
+
+        private void displayBtn_Click(object sender, EventArgs e)
+        {
+            Template temp = new Template();
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+
+            TemplateHandler tempHnd = new TemplateHandler();
+            
+            dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
     }
 }
