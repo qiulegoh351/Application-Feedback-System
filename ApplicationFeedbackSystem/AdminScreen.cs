@@ -233,5 +233,33 @@ namespace ApplicationFeedbackSystem
                 labelEditTemplate.Location = new Point(-3, 0);
             }
         }
+
+        private void codeText_TextChanged(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection("server=localhost;user=dbcli;database=se_assignment;port=3306;password=dbcli123");
+            con.Open();
+            if (codeText.Text != " ")
+            {
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM template where code =@code",con);
+                cmd.Parameters.AddWithValue("@code", (codeText.Text));
+                MySqlDataReader da = cmd.ExecuteReader();
+                while (da.Read())
+                {
+                    codeText.Text = da.GetValue(0).ToString();
+                    intervieweeText.Text = da.GetValue(1).ToString();
+                    genderText.Text = da.GetValue(2).ToString();
+                    ageText.Text = da.GetValue(3).ToString();
+                    dateOfBirth.Text = da.GetValue(4).ToString();
+                    emailText.Text = da.GetValue(5).ToString();
+                    contactText.Text = da.GetValue(6).ToString();
+                    typeText.Text = da.GetValue(7).ToString();
+                    positionText.Text = da.GetValue(8).ToString();
+                    cityText.Text = da.GetValue(9).ToString();
+                    stateText.Text = da.GetValue(10).ToString();
+                    addressText.Text = da.GetValue(11).ToString();
+                    interviewerText.Text = da.GetValue(12).ToString();
+                }
+            }
+        }
     }
 }
