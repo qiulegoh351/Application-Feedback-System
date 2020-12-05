@@ -28,13 +28,13 @@ namespace ApplicationFeedbackSystem
             panelAdminBtn.Height = 457;
             panelAdminBtn.Location = new Point(3, 119);
 
-            PanelViewTemplate.Width = 866;
+            PanelViewTemplate.Width = 872;
             PanelViewTemplate.Height = 561;
-            PanelViewTemplate.Location = new Point(130, 9);
+            PanelViewTemplate.Location = new Point(124, 9);
 
-            panelGradientColor1.Width = 866;
+            panelGradientColor1.Width = 872;
             panelGradientColor1.Height = 561;
-            panelGradientColor1.Location = new Point(130, 9);
+            panelGradientColor1.Location = new Point(124, 9);
 
 
             logoutPanel.Location = new Point(314, 161);

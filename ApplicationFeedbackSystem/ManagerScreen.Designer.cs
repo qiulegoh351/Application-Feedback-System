@@ -75,10 +75,10 @@
             this.labelGradientColor38 = new ApplicationFeedbackSystem.labelGradientColor();
             this.panelAdminRight = new ApplicationFeedbackSystem.PanelGradientColor();
             this.panelAdminBtn = new ApplicationFeedbackSystem.PanelGradientColor();
+            this.displayBtn = new System.Windows.Forms.Button();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new ApplicationFeedbackSystem.PictureBoxGradientColor();
-            this.displayBtn = new System.Windows.Forms.Button();
             this.PanelViewTemplate.SuspendLayout();
             this.logoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
@@ -142,7 +142,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(72, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 23);
+            this.label1.Size = new System.Drawing.Size(152, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Are you sure ?";
             // 
@@ -198,7 +198,7 @@
             this.dgvList.ReadOnly = true;
             this.dgvList.RowHeadersWidth = 51;
             this.dgvList.RowTemplate.Height = 40;
-            this.dgvList.Size = new System.Drawing.Size(866, 420);
+            this.dgvList.Size = new System.Drawing.Size(874, 420);
             this.dgvList.TabIndex = 7;
             // 
             // panelGradientColor1
@@ -439,7 +439,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(473, 174);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(81, 28);
+            this.comboBox2.Size = new System.Drawing.Size(81, 33);
             this.comboBox2.TabIndex = 84;
             // 
             // dateTimePicker2
@@ -447,7 +447,7 @@
             this.dateTimePicker2.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Location = new System.Drawing.Point(649, 174);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 27);
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 32);
             this.dateTimePicker2.TabIndex = 83;
             // 
             // labelGradientColor29
@@ -700,7 +700,7 @@
             this.panelAdminRight.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAdminRight.Location = new System.Drawing.Point(0, 0);
             this.panelAdminRight.Name = "panelAdminRight";
-            this.panelAdminRight.Size = new System.Drawing.Size(124, 584);
+            this.panelAdminRight.Size = new System.Drawing.Size(124, 561);
             this.panelAdminRight.TabIndex = 14;
             // 
             // panelAdminBtn
@@ -711,10 +711,20 @@
             this.panelAdminBtn.Controls.Add(this.displayBtn);
             this.panelAdminBtn.Controls.Add(this.logoutBtn);
             this.panelAdminBtn.Controls.Add(this.deleteBtn);
-            this.panelAdminBtn.Location = new System.Drawing.Point(7, 127);
+            this.panelAdminBtn.Location = new System.Drawing.Point(7, 117);
             this.panelAdminBtn.Name = "panelAdminBtn";
-            this.panelAdminBtn.Size = new System.Drawing.Size(114, 457);
+            this.panelAdminBtn.Size = new System.Drawing.Size(114, 440);
             this.panelAdminBtn.TabIndex = 2;
+            // 
+            // displayBtn
+            // 
+            this.displayBtn.Location = new System.Drawing.Point(14, 98);
+            this.displayBtn.Name = "displayBtn";
+            this.displayBtn.Size = new System.Drawing.Size(75, 45);
+            this.displayBtn.TabIndex = 5;
+            this.displayBtn.Text = "Display";
+            this.displayBtn.UseVisualStyleBackColor = true;
+            this.displayBtn.Click += new System.EventHandler(this.displayBtn_Click);
             // 
             // logoutBtn
             // 
@@ -749,22 +759,12 @@
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // displayBtn
-            // 
-            this.displayBtn.Location = new System.Drawing.Point(14, 98);
-            this.displayBtn.Name = "displayBtn";
-            this.displayBtn.Size = new System.Drawing.Size(75, 45);
-            this.displayBtn.TabIndex = 5;
-            this.displayBtn.Text = "Display";
-            this.displayBtn.UseVisualStyleBackColor = true;
-            this.displayBtn.Click += new System.EventHandler(this.displayBtn_Click);
-            // 
             // ManagerScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(997, 584);
+            this.ClientSize = new System.Drawing.Size(997, 561);
             this.Controls.Add(this.PanelViewTemplate);
             this.Controls.Add(this.panelGradientColor1);
             this.Controls.Add(this.panelAdminRight);

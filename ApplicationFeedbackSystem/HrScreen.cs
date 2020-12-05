@@ -43,17 +43,17 @@ namespace ApplicationFeedbackSystem
             panelFeedCompleteBtn.Height = 430;
             panelFeedCompleteBtn.Location = new Point(3, 119);
 
-            PanelViewTemplate.Width = 866;
+            PanelViewTemplate.Width = 872;
             PanelViewTemplate.Height = 561;
-            PanelViewTemplate.Location = new Point(130, 9);
+            PanelViewTemplate.Location = new Point(124, 1);
 
-            panelCompleteFeedback.Width = 866;
+            panelCompleteFeedback.Width = 872;
             panelCompleteFeedback.Height = 561;
-            panelCompleteFeedback.Location = new Point(130, 9);
+            panelCompleteFeedback.Location = new Point(124, 1);
 
-            panelFeedback.Width = 866;
+            panelFeedback.Width = 872;
             panelFeedback.Height = 561;
-            panelFeedback.Location = new Point(130, 9);
+            panelFeedback.Location = new Point(124, 1);
 
             logoutPanel2.Location = new Point(314, 161);
         }
