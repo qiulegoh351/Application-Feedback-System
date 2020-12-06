@@ -19,7 +19,7 @@ namespace ApplicationFeedbackSystem
             InitializeComponent();
         }
 
-        
+        bool validateFeedback = false;
        
 
         private void HrScreen_Load(object sender, EventArgs e)
@@ -63,19 +63,29 @@ namespace ApplicationFeedbackSystem
 
         private void createBtn_Click(object sender, EventArgs e)
         {
-            panelFeedCompleteBtn.Show();
-            panelAdminBtn.Hide();
-            panelFeedback.Show();
+            if (validateFeedback == true)
+            {
+                panelCreateTemplateBtn.Hide();
+                panelFeedback.Show();
+                panelCreateTemplateBtn.Hide();
+                panelAdminBtn.Hide();
+                panelFeedCompleteBtn.Show();
+                panelCompleteFeedback.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("Please Select A Template to feedback.");
+            }
 
 
+            //eFirstNameTextBox.Clear();
+            //textBox1.Clear();
+            //textBox2.Clear();
+            //textBox3.Clear();
+            //textBox4.Clear();
+            //textBox5.Clear();
 
-
-            eFirstNameTextBox.Clear();
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
         }
 
         private void editBtn_Click(object sender, EventArgs e)
@@ -220,7 +230,7 @@ namespace ApplicationFeedbackSystem
         {
             DbConnector dbConn = new DbConnector();
             dbConn.connect();
-            
+            validateFeedback = true;
 
             if (e.RowIndex >= 0)
 
@@ -230,26 +240,26 @@ namespace ApplicationFeedbackSystem
 
                 eFirstNameTextBox.Text = row.Cells["code"].Value.ToString();
                 textBox1.Text = row.Cells["interviewee"].Value.ToString();
-                row.Cells["gender"].Value.ToString();
-                row.Cells["age"].Value.ToString();
-                row.Cells["DateOfBirth"].Value.ToString();
+                //row.Cells["gender"].Value.ToString();
+                //row.Cells["age"].Value.ToString();
+                //row.Cells["DateOfBirth"].Value.ToString();
                 textBox2.Text = row.Cells["email"].Value.ToString();
-                row.Cells["contactNum"].Value.ToString();
+                //row.Cells["contactNum"].Value.ToString();
                 textBox3.Text = row.Cells["type"].Value.ToString();
-                row.Cells["position"].Value.ToString();
-                row.Cells["city"].Value.ToString();
-                row.Cells["state"].Value.ToString();
-                row.Cells["address"].Value.ToString();
+                //row.Cells["position"].Value.ToString();
+                //row.Cells["city"].Value.ToString();
+                //row.Cells["state"].Value.ToString();
+                //row.Cells["address"].Value.ToString();
                 textBox4.Text = row.Cells["interviewer"].Value.ToString();
 
 
 
-                panelAdminBtn.Hide();
-                panelFeedCompleteBtn.Show();
-                panelCreateTemplateBtn.Hide();
-                PanelViewTemplate.Hide();
-                panelCompleteFeedback.Hide();
-                panelFeedback.Show();
+                ////panelAdminBtn.Hide();
+                ////panelFeedCompleteBtn.Show();
+                ////panelCreateTemplateBtn.Hide();
+                ////PanelViewTemplate.Hide();
+                ////panelCompleteFeedback.Hide();
+                ////panelFeedback.Show();
 
 
             }
@@ -273,6 +283,11 @@ namespace ApplicationFeedbackSystem
             textBox3.Clear();
             textBox4.Clear();
             textBox5.Clear();
+        }
+
+        private void labelGradientColor8_Click(object sender, EventArgs e)
+        {
+
         }
     }
        
