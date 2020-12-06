@@ -21,6 +21,7 @@ namespace ApplicationFeedbackSystem
         }
 
         bool validateView = false;
+        bool validateEdit = false;
 
         private void AdminScreen_Load(object sender, EventArgs e)
         {
@@ -84,6 +85,7 @@ namespace ApplicationFeedbackSystem
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
+            validateEdit = false;
             panelCreateTemplateBtn.Hide();
             panelViewBtn.Hide();
             panelAdminBtn.Show();
@@ -157,18 +159,24 @@ namespace ApplicationFeedbackSystem
 
         private void editBtn_Click(object sender, EventArgs e)
         {
-            panelEditTemplateBtn.Show();
-            panelCreateAndEdit.Show();
-            labelEditTemplate.Show();
-            panelCreateTemplateBtn.Hide();
-            panelAdminBtn.Hide();
-            panelView.Hide();
-            panelViewBtn.Hide();
-            LabelCreateTemplate.Hide();
+            if (validateEdit == true)
+            {
+                panelEditTemplateBtn.Show();
+                panelCreateAndEdit.Show();
+                labelEditTemplate.Show();
+                panelCreateTemplateBtn.Hide();
+                panelAdminBtn.Hide();
+                LabelCreateTemplate.Hide();
 
-            labelEditTemplate.Width = 866;
-            labelEditTemplate.Height = 85;
-            labelEditTemplate.Location = new Point(-3, 0);
+                labelEditTemplate.Width = 866;
+                labelEditTemplate.Height = 85;
+                labelEditTemplate.Location = new Point(-3, 0);
+            }
+            else
+            {
+                MessageBox.Show("Please Select A Template to Edit");
+            }
+
         }
 
         private void displayBtn_Click(object sender, EventArgs e)
@@ -211,6 +219,7 @@ namespace ApplicationFeedbackSystem
             DbConnector dbConn = new DbConnector();
             dbConn.connect();
             validateView = true;
+            validateEdit = true;
 
             if (e.RowIndex >= 0)
             {
@@ -244,18 +253,6 @@ namespace ApplicationFeedbackSystem
                 address.Text = row.Cells["address"].Value.ToString();
                 interviewer.Text = row.Cells["interviewer"].Value.ToString();
                 feedbackTypeText.Text = row.Cells["position"].Value.ToString();
-
-
-                panelEditTemplateBtn.Show();
-                panelCreateAndEdit.Show();
-                labelEditTemplate.Show();
-                panelCreateTemplateBtn.Hide();
-                panelAdminBtn.Hide();
-                LabelCreateTemplate.Hide();
-
-                labelEditTemplate.Width = 866;
-                labelEditTemplate.Height = 85;
-                labelEditTemplate.Location = new Point(-3, 0);
             }
         }
 
