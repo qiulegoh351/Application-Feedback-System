@@ -191,8 +191,6 @@ namespace ApplicationFeedbackSystem
         {
             feedbackPrint.Print();
 
-            string query = "SELECT * FROM complete_feedback WHERE file_name";
-
             DbConnector dbConn = new DbConnector();
             dbConn.connect();
 
@@ -265,6 +263,16 @@ namespace ApplicationFeedbackSystem
             completeFeedbackHandler comhr = new completeFeedbackHandler();
 
             dataGridView1.DataSource = comhr.listCompleteFeedback(dbConn.getConn());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            eFirstNameTextBox.Clear();
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
         }
     }
        
