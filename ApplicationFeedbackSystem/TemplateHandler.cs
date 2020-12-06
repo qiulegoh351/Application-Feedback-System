@@ -40,9 +40,9 @@ namespace ApplicationFeedbackSystem
 
         public int deleteATemplate(MySqlConnection conn, Template ad)
         {
-
             string sql = "DELETE FROM template where code = " + ad.Code + ";";
             MySqlCommand sqlComm = new MySqlCommand(sql, conn);
+            sqlComm.Parameters.AddWithValue("@code", ad.Code);
 
             return sqlComm.ExecuteNonQuery();
         }

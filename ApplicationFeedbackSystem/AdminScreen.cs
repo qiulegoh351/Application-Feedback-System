@@ -20,12 +20,15 @@ namespace ApplicationFeedbackSystem
             InitializeComponent();
         }
 
+        bool validateView = false;
+
         private void AdminScreen_Load(object sender, EventArgs e)
         {
             panelAdminBtn.Show();
+            panelViewBtn.Hide();
             panelCreateTemplateBtn.Hide();
             panelCreateAndEdit.Hide();
-            panelGradientColor1.Hide();
+            panelView.Hide();
             PanelViewTemplate.Show();
             panelEditTemplateBtn.Hide();
             logoutPanel3.Hide();
@@ -34,6 +37,10 @@ namespace ApplicationFeedbackSystem
             panelAdminBtn.Width = 114;
             panelAdminBtn.Height = 457;
             panelAdminBtn.Location = new Point(3, 119);
+
+            panelViewBtn.Width = 114;
+            panelViewBtn.Height = 457;
+            panelViewBtn.Location = new Point(3, 119);
 
             panelCreateTemplateBtn.Width = 114;
             panelCreateTemplateBtn.Height = 457;
@@ -47,9 +54,9 @@ namespace ApplicationFeedbackSystem
             panelEditTemplateBtn.Height = 457;
             panelEditTemplateBtn.Location = new Point(3, 119);
 
-            panelGradientColor1.Width = 872;
-            panelGradientColor1.Height = 561;
-            panelGradientColor1.Location = new Point(124, 1);
+            panelView.Width = 872;
+            panelView.Height = 561;
+            panelView.Location = new Point(124, 1);
 
             PanelViewTemplate.Width = 872;
             PanelViewTemplate.Height = 561;
@@ -63,6 +70,7 @@ namespace ApplicationFeedbackSystem
         {
             panelCreateTemplateBtn.Show();
             panelAdminBtn.Hide();
+            panelViewBtn.Hide();
             panelCreateAndEdit.Show();
             LabelCreateTemplate.Show();
             labelEditTemplate.Hide();
@@ -77,6 +85,7 @@ namespace ApplicationFeedbackSystem
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             panelCreateTemplateBtn.Hide();
+            panelViewBtn.Hide();
             panelAdminBtn.Show();
             PanelViewTemplate.Show();
             panelCreateAndEdit.Hide();
@@ -85,6 +94,7 @@ namespace ApplicationFeedbackSystem
         private void exitEditBtn_Click(object sender, EventArgs e)
         {
             panelCreateTemplateBtn.Hide();
+            panelViewBtn.Hide();
             panelEditTemplateBtn.Hide();
             panelAdminBtn.Show();
             PanelViewTemplate.Show();
@@ -152,6 +162,8 @@ namespace ApplicationFeedbackSystem
             labelEditTemplate.Show();
             panelCreateTemplateBtn.Hide();
             panelAdminBtn.Hide();
+            panelView.Hide();
+            panelViewBtn.Hide();
             LabelCreateTemplate.Hide();
 
             labelEditTemplate.Width = 866;
@@ -161,7 +173,6 @@ namespace ApplicationFeedbackSystem
 
         private void displayBtn_Click(object sender, EventArgs e)
         {
-            Template temp = new Template();
             DbConnector dbConn = new DbConnector();
             dbConn.connect();
 
@@ -199,12 +210,11 @@ namespace ApplicationFeedbackSystem
         {
             DbConnector dbConn = new DbConnector();
             dbConn.connect();
+            validateView = true;
 
             if (e.RowIndex >= 0)
-
             {
                 DataGridViewRow row = this.dgvList.Rows[e.RowIndex];
-
 
                 codeText.Text = row.Cells["code"].Value.ToString();
                 intervieweeText.Text = row.Cells["interviewee"].Value.ToString();
@@ -219,6 +229,21 @@ namespace ApplicationFeedbackSystem
                 stateText.Text = row.Cells["state"].Value.ToString();
                 addressText.Text = row.Cells["address"].Value.ToString();
                 interviewerText.Text = row.Cells["interviewer"].Value.ToString();
+
+                code.Text = row.Cells["code"].Value.ToString();
+                interviewee.Text = row.Cells["interviewee"].Value.ToString();
+                gender.Text = row.Cells["gender"].Value.ToString();
+                age.Text = row.Cells["age"].Value.ToString();
+                datebirth.Text = row.Cells["DateOfBirth"].Value.ToString();
+                email.Text = row.Cells["email"].Value.ToString();
+                contact.Text = row.Cells["contactNum"].Value.ToString();
+                type.Text = row.Cells["type"].Value.ToString();
+                position.Text = row.Cells["position"].Value.ToString();
+                city.Text = row.Cells["city"].Value.ToString();
+                state.Text = row.Cells["state"].Value.ToString();
+                address.Text = row.Cells["address"].Value.ToString();
+                interviewer.Text = row.Cells["interviewer"].Value.ToString();
+                feedbackTypeText.Text = row.Cells["position"].Value.ToString();
 
 
                 panelEditTemplateBtn.Show();
@@ -260,6 +285,45 @@ namespace ApplicationFeedbackSystem
                     interviewerText.Text = da.GetValue(12).ToString();
                 }
             }
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            validateView = false;
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+
+            TemplateHandler tempHnd = new TemplateHandler();
+
+            dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
+            panelEditTemplateBtn.Hide();
+            panelCreateAndEdit.Hide();
+            labelEditTemplate.Hide();
+            panelView.Hide();
+            panelViewBtn.Hide();
+            panelAdminRight.Show();
+            panelAdminBtn.Show();
+            LabelCreateTemplate.Hide();
+        }
+
+        private void viewBtn_Click(object sender, EventArgs e)
+        {
+            if (validateView == true)
+            {
+                panelEditTemplateBtn.Hide();
+                panelCreateAndEdit.Hide();
+                labelEditTemplate.Hide();
+                panelCreateTemplateBtn.Hide();
+                panelAdminBtn.Hide();
+                panelView.Show();
+                panelViewBtn.Show();
+                LabelCreateTemplate.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Please Select A Template to View");
+            }
+           
         }
     }
 }
