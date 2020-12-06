@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelAdminBtn = new ApplicationFeedbackSystem.PanelGradientColor();
             this.viewBtn = new System.Windows.Forms.Button();
             this.displayBtn = new System.Windows.Forms.Button();
@@ -107,6 +107,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LabelViewTemplate = new ApplicationFeedbackSystem.labelGradientColor();
             this.dgvList = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panelAdminRight = new ApplicationFeedbackSystem.PanelGradientColor();
             this.panelViewBtn = new ApplicationFeedbackSystem.PanelGradientColor();
             this.button1 = new System.Windows.Forms.Button();
@@ -122,7 +123,6 @@
             this.SaveCreateBtn = new System.Windows.Forms.Button();
             this.ClearBtn = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new ApplicationFeedbackSystem.PictureBoxGradientColor();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panelAdminBtn.SuspendLayout();
             this.panelView.SuspendLayout();
             this.panelCreateAndEdit.SuspendLayout();
@@ -147,7 +147,7 @@
             this.panelAdminBtn.Controls.Add(this.logoutBtn);
             this.panelAdminBtn.Controls.Add(this.editBtn);
             this.panelAdminBtn.Controls.Add(this.createBtn);
-            this.panelAdminBtn.Location = new System.Drawing.Point(7, 332);
+            this.panelAdminBtn.Location = new System.Drawing.Point(12, 263);
             this.panelAdminBtn.Name = "panelAdminBtn";
             this.panelAdminBtn.Size = new System.Drawing.Size(114, 457);
             this.panelAdminBtn.TabIndex = 2;
@@ -350,7 +350,7 @@
             "Female"});
             this.gender.Location = new System.Drawing.Point(475, 187);
             this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(81, 28);
+            this.gender.Size = new System.Drawing.Size(81, 33);
             this.gender.TabIndex = 128;
             // 
             // datebirth
@@ -358,7 +358,7 @@
             this.datebirth.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datebirth.Location = new System.Drawing.Point(651, 187);
             this.datebirth.Name = "datebirth";
-            this.datebirth.Size = new System.Drawing.Size(200, 27);
+            this.datebirth.Size = new System.Drawing.Size(200, 32);
             this.datebirth.TabIndex = 127;
             // 
             // labelGradientColor18
@@ -836,7 +836,7 @@
             "Female"});
             this.genderText.Location = new System.Drawing.Point(472, 171);
             this.genderText.Name = "genderText";
-            this.genderText.Size = new System.Drawing.Size(81, 28);
+            this.genderText.Size = new System.Drawing.Size(81, 33);
             this.genderText.TabIndex = 84;
             // 
             // dateOfBirth
@@ -844,7 +844,7 @@
             this.dateOfBirth.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateOfBirth.Location = new System.Drawing.Point(648, 171);
             this.dateOfBirth.Name = "dateOfBirth";
-            this.dateOfBirth.Size = new System.Drawing.Size(200, 27);
+            this.dateOfBirth.Size = new System.Drawing.Size(200, 32);
             this.dateOfBirth.TabIndex = 83;
             // 
             // labelGradientColor9
@@ -1051,7 +1051,7 @@
             this.PanelViewTemplate.Controls.Add(this.logoutPanel3);
             this.PanelViewTemplate.Controls.Add(this.LabelViewTemplate);
             this.PanelViewTemplate.Controls.Add(this.dgvList);
-            this.PanelViewTemplate.Location = new System.Drawing.Point(150, 158);
+            this.PanelViewTemplate.Location = new System.Drawing.Point(160, 343);
             this.PanelViewTemplate.Name = "PanelViewTemplate";
             this.PanelViewTemplate.Size = new System.Drawing.Size(866, 588);
             this.PanelViewTemplate.TabIndex = 1;
@@ -1112,7 +1112,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(65, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.Size = new System.Drawing.Size(168, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Are you sure ?";
             // 
@@ -1136,24 +1136,31 @@
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvList.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgvList.Location = new System.Drawing.Point(1, 139);
             this.dgvList.Margin = new System.Windows.Forms.Padding(4);
             this.dgvList.Name = "dgvList";
             this.dgvList.RowHeadersWidth = 51;
             this.dgvList.RowTemplate.Height = 40;
-            this.dgvList.Size = new System.Drawing.Size(866, 449);
+            this.dgvList.Size = new System.Drawing.Size(880, 490);
             this.dgvList.TabIndex = 7;
             this.dgvList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
             // panelAdminRight
             // 
@@ -1168,7 +1175,7 @@
             this.panelAdminRight.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAdminRight.Location = new System.Drawing.Point(0, 0);
             this.panelAdminRight.Name = "panelAdminRight";
-            this.panelAdminRight.Size = new System.Drawing.Size(124, 588);
+            this.panelAdminRight.Size = new System.Drawing.Size(124, 568);
             this.panelAdminRight.TabIndex = 0;
             // 
             // panelViewBtn
@@ -1211,7 +1218,7 @@
             this.panelEditTemplateBtn.Controls.Add(this.button2);
             this.panelEditTemplateBtn.Controls.Add(this.saveEditBtn);
             this.panelEditTemplateBtn.Controls.Add(this.button4);
-            this.panelEditTemplateBtn.Location = new System.Drawing.Point(62, 137);
+            this.panelEditTemplateBtn.Location = new System.Drawing.Point(62, 131);
             this.panelEditTemplateBtn.Name = "panelEditTemplateBtn";
             this.panelEditTemplateBtn.Size = new System.Drawing.Size(114, 457);
             this.panelEditTemplateBtn.TabIndex = 9;
@@ -1320,17 +1327,12 @@
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            // 
             // AdminScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(990, 588);
+            this.ClientSize = new System.Drawing.Size(990, 568);
             this.Controls.Add(this.panelView);
             this.Controls.Add(this.panelCreateAndEdit);
             this.Controls.Add(this.PanelViewTemplate);

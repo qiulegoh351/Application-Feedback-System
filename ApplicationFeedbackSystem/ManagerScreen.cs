@@ -37,11 +37,11 @@ namespace ApplicationFeedbackSystem
 
             PanelViewTemplate.Width = 872;
             PanelViewTemplate.Height = 561;
-            PanelViewTemplate.Location = new Point(124, 9);
+            PanelViewTemplate.Location = new Point(124, 1);
 
             panelView.Width = 872;
             panelView.Height = 561;
-            panelView.Location = new Point(124, 9);
+            panelView.Location = new Point(124, 1);
 
 
             logoutPanel.Location = new Point(314, 161);
@@ -149,6 +149,14 @@ namespace ApplicationFeedbackSystem
             panelViewBtn.Hide();
             panelView.Hide();
             PanelViewTemplate.Show();
+
+            Template temp = new Template();
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+
+            TemplateHandler tempHnd = new TemplateHandler();
+
+            dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
     }
 }

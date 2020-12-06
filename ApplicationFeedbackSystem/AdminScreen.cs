@@ -95,6 +95,7 @@ namespace ApplicationFeedbackSystem
 
         private void exitEditBtn_Click(object sender, EventArgs e)
         {
+            validateEdit = false;
             panelCreateTemplateBtn.Hide();
             panelViewBtn.Hide();
             panelEditTemplateBtn.Hide();
@@ -191,6 +192,7 @@ namespace ApplicationFeedbackSystem
 
         private void saveEditBtn_Click(object sender, EventArgs e)
         {
+            validateEdit = false;
             DbConnector dbConn = new DbConnector();
             dbConn.connect();
 

@@ -19,6 +19,9 @@ namespace ApplicationFeedbackSystem
             InitializeComponent();
         }
 
+        
+       
+
         private void HrScreen_Load(object sender, EventArgs e)
         {
             panelAdminBtn.Show();
@@ -64,6 +67,15 @@ namespace ApplicationFeedbackSystem
             panelAdminBtn.Hide();
             panelFeedback.Show();
 
+
+
+
+            eFirstNameTextBox.Clear();
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
         }
 
         private void editBtn_Click(object sender, EventArgs e)
@@ -83,6 +95,14 @@ namespace ApplicationFeedbackSystem
             PanelViewTemplate.Show();
             panelCompleteFeedback.Hide();
             panelFeedback.Hide();
+
+            Template temp = new Template();
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+
+            TemplateHandler tempHnd = new TemplateHandler();
+
+            dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -128,16 +148,16 @@ namespace ApplicationFeedbackSystem
             con.Open();
             if (eFirstNameTextBox.Text != " ")
             {
-                MySqlCommand cmd = new MySqlCommand("Select Interviewee, Email, Description, FeedbackType, Interviewer from feedback where Code =@Code", con);
-                cmd.Parameters.AddWithValue("@Code", (eFirstNameTextBox.Text));
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM template where code =@code", con);
+                cmd.Parameters.AddWithValue("@code", (eFirstNameTextBox.Text));
                 MySqlDataReader da = cmd.ExecuteReader();
                 while (da.Read())
                 {
-                    textBox1.Text = da.GetValue(0).ToString();
-                    textBox2.Text = da.GetValue(1).ToString();
-                    textBox5.Text = da.GetValue(2).ToString();
-                    textBox3.Text = da.GetValue(3).ToString();
-                    textBox4.Text = da.GetValue(4).ToString();
+                    textBox1.Text = da.GetValue(1).ToString();
+                    textBox2.Text = da.GetValue(5).ToString();
+
+                    textBox3.Text = da.GetValue(7).ToString();
+                    textBox4.Text = da.GetValue(12).ToString();
                 }
                 con.Close();
             }
@@ -154,7 +174,7 @@ namespace ApplicationFeedbackSystem
             afeedback.FeedbackType = textBox3.Text;
             afeedback.Interviewer = textBox4.Text;
 
-            e.Graphics.DrawString(labelGradientColor8.Text, new Font("Arial", 50, FontStyle.Regular), Brushes.Black, new Point(2, 0));
+            e.Graphics.DrawString(labelGradientColor8.Text, new Font("Arial", 50, FontStyle.Regular), Brushes.Black, new Point(350, 0));
             e.Graphics.DrawString(labelGradientColor4.Text, new Font("Arial", 20, FontStyle.Regular), Brushes.Black, new Point(2, 84));
 
             e.Graphics.DrawString("Code: " + afeedback.Code, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(37, 142));
@@ -184,6 +204,45 @@ namespace ApplicationFeedbackSystem
             TemplateHandler tempHnd = new TemplateHandler();
 
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
+        }
+
+        private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+            
+
+            if (e.RowIndex >= 0)
+
+            {
+                DataGridViewRow row = this.dgvList.Rows[e.RowIndex];
+
+
+                eFirstNameTextBox.Text = row.Cells["code"].Value.ToString();
+                textBox1.Text = row.Cells["interviewee"].Value.ToString();
+                row.Cells["gender"].Value.ToString();
+                row.Cells["age"].Value.ToString();
+                row.Cells["DateOfBirth"].Value.ToString();
+                textBox2.Text = row.Cells["email"].Value.ToString();
+                row.Cells["contactNum"].Value.ToString();
+                textBox3.Text = row.Cells["type"].Value.ToString();
+                row.Cells["position"].Value.ToString();
+                row.Cells["city"].Value.ToString();
+                row.Cells["state"].Value.ToString();
+                row.Cells["address"].Value.ToString();
+                textBox4.Text = row.Cells["interviewer"].Value.ToString();
+
+
+
+                panelAdminBtn.Hide();
+                panelFeedCompleteBtn.Show();
+                panelCreateTemplateBtn.Hide();
+                PanelViewTemplate.Hide();
+                panelCompleteFeedback.Hide();
+                panelFeedback.Show();
+
+
+            }
         }
     }
        
