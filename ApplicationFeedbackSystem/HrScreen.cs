@@ -174,15 +174,14 @@ namespace ApplicationFeedbackSystem
             afeedback.FeedbackType = textBox3.Text;
             afeedback.Interviewer = textBox4.Text;
 
-            e.Graphics.DrawString(labelGradientColor8.Text, new Font("Arial", 50, FontStyle.Regular), Brushes.Black, new Point(350, 0));
+            e.Graphics.DrawString(labelGradientColor8.Text, new Font("Arial", 50, FontStyle.Regular), Brushes.Black, new Point(295, 0));
             e.Graphics.DrawString(labelGradientColor4.Text, new Font("Arial", 20, FontStyle.Regular), Brushes.Black, new Point(2, 84));
 
             e.Graphics.DrawString("Code: " + afeedback.Code, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(37, 142));
             e.Graphics.DrawString("Interviewee: " + afeedback.Interviewee, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(322, 142));
             e.Graphics.DrawString("Email: " + afeedback.Email, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(600, 142));
-            e.Graphics.DrawString(labelGradientColor38.Text, new Font("Arial", 20, FontStyle.Regular), Brushes.Black, new Point(0, 299));
 
-            e.Graphics.DrawString("Description: " + afeedback.Describe, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(41, 369));
+            e.Graphics.DrawString("Description: " + afeedback.Describe, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(37, 200));
             e.Graphics.DrawString("FeedbackType: " + afeedback.FeedbackType, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(488, 476));
             e.Graphics.DrawString("Interviewer: " + afeedback.Interviewer, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(488, 508));
 
@@ -192,7 +191,20 @@ namespace ApplicationFeedbackSystem
         {
             feedbackPrint.Print();
 
-            
+            string query = "SELECT * FROM complete_feedback WHERE file_name";
+
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+
+            completeFeedback cpFB = new completeFeedback();
+            cpFB.File_name = int.Parse(eFirstNameTextBox.Text);
+            cpFB.Email = textBox2.Text;
+           
+
+            completeFeedbackHandler cpFbHr = new completeFeedbackHandler();
+            int recordCnt = cpFbHr.addNewCompleteFeedback(dbConn.getConn(), cpFB);
+            MessageBox.Show(recordCnt + " data has been inserted");
+
         }
 
         private void displayBtn_Click(object sender, EventArgs e)
@@ -243,6 +255,16 @@ namespace ApplicationFeedbackSystem
 
 
             }
+        }
+
+        private void displayBtn2_Click(object sender, EventArgs e)
+        {
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+
+            completeFeedbackHandler comhr = new completeFeedbackHandler();
+
+            dataGridView1.DataSource = comhr.listCompleteFeedback(dbConn.getConn());
         }
     }
        

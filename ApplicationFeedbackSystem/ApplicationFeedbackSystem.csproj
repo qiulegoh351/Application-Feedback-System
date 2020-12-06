@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="completeFeedback.cs" />
+    <Compile Include="completeFeedbackHandler.cs" />
     <Compile Include="Template.cs" />
     <Compile Include="DbConnector.cs" />
     <Compile Include="FeedBackPage.cs" />
@@ -133,6 +135,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
