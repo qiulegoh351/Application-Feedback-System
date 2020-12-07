@@ -147,7 +147,7 @@
             this.panelAdminBtn.Controls.Add(this.logoutBtn);
             this.panelAdminBtn.Controls.Add(this.editBtn);
             this.panelAdminBtn.Controls.Add(this.createBtn);
-            this.panelAdminBtn.Location = new System.Drawing.Point(12, 263);
+            this.panelAdminBtn.Location = new System.Drawing.Point(3, 282);
             this.panelAdminBtn.Name = "panelAdminBtn";
             this.panelAdminBtn.Size = new System.Drawing.Size(114, 457);
             this.panelAdminBtn.TabIndex = 2;
@@ -168,7 +168,7 @@
             this.displayBtn.Name = "displayBtn";
             this.displayBtn.Size = new System.Drawing.Size(75, 45);
             this.displayBtn.TabIndex = 4;
-            this.displayBtn.Text = "Display";
+            this.displayBtn.Text = "Rehresh";
             this.displayBtn.UseVisualStyleBackColor = true;
             this.displayBtn.Click += new System.EventHandler(this.displayBtn_Click);
             // 
@@ -350,7 +350,7 @@
             "Female"});
             this.gender.Location = new System.Drawing.Point(475, 187);
             this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(81, 33);
+            this.gender.Size = new System.Drawing.Size(81, 28);
             this.gender.TabIndex = 128;
             // 
             // datebirth
@@ -358,7 +358,7 @@
             this.datebirth.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datebirth.Location = new System.Drawing.Point(651, 187);
             this.datebirth.Name = "datebirth";
-            this.datebirth.Size = new System.Drawing.Size(200, 32);
+            this.datebirth.Size = new System.Drawing.Size(200, 27);
             this.datebirth.TabIndex = 127;
             // 
             // labelGradientColor18
@@ -836,7 +836,7 @@
             "Female"});
             this.genderText.Location = new System.Drawing.Point(472, 171);
             this.genderText.Name = "genderText";
-            this.genderText.Size = new System.Drawing.Size(81, 33);
+            this.genderText.Size = new System.Drawing.Size(81, 28);
             this.genderText.TabIndex = 84;
             // 
             // dateOfBirth
@@ -844,7 +844,7 @@
             this.dateOfBirth.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateOfBirth.Location = new System.Drawing.Point(648, 171);
             this.dateOfBirth.Name = "dateOfBirth";
-            this.dateOfBirth.Size = new System.Drawing.Size(200, 32);
+            this.dateOfBirth.Size = new System.Drawing.Size(200, 27);
             this.dateOfBirth.TabIndex = 83;
             // 
             // labelGradientColor9
@@ -1112,7 +1112,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(65, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 32);
+            this.label1.Size = new System.Drawing.Size(132, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Are you sure ?";
             // 
@@ -1329,7 +1329,7 @@
             // 
             // AdminScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(990, 568);

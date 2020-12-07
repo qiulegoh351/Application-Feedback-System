@@ -17,6 +17,12 @@ namespace ApplicationFeedbackSystem
         public HrScreen()
         {
             InitializeComponent();
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+
+            TemplateHandler tempHnd = new TemplateHandler();
+
+            dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
 
         bool validateFeedback = false;
@@ -77,8 +83,6 @@ namespace ApplicationFeedbackSystem
             {
                 MessageBox.Show("Please Select A Template to feedback.");
             }
-
-
             //eFirstNameTextBox.Clear();
             //textBox1.Clear();
             //textBox2.Clear();
@@ -217,7 +221,6 @@ namespace ApplicationFeedbackSystem
 
         private void displayBtn_Click(object sender, EventArgs e)
         {
-            Template temp = new Template();
             DbConnector dbConn = new DbConnector();
             dbConn.connect();
 
@@ -286,6 +289,11 @@ namespace ApplicationFeedbackSystem
         }
 
         private void labelGradientColor8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

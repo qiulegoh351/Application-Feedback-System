@@ -18,6 +18,12 @@ namespace ApplicationFeedbackSystem
         public AdminScreen()
         {
             InitializeComponent();
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+
+            TemplateHandler tempHnd = new TemplateHandler();
+
+            dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
 
         bool validateView = false;

@@ -228,7 +228,7 @@
             "Female"});
             this.genderText.Location = new System.Drawing.Point(475, 187);
             this.genderText.Name = "genderText";
-            this.genderText.Size = new System.Drawing.Size(81, 33);
+            this.genderText.Size = new System.Drawing.Size(81, 28);
             this.genderText.TabIndex = 128;
             // 
             // dateOfBirth
@@ -236,7 +236,7 @@
             this.dateOfBirth.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateOfBirth.Location = new System.Drawing.Point(651, 187);
             this.dateOfBirth.Name = "dateOfBirth";
-            this.dateOfBirth.Size = new System.Drawing.Size(200, 32);
+            this.dateOfBirth.Size = new System.Drawing.Size(200, 27);
             this.dateOfBirth.TabIndex = 127;
             // 
             // labelGradientColor9
@@ -567,7 +567,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(72, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 30);
+            this.label1.Size = new System.Drawing.Size(119, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Are you sure ?";
             // 
@@ -687,7 +687,7 @@
             this.panelManagerBtn.Controls.Add(this.displayBtn);
             this.panelManagerBtn.Controls.Add(this.logoutBtn);
             this.panelManagerBtn.Controls.Add(this.deleteBtn);
-            this.panelManagerBtn.Location = new System.Drawing.Point(12, 257);
+            this.panelManagerBtn.Location = new System.Drawing.Point(7, 245);
             this.panelManagerBtn.Name = "panelManagerBtn";
             this.panelManagerBtn.Size = new System.Drawing.Size(114, 440);
             this.panelManagerBtn.TabIndex = 2;
@@ -708,7 +708,7 @@
             this.displayBtn.Name = "displayBtn";
             this.displayBtn.Size = new System.Drawing.Size(75, 45);
             this.displayBtn.TabIndex = 5;
-            this.displayBtn.Text = "Display";
+            this.displayBtn.Text = "Rehresh";
             this.displayBtn.UseVisualStyleBackColor = true;
             this.displayBtn.Click += new System.EventHandler(this.displayBtn_Click);
             // 
@@ -747,7 +747,7 @@
             // 
             // ManagerScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(997, 561);

@@ -17,6 +17,12 @@ namespace ApplicationFeedbackSystem
         public ManagerScreen()
         {
             InitializeComponent();
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+
+            TemplateHandler tempHnd = new TemplateHandler();
+
+            dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
         bool validateView = false;
         private void ManagerScreen_Load(object sender, EventArgs e)
@@ -90,7 +96,6 @@ namespace ApplicationFeedbackSystem
 
         private void displayBtn_Click(object sender, EventArgs e)
         {
-            Template temp = new Template();
             DbConnector dbConn = new DbConnector();
             dbConn.connect();
 

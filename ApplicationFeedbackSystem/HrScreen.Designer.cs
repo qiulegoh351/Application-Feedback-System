@@ -28,15 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.feedbackPrint = new System.Drawing.Printing.PrintDocument();
             this.logoutPanel2 = new System.Windows.Forms.Panel();
             this.cancelLogOutButton = new System.Windows.Forms.Button();
             this.cLogOutButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelCompleteFeedback = new ApplicationFeedbackSystem.PanelGradientColor();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.chk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.file_name_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelGradientColor9 = new ApplicationFeedbackSystem.labelGradientColor();
             this.labelGradientColor10 = new ApplicationFeedbackSystem.labelGradientColor();
             this.panelFeedback = new ApplicationFeedbackSystem.PanelGradientColor();
@@ -77,12 +81,9 @@
             this.backBtn = new System.Windows.Forms.Button();
             this.ClearBtn = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new ApplicationFeedbackSystem.PictureBoxGradientColor();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.chk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.file_name_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.logoutPanel2.SuspendLayout();
             this.panelCompleteFeedback.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelFeedback.SuspendLayout();
             this.PanelViewTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
@@ -91,7 +92,6 @@
             this.panelFeedCompleteBtn.SuspendLayout();
             this.panelCreateTemplateBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // feedbackPrint
@@ -141,7 +141,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(62, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 32);
+            this.label1.Size = new System.Drawing.Size(132, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Are you sure ?";
             // 
@@ -156,6 +156,52 @@
             this.panelCompleteFeedback.Name = "panelCompleteFeedback";
             this.panelCompleteFeedback.Size = new System.Drawing.Size(866, 561);
             this.panelCompleteFeedback.TabIndex = 70;
+            // 
+            // dataGridView1
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.ColumnHeadersHeight = 40;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.chk,
+            this.file_name_data,
+            this.email_data});
+            this.dataGridView1.Location = new System.Drawing.Point(1, 140);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.RowTemplate.Height = 40;
+            this.dataGridView1.Size = new System.Drawing.Size(866, 421);
+            this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // chk
+            // 
+            this.chk.HeaderText = "";
+            this.chk.Name = "chk";
+            this.chk.Width = 50;
+            // 
+            // file_name_data
+            // 
+            this.file_name_data.DataPropertyName = "file_name";
+            this.file_name_data.HeaderText = "File Name";
+            this.file_name_data.Name = "file_name_data";
+            this.file_name_data.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.file_name_data.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.file_name_data.Width = 250;
+            // 
+            // email_data
+            // 
+            this.email_data.DataPropertyName = "email";
+            this.email_data.HeaderText = "Email";
+            this.email_data.Name = "email_data";
+            this.email_data.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.email_data.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.email_data.Width = 520;
             // 
             // labelGradientColor9
             // 
@@ -440,15 +486,15 @@
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle37.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvList.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvList.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgvList.Location = new System.Drawing.Point(1, 139);
             this.dgvList.Margin = new System.Windows.Forms.Padding(4);
@@ -473,8 +519,8 @@
             this.panelAdminRight.ColorTop = System.Drawing.Color.Empty;
             this.panelAdminRight.Controls.Add(this.panelAdminBtn);
             this.panelAdminRight.Controls.Add(this.panelFeedCompleteBtn);
-            this.panelAdminRight.Controls.Add(this.panelCreateTemplateBtn);
             this.panelAdminRight.Controls.Add(this.pictureBoxLogo);
+            this.panelAdminRight.Controls.Add(this.panelCreateTemplateBtn);
             this.panelAdminRight.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAdminRight.Location = new System.Drawing.Point(0, 0);
             this.panelAdminRight.Name = "panelAdminRight";
@@ -606,7 +652,7 @@
             this.panelCreateTemplateBtn.Controls.Add(this.logOutBtn2);
             this.panelCreateTemplateBtn.Controls.Add(this.backBtn);
             this.panelCreateTemplateBtn.Controls.Add(this.ClearBtn);
-            this.panelCreateTemplateBtn.Location = new System.Drawing.Point(18, 177);
+            this.panelCreateTemplateBtn.Location = new System.Drawing.Point(3, 273);
             this.panelCreateTemplateBtn.Name = "panelCreateTemplateBtn";
             this.panelCreateTemplateBtn.Size = new System.Drawing.Size(114, 430);
             this.panelCreateTemplateBtn.TabIndex = 1;
@@ -614,11 +660,11 @@
             // displayBtn2
             // 
             this.displayBtn2.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayBtn2.Location = new System.Drawing.Point(14, 183);
+            this.displayBtn2.Location = new System.Drawing.Point(19, 161);
             this.displayBtn2.Name = "displayBtn2";
             this.displayBtn2.Size = new System.Drawing.Size(75, 45);
             this.displayBtn2.TabIndex = 3;
-            this.displayBtn2.Text = "Display";
+            this.displayBtn2.Text = "Rehresh";
             this.displayBtn2.UseVisualStyleBackColor = true;
             this.displayBtn2.Click += new System.EventHandler(this.displayBtn2_Click);
             // 
@@ -636,7 +682,7 @@
             // backBtn
             // 
             this.backBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backBtn.Location = new System.Drawing.Point(14, 91);
+            this.backBtn.Location = new System.Drawing.Point(19, 91);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(75, 45);
             this.backBtn.TabIndex = 1;
@@ -647,7 +693,7 @@
             // ClearBtn
             // 
             this.ClearBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearBtn.Location = new System.Drawing.Point(14, 21);
+            this.ClearBtn.Location = new System.Drawing.Point(19, 21);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(75, 45);
             this.ClearBtn.TabIndex = 0;
@@ -668,54 +714,9 @@
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // dataGridView1
-            // 
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle38;
-            this.dataGridView1.ColumnHeadersHeight = 40;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.chk,
-            this.file_name_data,
-            this.email_data});
-            this.dataGridView1.Location = new System.Drawing.Point(1, 140);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle39.BackColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle39;
-            this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(866, 421);
-            this.dataGridView1.TabIndex = 11;
-            // 
-            // chk
-            // 
-            this.chk.HeaderText = "";
-            this.chk.Name = "chk";
-            this.chk.Width = 50;
-            // 
-            // file_name_data
-            // 
-            this.file_name_data.DataPropertyName = "file_name";
-            this.file_name_data.HeaderText = "File Name";
-            this.file_name_data.Name = "file_name_data";
-            this.file_name_data.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.file_name_data.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.file_name_data.Width = 250;
-            // 
-            // email_data
-            // 
-            this.email_data.DataPropertyName = "email";
-            this.email_data.HeaderText = "Email";
-            this.email_data.Name = "email_data";
-            this.email_data.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.email_data.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.email_data.Width = 520;
-            // 
             // HrScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(990, 561);
@@ -732,6 +733,7 @@
             this.logoutPanel2.ResumeLayout(false);
             this.logoutPanel2.PerformLayout();
             this.panelCompleteFeedback.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelFeedback.ResumeLayout(false);
             this.panelFeedback.PerformLayout();
             this.PanelViewTemplate.ResumeLayout(false);
@@ -741,7 +743,6 @@
             this.panelFeedCompleteBtn.ResumeLayout(false);
             this.panelCreateTemplateBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
