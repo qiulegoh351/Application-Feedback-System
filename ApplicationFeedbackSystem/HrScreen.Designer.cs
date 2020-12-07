@@ -38,13 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.emailPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.lbToEmail = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtFrom = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lbSubject = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.sendEmailBtn = new System.Windows.Forms.Button();
             this.lblLocation = new System.Windows.Forms.Label();
@@ -166,87 +160,30 @@
             this.emailPanel.Controls.Add(this.lblLocation);
             this.emailPanel.Controls.Add(this.sendEmailBtn);
             this.emailPanel.Controls.Add(this.linkLabel1);
-            this.emailPanel.Controls.Add(this.lbSubject);
-            this.emailPanel.Controls.Add(this.txtPassword);
-            this.emailPanel.Controls.Add(this.txtFrom);
-            this.emailPanel.Controls.Add(this.label6);
             this.emailPanel.Controls.Add(this.lbToEmail);
-            this.emailPanel.Controls.Add(this.label4);
-            this.emailPanel.Controls.Add(this.label3);
             this.emailPanel.Controls.Add(this.label2);
-            this.emailPanel.Location = new System.Drawing.Point(176, 143);
+            this.emailPanel.Location = new System.Drawing.Point(176, 123);
             this.emailPanel.Name = "emailPanel";
-            this.emailPanel.Size = new System.Drawing.Size(595, 367);
+            this.emailPanel.Size = new System.Drawing.Size(646, 170);
             this.emailPanel.TabIndex = 72;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 195);
+            this.label2.Location = new System.Drawing.Point(19, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 26);
             this.label2.TabIndex = 0;
             this.label2.Text = "To               :";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 26);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "From          :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 135);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 26);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Subject      :";
-            // 
             // lbToEmail
             // 
             this.lbToEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbToEmail.Location = new System.Drawing.Point(188, 193);
+            this.lbToEmail.Location = new System.Drawing.Point(172, 18);
             this.lbToEmail.Name = "lbToEmail";
             this.lbToEmail.Size = new System.Drawing.Size(387, 28);
             this.lbToEmail.TabIndex = 3;
             this.lbToEmail.Text = "cheewengng@gmail.com";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(32, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 26);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Password  :";
-            // 
-            // txtFrom
-            // 
-            this.txtFrom.Location = new System.Drawing.Point(188, 34);
-            this.txtFrom.Name = "txtFrom";
-            this.txtFrom.Size = new System.Drawing.Size(387, 32);
-            this.txtFrom.TabIndex = 7;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(188, 79);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(387, 32);
-            this.txtPassword.TabIndex = 8;
-            // 
-            // lbSubject
-            // 
-            this.lbSubject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbSubject.Location = new System.Drawing.Point(188, 134);
-            this.lbSubject.Name = "lbSubject";
-            this.lbSubject.Size = new System.Drawing.Size(387, 28);
-            this.lbSubject.TabIndex = 9;
-            this.lbSubject.Text = "Interview Feedback";
             // 
             // linkLabel1
             // 
@@ -255,7 +192,7 @@
             this.linkLabel1.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.linkLabel1.Location = new System.Drawing.Point(185, 238);
+            this.linkLabel1.Location = new System.Drawing.Point(169, 63);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(74, 16);
             this.linkLabel1.TabIndex = 10;
@@ -272,7 +209,7 @@
             this.sendEmailBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sendEmailBtn.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sendEmailBtn.ForeColor = System.Drawing.Color.White;
-            this.sendEmailBtn.Location = new System.Drawing.Point(188, 267);
+            this.sendEmailBtn.Location = new System.Drawing.Point(172, 89);
             this.sendEmailBtn.Name = "sendEmailBtn";
             this.sendEmailBtn.Size = new System.Drawing.Size(84, 43);
             this.sendEmailBtn.TabIndex = 11;
@@ -285,7 +222,7 @@
             this.lblLocation.AutoSize = true;
             this.lblLocation.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblLocation.Location = new System.Drawing.Point(277, 238);
+            this.lblLocation.Location = new System.Drawing.Point(261, 63);
             this.lblLocation.Name = "lblLocation";
             this.lblLocation.Size = new System.Drawing.Size(0, 16);
             this.lblLocation.TabIndex = 12;
@@ -953,16 +890,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email_data;
         private System.Windows.Forms.Panel emailPanel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbToEmail;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblLocation;
         private System.Windows.Forms.Button sendEmailBtn;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label lbSubject;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtFrom;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

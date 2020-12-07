@@ -320,9 +320,9 @@ namespace ApplicationFeedbackSystem
                 //send mail content
                 MailMessage mail = new MailMessage();
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress(txtFrom.Text);
+                mail.From = new MailAddress("ngshi901@gmail.com");
                 mail.To.Add(lbToEmail.Text);
-                mail.Subject = lbSubject.Text;
+                mail.Subject = "Interview Feedback from HappyTech";
                 mail.Body = "";
 
                 //send attachment file
@@ -332,7 +332,7 @@ namespace ApplicationFeedbackSystem
 
                 //mail resources
                 smtp.Port = 587;
-                smtp.Credentials = new System.Net.NetworkCredential(txtFrom.Text, txtPassword.Text);
+                smtp.Credentials = new System.Net.NetworkCredential("ngshi901@gmail.com", "m9b5h62gc");
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
                 MessageBox.Show("Mail has sent","Email sent", MessageBoxButtons.OK,MessageBoxIcon.Information);
