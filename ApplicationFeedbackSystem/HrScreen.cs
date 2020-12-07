@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Net;
+using System.Net.Mail;
 
 
 namespace ApplicationFeedbackSystem
@@ -26,7 +28,7 @@ namespace ApplicationFeedbackSystem
         }
 
         bool validateFeedback = false;
-       
+        bool validateCompleteFeedback = false;
 
         private void HrScreen_Load(object sender, EventArgs e)
         {
@@ -39,6 +41,8 @@ namespace ApplicationFeedbackSystem
             panelFeedback.Hide();
 
             logoutPanel2.Hide();
+
+            emailPanel.Hide();
 
             panelAdminBtn.Width = 116;
             panelAdminBtn.Height = 430;
@@ -288,14 +292,76 @@ namespace ApplicationFeedbackSystem
             textBox5.Clear();
         }
 
-        private void labelGradientColor8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+            validateCompleteFeedback = true;
 
+            if (e.RowIndex >= 0)
+
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+
+                lbToEmail.Text = row.Cells[2].Value.ToString();
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            lblLocation.Text = openFileDialog1.FileName;
+        }
+
+        private void sendEmailBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //send mail content
+                MailMessage mail = new MailMessage();
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                mail.From = new MailAddress(txtFrom.Text);
+                mail.To.Add(lbToEmail.Text);
+                mail.Subject = lbSubject.Text;
+                mail.Body = "";
+
+                //send attachment file
+                System.Net.Mail.Attachment attachment;
+                attachment = new System.Net.Mail.Attachment(lblLocation.Text);
+                mail.Attachments.Add(attachment);
+
+                //mail resources
+                smtp.Port = 587;
+                smtp.Credentials = new System.Net.NetworkCredential(txtFrom.Text, txtPassword.Text);
+                smtp.EnableSsl = true;
+                smtp.Send(mail);
+                MessageBox.Show("Mail has sent","Email sent", MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            emailPanel.Hide();
+        }
+
+        private void sendBtn_Click(object sender, EventArgs e)
+        {
+            if (validateCompleteFeedback == true)
+            {
+                panelCreateTemplateBtn.Hide();
+                panelFeedback.Hide();
+                panelCreateTemplateBtn.Show();
+                panelAdminBtn.Hide();
+                panelFeedCompleteBtn.Hide();
+                panelCompleteFeedback.Show();
+                emailPanel.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Please Select A Template to send email");
+            }
         }
     }
        
