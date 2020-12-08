@@ -26,27 +26,32 @@ namespace ApplicationFeedbackSystem
 
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
-
+        CheckBox HeaderCheckBox = null;
+        bool IsHeaderCheckBoxClicked = false;
         bool validateFeedback = false;
         bool validateCompleteFeedback = false;
 
+        //Hide and Show Control for initian HR Main Screen
         private void HrScreen_Load(object sender, EventArgs e)
         {
-            panelAdminBtn.Show();
+            panelHRBtn.Show();
             panelCreateTemplateBtn.Hide();
             panelFeedCompleteBtn.Hide();
-
             PanelViewTemplate.Show();
+            panelViewBtn.Hide();
+            panelView.Hide();
             panelCompleteFeedback.Hide();
             panelFeedback.Hide();
-
             logoutPanel2.Hide();
-
             emailPanel.Hide();
 
-            panelAdminBtn.Width = 116;
-            panelAdminBtn.Height = 430;
-            panelAdminBtn.Location = new Point(3, 119);
+            panelHRBtn.Width = 116;
+            panelHRBtn.Height = 430;
+            panelHRBtn.Location = new Point(3, 119);
+
+            panelViewBtn.Width = 116;
+            panelViewBtn.Height = 430;
+            panelViewBtn.Location = new Point(3, 119);
 
             panelCreateTemplateBtn.Width = 114;
             panelCreateTemplateBtn.Height = 430;
@@ -60,6 +65,10 @@ namespace ApplicationFeedbackSystem
             PanelViewTemplate.Height = 561;
             PanelViewTemplate.Location = new Point(124, 1);
 
+            panelView.Width = 872;
+            panelView.Height = 561;
+            panelView.Location = new Point(124, 1);
+
             panelCompleteFeedback.Width = 872;
             panelCompleteFeedback.Height = 561;
             panelCompleteFeedback.Location = new Point(124, 1);
@@ -69,8 +78,13 @@ namespace ApplicationFeedbackSystem
             panelFeedback.Location = new Point(124, 1);
 
             logoutPanel2.Location = new Point(314, 161);
+            //call this method of header checkbox mouse click.
+            //first add header checkbox than mouseClick without checkbox 
+            AddHeaderChecBox();
+            HeaderCheckBox.MouseClick += new MouseEventHandler(HeaderCheckBox_MouseClick);
         }
-
+//-------------------------------------------------------------------HR Main Screen-------------------------------------------------------//
+        //Create Button -----HR Main Screen
         private void createBtn_Click(object sender, EventArgs e)
         {
             if (validateFeedback == true)
@@ -78,88 +92,18 @@ namespace ApplicationFeedbackSystem
                 panelCreateTemplateBtn.Hide();
                 panelFeedback.Show();
                 panelCreateTemplateBtn.Hide();
-                panelAdminBtn.Hide();
+                panelHRBtn.Hide();
                 panelFeedCompleteBtn.Show();
                 panelCompleteFeedback.Hide();
-
+                panelView.Hide();
+                panelViewBtn.Hide();
             }
             else
             {
                 MessageBox.Show("Please Select A Template to feedback...");
             }
-            //eFirstNameTextBox.Clear();
-            //textBox1.Clear();
-            //textBox2.Clear();
-            //textBox3.Clear();
-            //textBox4.Clear();
-            //textBox5.Clear();
-
         }
-
-        private void editBtn_Click(object sender, EventArgs e)
-        {
-            panelAdminBtn.Hide();
-            panelCompleteFeedback.Show();
-            panelFeedCompleteBtn.Hide();
-            panelCreateTemplateBtn.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            panelFeedCompleteBtn.Hide();
-            panelAdminBtn.Hide();
-            panelCreateTemplateBtn.Hide();
-            panelAdminBtn.Show();
-            PanelViewTemplate.Show();
-            panelCompleteFeedback.Hide();
-            panelFeedback.Hide();
-
-            Template temp = new Template();
-            DbConnector dbConn = new DbConnector();
-            dbConn.connect();
-
-            TemplateHandler tempHnd = new TemplateHandler();
-
-            dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
-        }
-
-        private void backBtn_Click(object sender, EventArgs e)
-        {
-            panelAdminBtn.Show();
-            panelCreateTemplateBtn.Hide();
-            PanelViewTemplate.Show();
-            panelCompleteFeedback.Hide();
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            logoutPanel2.Show();
-        }
-
-        private void logoutBtn_Click(object sender, EventArgs e)
-        {
-            logoutPanel2.Show();
-        }
-
-        private void logOutBtn2_Click(object sender, EventArgs e)
-        {
-            logoutPanel2.Show();
-        }
-
-        private void cLogOutButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            login_form loginForm = new login_form();
-            loginForm.Show();
-        }
-
-        private void cancelLogOutButton_Click(object sender, EventArgs e)
-        {
-            logoutPanel2.Hide();
-
-        }
-
+        //Connect to database to return the value to template's text box
         private void eFirstNameTextBox_TextChanged(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection("server=localhost;user=dbcli;database=se_assignment;port=3306;password=dbcli123");
@@ -173,14 +117,112 @@ namespace ApplicationFeedbackSystem
                 {
                     textBox1.Text = da.GetValue(1).ToString();
                     textBox2.Text = da.GetValue(5).ToString();
-
                     textBox3.Text = da.GetValue(7).ToString();
                     textBox4.Text = da.GetValue(12).ToString();
                 }
                 con.Close();
             }
         }
+        //Edit Button -----HR Main Screen
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            panelHRBtn.Hide();
+            panelCompleteFeedback.Show();
+            panelFeedCompleteBtn.Hide();
+            panelCreateTemplateBtn.Show();
+            panelView.Hide();
+            panelViewBtn.Hide();
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+            completeFeedbackHandler comhr = new completeFeedbackHandler();
+            dataGridView1.DataSource = comhr.listCompleteFeedback(dbConn.getConn());
+        }
+        private void viewBtn_Click(object sender, EventArgs e)
+        {
+            panelHRBtn.Hide();
+            panelCompleteFeedback.Hide();
+            panelFeedCompleteBtn.Hide();
+            panelCreateTemplateBtn.Hide();
+            panelView.Show();
+            panelViewBtn.Show();
+        }
+        //Refresh Button ----HR Main Screen
+        private void displayBtn_Click(object sender, EventArgs e)
+        {
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
 
+            TemplateHandler tempHnd = new TemplateHandler();
+
+            dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
+        }
+        //Logout Button ------HR Main Screen
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            logoutPanel2.Show();
+        }
+
+//----------------------------------------------------------------Feedback Panel------------------------------------------------------------------//
+        //Clear Button -----Feedback Panel
+        private void clear_Click(object sender, EventArgs e)
+        {
+            commentsTextBox.Clear();
+        }
+        //Save Button ----Feedback Panel
+        private void button3_Click(object sender, EventArgs e)
+        {
+            feedbackPrint.Print();
+
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+
+            completeFeedback cpFB = new completeFeedback();
+            cpFB.File_name = int.Parse(eFirstNameTextBox.Text);
+            cpFB.Email = textBox2.Text;
+
+
+            completeFeedbackHandler cpFbHr = new completeFeedbackHandler();
+            int recordCnt = cpFbHr.addNewCompleteFeedback(dbConn.getConn(), cpFB);
+            MessageBox.Show(recordCnt + " data has been inserted");
+        }
+        //Exit Button ----Feedback Panel
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if ((commentsTextBox.Text != "") || (commentsTextBox.Text == null))
+            {
+                DialogResult result = MessageBox.Show("Are you sure want exit without saving the Feedback?",
+                "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    panelFeedCompleteBtn.Hide();
+                    panelHRBtn.Hide();
+                    panelCreateTemplateBtn.Hide();
+                    panelHRBtn.Show();
+                    PanelViewTemplate.Show();
+                    panelCompleteFeedback.Hide();
+                    panelFeedback.Hide();
+                    panelView.Hide();
+                    panelViewBtn.Hide();
+                }else if (result == DialogResult.No) { }
+            }
+            else
+            {
+                panelFeedCompleteBtn.Hide();
+                panelHRBtn.Hide();
+                panelCreateTemplateBtn.Hide();
+                panelHRBtn.Show();
+                PanelViewTemplate.Show();
+                panelCompleteFeedback.Hide();
+                panelFeedback.Hide();
+                panelView.Hide();
+                panelViewBtn.Hide();
+            }
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+            TemplateHandler tempHnd = new TemplateHandler();
+            dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
+        }
+        //Feedback Print ----Feedback Panel
         private void feedbackPrint_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             FeedBackPage afeedback = new FeedBackPage();
@@ -188,7 +230,7 @@ namespace ApplicationFeedbackSystem
             afeedback.Code = int.Parse(eFirstNameTextBox.Text);
             afeedback.Interviewee = textBox1.Text;
             afeedback.Email = textBox2.Text;
-            afeedback.Describe = textBox5.Text;
+            afeedback.Describe = commentsTextBox.Text;
             afeedback.FeedbackType = textBox3.Text;
             afeedback.Interviewer = textBox4.Text;
 
@@ -202,48 +244,139 @@ namespace ApplicationFeedbackSystem
             e.Graphics.DrawString("Description: " + afeedback.Describe, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(37, 200));
             e.Graphics.DrawString("FeedbackType: " + afeedback.FeedbackType, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(488, 476));
             e.Graphics.DrawString("Interviewer: " + afeedback.Interviewer, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(488, 508));
-
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        //Logout Button -----Feedback Panel
+        private void button1_Click(object sender, EventArgs e)
         {
-            feedbackPrint.Print();
-
+            if ((commentsTextBox.Text != "") || (commentsTextBox.Text == null))
+            {
+                DialogResult result = MessageBox.Show("Are you sure want to Logout without saving the Feedback?",
+                "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    logoutPanel2.Show();
+                }
+                else if (result == DialogResult.No) { }
+            }
+            else
+            {
+                logoutPanel2.Show();
+            }   
+        }
+// --------------------------------------------------------------------------View A Template Panel--------------------------------------------------------//
+        //Back Button----View A Template Panel
+        private void back_Click(object sender, EventArgs e)
+        {
+            panelFeedCompleteBtn.Hide();
+            panelCreateTemplateBtn.Hide();
+            panelHRBtn.Show();
+            PanelViewTemplate.Show();
+            panelCompleteFeedback.Hide();
+            panelFeedback.Hide();
+            panelView.Hide();
+            panelViewBtn.Hide();
+        }
+        //Logout Button----View A Template Panel
+        private void logout3_Click(object sender, EventArgs e)
+        {
+            logoutPanel2.Show();
+        }
+//------------------------------------------------------------Complete Feedback List Panel-------------------------------------------------------//
+        //Email Sent Button ----Complete Feedback List
+        private void sendBtn_Click(object sender, EventArgs e)
+        {
+            if (validateCompleteFeedback == true)
+            {
+                panelCreateTemplateBtn.Hide();
+                panelFeedback.Hide();
+                panelCreateTemplateBtn.Show();
+                panelHRBtn.Hide();
+                panelFeedCompleteBtn.Show();
+                panelCompleteFeedback.Show();
+                panelViewBtn.Hide();
+                panelView.Hide();
+                emailPanel.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please Select A Template to send email");
+            }
+        }
+        //Refresh Button ----Complete Feedback List
+        private void displayBtn2_Click(object sender, EventArgs e)
+        {
             DbConnector dbConn = new DbConnector();
             dbConn.connect();
 
-            completeFeedback cpFB = new completeFeedback();
-            cpFB.File_name = int.Parse(eFirstNameTextBox.Text);
-            cpFB.Email = textBox2.Text;
-           
+            completeFeedbackHandler comhr = new completeFeedbackHandler();
 
-            completeFeedbackHandler cpFbHr = new completeFeedbackHandler();
-            int recordCnt = cpFbHr.addNewCompleteFeedback(dbConn.getConn(), cpFB);
-            MessageBox.Show(recordCnt + " data has been inserted");
-
+            dataGridView1.DataSource = comhr.listCompleteFeedback(dbConn.getConn());
+        }
+        //Back Button -----Complete Feedback List
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            panelHRBtn.Show();
+            panelCreateTemplateBtn.Hide();
+            PanelViewTemplate.Show();
+            panelCompleteFeedback.Hide();
+            panelView.Hide();
+            panelViewBtn.Hide();
+        }
+        //Logout Button ------Complete Feedback List
+        private void logOutBtn2_Click(object sender, EventArgs e)
+        {
+            logoutPanel2.Show();
+        }
+//-------------------------------------------------------------Datagrid View Control-------------------------------------------------------------//
+        //Add Header checkBox Method
+        private void AddHeaderChecBox()
+        {
+            HeaderCheckBox = new CheckBox();
+            Point headerCellLocation = this.dataGridView1.GetCellDisplayRectangle(0, -1, true).Location;
+            HeaderCheckBox.Location = new Point(headerCellLocation.X + 23, headerCellLocation.Y + 8);
+            HeaderCheckBox.BackColor = Color.White;
+            HeaderCheckBox.Size = new Size(23, 23);
+            this.dataGridView1.Controls.Add(HeaderCheckBox);
         }
 
-        private void displayBtn_Click(object sender, EventArgs e)
+        //header checkbox clickevent
+        private void HeaderCheckBoxClick(CheckBox HCheckBox)
+        {
+            IsHeaderCheckBoxClicked = true;
+            foreach (DataGridViewRow Row in dataGridView1.Rows)
+                ((DataGridViewCheckBoxCell)Row.Cells["chk"]).Value = HCheckBox.Checked;
+
+            IsHeaderCheckBoxClicked = false;
+        }
+
+        //mouse click event for Header Check Box on DataGridView
+        private void HeaderCheckBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            HeaderCheckBoxClick((CheckBox)sender);
+        }
+        //Complete Feedback List Panel Cell Content Click
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DbConnector dbConn = new DbConnector();
             dbConn.connect();
+            validateCompleteFeedback = true;
 
-            TemplateHandler tempHnd = new TemplateHandler();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
 
-            dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
+                lbToEmail.Text = row.Cells[2].Value.ToString();
+            }
         }
-
+        //HR Main Screen Cell Content Click
         private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DbConnector dbConn = new DbConnector();
             dbConn.connect();
             validateFeedback = true;
-
             if (e.RowIndex >= 0)
-
             {
                 DataGridViewRow row = this.dgvList.Rows[e.RowIndex];
-
 
                 eFirstNameTextBox.Text = row.Cells["code"].Value.ToString();
                 textBox1.Text = row.Cells["interviewee"].Value.ToString();
@@ -259,60 +392,42 @@ namespace ApplicationFeedbackSystem
                 //row.Cells["address"].Value.ToString();
                 textBox4.Text = row.Cells["interviewer"].Value.ToString();
 
-
-
-                ////panelAdminBtn.Hide();
-                ////panelFeedCompleteBtn.Show();
-                ////panelCreateTemplateBtn.Hide();
-                ////PanelViewTemplate.Hide();
-                ////panelCompleteFeedback.Hide();
-                ////panelFeedback.Show();
-
-
+                codeText.Text = row.Cells["code"].Value.ToString();
+                intervieweeText.Text = row.Cells["interviewee"].Value.ToString();
+                genderText.Text = row.Cells["gender"].Value.ToString();
+                ageText.Text = row.Cells["age"].Value.ToString();
+                dateOfBirth.Text = row.Cells["DateOfBirth"].Value.ToString();
+                emailText.Text = row.Cells["email"].Value.ToString();
+                contactText.Text = row.Cells["contactNum"].Value.ToString();
+                typeText.Text = row.Cells["type"].Value.ToString();
+                positionText.Text = row.Cells["position"].Value.ToString();
+                cityText.Text = row.Cells["city"].Value.ToString();
+                stateText.Text = row.Cells["state"].Value.ToString();
+                addressText.Text = row.Cells["address"].Value.ToString();
+                interviewerText.Text = row.Cells["interviewer"].Value.ToString();
             }
         }
-
-        private void displayBtn2_Click(object sender, EventArgs e)
+//----------------------------------------------------------------------------Logout Panel------------------------------------------------------------------------
+        //Logout Button ----Logout Panel
+        private void cLogOutButton_Click(object sender, EventArgs e)
         {
-            DbConnector dbConn = new DbConnector();
-            dbConn.connect();
-
-            completeFeedbackHandler comhr = new completeFeedbackHandler();
-
-            dataGridView1.DataSource = comhr.listCompleteFeedback(dbConn.getConn());
+            this.Close();
+            login_form loginForm = new login_form();
+            loginForm.Show();
         }
-
-        private void button4_Click(object sender, EventArgs e)
+        //Cancel Logout Button ------HR Main Screen
+        private void cancelLogOutButton_Click(object sender, EventArgs e)
         {
-            eFirstNameTextBox.Clear();
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
+            logoutPanel2.Hide();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DbConnector dbConn = new DbConnector();
-            dbConn.connect();
-            validateCompleteFeedback = true;
-
-            if (e.RowIndex >= 0)
-
-            {
-                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-
-                lbToEmail.Text = row.Cells[2].Value.ToString();
-            }
-        }
-
+//---------------------------------------------------------------------------------Email Panel------------------------------
+        //Link Label -----Email Panel
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             openFileDialog1.ShowDialog();
             lblLocation.Text = openFileDialog1.FileName;
         }
-
+        //Send Email Button ----Email Panel
         private void sendEmailBtn_Click(object sender, EventArgs e)
         {
             try
@@ -341,33 +456,20 @@ namespace ApplicationFeedbackSystem
             {
                 MessageBox.Show(ex.Message);
             }
-
             emailPanel.Hide();
-        }
-
-        private void sendBtn_Click(object sender, EventArgs e)
-        {
-            if (validateCompleteFeedback == true)
-            {
-                panelCreateTemplateBtn.Hide();
-                panelFeedback.Hide();
-                panelCreateTemplateBtn.Show();
-                panelAdminBtn.Hide();
-                panelFeedCompleteBtn.Hide();
-                panelCompleteFeedback.Show();
-                emailPanel.Show();
-
-            }
-            else
-            {
-                MessageBox.Show("Please Select A Template to send email");
-            }
         }
 
         private void TestBtn_Click(object sender, EventArgs e)
         {
-
+            panelView.Hide();
+            panelViewBtn.Hide();
+            panelCreateTemplateBtn.Hide();
+            panelFeedback.Hide();
+            panelCreateTemplateBtn.Hide();
+            panelHRBtn.Hide();
+            panelFeedCompleteBtn.Show();
+            panelCompleteFeedback.Show();
+            emailPanel.Hide();
         }
-    }
-       
+    }     
 }

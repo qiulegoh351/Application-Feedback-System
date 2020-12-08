@@ -51,10 +51,9 @@ namespace ApplicationFeedbackSystem
             panelView.Width = 872;
             panelView.Height = 561;
             panelView.Location = new Point(124, 1);
-
+            logoutPanel.Location = new Point(314, 161);
             //call this method of header checkbox mouse click.
             //first add header checkbox than mouseClick without checkbox 
-            logoutPanel.Location = new Point(314, 161);
             AddHeaderChecBox();
             HeaderCheckBox.MouseClick += new MouseEventHandler(HeaderCheckBox_MouseClick);   
         }

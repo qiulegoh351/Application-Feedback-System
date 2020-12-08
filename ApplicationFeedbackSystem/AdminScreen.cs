@@ -19,9 +19,7 @@ namespace ApplicationFeedbackSystem
             InitializeComponent();
             DbConnector dbConn = new DbConnector();
             dbConn.connect();
-
             TemplateHandler tempHnd = new TemplateHandler();
-
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
         bool validateView = false;
@@ -37,7 +35,6 @@ namespace ApplicationFeedbackSystem
             PanelViewTemplate.Show();
             panelEditTemplateBtn.Hide();
             logoutPanel3.Hide();
-
 
             panelAdminBtn.Width = 114;
             panelAdminBtn.Height = 457;
@@ -225,7 +222,22 @@ namespace ApplicationFeedbackSystem
         //Logout Button ----Create Panel
         private void logOutBtn2_Click(object sender, EventArgs e)
         {
-            logoutPanel3.Show();
+            if ((codeText.Text != "") || (codeText.Text == null))
+            {
+                DialogResult result = MessageBox.Show("Are you sure want exit without saving the template?",
+                "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    validateEdit = false;
+                    logoutPanel3.Show();
+                }
+                else if (result == DialogResult.No) { }
+            }
+            else
+            {
+                validateEdit = false;
+                logoutPanel3.Show();
+            }      
         }
 //----------------------------------Edit Panel & View Panel coding for connecting to database to return data to Text Box-----------------------------------------//
         //Cell Content Click Control
