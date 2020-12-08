@@ -187,10 +187,12 @@ namespace ApplicationFeedbackSystem
             fbp.FeedbackType = textBox3.Text;
             fbp.Interviewer = textBox4.Text;
             cpFB.Email = textBox2.Text;
+
             Template Ad = new Template();
             Ad.Code = int.Parse(codeText.Text);
             TemplateHandler ADHandler = new TemplateHandler();
             ADHandler.deleteATemplate(dbConn.getConn(), Ad);
+
             feedbackHandler fbHr = new feedbackHandler();
             int countRecord = fbHr.addNewfeedback(dbConn.getConn(), fbp);
             MessageBox.Show(countRecord + "data has benn inserted into Feedback");
@@ -386,6 +388,7 @@ namespace ApplicationFeedbackSystem
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 lbToEmail.Text = row.Cells[2].Value.ToString();
+                lbCode.Text = row.Cells[1].Value.ToString();
             }
         }
         //HR Main Screen Cell Content Click
@@ -477,6 +480,21 @@ namespace ApplicationFeedbackSystem
                 MessageBox.Show(ex.Message);
             }
             emailPanel.Hide();
+
+            DbConnector dbConn = DbConnector.Instance;
+            dbConn.connect();
+
+            if(lblLocation.Text != "")
+            {
+                completeFeedback cpFB = new completeFeedback();
+                cpFB.File_name = int.Parse(lbCode.Text);
+                completeFeedbackHandler cpHand = new completeFeedbackHandler();
+                cpHand.deleteCompleteRow(dbConn.getConn(), cpFB);
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
         }
 
         private void TestBtn_Click(object sender, EventArgs e)

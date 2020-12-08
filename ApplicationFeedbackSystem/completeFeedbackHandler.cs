@@ -20,6 +20,15 @@ namespace ApplicationFeedbackSystem
             
         }
 
+        public int deleteCompleteRow(MySqlConnection conn, completeFeedback cf)
+        {
+            string sql = "DELETE FROM complete_feedback where file_name = " + cf.File_name + ";";
+            MySqlCommand sqlComm = new MySqlCommand(sql, conn);
+            sqlComm.Parameters.AddWithValue("@code", cf.File_name);
+
+            return sqlComm.ExecuteNonQuery();
+        }
+
         public List<completeFeedback> listCompleteFeedback(MySqlConnection conn)
         {
             List<completeFeedback> listComplete = new List<completeFeedback>();

@@ -125,6 +125,8 @@
             this.logOutBtn2 = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
             this.sendBtn = new System.Windows.Forms.Button();
+            this.lbCode = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.logoutPanel2.SuspendLayout();
             this.emailPanel.SuspendLayout();
             this.panelHRBtn.SuspendLayout();
@@ -188,7 +190,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(62, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.Size = new System.Drawing.Size(168, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Are you sure ?";
             // 
@@ -197,15 +199,17 @@
             this.emailPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.emailPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.emailPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.emailPanel.Controls.Add(this.lbCode);
+            this.emailPanel.Controls.Add(this.label4);
             this.emailPanel.Controls.Add(this.TestBtn);
             this.emailPanel.Controls.Add(this.lblLocation);
             this.emailPanel.Controls.Add(this.sendEmailBtn);
             this.emailPanel.Controls.Add(this.linkLabel1);
             this.emailPanel.Controls.Add(this.lbToEmail);
             this.emailPanel.Controls.Add(this.label2);
-            this.emailPanel.Location = new System.Drawing.Point(521, 12);
+            this.emailPanel.Location = new System.Drawing.Point(443, 12);
             this.emailPanel.Name = "emailPanel";
-            this.emailPanel.Size = new System.Drawing.Size(351, 143);
+            this.emailPanel.Size = new System.Drawing.Size(429, 143);
             this.emailPanel.TabIndex = 72;
             // 
             // TestBtn
@@ -215,7 +219,7 @@
             this.TestBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TestBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TestBtn.ForeColor = System.Drawing.Color.White;
-            this.TestBtn.Location = new System.Drawing.Point(235, 96);
+            this.TestBtn.Location = new System.Drawing.Point(312, 104);
             this.TestBtn.Name = "TestBtn";
             this.TestBtn.Size = new System.Drawing.Size(84, 31);
             this.TestBtn.TabIndex = 13;
@@ -228,9 +232,9 @@
             this.lblLocation.AutoSize = true;
             this.lblLocation.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblLocation.Location = new System.Drawing.Point(261, 63);
+            this.lblLocation.Location = new System.Drawing.Point(337, 87);
             this.lblLocation.Name = "lblLocation";
-            this.lblLocation.Size = new System.Drawing.Size(0, 12);
+            this.lblLocation.Size = new System.Drawing.Size(0, 16);
             this.lblLocation.TabIndex = 12;
             // 
             // sendEmailBtn
@@ -240,7 +244,7 @@
             this.sendEmailBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sendEmailBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sendEmailBtn.ForeColor = System.Drawing.Color.White;
-            this.sendEmailBtn.Location = new System.Drawing.Point(44, 95);
+            this.sendEmailBtn.Location = new System.Drawing.Point(121, 103);
             this.sendEmailBtn.Name = "sendEmailBtn";
             this.sendEmailBtn.Size = new System.Drawing.Size(84, 34);
             this.sendEmailBtn.TabIndex = 11;
@@ -254,7 +258,7 @@
             this.linkLabel1.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.linkLabel1.Location = new System.Drawing.Point(32, 48);
+            this.linkLabel1.Location = new System.Drawing.Point(108, 72);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(107, 24);
             this.linkLabel1.TabIndex = 10;
@@ -267,7 +271,7 @@
             // lbToEmail
             // 
             this.lbToEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbToEmail.Location = new System.Drawing.Point(44, 18);
+            this.lbToEmail.Location = new System.Drawing.Point(120, 42);
             this.lbToEmail.Name = "lbToEmail";
             this.lbToEmail.Size = new System.Drawing.Size(276, 28);
             this.lbToEmail.TabIndex = 3;
@@ -275,11 +279,11 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(5, 20);
+            this.label2.Location = new System.Drawing.Point(59, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 20);
+            this.label2.Size = new System.Drawing.Size(55, 26);
             this.label2.TabIndex = 0;
-            this.label2.Text = "To               :";
+            this.label2.Text = "To ";
             // 
             // openFileDialog1
             // 
@@ -583,7 +587,7 @@
             "Female"});
             this.genderText.Location = new System.Drawing.Point(475, 187);
             this.genderText.Name = "genderText";
-            this.genderText.Size = new System.Drawing.Size(81, 28);
+            this.genderText.Size = new System.Drawing.Size(81, 33);
             this.genderText.TabIndex = 128;
             // 
             // dateOfBirth
@@ -591,7 +595,7 @@
             this.dateOfBirth.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateOfBirth.Location = new System.Drawing.Point(651, 187);
             this.dateOfBirth.Name = "dateOfBirth";
-            this.dateOfBirth.Size = new System.Drawing.Size(200, 27);
+            this.dateOfBirth.Size = new System.Drawing.Size(200, 32);
             this.dateOfBirth.TabIndex = 127;
             // 
             // labelGradientColor14
@@ -1326,9 +1330,25 @@
             this.sendBtn.UseVisualStyleBackColor = true;
             this.sendBtn.Click += new System.EventHandler(this.sendBtn_Click);
             // 
+            // lbCode
+            // 
+            this.lbCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbCode.Location = new System.Drawing.Point(120, 6);
+            this.lbCode.Name = "lbCode";
+            this.lbCode.Size = new System.Drawing.Size(276, 28);
+            this.lbCode.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(59, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 26);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Code";
+            // 
             // HrScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(990, 561);
@@ -1462,5 +1482,7 @@
         private PanelGradientColor panelViewBtn;
         private System.Windows.Forms.Button logout3;
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.Label lbCode;
+        private System.Windows.Forms.Label label4;
     }
 }
