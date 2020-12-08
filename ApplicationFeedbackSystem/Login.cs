@@ -42,7 +42,7 @@ namespace ApplicationFeedbackSystem
             {
                 for (x = 0; x < dt.Rows.Count; x++)
                 {
-                    MessageBox.Show("Successfully Login!!");
+                    MessageBox.Show("Successfully Login!!", "Login Page");
 
                     if (dt.Rows[x]["role"].ToString() == "1")
                     {

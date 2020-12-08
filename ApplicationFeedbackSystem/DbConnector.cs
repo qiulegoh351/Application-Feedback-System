@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ApplicationFeedbackSystem
 {
-    class DbConnector
+    public class DbConnector
     {
         MySqlConnection conn;
 

@@ -185,7 +185,7 @@ namespace ApplicationFeedbackSystem
         {
             FeedBackPage afeedback = new FeedBackPage();
 
-            afeedback.Code = eFirstNameTextBox.Text;
+            afeedback.Code = int.Parse(eFirstNameTextBox.Text);
             afeedback.Interviewee = textBox1.Text;
             afeedback.Email = textBox2.Text;
             afeedback.Describe = textBox5.Text;

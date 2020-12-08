@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ApplicationFeedbackSystem
 {
-    class FeedBackPage
+    public class FeedBackPage
     {
-        private string code;
+        private int code;
         private string interviewee;
         private string email;
         private string describe;
@@ -21,7 +21,7 @@ namespace ApplicationFeedbackSystem
 
         }
 
-        public string Code
+        public int Code
         {
             get { return code; }
             set { code = value; }

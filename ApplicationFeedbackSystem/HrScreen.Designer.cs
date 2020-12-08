@@ -37,6 +37,7 @@
             this.cLogOutButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.emailPanel = new System.Windows.Forms.Panel();
+            this.TestBtn = new System.Windows.Forms.Button();
             this.lblLocation = new System.Windows.Forms.Label();
             this.sendEmailBtn = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -88,7 +89,6 @@
             this.logOutBtn2 = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
             this.sendBtn = new System.Windows.Forms.Button();
-            this.TestBtn = new System.Windows.Forms.Button();
             this.logoutPanel2.SuspendLayout();
             this.emailPanel.SuspendLayout();
             this.panelCompleteFeedback.SuspendLayout();
@@ -150,7 +150,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(62, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.Size = new System.Drawing.Size(168, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Are you sure ?";
             // 
@@ -169,6 +169,21 @@
             this.emailPanel.Size = new System.Drawing.Size(646, 170);
             this.emailPanel.TabIndex = 72;
             // 
+            // TestBtn
+            // 
+            this.TestBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.TestBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TestBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TestBtn.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TestBtn.ForeColor = System.Drawing.Color.White;
+            this.TestBtn.Location = new System.Drawing.Point(363, 85);
+            this.TestBtn.Name = "TestBtn";
+            this.TestBtn.Size = new System.Drawing.Size(84, 43);
+            this.TestBtn.TabIndex = 13;
+            this.TestBtn.Text = "Ok";
+            this.TestBtn.UseVisualStyleBackColor = false;
+            this.TestBtn.Click += new System.EventHandler(this.TestBtn_Click);
+            // 
             // lblLocation
             // 
             this.lblLocation.AutoSize = true;
@@ -176,7 +191,7 @@
             this.lblLocation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblLocation.Location = new System.Drawing.Point(261, 63);
             this.lblLocation.Name = "lblLocation";
-            this.lblLocation.Size = new System.Drawing.Size(0, 12);
+            this.lblLocation.Size = new System.Drawing.Size(0, 16);
             this.lblLocation.TabIndex = 12;
             // 
             // sendEmailBtn
@@ -203,7 +218,7 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.linkLabel1.Location = new System.Drawing.Point(169, 63);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 12);
+            this.linkLabel1.Size = new System.Drawing.Size(74, 16);
             this.linkLabel1.TabIndex = 10;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Attach File";
@@ -225,7 +240,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(19, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 20);
+            this.label2.Size = new System.Drawing.Size(116, 26);
             this.label2.TabIndex = 0;
             this.label2.Text = "To               :";
             // 
@@ -270,6 +285,7 @@
             // chk
             // 
             this.chk.HeaderText = "";
+            this.chk.MinimumWidth = 6;
             this.chk.Name = "chk";
             this.chk.Width = 50;
             // 
@@ -277,6 +293,7 @@
             // 
             this.file_name_data.DataPropertyName = "file_name";
             this.file_name_data.HeaderText = "File Name";
+            this.file_name_data.MinimumWidth = 6;
             this.file_name_data.Name = "file_name_data";
             this.file_name_data.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.file_name_data.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -286,6 +303,7 @@
             // 
             this.email_data.DataPropertyName = "email";
             this.email_data.HeaderText = "Email";
+            this.email_data.MinimumWidth = 6;
             this.email_data.Name = "email_data";
             this.email_data.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.email_data.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -765,7 +783,7 @@
             this.displayBtn2.Name = "displayBtn2";
             this.displayBtn2.Size = new System.Drawing.Size(75, 45);
             this.displayBtn2.TabIndex = 3;
-            this.displayBtn2.Text = "Rehresh";
+            this.displayBtn2.Text = "Refresh";
             this.displayBtn2.UseVisualStyleBackColor = true;
             this.displayBtn2.Click += new System.EventHandler(this.displayBtn2_Click);
             // 
@@ -802,24 +820,9 @@
             this.sendBtn.UseVisualStyleBackColor = true;
             this.sendBtn.Click += new System.EventHandler(this.sendBtn_Click);
             // 
-            // TestBtn
-            // 
-            this.TestBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.TestBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.TestBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TestBtn.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TestBtn.ForeColor = System.Drawing.Color.White;
-            this.TestBtn.Location = new System.Drawing.Point(363, 85);
-            this.TestBtn.Name = "TestBtn";
-            this.TestBtn.Size = new System.Drawing.Size(84, 43);
-            this.TestBtn.TabIndex = 13;
-            this.TestBtn.Text = "Ok";
-            this.TestBtn.UseVisualStyleBackColor = false;
-            this.TestBtn.Click += new System.EventHandler(this.TestBtn_Click);
-            // 
             // HrScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(990, 561);

@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="completeFeedback.cs" />
     <Compile Include="completeFeedbackHandler.cs" />
+    <Compile Include="feedbackHandler.cs" />
     <Compile Include="Template.cs" />
     <Compile Include="DbConnector.cs" />
     <Compile Include="FeedBackPage.cs" />
