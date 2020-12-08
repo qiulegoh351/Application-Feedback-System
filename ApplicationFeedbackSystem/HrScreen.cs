@@ -22,7 +22,7 @@ namespace ApplicationFeedbackSystem
             DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
-            TemplateHandler tempHnd = new TemplateHandler();
+            TemplateHandler tempHnd = TemplateHandler.TH_instance;
 
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
@@ -64,6 +64,10 @@ namespace ApplicationFeedbackSystem
             PanelViewTemplate.Width = 872;
             PanelViewTemplate.Height = 561;
             PanelViewTemplate.Location = new Point(124, 1);
+
+            emailPanel.Width = 429;
+            emailPanel.Height = 143;
+            emailPanel.Location = new Point(334, 208);
 
             panelView.Width = 872;
             panelView.Height = 561;
@@ -153,7 +157,7 @@ namespace ApplicationFeedbackSystem
             DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
-            TemplateHandler tempHnd = new TemplateHandler();
+            TemplateHandler tempHnd = TemplateHandler.TH_instance;
 
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
@@ -190,7 +194,7 @@ namespace ApplicationFeedbackSystem
 
             Template Ad = new Template();
             Ad.Code = int.Parse(codeText.Text);
-            TemplateHandler ADHandler = new TemplateHandler();
+            TemplateHandler ADHandler = TemplateHandler.TH_instance;
             ADHandler.deleteATemplate(dbConn.getConn(), Ad);
 
             feedbackHandler fbHr = new feedbackHandler();
@@ -234,7 +238,7 @@ namespace ApplicationFeedbackSystem
             }
             DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
-            TemplateHandler tempHnd = new TemplateHandler();
+            TemplateHandler tempHnd = TemplateHandler.TH_instance;
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
         //Feedback Print ----Feedback Panel

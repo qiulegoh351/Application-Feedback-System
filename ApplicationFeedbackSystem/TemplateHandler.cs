@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Data;
@@ -12,6 +13,29 @@ namespace ApplicationFeedbackSystem
 {
     public class TemplateHandler
     {
+        private String logTHFile = "AddNewTemplate_log.txt";
+        private StreamWriter writer;
+
+        private static TemplateHandler tH_instance;
+        private static int counter = 0;
+
+        public static TemplateHandler TH_instance
+        {
+            get
+            {
+                if (tH_instance == null)
+                    tH_instance = new TemplateHandler();
+                return tH_instance;
+            }
+        }
+        private TemplateHandler()
+        {
+            try
+            {
+                writer = new StreamWriter(logTHFile, true);
+            }
+            catch (IOException e) { }
+        }
         public int addNewTemplate(MySqlConnection conn, Template ad)
         {           
             string sql = "INSERT INTO template (code, interviewee, gender, age, date_of_birth, email, contact_number" +
@@ -20,6 +44,14 @@ namespace ApplicationFeedbackSystem
                             + "', " + ad.Age + " ,'" + ad.DateOfBirth.ToString("yyyy-MM-dd HH:mm:ss") + "' , '" + ad.Email
                             + "', '" + ad.ContactNum + "', '" + ad.City + "', '" + ad.State + "', '" + ad.Address
                             + "', '" + ad.Type + "', '" + ad.Position + "', '" + ad.Interviewer + "')";
+            counter++;
+            writer.WriteLine(counter + ") Succcessful Add New Template to Database!" + '\n' +
+                            " Code: " + ad.Code + '\n' + " Interviewee: " + ad.Interviewee + '\n' + " Gender: " + ad.Gender + '\n' +
+                            " Age: " + ad.Age + '\n' + " Date Of Birth: " + ad.DateOfBirth + '\n' + " Email: " + ad.Email + '\n' +
+                            " Contact Number: " + ad.ContactNum + '\n' + " City: " + ad.City + '\n' + " State: " + ad.State + '\n' +
+                            " Address: " + ad.Address + '\n' + " Application Type: " + ad.Type + '\n' + " Position Apply: " + ad.Position + '\n' +
+                            " Interviewer: " + ad.Interviewer + '\n');
+
             MySqlCommand sqlComm = new MySqlCommand(sql, conn);
             
             return sqlComm.ExecuteNonQuery();
@@ -73,6 +105,16 @@ namespace ApplicationFeedbackSystem
                 listTemp.Add(temp);
             }
             return listTemp;
+        }
+        public void Close()
+        {
+            writer.Close();
+        }
+
+        public void Open()
+        {
+            writer = new StreamWriter(logTHFile, true);
+            writer.WriteLine();
         }
     }
 }

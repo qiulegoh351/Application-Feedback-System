@@ -14,14 +14,16 @@ namespace ApplicationFeedbackSystem
 {
     public partial class AdminScreen : Form
     {
+        private bool validationSingleton = false;
         public AdminScreen()
         {
             InitializeComponent();
             DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
-            TemplateHandler tempHnd = new TemplateHandler();
+            TemplateHandler tempHnd = TemplateHandler.TH_instance;
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
+
         bool validateView = false;
         bool validateEdit = false;
         //Hide and Show Panel Control for Admin initial Main Screen 
@@ -71,6 +73,7 @@ namespace ApplicationFeedbackSystem
         //Create Button ----Main Screen
         private void createBtn_Click(object sender, EventArgs e)
         {
+            validationSingleton = false;
             panelCreateTemplateBtn.Show();
             panelAdminBtn.Hide();
             panelViewBtn.Hide();
@@ -130,7 +133,7 @@ namespace ApplicationFeedbackSystem
             DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
-            TemplateHandler tempHnd = new TemplateHandler();
+            TemplateHandler tempHnd = TemplateHandler.TH_instance;
 
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
@@ -181,9 +184,18 @@ namespace ApplicationFeedbackSystem
                 Ad.State = stateText.Text;
                 Ad.Address = addressText.Text;
                 Ad.Interviewer = interviewerText.Text;
-                TemplateHandler ADHandler = new TemplateHandler();
-                int recordAdd = ADHandler.addNewTemplate(dbConn.getConn(), Ad);
-                MessageBox.Show(recordAdd + " New Template has been Added !!");
+                TemplateHandler ADHandler = TemplateHandler.TH_instance;
+                if (validationSingleton == false)
+                {
+                    int recordAdd = ADHandler.addNewTemplate(dbConn.getConn(), Ad);
+                    ADHandler.Close();
+                    MessageBox.Show(recordAdd + " New Template has been Added !!");
+                    ADHandler.Open();
+                }
+                else if (validationSingleton== true)
+                {
+                    ADHandler.Close();
+                }
             }
             catch (Exception)
             {
@@ -194,6 +206,7 @@ namespace ApplicationFeedbackSystem
         //Exit Button ----Create Panel
         private void ExitBtn_Click(object sender, EventArgs e)
         {
+            validationSingleton = false;
             if ((codeText.Text != "") || (codeText.Text == null))
             {
                 DialogResult result = MessageBox.Show("Are you sure want exit without saving the template?",
@@ -350,7 +363,7 @@ namespace ApplicationFeedbackSystem
             Ad.Address = addressText.Text;
             Ad.Interviewer = interviewerText.Text;
             dbConn.getConn();
-            TemplateHandler ADHandler = new TemplateHandler();
+            TemplateHandler ADHandler = TemplateHandler.TH_instance;
             int recordAdd = ADHandler.editTemplate(dbConn.getConn(), Ad);
             MessageBox.Show(recordAdd + " Template Successful Updated !!");
         }
@@ -380,7 +393,7 @@ namespace ApplicationFeedbackSystem
             DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
-            TemplateHandler tempHnd = new TemplateHandler();
+            TemplateHandler tempHnd = TemplateHandler.TH_instance;
 
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
             panelEditTemplateBtn.Hide();

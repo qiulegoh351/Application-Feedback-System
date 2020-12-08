@@ -11,12 +11,12 @@ namespace UnitTestApplicationFeedbackSystem
         [TestMethod]
         public void TestAddTemplate()
         {
-            DbConnector dbC = new DbConnector();
+            DbConnector dbC = DbConnector.Instance;
             string resp = dbC.connect();
             Assert.AreEqual("Done", resp);
 
             Template tempA = new Template();
-            tempA.Code = 3;
+            tempA.Code = 302;
             tempA.Interviewee = "Anson";
             tempA.Gender = "Male";
             tempA.Age = 35;
@@ -30,7 +30,7 @@ namespace UnitTestApplicationFeedbackSystem
             tempA.Position = "Web Develop";
             tempA.Interviewer = "Siong Foong";
 
-            TemplateHandler tempHand = new TemplateHandler();
+            TemplateHandler tempHand = TemplateHandler.TH_instance;
             int resp2 = tempHand.addNewTemplate(dbC.getConn(), tempA);
             Assert.IsNotNull(resp2);
         }

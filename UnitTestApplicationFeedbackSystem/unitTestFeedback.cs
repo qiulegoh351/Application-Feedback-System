@@ -11,12 +11,12 @@ namespace UnitTestApplicationFeedbackSystem
         [TestMethod]
         public void TestAddNewFeedback()
         {
-            DbConnector dbC = new DbConnector();
+            DbConnector dbC = DbConnector.Instance;
             string resp = dbC.connect();
             Assert.AreEqual("Done", resp);
 
             FeedBackPage fbA = new FeedBackPage();
-            fbA.Code = 0002;
+            fbA.Code = 10003;
             fbA.Interviewee = "HappyTech";
             fbA.Email = "mariong9919@gmail.com";
             fbA.Describe = "successful";

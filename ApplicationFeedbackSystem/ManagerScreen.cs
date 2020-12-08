@@ -19,7 +19,7 @@ namespace ApplicationFeedbackSystem
             InitializeComponent();
             DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
-            TemplateHandler tempHnd = new TemplateHandler();
+            TemplateHandler tempHnd = TemplateHandler.TH_instance;
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
 
@@ -77,7 +77,7 @@ namespace ApplicationFeedbackSystem
                         code = dgvList.Rows[i].Cells[1].Value.ToString();
                         codeText.Text = code;
                         Ad.Code = int.Parse(codeText.Text);
-                        TemplateHandler ADHandler = new TemplateHandler();
+                        TemplateHandler ADHandler = TemplateHandler.TH_instance;
                         recordDeleted = ADHandler.deleteATemplate(dbConn.getConn(), Ad);
                         totalRecordDeleted += recordDeleted;
                     }
@@ -93,7 +93,7 @@ namespace ApplicationFeedbackSystem
             DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
-            TemplateHandler tempHnd = new TemplateHandler();
+            TemplateHandler tempHnd = TemplateHandler.TH_instance;
 
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
             validateView = false;
@@ -134,7 +134,7 @@ namespace ApplicationFeedbackSystem
             DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
-            TemplateHandler tempHnd = new TemplateHandler();
+            TemplateHandler tempHnd = TemplateHandler.TH_instance;
 
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }

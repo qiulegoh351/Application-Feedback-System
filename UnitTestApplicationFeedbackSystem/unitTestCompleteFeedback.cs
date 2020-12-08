@@ -11,7 +11,7 @@ namespace UnitTestApplicationFeedbackSystem
         [TestMethod]
         public void testAddNewCompleteFeedback()
         {
-            DbConnector dbC = new DbConnector();
+            DbConnector dbC = DbConnector.Instance;
             string resp = dbC.connect();
             Assert.AreEqual("Done", resp);
 
