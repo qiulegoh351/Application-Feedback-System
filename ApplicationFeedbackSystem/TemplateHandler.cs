@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ApplicationFeedbackSystem
 {
-    class TemplateHandler
+    public class TemplateHandler
     {
         public int addNewTemplate(MySqlConnection conn, Template ad)
         {           

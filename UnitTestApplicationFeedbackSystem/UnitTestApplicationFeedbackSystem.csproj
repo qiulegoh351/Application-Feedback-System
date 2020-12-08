@@ -50,6 +50,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="unitTestTemplate.cs" />
+    <Compile Include="unitTestCompleteFeedback.cs" />
     <Compile Include="unitTestFeedback.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

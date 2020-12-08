@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationFeedbackSystem
 {
-    class completeFeedback
+    public class completeFeedback
     {
         private int file_name;
         private string email;

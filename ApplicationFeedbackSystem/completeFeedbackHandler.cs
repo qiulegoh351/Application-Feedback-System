@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace ApplicationFeedbackSystem
 {
-    class completeFeedbackHandler
+    public class completeFeedbackHandler
     {
         public int addNewCompleteFeedback(MySqlConnection conn, completeFeedback cf)
         {
