@@ -25,6 +25,8 @@ namespace ApplicationFeedbackSystem
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
         bool validateView = false;
+        CheckBox HeaderCheckBox = null;
+        bool IsHeaderCheckBoxClicked = false;
         private void ManagerScreen_Load(object sender, EventArgs e)
         {
             panelManagerBtn.Show();
@@ -49,9 +51,11 @@ namespace ApplicationFeedbackSystem
             panelView.Height = 561;
             panelView.Location = new Point(124, 1);
 
-
+            //call this method of header checkbox mouse click..
+            //first add header checkbox than mouseClick without checkbox what will u click?
             logoutPanel.Location = new Point(314, 161);
-
+            AddHeaderChecBox();
+            HeaderCheckBox.MouseClick += new MouseEventHandler(HeaderCheckBox_MouseClick);   
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)
@@ -71,28 +75,61 @@ namespace ApplicationFeedbackSystem
             logoutPanel.Hide();
         }
 
+        
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            DbConnector dbConn = new DbConnector();
-            dbConn.connect();
-            Template Ad = new Template();
-      
-            TemplateHandler tempHnd = new TemplateHandler();
-            Ad.Code = int.Parse(codeText.Text);
-            if (Ad.Code != 0)
+            DialogResult result = MessageBox.Show("Are you sure want to delete the selected template?", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
             {
-                TemplateHandler ADHandler = new TemplateHandler();
-                int recordAdd = ADHandler.deleteATemplate(dbConn.getConn(), Ad);
-                MessageBox.Show(recordAdd + " Template Successful Updated !!");
-                MessageBox.Show("Record Deleted Successfully!");
+                DbConnector dbConn = new DbConnector();
+                dbConn.connect();
+                string code;
+                int recordDeleted = 0;
+                int totalRecordDeleted = 0;
+                for (int i = 0; i <= dgvList.RowCount - 1; i++)
+                {
+                    if (Convert.ToBoolean(dgvList.Rows[i].Cells["Select"].Value) == true)
+                    {
+                        Template Ad = new Template();
+                        code = dgvList.Rows[i].Cells[1].Value.ToString();
+                        codeText.Text = code;
+                        Ad.Code = int.Parse(codeText.Text);
+                        TemplateHandler ADHandler = new TemplateHandler();
+                        recordDeleted = ADHandler.deleteATemplate(dbConn.getConn(), Ad);
+                        totalRecordDeleted += recordDeleted;
+                    }
+                }
+                MessageBox.Show("You have successfull Deleted" + " " + totalRecordDeleted + " " + "Template");
             }
-            else
-            {
-                MessageBox.Show("Please Select Record to Delete");
-            }
-
+            else if (result == DialogResult.No){}
+            
         }
 
+        private void AddHeaderChecBox()
+        {
+            HeaderCheckBox = new CheckBox();
+            Point headerCellLocation = this.dgvList.GetCellDisplayRectangle(0, -1, true).Location;        
+            HeaderCheckBox.Location = new Point(headerCellLocation.X + 23, headerCellLocation.Y + 8);
+            HeaderCheckBox.BackColor = Color.White;
+            HeaderCheckBox.Size = new Size(23, 23);
+            this.dgvList.Controls.Add(HeaderCheckBox);
+        }
+
+        //now header checkbox clickevent
+        private void HeaderCheckBoxClick(CheckBox HCheckBox)
+        {
+            IsHeaderCheckBoxClicked = true;
+            foreach (DataGridViewRow Row in dgvList.Rows)
+                ((DataGridViewCheckBoxCell)Row.Cells["Select"]).Value = HCheckBox.Checked;
+
+            IsHeaderCheckBoxClicked = false;
+        }
+
+        //mouse click event
+        private void HeaderCheckBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            HeaderCheckBoxClick((CheckBox)sender);
+        }
 
         private void displayBtn_Click(object sender, EventArgs e)
         {
@@ -100,7 +137,7 @@ namespace ApplicationFeedbackSystem
             dbConn.connect();
 
             TemplateHandler tempHnd = new TemplateHandler();
-
+            
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
             validateView = false;
         }
@@ -126,11 +163,11 @@ namespace ApplicationFeedbackSystem
             DbConnector dbConn = new DbConnector();
             dbConn.connect();
             validateView = true;
+            Template Ad = new Template();
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgvList.Rows[e.RowIndex];
-
-                codeText.Text = row.Cells["code"].Value.ToString();
+                codeText.Text = row.Cells[1].Value.ToString();
                 intervieweeText.Text = row.Cells["interviewee"].Value.ToString();
                 genderText.Text = row.Cells["gender"].Value.ToString();
                 ageText.Text = row.Cells["age"].Value.ToString();

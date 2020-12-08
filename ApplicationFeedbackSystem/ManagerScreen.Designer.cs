@@ -69,7 +69,6 @@
             this.labelTemplateList = new ApplicationFeedbackSystem.labelGradientColor();
             this.LabelViewTemplate = new ApplicationFeedbackSystem.labelGradientColor();
             this.dgvList = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panelAdminRight = new ApplicationFeedbackSystem.PanelGradientColor();
             this.panelViewBtn = new ApplicationFeedbackSystem.PanelGradientColor();
             this.button5 = new System.Windows.Forms.Button();
@@ -80,6 +79,7 @@
             this.logoutBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new ApplicationFeedbackSystem.PictureBoxGradientColor();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panelView.SuspendLayout();
             this.PanelViewTemplate.SuspendLayout();
             this.logoutPanel.SuspendLayout();
@@ -125,7 +125,7 @@
             this.panelView.Controls.Add(this.labelGradientColor24);
             this.panelView.Controls.Add(this.LabelTemplate);
             this.panelView.Controls.Add(this.labelGradientColor38);
-            this.panelView.Location = new System.Drawing.Point(228, 58);
+            this.panelView.Location = new System.Drawing.Point(315, 24);
             this.panelView.Name = "panelView";
             this.panelView.Size = new System.Drawing.Size(866, 588);
             this.panelView.TabIndex = 65;
@@ -607,7 +607,7 @@
             this.dgvList.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
+            this.Select});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -626,12 +626,6 @@
             this.dgvList.Size = new System.Drawing.Size(874, 449);
             this.dgvList.TabIndex = 7;
             this.dgvList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // panelAdminRight
             // 
@@ -745,6 +739,14 @@
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // Select
+            // 
+            this.Select.FalseValue = "";
+            this.Select.HeaderText = "";
+            this.Select.Name = "Select";
+            this.Select.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Select.Width = 60;
+            // 
             // ManagerScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -825,6 +827,6 @@
         private PanelGradientColor panelViewBtn;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button back;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
     }
 }

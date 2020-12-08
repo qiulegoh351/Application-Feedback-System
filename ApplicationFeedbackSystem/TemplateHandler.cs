@@ -25,7 +25,7 @@ namespace ApplicationFeedbackSystem
 
             return sqlComm.ExecuteNonQuery();
         }
-
+        
         public int editTemplate(MySqlConnection conn, Template ad)
         {
             string sql = "UPDATE template set code=" + ad.Code + ",Interviewee='" + ad.Interviewee + "',gender='" +
