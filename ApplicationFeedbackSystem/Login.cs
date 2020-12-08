@@ -16,7 +16,7 @@ namespace ApplicationFeedbackSystem
     {
         user User = new user();
 
-        MySqlConnection con = new MySqlConnection(@"Data Source=localhost;port=3306;Initial Catalog=se_assignment;User Id=dbcli;password=dbcli123");
+        DbConnector dbcon = new DbConnector();
         public login_form()
         {
             InitializeComponent();
@@ -28,8 +28,11 @@ namespace ApplicationFeedbackSystem
             User.Log_username = textBox2.Text;
             User.Log_password = textBox1.Text;
 
-            con.Open();
-            MySqlCommand cmd = con.CreateCommand();
+            dbcon.connect();
+            //con.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            //MySqlCommand cmd = con.CreateCommand();
+            cmd.Connection = dbcon.getConn();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT * FROM user WHERE username='" + User.Log_username + "' AND password ='" + User.Log_password + "'";
             cmd.ExecuteNonQuery();
@@ -70,7 +73,7 @@ namespace ApplicationFeedbackSystem
                 MessageBox.Show("Please try again!");
             }
             
-            con.Close();  
+           // con.Close();  
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
