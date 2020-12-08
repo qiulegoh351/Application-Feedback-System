@@ -13,16 +13,15 @@ namespace ApplicationFeedbackSystem
     class TemplateHandler
     {
         public int addNewTemplate(MySqlConnection conn, Template ad)
-        {
+        {           
             string sql = "INSERT INTO template (code, interviewee, gender, age, date_of_birth, email, contact_number" +
                          " , city, state, address, type, position, interviewer) "
                             + " VALUES (" + ad.Code + ", '" + ad.Interviewee + "', '" + ad.Gender
                             + "', " + ad.Age + " ,'" + ad.DateOfBirth.ToString("yyyy-MM-dd HH:mm:ss") + "' , '" + ad.Email
                             + "', '" + ad.ContactNum + "', '" + ad.City + "', '" + ad.State + "', '" + ad.Address
                             + "', '" + ad.Type + "', '" + ad.Position + "', '" + ad.Interviewer + "')";
-
             MySqlCommand sqlComm = new MySqlCommand(sql, conn);
-
+            
             return sqlComm.ExecuteNonQuery();
         }
         
@@ -75,7 +74,5 @@ namespace ApplicationFeedbackSystem
             }
             return listTemp;
         }
-
-       
     }
 }

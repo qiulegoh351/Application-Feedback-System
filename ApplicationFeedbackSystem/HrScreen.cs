@@ -363,6 +363,11 @@ namespace ApplicationFeedbackSystem
                 MessageBox.Show("Please Select A Template to send email");
             }
         }
+
+        private void TestBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
        
 }

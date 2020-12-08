@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelView = new ApplicationFeedbackSystem.PanelGradientColor();
             this.stateText = new System.Windows.Forms.TextBox();
             this.labelGradientColor17 = new ApplicationFeedbackSystem.labelGradientColor();
@@ -63,23 +63,23 @@
             this.labelGradientColor38 = new ApplicationFeedbackSystem.labelGradientColor();
             this.PanelViewTemplate = new ApplicationFeedbackSystem.PanelGradientColor();
             this.logoutPanel = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CancelBtn = new System.Windows.Forms.Button();
+            this.logoutButtonMain = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.labelTemplateList = new ApplicationFeedbackSystem.labelGradientColor();
             this.LabelViewTemplate = new ApplicationFeedbackSystem.labelGradientColor();
             this.dgvList = new System.Windows.Forms.DataGridView();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panelAdminRight = new ApplicationFeedbackSystem.PanelGradientColor();
             this.panelViewBtn = new ApplicationFeedbackSystem.PanelGradientColor();
             this.button5 = new System.Windows.Forms.Button();
             this.back = new System.Windows.Forms.Button();
             this.panelManagerBtn = new ApplicationFeedbackSystem.PanelGradientColor();
             this.viewBtn = new System.Windows.Forms.Button();
-            this.displayBtn = new System.Windows.Forms.Button();
+            this.refreshBtn = new System.Windows.Forms.Button();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new ApplicationFeedbackSystem.PictureBoxGradientColor();
-            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panelView.SuspendLayout();
             this.PanelViewTemplate.SuspendLayout();
             this.logoutPanel.SuspendLayout();
@@ -125,7 +125,7 @@
             this.panelView.Controls.Add(this.labelGradientColor24);
             this.panelView.Controls.Add(this.LabelTemplate);
             this.panelView.Controls.Add(this.labelGradientColor38);
-            this.panelView.Location = new System.Drawing.Point(315, 24);
+            this.panelView.Location = new System.Drawing.Point(724, 23);
             this.panelView.Name = "panelView";
             this.panelView.Size = new System.Drawing.Size(866, 588);
             this.panelView.TabIndex = 65;
@@ -517,7 +517,6 @@
             // 
             this.PanelViewTemplate.ColorBottom = System.Drawing.Color.Empty;
             this.PanelViewTemplate.ColorTop = System.Drawing.Color.Empty;
-            this.PanelViewTemplate.Controls.Add(this.logoutPanel);
             this.PanelViewTemplate.Controls.Add(this.labelTemplateList);
             this.PanelViewTemplate.Controls.Add(this.LabelViewTemplate);
             this.PanelViewTemplate.Controls.Add(this.dgvList);
@@ -530,35 +529,35 @@
             // 
             this.logoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.logoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.logoutPanel.Controls.Add(this.button2);
-            this.logoutPanel.Controls.Add(this.button1);
+            this.logoutPanel.Controls.Add(this.CancelBtn);
+            this.logoutPanel.Controls.Add(this.logoutButtonMain);
             this.logoutPanel.Controls.Add(this.label1);
-            this.logoutPanel.Location = new System.Drawing.Point(314, 161);
+            this.logoutPanel.Location = new System.Drawing.Point(292, 29);
             this.logoutPanel.Name = "logoutPanel";
             this.logoutPanel.Size = new System.Drawing.Size(262, 117);
             this.logoutPanel.TabIndex = 67;
             // 
-            // button2
+            // CancelBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(156, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.CancelBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelBtn.Location = new System.Drawing.Point(156, 56);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Size = new System.Drawing.Size(75, 23);
+            this.CancelBtn.TabIndex = 2;
+            this.CancelBtn.Text = "Cancel";
+            this.CancelBtn.UseVisualStyleBackColor = true;
+            this.CancelBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // logoutButtonMain
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(26, 56);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 26);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Log out";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.logoutButtonMain.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButtonMain.Location = new System.Drawing.Point(26, 56);
+            this.logoutButtonMain.Name = "logoutButtonMain";
+            this.logoutButtonMain.Size = new System.Drawing.Size(75, 26);
+            this.logoutButtonMain.TabIndex = 1;
+            this.logoutButtonMain.Text = "Log out";
+            this.logoutButtonMain.UseVisualStyleBackColor = true;
+            this.logoutButtonMain.Click += new System.EventHandler(this.logoutButtonMain_Click);
             // 
             // label1
             // 
@@ -608,15 +607,15 @@
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Select});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvList.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvList.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgvList.Location = new System.Drawing.Point(1, 139);
             this.dgvList.Margin = new System.Windows.Forms.Padding(4);
@@ -626,6 +625,14 @@
             this.dgvList.Size = new System.Drawing.Size(874, 449);
             this.dgvList.TabIndex = 7;
             this.dgvList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellContentClick);
+            // 
+            // Select
+            // 
+            this.Select.FalseValue = "";
+            this.Select.HeaderText = "";
+            this.Select.Name = "Select";
+            this.Select.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Select.Width = 60;
             // 
             // panelAdminRight
             // 
@@ -678,10 +685,10 @@
             this.panelManagerBtn.ColorBottom = System.Drawing.Color.Empty;
             this.panelManagerBtn.ColorTop = System.Drawing.Color.Empty;
             this.panelManagerBtn.Controls.Add(this.viewBtn);
-            this.panelManagerBtn.Controls.Add(this.displayBtn);
+            this.panelManagerBtn.Controls.Add(this.refreshBtn);
             this.panelManagerBtn.Controls.Add(this.logoutBtn);
             this.panelManagerBtn.Controls.Add(this.deleteBtn);
-            this.panelManagerBtn.Location = new System.Drawing.Point(7, 245);
+            this.panelManagerBtn.Location = new System.Drawing.Point(12, 231);
             this.panelManagerBtn.Name = "panelManagerBtn";
             this.panelManagerBtn.Size = new System.Drawing.Size(114, 440);
             this.panelManagerBtn.TabIndex = 2;
@@ -696,15 +703,15 @@
             this.viewBtn.UseVisualStyleBackColor = true;
             this.viewBtn.Click += new System.EventHandler(this.viewBtn_Click);
             // 
-            // displayBtn
+            // refreshBtn
             // 
-            this.displayBtn.Location = new System.Drawing.Point(14, 98);
-            this.displayBtn.Name = "displayBtn";
-            this.displayBtn.Size = new System.Drawing.Size(75, 45);
-            this.displayBtn.TabIndex = 5;
-            this.displayBtn.Text = "Rehresh";
-            this.displayBtn.UseVisualStyleBackColor = true;
-            this.displayBtn.Click += new System.EventHandler(this.displayBtn_Click);
+            this.refreshBtn.Location = new System.Drawing.Point(14, 98);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(75, 45);
+            this.refreshBtn.TabIndex = 5;
+            this.refreshBtn.Text = "Refresh";
+            this.refreshBtn.UseVisualStyleBackColor = true;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
             // logoutBtn
             // 
@@ -739,20 +746,13 @@
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // Select
-            // 
-            this.Select.FalseValue = "";
-            this.Select.HeaderText = "";
-            this.Select.Name = "Select";
-            this.Select.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Select.Width = 60;
-            // 
             // ManagerScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(997, 561);
+            this.Controls.Add(this.logoutPanel);
             this.Controls.Add(this.panelView);
             this.Controls.Add(this.PanelViewTemplate);
             this.Controls.Add(this.panelAdminRight);
@@ -787,10 +787,10 @@
         private labelGradientColor LabelViewTemplate;
         private System.Windows.Forms.DataGridView dgvList;
         private System.Windows.Forms.Panel logoutPanel;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CancelBtn;
+        private System.Windows.Forms.Button logoutButtonMain;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button displayBtn;
+        private System.Windows.Forms.Button refreshBtn;
         private labelGradientColor labelGradientColor38;
         private labelGradientColor LabelTemplate;
         private labelGradientColor labelGradientColor24;

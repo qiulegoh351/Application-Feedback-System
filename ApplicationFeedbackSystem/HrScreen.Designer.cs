@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.feedbackPrint = new System.Drawing.Printing.PrintDocument();
             this.logoutPanel2 = new System.Windows.Forms.Panel();
             this.cancelLogOutButton = new System.Windows.Forms.Button();
             this.cLogOutButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.emailPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbToEmail = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.sendEmailBtn = new System.Windows.Forms.Button();
             this.lblLocation = new System.Windows.Forms.Label();
+            this.sendEmailBtn = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lbToEmail = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panelCompleteFeedback = new ApplicationFeedbackSystem.PanelGradientColor();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -88,6 +88,7 @@
             this.logOutBtn2 = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
             this.sendBtn = new System.Windows.Forms.Button();
+            this.TestBtn = new System.Windows.Forms.Button();
             this.logoutPanel2.SuspendLayout();
             this.emailPanel.SuspendLayout();
             this.panelCompleteFeedback.SuspendLayout();
@@ -149,7 +150,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(62, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 32);
+            this.label1.Size = new System.Drawing.Size(132, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Are you sure ?";
             // 
@@ -157,6 +158,7 @@
             // 
             this.emailPanel.BackColor = System.Drawing.Color.White;
             this.emailPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.emailPanel.Controls.Add(this.TestBtn);
             this.emailPanel.Controls.Add(this.lblLocation);
             this.emailPanel.Controls.Add(this.sendEmailBtn);
             this.emailPanel.Controls.Add(this.linkLabel1);
@@ -167,40 +169,15 @@
             this.emailPanel.Size = new System.Drawing.Size(646, 170);
             this.emailPanel.TabIndex = 72;
             // 
-            // label2
+            // lblLocation
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 26);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "To               :";
-            // 
-            // lbToEmail
-            // 
-            this.lbToEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbToEmail.Location = new System.Drawing.Point(172, 18);
-            this.lbToEmail.Name = "lbToEmail";
-            this.lbToEmail.Size = new System.Drawing.Size(387, 28);
-            this.lbToEmail.TabIndex = 3;
-            this.lbToEmail.Text = "cheewengng@gmail.com";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.linkLabel1.Location = new System.Drawing.Point(169, 63);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(74, 16);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Attach File";
-            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lblLocation.AutoSize = true;
+            this.lblLocation.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblLocation.Location = new System.Drawing.Point(261, 63);
+            this.lblLocation.Name = "lblLocation";
+            this.lblLocation.Size = new System.Drawing.Size(0, 12);
+            this.lblLocation.TabIndex = 12;
             // 
             // sendEmailBtn
             // 
@@ -217,15 +194,40 @@
             this.sendEmailBtn.UseVisualStyleBackColor = false;
             this.sendEmailBtn.Click += new System.EventHandler(this.sendEmailBtn_Click);
             // 
-            // lblLocation
+            // linkLabel1
             // 
-            this.lblLocation.AutoSize = true;
-            this.lblLocation.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblLocation.Location = new System.Drawing.Point(261, 63);
-            this.lblLocation.Name = "lblLocation";
-            this.lblLocation.Size = new System.Drawing.Size(0, 16);
-            this.lblLocation.TabIndex = 12;
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.linkLabel1.Location = new System.Drawing.Point(169, 63);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(55, 12);
+            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Attach File";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // lbToEmail
+            // 
+            this.lbToEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbToEmail.Location = new System.Drawing.Point(172, 18);
+            this.lbToEmail.Name = "lbToEmail";
+            this.lbToEmail.Size = new System.Drawing.Size(387, 28);
+            this.lbToEmail.TabIndex = 3;
+            this.lbToEmail.Text = "cheewengng@gmail.com";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "To               :";
             // 
             // openFileDialog1
             // 
@@ -245,11 +247,11 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 40;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.chk,
@@ -258,8 +260,8 @@
             this.dataGridView1.Location = new System.Drawing.Point(1, 140);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowTemplate.Height = 40;
             this.dataGridView1.Size = new System.Drawing.Size(866, 421);
             this.dataGridView1.TabIndex = 11;
@@ -571,15 +573,15 @@
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvList.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvList.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgvList.Location = new System.Drawing.Point(1, 139);
             this.dgvList.Margin = new System.Windows.Forms.Padding(4);
@@ -800,9 +802,24 @@
             this.sendBtn.UseVisualStyleBackColor = true;
             this.sendBtn.Click += new System.EventHandler(this.sendBtn_Click);
             // 
+            // TestBtn
+            // 
+            this.TestBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.TestBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TestBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TestBtn.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TestBtn.ForeColor = System.Drawing.Color.White;
+            this.TestBtn.Location = new System.Drawing.Point(363, 85);
+            this.TestBtn.Name = "TestBtn";
+            this.TestBtn.Size = new System.Drawing.Size(84, 43);
+            this.TestBtn.TabIndex = 13;
+            this.TestBtn.Text = "Ok";
+            this.TestBtn.UseVisualStyleBackColor = false;
+            this.TestBtn.Click += new System.EventHandler(this.TestBtn_Click);
+            // 
             // HrScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(990, 561);
@@ -895,5 +912,6 @@
         private System.Windows.Forms.Button sendEmailBtn;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button TestBtn;
     }
 }

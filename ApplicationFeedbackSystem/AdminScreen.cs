@@ -14,7 +14,6 @@ namespace ApplicationFeedbackSystem
 {
     public partial class AdminScreen : Form
     {
-        DataTable table = new DataTable();
         public AdminScreen()
         {
             InitializeComponent();
@@ -25,10 +24,9 @@ namespace ApplicationFeedbackSystem
 
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
-
         bool validateView = false;
         bool validateEdit = false;
-
+        //Hide and Show Panel Control for Admin initial Main Screen 
         private void AdminScreen_Load(object sender, EventArgs e)
         {
             panelAdminBtn.Show();
@@ -70,9 +68,10 @@ namespace ApplicationFeedbackSystem
             PanelViewTemplate.Location = new Point(124, 1);
 
             logoutPanel3.Location = new Point(314, 161);
-
         }
 
+//----------------------------------------------------------------------Admin Main Screen-----------------------------------------------------------------------//
+        //Create Button ----Main Screen
         private void createBtn_Click(object sender, EventArgs e)
         {
             panelCreateTemplateBtn.Show();
@@ -86,84 +85,7 @@ namespace ApplicationFeedbackSystem
             LabelCreateTemplate.Height = 85;
             LabelCreateTemplate.Location = new Point(-3, 0);
         }
-
-
-
-        private void ExitBtn_Click(object sender, EventArgs e)
-        {
-            validateEdit = false;
-            panelCreateTemplateBtn.Hide();
-            panelViewBtn.Hide();
-            panelAdminBtn.Show();
-            PanelViewTemplate.Show();
-            panelCreateAndEdit.Hide();
-        }
-
-        private void exitEditBtn_Click(object sender, EventArgs e)
-        {
-            validateEdit = false;
-            panelCreateTemplateBtn.Hide();
-            panelViewBtn.Hide();
-            panelEditTemplateBtn.Hide();
-            panelAdminBtn.Show();
-            PanelViewTemplate.Show();
-            panelCreateAndEdit.Hide();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            panelAdminBtn.Show();
-            PanelViewTemplate.Show();
-            panelCreateAndEdit.Hide();
-        }
-
-        private void logOutBtn2_Click(object sender, EventArgs e)
-        {
-            logoutPanel3.Show();
-        }
-
-        private void logoutBtn_Click(object sender, EventArgs e)
-        {
-            logoutPanel3.Show();
-        }
-
-        private void cLogOutButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            login_form loginForm = new login_form();
-            loginForm.Show();
-        }
-
-        private void cancelLogOutButton2_Click(object sender, EventArgs e)
-        {
-            logoutPanel3.Hide();
-        }
-
-        private void SaveCreateBtn_Click(object sender, EventArgs e)
-        {
-            DbConnector dbConn = new DbConnector();
-            dbConn.connect();
-
-            Template Ad = new Template();
-            Ad.Code = int.Parse(codeText.Text);
-            Ad.Interviewee = intervieweeText.Text;
-            Ad.Gender = genderText.Text;
-            Ad.Age = int.Parse(ageText.Text);
-            Ad.DateOfBirth = DateTime.Parse(dateOfBirth.Text);
-            Ad.Email = emailText.Text;
-            Ad.ContactNum = contactText.Text;
-            Ad.Type = typeText.Text;
-            Ad.Position = positionText.Text;
-            Ad.City = cityText.Text;
-            Ad.State = stateText.Text;
-            Ad.Address = addressText.Text;
-            Ad.Interviewer = interviewerText.Text;
-
-            TemplateHandler ADHandler = new TemplateHandler();
-            int recordAdd = ADHandler.addNewTemplate(dbConn.getConn(), Ad);
-            MessageBox.Show(recordAdd + " New Template has been Added !!");
-        }
-
+        //Edit Button ----Main Screen
         private void editBtn_Click(object sender, EventArgs e)
         {
             if (validateEdit == true)
@@ -183,45 +105,130 @@ namespace ApplicationFeedbackSystem
             {
                 MessageBox.Show("Please Select A Template to Edit");
             }
-
         }
 
-        private void displayBtn_Click(object sender, EventArgs e)
+        //View Button ----Main Screen
+        private void viewBtn_Click(object sender, EventArgs e)
+        {
+            if (validateView == true)
+            {
+                panelEditTemplateBtn.Hide();
+                panelCreateAndEdit.Hide();
+                labelEditTemplate.Hide();
+                panelCreateTemplateBtn.Hide();
+                panelAdminBtn.Hide();
+                panelView.Show();
+                panelViewBtn.Show();
+                LabelCreateTemplate.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Please Select A Template to View");
+            }
+        }
+
+        //Refresh Button ----Main Screen
+        private void RefreshBtn_Click(object sender, EventArgs e)
         {
             DbConnector dbConn = new DbConnector();
             dbConn.connect();
 
             TemplateHandler tempHnd = new TemplateHandler();
-            
+
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
 
-        private void saveEditBtn_Click(object sender, EventArgs e)
+        //Logout Button ----Main Screen
+        private void logoutMainScreen_Click(object sender, EventArgs e)
         {
-            validateEdit = false;
-            DbConnector dbConn = new DbConnector();
-            dbConn.connect();
-
-            Template Ad = new Template();
-            Ad.Code = int.Parse(codeText.Text);
-            Ad.Interviewee = intervieweeText.Text;
-            Ad.Gender = genderText.Text;
-            Ad.Age = int.Parse(ageText.Text);
-            Ad.DateOfBirth = DateTime.Parse(dateOfBirth.Text);
-            Ad.Email = emailText.Text;
-            Ad.ContactNum = contactText.Text;
-            Ad.Type = typeText.Text;
-            Ad.Position = positionText.Text;
-            Ad.City = cityText.Text;
-            Ad.State = stateText.Text;
-            Ad.Address = addressText.Text;
-            Ad.Interviewer = interviewerText.Text;
-
-            TemplateHandler ADHandler = new TemplateHandler();
-            int recordAdd = ADHandler.editTemplate(dbConn.getConn(), Ad);
-            MessageBox.Show(recordAdd + " Template Successful Updated !!");
+            logoutPanel3.Show();
         }
 
+//--------------------------------------------------------------------------Create Panel------------------------------------------------------------------------//
+        // Clear Button ----Create Panel
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            codeText.Text = "";
+            intervieweeText.Text = "";
+            genderText.Text = "";
+            ageText.Text = "";
+            dateOfBirth.Text = "";
+            emailText.Text = "";
+            contactText.Text = "";
+            typeText.Text = "";
+            positionText.Text = "";
+            cityText.Text = "";
+            stateText.Text = "";
+            addressText.Text = "";
+            interviewerText.Text = "";
+        }
+
+        // Save Button ----Create Panel
+        private void SaveCreateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DbConnector dbConn = new DbConnector();
+                dbConn.connect();
+                Template Ad = new Template();
+                Ad.Code = int.Parse(codeText.Text);
+                Ad.Interviewee = intervieweeText.Text;
+                Ad.Gender = genderText.Text;
+                Ad.Age = int.Parse(ageText.Text);
+                Ad.DateOfBirth = DateTime.Parse(dateOfBirth.Text);
+                Ad.Email = emailText.Text;
+                Ad.ContactNum = contactText.Text;
+                Ad.Type = typeText.Text;
+                Ad.Position = positionText.Text;
+                Ad.City = cityText.Text;
+                Ad.State = stateText.Text;
+                Ad.Address = addressText.Text;
+                Ad.Interviewer = interviewerText.Text;
+                TemplateHandler ADHandler = new TemplateHandler();
+                int recordAdd = ADHandler.addNewTemplate(dbConn.getConn(), Ad);
+                MessageBox.Show(recordAdd + " New Template has been Added !!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Data Existing already or Save Null Value");
+            }
+        }
+
+        //Exit Button ----Create Panel
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            if ((codeText.Text != "") || (codeText.Text == null))
+            {
+                DialogResult result = MessageBox.Show("Are you sure want exit without saving the template?",
+                "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    validateEdit = false;
+                    panelCreateTemplateBtn.Hide();
+                    panelViewBtn.Hide();
+                    panelAdminBtn.Show();
+                    PanelViewTemplate.Show();
+                    panelCreateAndEdit.Hide();
+                }
+                else if (result == DialogResult.No) { }
+            }
+            else
+            {
+                validateEdit = false;
+                panelCreateTemplateBtn.Hide();
+                panelViewBtn.Hide();
+                panelAdminBtn.Show();
+                PanelViewTemplate.Show();
+                panelCreateAndEdit.Hide();
+            }
+        }
+        //Logout Button ----Create Panel
+        private void logOutBtn2_Click(object sender, EventArgs e)
+        {
+            logoutPanel3.Show();
+        }
+//----------------------------------Edit Panel & View Panel coding for connecting to database to return data to Text Box-----------------------------------------//
+        //Cell Content Click Control
         private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DbConnector dbConn = new DbConnector();
@@ -264,13 +271,14 @@ namespace ApplicationFeedbackSystem
             }
         }
 
+        //Code Text Changed by mousce click on the cell of the Datagrid View
         private void codeText_TextChanged(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection("server=localhost;user=dbcli;database=se_assignment;port=3306;password=dbcli123");
             con.Open();
             if (codeText.Text != " ")
             {
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM template where code =@code",con);
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM template where code =@code", con);
                 cmd.Parameters.AddWithValue("@code", (codeText.Text));
                 MySqlDataReader da = cmd.ExecuteReader();
                 while (da.Read())
@@ -291,7 +299,69 @@ namespace ApplicationFeedbackSystem
                 }
             }
         }
+        //------------------------------------------------------------------------------Edit Panel-----------------------------------------------------------------------//
+        //Clear Button -----Edit Panel
+        private void clearBtnEdit_Click(object sender, EventArgs e)
+        {
+            codeText.Text = "";
+            intervieweeText.Text = "";
+            genderText.Text = "";
+            ageText.Text = "";
+            dateOfBirth.Text = "";
+            emailText.Text = "";
+            contactText.Text = "";
+            typeText.Text = "";
+            positionText.Text = "";
+            cityText.Text = "";
+            stateText.Text = "";
+            addressText.Text = "";
+            interviewerText.Text = "";
+        }
 
+        //Edit Save Button ----Edit Panel
+        private void saveEditBtn_Click(object sender, EventArgs e)
+        {
+            DbConnector dbConn = new DbConnector();
+            dbConn.connect();
+            Template Ad = new Template();
+            Ad.Code = int.Parse(codeText.Text);
+            Ad.Interviewee = intervieweeText.Text;
+            Ad.Gender = genderText.Text;
+            Ad.Age = int.Parse(ageText.Text);
+            Ad.DateOfBirth = DateTime.Parse(dateOfBirth.Text);
+            Ad.Email = emailText.Text;
+            Ad.ContactNum = contactText.Text;
+            Ad.Type = typeText.Text;
+            Ad.Position = positionText.Text;
+            Ad.City = cityText.Text;
+            Ad.State = stateText.Text;
+            Ad.Address = addressText.Text;
+            Ad.Interviewer = interviewerText.Text;
+            dbConn.getConn();
+            TemplateHandler ADHandler = new TemplateHandler();
+            int recordAdd = ADHandler.editTemplate(dbConn.getConn(), Ad);
+            MessageBox.Show(recordAdd + " Template Successful Updated !!");
+        }
+
+        //Exit Button ----Edit Panel
+        private void exitEditBtn_Click(object sender, EventArgs e)
+        {
+            validateEdit = false;
+            panelCreateTemplateBtn.Hide();
+            panelViewBtn.Hide();
+            panelEditTemplateBtn.Hide();
+            panelAdminBtn.Show();
+            PanelViewTemplate.Show();
+            panelCreateAndEdit.Hide();
+        }
+
+        //Logout Button ----Edit Panel
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            logoutPanel3.Show();
+        }
+//-------------------------------------------------------------------------View A Template Panel---------------------------------------------------------------------//
+        //Back Button ----A Template Panel
         private void back_Click(object sender, EventArgs e)
         {
             validateView = false;
@@ -311,24 +381,24 @@ namespace ApplicationFeedbackSystem
             LabelCreateTemplate.Hide();
         }
 
-        private void viewBtn_Click(object sender, EventArgs e)
+        //Logout Button ----A Template Panel
+        private void logout_Click(object sender, EventArgs e)
         {
-            if (validateView == true)
-            {
-                panelEditTemplateBtn.Hide();
-                panelCreateAndEdit.Hide();
-                labelEditTemplate.Hide();
-                panelCreateTemplateBtn.Hide();
-                panelAdminBtn.Hide();
-                panelView.Show();
-                panelViewBtn.Show();
-                LabelCreateTemplate.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Please Select A Template to View");
-            }
-           
+            logoutPanel3.Show();
+        }
+//-------------------------------------------------------------------------Logout Panel-------------------------------------------------------------------------//
+        //Logout Button ----Logout Panel
+        private void cLogOutButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            login_form loginForm = new login_form();
+            loginForm.Show();
+        }
+
+        //Cancel Button ----Logout Panel
+        private void cancelLogOutButton2_Click(object sender, EventArgs e)
+        {
+            logoutPanel3.Hide();
         }
     }
 }
