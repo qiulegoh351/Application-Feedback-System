@@ -35,8 +35,8 @@ namespace ApplicationFeedbackSystem
         private void HrScreen_Load(object sender, EventArgs e)
         {
             panelHRBtn.Show();
-            panelCreateTemplateBtn.Hide();
-            panelFeedCompleteBtn.Hide();
+            panelCompleteFeedbackBtn.Hide();
+            panelFeedBtn.Hide();
             PanelViewTemplate.Show();
             panelViewBtn.Hide();
             panelView.Hide();
@@ -53,13 +53,13 @@ namespace ApplicationFeedbackSystem
             panelViewBtn.Height = 430;
             panelViewBtn.Location = new Point(3, 119);
 
-            panelCreateTemplateBtn.Width = 114;
-            panelCreateTemplateBtn.Height = 430;
-            panelCreateTemplateBtn.Location = new Point(3, 119);
+            panelCompleteFeedbackBtn.Width = 114;
+            panelCompleteFeedbackBtn.Height = 430;
+            panelCompleteFeedbackBtn.Location = new Point(3, 119);
 
-            panelFeedCompleteBtn.Width = 114;
-            panelFeedCompleteBtn.Height = 430;
-            panelFeedCompleteBtn.Location = new Point(3, 119);
+            panelFeedBtn.Width = 114;
+            panelFeedBtn.Height = 430;
+            panelFeedBtn.Location = new Point(3, 119);
 
             PanelViewTemplate.Width = 872;
             PanelViewTemplate.Height = 561;
@@ -89,11 +89,11 @@ namespace ApplicationFeedbackSystem
         {
             if (validateFeedback == true)
             {
-                panelCreateTemplateBtn.Hide();
+                panelCompleteFeedbackBtn.Hide();
                 panelFeedback.Show();
-                panelCreateTemplateBtn.Hide();
+                panelCompleteFeedbackBtn.Hide();
                 panelHRBtn.Hide();
-                panelFeedCompleteBtn.Show();
+                panelFeedBtn.Show();
                 panelCompleteFeedback.Hide();
                 panelView.Hide();
                 panelViewBtn.Hide();
@@ -128,8 +128,8 @@ namespace ApplicationFeedbackSystem
         {
             panelHRBtn.Hide();
             panelCompleteFeedback.Show();
-            panelFeedCompleteBtn.Hide();
-            panelCreateTemplateBtn.Show();
+            panelFeedBtn.Hide();
+            panelCompleteFeedbackBtn.Show();
             panelView.Hide();
             panelViewBtn.Hide();
             DbConnector dbConn = new DbConnector();
@@ -141,8 +141,8 @@ namespace ApplicationFeedbackSystem
         {
             panelHRBtn.Hide();
             panelCompleteFeedback.Hide();
-            panelFeedCompleteBtn.Hide();
-            panelCreateTemplateBtn.Hide();
+            panelFeedBtn.Hide();
+            panelCompleteFeedbackBtn.Hide();
             panelView.Show();
             panelViewBtn.Show();
         }
@@ -177,13 +177,25 @@ namespace ApplicationFeedbackSystem
             dbConn.connect();
 
             completeFeedback cpFB = new completeFeedback();
+            FeedBackPage fbp = new FeedBackPage();
             cpFB.File_name = int.Parse(eFirstNameTextBox.Text);
+            fbp.Code = int.Parse(eFirstNameTextBox.Text);
+            fbp.Interviewee = textBox1.Text;
+            fbp.Email = textBox2.Text;
+            fbp.Describe = commentsTextBox.Text;
+            fbp.FeedbackType = textBox3.Text;
+            fbp.Interviewer = textBox4.Text;
             cpFB.Email = textBox2.Text;
-
-
+            Template Ad = new Template();
+            Ad.Code = int.Parse(codeText.Text);
+            TemplateHandler ADHandler = new TemplateHandler();
+            ADHandler.deleteATemplate(dbConn.getConn(), Ad);
+            feedbackHandler fbHr = new feedbackHandler();
+            int countRecord = fbHr.addNewfeedback(dbConn.getConn(), fbp);
+            MessageBox.Show(countRecord + "data has benn inserted into Feedback");
             completeFeedbackHandler cpFbHr = new completeFeedbackHandler();
             int recordCnt = cpFbHr.addNewCompleteFeedback(dbConn.getConn(), cpFB);
-            MessageBox.Show(recordCnt + " data has been inserted");
+            MessageBox.Show(recordCnt + " data has been inserted into Complete Feedback");
         }
         //Exit Button ----Feedback Panel
         private void button2_Click(object sender, EventArgs e)
@@ -194,9 +206,9 @@ namespace ApplicationFeedbackSystem
                 "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
-                    panelFeedCompleteBtn.Hide();
+                    panelFeedBtn.Hide();
                     panelHRBtn.Hide();
-                    panelCreateTemplateBtn.Hide();
+                    panelCompleteFeedbackBtn.Hide();
                     panelHRBtn.Show();
                     PanelViewTemplate.Show();
                     panelCompleteFeedback.Hide();
@@ -207,9 +219,9 @@ namespace ApplicationFeedbackSystem
             }
             else
             {
-                panelFeedCompleteBtn.Hide();
+                panelFeedBtn.Hide();
                 panelHRBtn.Hide();
-                panelCreateTemplateBtn.Hide();
+                panelCompleteFeedbackBtn.Hide();
                 panelHRBtn.Show();
                 PanelViewTemplate.Show();
                 panelCompleteFeedback.Hide();
@@ -267,8 +279,8 @@ namespace ApplicationFeedbackSystem
         //Back Button----View A Template Panel
         private void back_Click(object sender, EventArgs e)
         {
-            panelFeedCompleteBtn.Hide();
-            panelCreateTemplateBtn.Hide();
+            panelFeedBtn.Hide();
+            panelCompleteFeedbackBtn.Hide();
             panelHRBtn.Show();
             PanelViewTemplate.Show();
             panelCompleteFeedback.Hide();
@@ -287,11 +299,19 @@ namespace ApplicationFeedbackSystem
         {
             if (validateCompleteFeedback == true)
             {
-                panelCreateTemplateBtn.Hide();
+                DbConnector dbConn = new DbConnector();
+                dbConn.connect();
+                ///FeedBackPage fb = new FeedBackPage();
+                ///fb.Code = int.Parse(eFirstNameTextBox.Text);
+                ///feedbackHandler FBHandler = new feedbackHandler();
+                ///FBHandler.deleteAFeedback(dbConn.getConn(),fb);
+
+               
+                panelCompleteFeedbackBtn.Hide();
                 panelFeedback.Hide();
-                panelCreateTemplateBtn.Show();
+                panelCompleteFeedbackBtn.Show();
                 panelHRBtn.Hide();
-                panelFeedCompleteBtn.Show();
+                panelFeedBtn.Hide();
                 panelCompleteFeedback.Show();
                 panelViewBtn.Hide();
                 panelView.Hide();
@@ -316,7 +336,7 @@ namespace ApplicationFeedbackSystem
         private void backBtn_Click(object sender, EventArgs e)
         {
             panelHRBtn.Show();
-            panelCreateTemplateBtn.Hide();
+            panelCompleteFeedbackBtn.Hide();
             PanelViewTemplate.Show();
             panelCompleteFeedback.Hide();
             panelView.Hide();
@@ -364,7 +384,6 @@ namespace ApplicationFeedbackSystem
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-
                 lbToEmail.Text = row.Cells[2].Value.ToString();
             }
         }
@@ -463,11 +482,10 @@ namespace ApplicationFeedbackSystem
         {
             panelView.Hide();
             panelViewBtn.Hide();
-            panelCreateTemplateBtn.Hide();
+            panelCompleteFeedbackBtn.Show();
             panelFeedback.Hide();
-            panelCreateTemplateBtn.Hide();
             panelHRBtn.Hide();
-            panelFeedCompleteBtn.Show();
+            panelFeedBtn.Hide();
             panelCompleteFeedback.Show();
             emailPanel.Hide();
         }

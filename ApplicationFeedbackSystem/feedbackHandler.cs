@@ -19,5 +19,14 @@ namespace ApplicationFeedbackSystem
 
             return sqlComm.ExecuteNonQuery();
         }
+
+        public int deleteAFeedback(MySqlConnection conn, Template fb)
+        {
+            string sql = "DELETE FROM feedback where Code = " + fb.Code + ";";
+            MySqlCommand sqlComm = new MySqlCommand(sql, conn);
+            sqlComm.Parameters.AddWithValue("@Code", fb.Code);
+
+            return sqlComm.ExecuteNonQuery();
+        }
     }
 }

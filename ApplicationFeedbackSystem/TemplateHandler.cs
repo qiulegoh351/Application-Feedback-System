@@ -45,7 +45,7 @@ namespace ApplicationFeedbackSystem
 
             return sqlComm.ExecuteNonQuery();
         }
-        
+
         public List<Template> listAllTemplate(MySqlConnection conn)
         {
             List<Template> listTemp = new List<Template>();
