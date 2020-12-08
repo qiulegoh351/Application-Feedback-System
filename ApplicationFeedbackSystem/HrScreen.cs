@@ -19,7 +19,7 @@ namespace ApplicationFeedbackSystem
         public HrScreen()
         {
             InitializeComponent();
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
             TemplateHandler tempHnd = new TemplateHandler();
@@ -132,8 +132,9 @@ namespace ApplicationFeedbackSystem
             panelCompleteFeedbackBtn.Show();
             panelView.Hide();
             panelViewBtn.Hide();
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
+            dbConn.Close();
             completeFeedbackHandler comhr = new completeFeedbackHandler();
             dataGridView1.DataSource = comhr.listCompleteFeedback(dbConn.getConn());
         }
@@ -149,7 +150,7 @@ namespace ApplicationFeedbackSystem
         //Refresh Button ----HR Main Screen
         private void displayBtn_Click(object sender, EventArgs e)
         {
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
             TemplateHandler tempHnd = new TemplateHandler();
@@ -173,7 +174,7 @@ namespace ApplicationFeedbackSystem
         {
             feedbackPrint.Print();
 
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
             completeFeedback cpFB = new completeFeedback();
@@ -229,7 +230,7 @@ namespace ApplicationFeedbackSystem
                 panelView.Hide();
                 panelViewBtn.Hide();
             }
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
             TemplateHandler tempHnd = new TemplateHandler();
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
@@ -299,7 +300,7 @@ namespace ApplicationFeedbackSystem
         {
             if (validateCompleteFeedback == true)
             {
-                DbConnector dbConn = new DbConnector();
+                DbConnector dbConn = DbConnector.Instance;
                 dbConn.connect();
                 ///FeedBackPage fb = new FeedBackPage();
                 ///fb.Code = int.Parse(eFirstNameTextBox.Text);
@@ -325,7 +326,7 @@ namespace ApplicationFeedbackSystem
         //Refresh Button ----Complete Feedback List
         private void displayBtn2_Click(object sender, EventArgs e)
         {
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
             completeFeedbackHandler comhr = new completeFeedbackHandler();
@@ -377,7 +378,7 @@ namespace ApplicationFeedbackSystem
         //Complete Feedback List Panel Cell Content Click
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
             validateCompleteFeedback = true;
 
@@ -390,7 +391,7 @@ namespace ApplicationFeedbackSystem
         //HR Main Screen Cell Content Click
         private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
             validateFeedback = true;
             if (e.RowIndex >= 0)

@@ -17,7 +17,7 @@ namespace ApplicationFeedbackSystem
         public AdminScreen()
         {
             InitializeComponent();
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
             TemplateHandler tempHnd = new TemplateHandler();
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
@@ -127,7 +127,7 @@ namespace ApplicationFeedbackSystem
         //Refresh Button ----Main Screen
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
             TemplateHandler tempHnd = new TemplateHandler();
@@ -165,7 +165,7 @@ namespace ApplicationFeedbackSystem
         {
             try
             {
-                DbConnector dbConn = new DbConnector();
+                DbConnector dbConn = DbConnector.Instance;
                 dbConn.connect();
                 Template Ad = new Template();
                 Ad.Code = int.Parse(codeText.Text);
@@ -243,7 +243,7 @@ namespace ApplicationFeedbackSystem
         //Cell Content Click Control
         private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
             validateView = true;
             validateEdit = true;
@@ -333,7 +333,7 @@ namespace ApplicationFeedbackSystem
         //Edit Save Button ----Edit Panel
         private void saveEditBtn_Click(object sender, EventArgs e)
         {
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
             Template Ad = new Template();
             Ad.Code = int.Parse(codeText.Text);
@@ -377,7 +377,7 @@ namespace ApplicationFeedbackSystem
         private void back_Click(object sender, EventArgs e)
         {
             validateView = false;
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
             TemplateHandler tempHnd = new TemplateHandler();

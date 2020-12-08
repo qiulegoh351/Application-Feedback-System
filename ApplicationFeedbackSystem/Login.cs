@@ -14,9 +14,7 @@ namespace ApplicationFeedbackSystem
 {
     public partial class login_form : Form
     {
-        user User = new user();
-
-        DbConnector dbcon = new DbConnector();
+        
         public login_form()
         {
             InitializeComponent();
@@ -25,6 +23,8 @@ namespace ApplicationFeedbackSystem
         private void loginBtn_Click(object sender, EventArgs e)
         {
             int x = 0;
+            user User = new user();
+            DbConnector dbcon = DbConnector.Instance;
             User.Log_username = textBox2.Text;
             User.Log_password = textBox1.Text;
 
@@ -40,7 +40,7 @@ namespace ApplicationFeedbackSystem
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             da.Fill(dt);
             x = Convert.ToInt32(dt.Rows.Count.ToString());
-
+            dbcon.Close();
             if (dt.Rows.Count > 0)
             {
                 for (x = 0; x < dt.Rows.Count; x++)
@@ -52,18 +52,21 @@ namespace ApplicationFeedbackSystem
                         AdminScreen MainScreen = new AdminScreen();
                         MainScreen.Show();
                         this.Hide();
+                        //dbcon.Close();
                     }
                     else if (dt.Rows[x]["role"].ToString() == "2")
                     {
                         ManagerScreen managerScreen = new ManagerScreen();
                         managerScreen.Show();
                         this.Hide();
+                       // dbcon.Close();
                     }
                     else if (dt.Rows[x]["role"].ToString() == "3")
                     {
                         HrScreen hrScreen = new HrScreen();
                         hrScreen.Show();
                         this.Hide();
+                       // dbcon.Close();
                     }
                 }
             }
@@ -72,8 +75,8 @@ namespace ApplicationFeedbackSystem
             {
                 MessageBox.Show("Please try again!");
             }
-            
-           // con.Close();  
+            dbcon.Close();
+            // con.Close();  
         }
 
         private void exitBtn_Click(object sender, EventArgs e)

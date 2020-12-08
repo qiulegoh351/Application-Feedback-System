@@ -17,7 +17,7 @@ namespace ApplicationFeedbackSystem
         public ManagerScreen()
         {
             InitializeComponent();
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
             TemplateHandler tempHnd = new TemplateHandler();
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
@@ -64,7 +64,7 @@ namespace ApplicationFeedbackSystem
             DialogResult result = MessageBox.Show("Are you sure want to delete the selected template?", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                DbConnector dbConn = new DbConnector();
+                DbConnector dbConn = DbConnector.Instance;
                 dbConn.connect();
                 string code;
                 int recordDeleted;
@@ -90,7 +90,7 @@ namespace ApplicationFeedbackSystem
         //Refresh Button ----Manager Main Scren
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
             TemplateHandler tempHnd = new TemplateHandler();
@@ -131,7 +131,7 @@ namespace ApplicationFeedbackSystem
             PanelViewTemplate.Show();
 
             Template temp = new Template();
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
             TemplateHandler tempHnd = new TemplateHandler();
@@ -183,7 +183,7 @@ namespace ApplicationFeedbackSystem
         //Cell Content Click Control
         private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DbConnector dbConn = new DbConnector();
+            DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
             validateView = true;
             Template Ad = new Template();
