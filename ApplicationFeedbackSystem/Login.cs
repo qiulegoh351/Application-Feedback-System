@@ -14,6 +14,8 @@ namespace ApplicationFeedbackSystem
 {
     public partial class login_form : Form
     {
+        user User = new user();
+
         MySqlConnection con = new MySqlConnection(@"Data Source=localhost;port=3306;Initial Catalog=se_assignment;User Id=dbcli;password=dbcli123");
         public login_form()
         {
@@ -23,22 +25,26 @@ namespace ApplicationFeedbackSystem
         private void loginBtn_Click(object sender, EventArgs e)
         {
             int x = 0;
+            User.Log_username = textBox2.Text;
+            User.Log_password = textBox1.Text;
 
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM user WHERE username='" + textBox2.Text + "' AND password ='" + textBox1.Text + "'";
+            cmd.CommandText = "SELECT * FROM user WHERE username='" + User.Log_username + "' AND password ='" + User.Log_password + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             da.Fill(dt);
             x = Convert.ToInt32(dt.Rows.Count.ToString());
 
-            if(dt.Rows.Count>0)
+            if (dt.Rows.Count > 0)
             {
-                for(x=0; x<dt.Rows.Count; x++)
+                for (x = 0; x < dt.Rows.Count; x++)
                 {
-                    if(dt.Rows[x]["role"].ToString() == "1" )
+                    MessageBox.Show("Successfully Login!!");
+
+                    if (dt.Rows[x]["role"].ToString() == "1")
                     {
                         AdminScreen MainScreen = new AdminScreen();
                         MainScreen.Show();
@@ -58,6 +64,7 @@ namespace ApplicationFeedbackSystem
                     }
                 }
             }
+        
             else
             {
                 MessageBox.Show("Please try again!");

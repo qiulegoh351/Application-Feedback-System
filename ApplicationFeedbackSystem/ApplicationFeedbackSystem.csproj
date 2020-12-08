@@ -89,6 +89,7 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="user.cs" />
     <EmbeddedResource Include="HrScreen.resx">
       <DependentUpon>HrScreen.cs</DependentUpon>
     </EmbeddedResource>
