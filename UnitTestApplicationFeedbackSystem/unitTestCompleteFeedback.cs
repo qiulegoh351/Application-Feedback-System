@@ -19,7 +19,7 @@ namespace UnitTestApplicationFeedbackSystem
             cfbA.File_name = 1;
             cfbA.Email = "cheewengng@gmail.com";
 
-            completeFeedbackHandler cfbHand = new completeFeedbackHandler();
+            completeFeedbackHandler cfbHand = completeFeedbackHandler.FH_instance;
             int resp4 = cfbHand.addNewCompleteFeedback(dbC.getConn(), cfbA);
             Assert.IsNotNull(resp4);
         }

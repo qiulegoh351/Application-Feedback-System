@@ -23,7 +23,7 @@ namespace UnitTestApplicationFeedbackSystem
             fbA.FeedbackType = "testing";
             fbA.Interviewer = "weng";
 
-            feedbackHandler fbHand = new feedbackHandler();
+            feedbackHandler fbHand = feedbackHandler.TH_instance;
             int resp3 = fbHand.addNewfeedback(dbC.getConn(), fbA);
             Assert.IsNotNull(resp3);
         }
