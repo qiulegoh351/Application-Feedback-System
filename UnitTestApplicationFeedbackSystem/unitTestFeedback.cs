@@ -16,7 +16,7 @@ namespace UnitTestApplicationFeedbackSystem
             Assert.AreEqual("Done", resp);
 
             FeedBackPage fbA = new FeedBackPage();
-            fbA.Code = 10003;
+            fbA.Code = 1;
             fbA.Interviewee = "HappyTech";
             fbA.Email = "mariong9919@gmail.com";
             fbA.Describe = "successful";

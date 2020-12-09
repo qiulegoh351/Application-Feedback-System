@@ -16,7 +16,7 @@ namespace UnitTestApplicationFeedbackSystem
             Assert.AreEqual("Done", resp);
 
             Template tempA = new Template();
-            tempA.Code = 302;
+            tempA.Code = 1;
             tempA.Interviewee = "Anson";
             tempA.Gender = "Male";
             tempA.Age = 35;

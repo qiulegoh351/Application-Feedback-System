@@ -16,7 +16,7 @@ namespace UnitTestApplicationFeedbackSystem
             Assert.AreEqual("Done", resp);
 
             completeFeedback cfbA = new completeFeedback();
-            cfbA.File_name = 0002;
+            cfbA.File_name = 1;
             cfbA.Email = "cheewengng@gmail.com";
 
             completeFeedbackHandler cfbHand = new completeFeedbackHandler();
