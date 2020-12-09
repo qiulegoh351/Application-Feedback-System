@@ -201,6 +201,16 @@ namespace ApplicationFeedbackSystem
             {
                 MessageBox.Show("Data Existing already or Save Null Value");
             }
+
+            panelEditTemplateBtn.Hide();
+            panelCreateAndEdit.Hide();
+            labelEditTemplate.Hide();
+            panelCreateTemplateBtn.Hide();
+            panelAdminBtn.Show();
+            panelView.Hide();
+            panelViewBtn.Hide();
+            LabelCreateTemplate.Hide();
+            PanelViewTemplate.Show();
         }
 
         //Exit Button ----Create Panel

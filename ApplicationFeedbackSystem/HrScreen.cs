@@ -16,6 +16,9 @@ namespace ApplicationFeedbackSystem
 {
     public partial class HrScreen : Form
     {
+        private bool validateA = false;
+        private bool validateB = false;
+        private bool validateC = false;
         public HrScreen()
         {
             InitializeComponent();
@@ -91,6 +94,7 @@ namespace ApplicationFeedbackSystem
         //Create Button -----HR Main Screen
         private void createBtn_Click(object sender, EventArgs e)
         {
+            validateA = false;
             if (validateFeedback == true)
             {
                 panelCompleteFeedbackBtn.Hide();
@@ -127,9 +131,10 @@ namespace ApplicationFeedbackSystem
                 con.Close();
             }
         }
-        //Edit Button -----HR Main Screen
+        //Complete Feedback list Button -----HR Main Screen
         private void editBtn_Click(object sender, EventArgs e)
         {
+            validateB = false;
             panelHRBtn.Hide();
             panelCompleteFeedback.Show();
             panelFeedBtn.Hide();
@@ -139,7 +144,7 @@ namespace ApplicationFeedbackSystem
             DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
             dbConn.Close();
-            completeFeedbackHandler comhr = new completeFeedbackHandler();
+            completeFeedbackHandler comhr = completeFeedbackHandler.FH_instance;
             dataGridView1.DataSource = comhr.listCompleteFeedback(dbConn.getConn());
         }
         private void viewBtn_Click(object sender, EventArgs e)
@@ -176,6 +181,15 @@ namespace ApplicationFeedbackSystem
         //Save Button ----Feedback Panel
         private void button3_Click(object sender, EventArgs e)
         {
+            panelHRBtn.Show();
+            PanelViewTemplate.Show();
+            panelCompleteFeedback.Hide();
+            panelFeedBtn.Hide();
+            panelFeedback.Hide();
+            panelCompleteFeedbackBtn.Hide();
+            panelView.Hide();
+            panelViewBtn.Hide();
+            validateC = true;
             feedbackPrint.Print();
 
             DbConnector dbConn = DbConnector.Instance;
@@ -194,20 +208,31 @@ namespace ApplicationFeedbackSystem
 
             Template Ad = new Template();
             Ad.Code = int.Parse(codeText.Text);
-            TemplateHandler ADHandler = TemplateHandler.TH_instance;
+            TemplateHandler ADHandler = TemplateHandler.TH_instance;      
             ADHandler.deleteATemplate(dbConn.getConn(), Ad);
+            
+            feedbackHandler fbHr = feedbackHandler.TH_instance;
+            if (validateA == false)
+            {
+                int countRecord = fbHr.addNewfeedback(dbConn.getConn(), fbp);
+                fbHr.Close();
+                MessageBox.Show(countRecord + "data has benn inserted into Feedback");
+                fbHr.Open();
+            }
+            else if (validateA == true)
+            {
+                fbHr.Close();
+            }
 
-            feedbackHandler fbHr = new feedbackHandler();
-            int countRecord = fbHr.addNewfeedback(dbConn.getConn(), fbp);
-            MessageBox.Show(countRecord + "data has benn inserted into Feedback");
-            completeFeedbackHandler cpFbHr = new completeFeedbackHandler();
+            completeFeedbackHandler cpFbHr = completeFeedbackHandler.FH_instance;
             int recordCnt = cpFbHr.addNewCompleteFeedback(dbConn.getConn(), cpFB);
             MessageBox.Show(recordCnt + " data has been inserted into Complete Feedback");
+
         }
         //Exit Button ----Feedback Panel
         private void button2_Click(object sender, EventArgs e)
         {
-            if ((commentsTextBox.Text != "") || (commentsTextBox.Text == null))
+            if ((commentsTextBox.Text != "") || (commentsTextBox.Text != null))
             {
                 DialogResult result = MessageBox.Show("Are you sure want exit without saving the Feedback?",
                 "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -224,7 +249,7 @@ namespace ApplicationFeedbackSystem
                     panelViewBtn.Hide();
                 }else if (result == DialogResult.No) { }
             }
-            else
+            else if((validateC == true) || (commentsTextBox.Text == "") || (commentsTextBox.Text == null))
             {
                 panelFeedBtn.Hide();
                 panelHRBtn.Hide();
@@ -267,6 +292,7 @@ namespace ApplicationFeedbackSystem
         //Logout Button -----Feedback Panel
         private void button1_Click(object sender, EventArgs e)
         {
+            validateA = false;
             if ((commentsTextBox.Text != "") || (commentsTextBox.Text == null))
             {
                 DialogResult result = MessageBox.Show("Are you sure want to Logout without saving the Feedback?",
@@ -335,13 +361,14 @@ namespace ApplicationFeedbackSystem
             DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
-            completeFeedbackHandler comhr = new completeFeedbackHandler();
+            completeFeedbackHandler comhr = completeFeedbackHandler.FH_instance;
 
             dataGridView1.DataSource = comhr.listCompleteFeedback(dbConn.getConn());
         }
         //Back Button -----Complete Feedback List
         private void backBtn_Click(object sender, EventArgs e)
         {
+            validateB = false;
             panelHRBtn.Show();
             panelCompleteFeedbackBtn.Hide();
             PanelViewTemplate.Show();
@@ -488,12 +515,22 @@ namespace ApplicationFeedbackSystem
             DbConnector dbConn = DbConnector.Instance;
             dbConn.connect();
 
-            if(lblLocation.Text != "")
+            if (lblLocation.Text != "")
             {
                 completeFeedback cpFB = new completeFeedback();
+
                 cpFB.File_name = int.Parse(lbCode.Text);
-                completeFeedbackHandler cpHand = new completeFeedbackHandler();
-                cpHand.deleteCompleteRow(dbConn.getConn(), cpFB);
+                completeFeedbackHandler cpHand = completeFeedbackHandler.FH_instance;
+                if (validateB == false)
+                {
+                    cpHand.deleteCompleteRow(dbConn.getConn(), cpFB);
+                    cpHand.Close();
+                    cpHand.Open();
+                }
+                else if (validateB == true)
+                {
+                    cpHand.Close();
+                }
             }
             else
             {
@@ -503,6 +540,7 @@ namespace ApplicationFeedbackSystem
 
         private void TestBtn_Click(object sender, EventArgs e)
         {
+            validateB = false;
             panelView.Hide();
             panelViewBtn.Hide();
             panelCompleteFeedbackBtn.Show();

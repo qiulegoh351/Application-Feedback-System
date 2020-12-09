@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelView = new ApplicationFeedbackSystem.PanelGradientColor();
             this.state = new System.Windows.Forms.TextBox();
             this.labelGradientColor2 = new ApplicationFeedbackSystem.labelGradientColor();
@@ -273,7 +273,7 @@
             "Female"});
             this.gender.Location = new System.Drawing.Point(475, 187);
             this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(81, 33);
+            this.gender.Size = new System.Drawing.Size(81, 28);
             this.gender.TabIndex = 128;
             // 
             // datebirth
@@ -281,7 +281,7 @@
             this.datebirth.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datebirth.Location = new System.Drawing.Point(651, 187);
             this.datebirth.Name = "datebirth";
-            this.datebirth.Size = new System.Drawing.Size(200, 32);
+            this.datebirth.Size = new System.Drawing.Size(200, 27);
             this.datebirth.TabIndex = 127;
             // 
             // labelGradientColor18
@@ -759,7 +759,7 @@
             "Female"});
             this.genderText.Location = new System.Drawing.Point(472, 171);
             this.genderText.Name = "genderText";
-            this.genderText.Size = new System.Drawing.Size(81, 33);
+            this.genderText.Size = new System.Drawing.Size(81, 28);
             this.genderText.TabIndex = 84;
             // 
             // dateOfBirth
@@ -767,7 +767,7 @@
             this.dateOfBirth.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateOfBirth.Location = new System.Drawing.Point(648, 171);
             this.dateOfBirth.Name = "dateOfBirth";
-            this.dateOfBirth.Size = new System.Drawing.Size(200, 32);
+            this.dateOfBirth.Size = new System.Drawing.Size(200, 27);
             this.dateOfBirth.TabIndex = 83;
             // 
             // labelGradientColor9
@@ -1013,15 +1013,15 @@
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvList.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvList.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgvList.Location = new System.Drawing.Point(1, 139);
             this.dgvList.Margin = new System.Windows.Forms.Padding(4);
@@ -1048,7 +1048,7 @@
             this.logoutPanel3.Controls.Add(this.cancelLogOutButton2);
             this.logoutPanel3.Controls.Add(this.cLogOutButton2);
             this.logoutPanel3.Controls.Add(this.label1);
-            this.logoutPanel3.Location = new System.Drawing.Point(148, 84);
+            this.logoutPanel3.Location = new System.Drawing.Point(141, 31);
             this.logoutPanel3.Name = "logoutPanel3";
             this.logoutPanel3.Size = new System.Drawing.Size(262, 117);
             this.logoutPanel3.TabIndex = 72;
@@ -1082,7 +1082,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(65, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 32);
+            this.label1.Size = new System.Drawing.Size(132, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Are you sure ?";
             // 
@@ -1197,7 +1197,7 @@
             this.panelCreateTemplateBtn.Controls.Add(this.logOutBtn2);
             this.panelCreateTemplateBtn.Controls.Add(this.SaveCreateBtn);
             this.panelCreateTemplateBtn.Controls.Add(this.ClearBtn);
-            this.panelCreateTemplateBtn.Location = new System.Drawing.Point(47, 197);
+            this.panelCreateTemplateBtn.Location = new System.Drawing.Point(28, 189);
             this.panelCreateTemplateBtn.Name = "panelCreateTemplateBtn";
             this.panelCreateTemplateBtn.Size = new System.Drawing.Size(114, 457);
             this.panelCreateTemplateBtn.TabIndex = 1;
@@ -1322,7 +1322,7 @@
             // 
             // AdminScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(990, 568);

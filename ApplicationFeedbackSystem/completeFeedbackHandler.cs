@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,29 @@ namespace ApplicationFeedbackSystem
 {
     public class completeFeedbackHandler
     {
+        private String logFHdfile = "Successful Sent Feedback_log.txt";
+        private StreamWriter writer;
+
+        private static completeFeedbackHandler fH_instance;
+        private static int counter = 0;
+
+        public static completeFeedbackHandler FH_instance
+        {
+            get
+            {
+                if (fH_instance == null)
+                    fH_instance = new completeFeedbackHandler();
+                return fH_instance;
+            }
+        }
+        private completeFeedbackHandler()
+        {
+            try
+            {
+                writer = new StreamWriter(logFHdfile, true);
+            }
+            catch (IOException e) { }
+        }
         public int addNewCompleteFeedback(MySqlConnection conn, completeFeedback cf)
         {
             
@@ -25,6 +49,9 @@ namespace ApplicationFeedbackSystem
             string sql = "DELETE FROM complete_feedback where file_name = " + cf.File_name + ";";
             MySqlCommand sqlComm = new MySqlCommand(sql, conn);
             sqlComm.Parameters.AddWithValue("@code", cf.File_name);
+
+            counter++;
+            writer.WriteLine(counter + ") Succcessful Sent Feedback!" + '\n' + " Code: " + cf.File_name + '\n');
 
             return sqlComm.ExecuteNonQuery();
         }
@@ -45,6 +72,16 @@ namespace ApplicationFeedbackSystem
                 listComplete.Add(complete);
             }
             return listComplete;
+        }
+        public void Close()
+        {
+            writer.Close();
+        }
+
+        public void Open()
+        {
+            writer = new StreamWriter(logFHdfile, true);
+            writer.WriteLine();
         }
     }
 }

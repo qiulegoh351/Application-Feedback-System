@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ApplicationFeedbackSystem
 {
-    public class TemplateHandler
+    public sealed class TemplateHandler
     {
         private String logTHFile = "AddNewTemplate_log.txt";
         private StreamWriter writer;
