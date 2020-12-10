@@ -205,6 +205,7 @@ namespace ApplicationFeedbackSystem
             fbp.FeedbackType = textBox3.Text;
             fbp.Interviewer = textBox4.Text;
             cpFB.Email = textBox2.Text;
+            cpFB.Status = "Incomplete";
 
             Template Ad = new Template();
             Ad.Code = int.Parse(codeText.Text);

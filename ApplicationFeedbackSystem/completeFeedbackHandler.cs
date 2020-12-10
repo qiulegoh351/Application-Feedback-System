@@ -36,7 +36,7 @@ namespace ApplicationFeedbackSystem
         public int addNewCompleteFeedback(MySqlConnection conn, completeFeedback cf)
         {
             
-            string sql = "INSERT INTO complete_feedback (file_name,email)" + " VALUES ('" + cf.File_name + "', '" + cf.Email + "')";
+            string sql = "INSERT INTO complete_feedback (file_name,email,status)" + " VALUES ('" + cf.File_name + "', '" + cf.Email + "', '" + cf.Status + "')";
             
             MySqlCommand sqlComm = new MySqlCommand(sql, conn);
 
@@ -69,6 +69,7 @@ namespace ApplicationFeedbackSystem
                 completeFeedback complete = new completeFeedback();
                 complete.File_name = (int)myReader.GetValue(0);
                 complete.Email = (string)myReader.GetValue(1);
+                complete.Status = (string)myReader.GetValue(2);
                 listComplete.Add(complete);
             }
             return listComplete;

@@ -16,7 +16,7 @@ namespace UnitTestApplicationFeedbackSystem
             Assert.AreEqual("Done", resp);
 
             Template tempC = new Template();
-            tempC.Code = 1;
+            tempC.Code = 3;
 
 
             TemplateHandler tempHand3 = TemplateHandler.TH_instance;

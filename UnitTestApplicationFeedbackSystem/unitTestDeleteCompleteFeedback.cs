@@ -16,7 +16,7 @@ namespace UnitTestApplicationFeedbackSystem
             Assert.AreEqual("Done", resp);
 
             completeFeedback fbA = new completeFeedback();
-            fbA.File_name = 1;
+            fbA.File_name = 2;
 
 
             completeFeedbackHandler tempHand3 = completeFeedbackHandler.FH_instance;
