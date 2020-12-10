@@ -50,8 +50,19 @@ namespace ApplicationFeedbackSystem
             MySqlCommand sqlComm = new MySqlCommand(sql, conn);
             sqlComm.Parameters.AddWithValue("@code", cf.File_name);
 
+            
+
+            return sqlComm.ExecuteNonQuery();
+        }
+
+        public int editCompleteFeedback(MySqlConnection conn, completeFeedback cf)
+        {
+            string sql = "UPDATE complete_feedback set status='" + cf.Status + "' WHERE file_name = '" + cf.File_name+ "';";
+
             counter++;
-            writer.WriteLine(counter + ") Succcessful Sent Feedback!" + '\n' + " Code: " + cf.File_name + '\n');
+            writer.WriteLine(counter + ") Succcessful Sent Feedback!" + '\n' + " Code: " + cf.File_name + '\n' + " Status: " + cf.Status + '\n');
+
+            MySqlCommand sqlComm = new MySqlCommand(sql, conn);
 
             return sqlComm.ExecuteNonQuery();
         }

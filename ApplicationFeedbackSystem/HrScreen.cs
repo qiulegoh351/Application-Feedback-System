@@ -339,8 +339,9 @@ namespace ApplicationFeedbackSystem
                 ///fb.Code = int.Parse(eFirstNameTextBox.Text);
                 ///feedbackHandler FBHandler = new feedbackHandler();
                 ///FBHandler.deleteAFeedback(dbConn.getConn(),fb);
+                openFileDialog1.ShowDialog();
+                lblLocation.Text = openFileDialog1.FileName;
 
-               
                 panelCompleteFeedbackBtn.Hide();
                 panelFeedback.Hide();
                 panelCompleteFeedbackBtn.Show();
@@ -479,8 +480,8 @@ namespace ApplicationFeedbackSystem
         //Link Label -----Email Panel
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            lblLocation.Text = openFileDialog1.FileName;
+            //openFileDialog1.ShowDialog();
+            //lblLocation.Text = openFileDialog1.FileName;
         }
         //Send Email Button ----Email Panel
         private void sendEmailBtn_Click(object sender, EventArgs e)
@@ -521,12 +522,17 @@ namespace ApplicationFeedbackSystem
                 completeFeedback cpFB = new completeFeedback();
 
                 cpFB.File_name = int.Parse(lbCode.Text);
+                cpFB.Email = lbToEmail.Text;
+                cpFB.Status = "Successful";
                 completeFeedbackHandler cpHand = completeFeedbackHandler.FH_instance;
                 if (validateB == false)
                 {
-                    cpHand.deleteCompleteRow(dbConn.getConn(), cpFB);
-                    cpHand.Close();
+                    
+                    //cpHand.deleteCompleteRow(dbConn.getConn(), cpFB);
+                    cpHand.editCompleteFeedback(dbConn.getConn(), cpFB);
                     cpHand.Open();
+                    cpHand.Close();
+                    
                 }
                 else if (validateB == true)
                 {
