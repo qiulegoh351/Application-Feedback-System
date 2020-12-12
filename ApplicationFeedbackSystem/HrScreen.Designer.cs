@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.feedbackPrint = new System.Drawing.Printing.PrintDocument();
             this.logoutPanel2 = new System.Windows.Forms.Panel();
             this.cancelLogOutButton = new System.Windows.Forms.Button();
@@ -128,6 +128,9 @@
             this.logOutBtn2 = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
             this.sendBtn = new System.Windows.Forms.Button();
+            this.suggestionBtn = new System.Windows.Forms.CheckBox();
+            this.commandBtn = new System.Windows.Forms.CheckBox();
+            this.questionBtn = new System.Windows.Forms.CheckBox();
             this.logoutPanel2.SuspendLayout();
             this.emailPanel.SuspendLayout();
             this.panelFeedBtn.SuspendLayout();
@@ -208,7 +211,7 @@
             this.emailPanel.Controls.Add(this.linkLabel1);
             this.emailPanel.Controls.Add(this.lbToEmail);
             this.emailPanel.Controls.Add(this.label2);
-            this.emailPanel.Location = new System.Drawing.Point(272, 169);
+            this.emailPanel.Location = new System.Drawing.Point(187, 149);
             this.emailPanel.Name = "emailPanel";
             this.emailPanel.Size = new System.Drawing.Size(429, 143);
             this.emailPanel.TabIndex = 72;
@@ -371,18 +374,18 @@
             this.panelCompleteFeedback.Controls.Add(this.dataGridView1);
             this.panelCompleteFeedback.Controls.Add(this.labelGradientColor9);
             this.panelCompleteFeedback.Controls.Add(this.labelGradientColor10);
-            this.panelCompleteFeedback.Location = new System.Drawing.Point(541, 330);
+            this.panelCompleteFeedback.Location = new System.Drawing.Point(165, 276);
             this.panelCompleteFeedback.Name = "panelCompleteFeedback";
             this.panelCompleteFeedback.Size = new System.Drawing.Size(866, 561);
             this.panelCompleteFeedback.TabIndex = 70;
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridView1.ColumnHeadersHeight = 40;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.chk,
@@ -392,8 +395,8 @@
             this.dataGridView1.Location = new System.Drawing.Point(1, 140);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridView1.RowTemplate.Height = 40;
             this.dataGridView1.Size = new System.Drawing.Size(866, 421);
             this.dataGridView1.TabIndex = 11;
@@ -496,7 +499,7 @@
             this.panelView.Controls.Add(this.labelGradientColor25);
             this.panelView.Controls.Add(this.LabelTemplate);
             this.panelView.Controls.Add(this.labelGradientColor26);
-            this.panelView.Location = new System.Drawing.Point(730, 206);
+            this.panelView.Location = new System.Drawing.Point(252, 325);
             this.panelView.Name = "panelView";
             this.panelView.Size = new System.Drawing.Size(866, 588);
             this.panelView.TabIndex = 73;
@@ -888,6 +891,9 @@
             // 
             this.panelFeedback.ColorBottom = System.Drawing.Color.Empty;
             this.panelFeedback.ColorTop = System.Drawing.Color.Empty;
+            this.panelFeedback.Controls.Add(this.questionBtn);
+            this.panelFeedback.Controls.Add(this.commandBtn);
+            this.panelFeedback.Controls.Add(this.suggestionBtn);
             this.panelFeedback.Controls.Add(this.textBox4);
             this.panelFeedback.Controls.Add(this.labelGradientColor7);
             this.panelFeedback.Controls.Add(this.textBox3);
@@ -903,9 +909,9 @@
             this.panelFeedback.Controls.Add(this.labelGradientColor1);
             this.panelFeedback.Controls.Add(this.labelGradientColor38);
             this.panelFeedback.Controls.Add(this.labelGradientColor8);
-            this.panelFeedback.Location = new System.Drawing.Point(205, 357);
+            this.panelFeedback.Location = new System.Drawing.Point(683, 108);
             this.panelFeedback.Name = "panelFeedback";
-            this.panelFeedback.Size = new System.Drawing.Size(867, 561);
+            this.panelFeedback.Size = new System.Drawing.Size(867, 578);
             this.panelFeedback.TabIndex = 68;
             // 
             // textBox4
@@ -960,11 +966,11 @@
             // 
             this.commentsTextBox.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.commentsTextBox.ForeColor = System.Drawing.Color.Black;
-            this.commentsTextBox.Location = new System.Drawing.Point(41, 316);
+            this.commentsTextBox.Location = new System.Drawing.Point(41, 362);
             this.commentsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.commentsTextBox.Multiline = true;
             this.commentsTextBox.Name = "commentsTextBox";
-            this.commentsTextBox.Size = new System.Drawing.Size(783, 142);
+            this.commentsTextBox.Size = new System.Drawing.Size(783, 96);
             this.commentsTextBox.TabIndex = 85;
             // 
             // labelGradientColor6
@@ -973,7 +979,7 @@
             this.labelGradientColor6.ColorTop = System.Drawing.Color.Empty;
             this.labelGradientColor6.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGradientColor6.ForeColor = System.Drawing.Color.Black;
-            this.labelGradientColor6.Location = new System.Drawing.Point(36, 273);
+            this.labelGradientColor6.Location = new System.Drawing.Point(36, 321);
             this.labelGradientColor6.Name = "labelGradientColor6";
             this.labelGradientColor6.Size = new System.Drawing.Size(423, 41);
             this.labelGradientColor6.TabIndex = 84;
@@ -1138,15 +1144,15 @@
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvList.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle21.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle21;
             this.dgvList.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgvList.Location = new System.Drawing.Point(1, 139);
             this.dgvList.Margin = new System.Windows.Forms.Padding(4);
@@ -1354,12 +1360,43 @@
             this.sendBtn.UseVisualStyleBackColor = true;
             this.sendBtn.Click += new System.EventHandler(this.sendBtn_Click);
             // 
+            // suggestionBtn
+            // 
+            this.suggestionBtn.AutoSize = true;
+            this.suggestionBtn.Location = new System.Drawing.Point(42, 289);
+            this.suggestionBtn.Name = "suggestionBtn";
+            this.suggestionBtn.Size = new System.Drawing.Size(136, 30);
+            this.suggestionBtn.TabIndex = 90;
+            this.suggestionBtn.Text = "Suggestion";
+            this.suggestionBtn.UseVisualStyleBackColor = true;
+            this.suggestionBtn.CheckedChanged += new System.EventHandler(this.suggestionBtn_CheckedChanged);
+            // 
+            // commandBtn
+            // 
+            this.commandBtn.AutoSize = true;
+            this.commandBtn.Location = new System.Drawing.Point(218, 289);
+            this.commandBtn.Name = "commandBtn";
+            this.commandBtn.Size = new System.Drawing.Size(129, 30);
+            this.commandBtn.TabIndex = 91;
+            this.commandBtn.Text = "Command";
+            this.commandBtn.UseVisualStyleBackColor = true;
+            // 
+            // questionBtn
+            // 
+            this.questionBtn.AutoSize = true;
+            this.questionBtn.Location = new System.Drawing.Point(386, 289);
+            this.questionBtn.Name = "questionBtn";
+            this.questionBtn.Size = new System.Drawing.Size(117, 30);
+            this.questionBtn.TabIndex = 92;
+            this.questionBtn.Text = "Question";
+            this.questionBtn.UseVisualStyleBackColor = true;
+            // 
             // HrScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1307, 561);
+            this.ClientSize = new System.Drawing.Size(990, 561);
             this.Controls.Add(this.emailPanel);
             this.Controls.Add(this.logoutPanel2);
             this.Controls.Add(this.panelCompleteFeedback);
@@ -1492,5 +1529,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn file_name_data;
         private System.Windows.Forms.DataGridViewTextBoxColumn email_data;
         private System.Windows.Forms.DataGridViewTextBoxColumn status_data;
+        private System.Windows.Forms.CheckBox questionBtn;
+        private System.Windows.Forms.CheckBox commandBtn;
+        private System.Windows.Forms.CheckBox suggestionBtn;
     }
 }

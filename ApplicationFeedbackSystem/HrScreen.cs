@@ -557,5 +557,10 @@ namespace ApplicationFeedbackSystem
             panelCompleteFeedback.Show();
             emailPanel.Hide();
         }
+
+        private void suggestionBtn_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }     
 }
