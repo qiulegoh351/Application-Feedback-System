@@ -178,56 +178,78 @@ namespace ApplicationFeedbackSystem
         {
             commentsTextBox.Clear();
         }
+        bool validateTitle = false;
         //Save Button ----Feedback Panel
         private void button3_Click(object sender, EventArgs e)
         {
-            panelHRBtn.Show();
-            PanelViewTemplate.Show();
-            panelCompleteFeedback.Hide();
-            panelFeedBtn.Hide();
-            panelFeedback.Hide();
-            panelCompleteFeedbackBtn.Hide();
-            panelView.Hide();
-            panelViewBtn.Hide();
-            validateC = true;
-            feedbackPrint.Print();
-
-            DbConnector dbConn = DbConnector.Instance;
-            dbConn.connect();
-
-            completeFeedback cpFB = new completeFeedback();
-            FeedBackPage fbp = new FeedBackPage();
-            cpFB.File_name = int.Parse(eFirstNameTextBox.Text);
-            fbp.Code = int.Parse(eFirstNameTextBox.Text);
-            fbp.Interviewee = textBox1.Text;
-            fbp.Email = textBox2.Text;
-            fbp.Describe = commentsTextBox.Text;
-            fbp.FeedbackType = textBox3.Text;
-            fbp.Interviewer = textBox4.Text;
-            cpFB.Email = textBox2.Text;
-            cpFB.Status = "Incomplete";
-
-            Template Ad = new Template();
-            Ad.Code = int.Parse(codeText.Text);
-            TemplateHandler ADHandler = TemplateHandler.TH_instance;      
-            ADHandler.deleteATemplate(dbConn.getConn(), Ad);
-            
-            feedbackHandler fbHr = feedbackHandler.TH_instance;
-            if (validateA == false)
+            if(suggestionBtn.Checked == true && commentBtn.Checked == false && questionBtn.Checked == false)
             {
-                int countRecord = fbHr.addNewfeedback(dbConn.getConn(), fbp);
-                fbHr.Close();
-                MessageBox.Show(countRecord + "data has benn inserted into Feedback");
-                fbHr.Open();
+                validateTitle = true; 
+            }else if(suggestionBtn.Checked == false && commentBtn.Checked == true && questionBtn.Checked == false)
+            {
+                validateTitle = true;
             }
-            else if (validateA == true)
+            else if (suggestionBtn.Checked == false && commentBtn.Checked == false && questionBtn.Checked == true)
             {
-                fbHr.Close();
+                validateTitle = true;
+            }else
+            {
+                validateTitle = false;
             }
 
-            completeFeedbackHandler cpFbHr = completeFeedbackHandler.FH_instance;
-            int recordCnt = cpFbHr.addNewCompleteFeedback(dbConn.getConn(), cpFB);
-            MessageBox.Show(recordCnt + " data has been inserted into Complete Feedback");
+            if (validateTitle == true)
+            {
+                panelHRBtn.Show();
+                PanelViewTemplate.Show();
+                panelCompleteFeedback.Hide();
+                panelFeedBtn.Hide();
+                panelFeedback.Hide();
+                panelCompleteFeedbackBtn.Hide();
+                panelView.Hide();
+                panelViewBtn.Hide();
+                validateC = true;
+                feedbackPrint.Print();
+
+                DbConnector dbConn = DbConnector.Instance;
+                dbConn.connect();
+
+                completeFeedback cpFB = new completeFeedback();
+                FeedBackPage fbp = new FeedBackPage();
+                cpFB.File_name = int.Parse(eFirstNameTextBox.Text);
+                fbp.Code = int.Parse(eFirstNameTextBox.Text);
+                fbp.Interviewee = textBox1.Text;
+                fbp.Email = textBox2.Text;
+                fbp.Describe = commentsTextBox.Text;
+                fbp.FeedbackType = textBox3.Text;
+                fbp.Interviewer = textBox4.Text;
+                cpFB.Email = textBox2.Text;
+                cpFB.Status = "Incomplete";
+
+                Template Ad = new Template();
+                Ad.Code = int.Parse(codeText.Text);
+                TemplateHandler ADHandler = TemplateHandler.TH_instance;
+                ADHandler.deleteATemplate(dbConn.getConn(), Ad);
+
+                feedbackHandler fbHr = feedbackHandler.TH_instance;
+                if (validateA == false)
+                {
+                    int countRecord = fbHr.addNewfeedback(dbConn.getConn(), fbp);
+                    fbHr.Close();
+                    MessageBox.Show(countRecord + "data has benn inserted into Feedback");
+                    fbHr.Open();
+                }
+                else if (validateA == true)
+                {
+                    fbHr.Close();
+                }
+
+                completeFeedbackHandler cpFbHr = completeFeedbackHandler.FH_instance;
+                int recordCnt = cpFbHr.addNewCompleteFeedback(dbConn.getConn(), cpFB);
+                MessageBox.Show(recordCnt + " data has been inserted into Complete Feedback");
+            }else
+            {
+                MessageBox.Show("Please select a Title's checkbox and don't select more than one title's checkbox.");
+            }
 
         }
         //Exit Button ----Feedback Panel
@@ -275,6 +297,16 @@ namespace ApplicationFeedbackSystem
             afeedback.Code = int.Parse(eFirstNameTextBox.Text);
             afeedback.Interviewee = textBox1.Text;
             afeedback.Email = textBox2.Text;
+            if(suggestionBtn.Checked == true)
+            {
+                afeedback.Title = "Suggestion";
+            }else if(commentBtn.Checked == true)
+            {
+                afeedback.Title = "Comment";
+            }else if(questionBtn.Checked == true)
+            {
+                afeedback.Title = "Question";
+            }
             afeedback.Describe = commentsTextBox.Text;
             afeedback.FeedbackType = textBox3.Text;
             afeedback.Interviewer = textBox4.Text;
@@ -285,7 +317,7 @@ namespace ApplicationFeedbackSystem
             e.Graphics.DrawString("Code: " + afeedback.Code, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(37, 142));
             e.Graphics.DrawString("Interviewee: " + afeedback.Interviewee, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(322, 142));
             e.Graphics.DrawString("Email: " + afeedback.Email, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(600, 142));
-
+            e.Graphics.DrawString("Title: " + afeedback.Title, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(227, 130));
             e.Graphics.DrawString("Description: " + afeedback.Describe, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(37, 200));
             e.Graphics.DrawString("FeedbackType: " + afeedback.FeedbackType, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(488, 476));
             e.Graphics.DrawString("Interviewer: " + afeedback.Interviewer, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, new Point(488, 508));
@@ -326,36 +358,6 @@ namespace ApplicationFeedbackSystem
         private void logout3_Click(object sender, EventArgs e)
         {
             logoutPanel2.Show();
-        }
-//------------------------------------------------------------Complete Feedback List Panel-------------------------------------------------------//
-        //Email Sent Button ----Complete Feedback List
-        private void sendBtn_Click(object sender, EventArgs e)
-        {
-            if (validateCompleteFeedback == true)
-            {
-                DbConnector dbConn = DbConnector.Instance;
-                dbConn.connect();
-                ///FeedBackPage fb = new FeedBackPage();
-                ///fb.Code = int.Parse(eFirstNameTextBox.Text);
-                ///feedbackHandler FBHandler = new feedbackHandler();
-                ///FBHandler.deleteAFeedback(dbConn.getConn(),fb);
-                openFileDialog1.ShowDialog();
-                lblLocation.Text = openFileDialog1.FileName;
-
-                panelCompleteFeedbackBtn.Hide();
-                panelFeedback.Hide();
-                panelCompleteFeedbackBtn.Show();
-                panelHRBtn.Hide();
-                panelFeedBtn.Hide();
-                panelCompleteFeedback.Show();
-                panelViewBtn.Hide();
-                panelView.Hide();
-                emailPanel.Show();
-            }
-            else
-            {
-                MessageBox.Show("Please Select A Template to send email");
-            }
         }
         //Refresh Button ----Complete Feedback List
         private void displayBtn2_Click(object sender, EventArgs e)
@@ -530,9 +532,8 @@ namespace ApplicationFeedbackSystem
                     
                     //cpHand.deleteCompleteRow(dbConn.getConn(), cpFB);
                     cpHand.editCompleteFeedback(dbConn.getConn(), cpFB);
-                    cpHand.Open();
                     cpHand.Close();
-                    
+                    cpHand.Open();             
                 }
                 else if (validateB == true)
                 {
@@ -543,6 +544,35 @@ namespace ApplicationFeedbackSystem
             {
                 MessageBox.Show("Error");
             }
+        }
+        //Select Btn -----Complete Feedback List
+        private void selectBtn(object sender, EventArgs e)
+        {
+                if (validateCompleteFeedback == true)
+                {
+                    DbConnector dbConn = DbConnector.Instance;
+                    dbConn.connect();
+                    ///FeedBackPage fb = new FeedBackPage();
+                    ///fb.Code = int.Parse(eFirstNameTextBox.Text);
+                    ///feedbackHandler FBHandler = new feedbackHandler();
+                    ///FBHandler.deleteAFeedback(dbConn.getConn(),fb);
+                    openFileDialog1.ShowDialog();
+                    lblLocation.Text = openFileDialog1.FileName;
+
+                    panelCompleteFeedbackBtn.Hide();
+                    panelFeedback.Hide();
+                    panelCompleteFeedbackBtn.Show();
+                    panelHRBtn.Hide();
+                    panelFeedBtn.Hide();
+                    panelCompleteFeedback.Show();
+                    panelViewBtn.Hide();
+                    panelView.Hide();
+                    emailPanel.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Please Select A Template to send email");
+                }
         }
 
         private void TestBtn_Click(object sender, EventArgs e)

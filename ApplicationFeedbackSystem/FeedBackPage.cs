@@ -14,6 +14,7 @@ namespace ApplicationFeedbackSystem
         private string describe;
         private string feebbackType;
         private string interviewer;
+        private string title;
         
 
         public FeedBackPage()
@@ -35,6 +36,11 @@ namespace ApplicationFeedbackSystem
         {
             get { return email; }
             set { email = value; }
+        }
+        public string Title
+        {
+            get { return title; }
+            set { title = value; }
         }
         public string Describe
         {

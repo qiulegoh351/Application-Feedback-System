@@ -62,6 +62,7 @@ namespace ApplicationFeedbackSystem
             counter++;
             writer.WriteLine(counter + ") Succcessful Sent Feedback!" + '\n' + " Code: " + cf.File_name + '\n' + " Status: " + cf.Status + '\n');
 
+
             MySqlCommand sqlComm = new MySqlCommand(sql, conn);
 
             return sqlComm.ExecuteNonQuery();
