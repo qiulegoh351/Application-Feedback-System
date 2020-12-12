@@ -6,7 +6,7 @@ using ApplicationFeedbackSystem;
 namespace UnitTestApplicationFeedbackSystem
 {
     [TestClass]
-    public class unitTestDeleteCompleteFeedback
+    public class unitTestEditCompleteFeedback
     {
         [TestMethod]
         public void TestDeleteTemplate()
@@ -15,12 +15,13 @@ namespace UnitTestApplicationFeedbackSystem
             string resp = dbC.connect();
             Assert.AreEqual("Done", resp);
 
-            completeFeedback fbA = new completeFeedback();
-            fbA.File_name = 2;
+            completeFeedback cfB = new completeFeedback();
+            cfB.File_name = 1;
+            cfB.Email = "mario9919@gmail.com";
+            cfB.Status = "Successful";
 
-
-            completeFeedbackHandler tempHand3 = completeFeedbackHandler.FH_instance;
-            int resp7 = tempHand3.deleteCompleteRow(dbC.getConn(), fbA);
+           completeFeedbackHandler cfHand2 = completeFeedbackHandler.FH_instance;
+            int resp7 = cfHand2.editCompleteFeedback(dbC.getConn(), cfB);
             Assert.IsNotNull(resp7);
         }
     }
