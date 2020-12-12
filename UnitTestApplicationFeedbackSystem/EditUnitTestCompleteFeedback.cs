@@ -6,10 +6,10 @@ using ApplicationFeedbackSystem;
 namespace UnitTestApplicationFeedbackSystem
 {
     [TestClass]
-    public class unitTestEditCompleteFeedback
+    public class EditUnitTestCompleteFeedback
     {
         [TestMethod]
-        public void TestDeleteTemplate()
+        public void TestEditCompleteFeedback()
         {
             DbConnector dbC = DbConnector.Instance;
             string resp = dbC.connect();
