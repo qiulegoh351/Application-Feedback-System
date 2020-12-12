@@ -359,6 +359,36 @@ namespace ApplicationFeedbackSystem
         {
             logoutPanel2.Show();
         }
+//------------------------------------------------------------Complete Feedback List Panel-------------------------------------------------------//
+        //Select Button ----Complete Feedback List
+        private void selectBtn_Click(object sender, EventArgs e)
+        {
+            if (validateCompleteFeedback == true)
+            {
+                DbConnector dbConn = DbConnector.Instance;
+                dbConn.connect();
+                ///FeedBackPage fb = new FeedBackPage();
+                ///fb.Code = int.Parse(eFirstNameTextBox.Text);
+                ///feedbackHandler FBHandler = new feedbackHandler();
+                ///FBHandler.deleteAFeedback(dbConn.getConn(),fb);
+                openFileDialog1.ShowDialog();
+                lblLocation.Text = openFileDialog1.FileName;
+
+                panelCompleteFeedbackBtn.Hide();
+                panelFeedback.Hide();
+                panelCompleteFeedbackBtn.Show();
+                panelHRBtn.Hide();
+                panelFeedBtn.Hide();
+                panelCompleteFeedback.Show();
+                panelViewBtn.Hide();
+                panelView.Hide();
+                emailPanel.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please Select A Complete Feedback");
+            }
+        }
         //Refresh Button ----Complete Feedback List
         private void displayBtn2_Click(object sender, EventArgs e)
         {
@@ -369,6 +399,8 @@ namespace ApplicationFeedbackSystem
 
             dataGridView1.DataSource = comhr.listCompleteFeedback(dbConn.getConn());
         }
+
+
         //Back Button -----Complete Feedback List
         private void backBtn_Click(object sender, EventArgs e)
         {
@@ -546,34 +578,7 @@ namespace ApplicationFeedbackSystem
             }
         }
         //Select Btn -----Complete Feedback List
-        private void selectBtn(object sender, EventArgs e)
-        {
-                if (validateCompleteFeedback == true)
-                {
-                    DbConnector dbConn = DbConnector.Instance;
-                    dbConn.connect();
-                    ///FeedBackPage fb = new FeedBackPage();
-                    ///fb.Code = int.Parse(eFirstNameTextBox.Text);
-                    ///feedbackHandler FBHandler = new feedbackHandler();
-                    ///FBHandler.deleteAFeedback(dbConn.getConn(),fb);
-                    openFileDialog1.ShowDialog();
-                    lblLocation.Text = openFileDialog1.FileName;
-
-                    panelCompleteFeedbackBtn.Hide();
-                    panelFeedback.Hide();
-                    panelCompleteFeedbackBtn.Show();
-                    panelHRBtn.Hide();
-                    panelFeedBtn.Hide();
-                    panelCompleteFeedback.Show();
-                    panelViewBtn.Hide();
-                    panelView.Hide();
-                    emailPanel.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Please Select A Template to send email");
-                }
-        }
+       
 
         private void TestBtn_Click(object sender, EventArgs e)
         {

@@ -319,7 +319,7 @@
             this.panelFeedBtn.Controls.Add(this.button1);
             this.panelFeedBtn.Controls.Add(this.exitBtn);
             this.panelFeedBtn.Controls.Add(this.button3);
-            this.panelFeedBtn.Location = new System.Drawing.Point(31, 346);
+            this.panelFeedBtn.Location = new System.Drawing.Point(21, 346);
             this.panelFeedBtn.Name = "panelFeedBtn";
             this.panelFeedBtn.Size = new System.Drawing.Size(114, 430);
             this.panelFeedBtn.TabIndex = 71;
@@ -1357,7 +1357,7 @@
             this.panelCompleteFeedbackBtn.Controls.Add(this.logOutBtn2);
             this.panelCompleteFeedbackBtn.Controls.Add(this.backBtn);
             this.panelCompleteFeedbackBtn.Controls.Add(this.selectBtn);
-            this.panelCompleteFeedbackBtn.Location = new System.Drawing.Point(7, 387);
+            this.panelCompleteFeedbackBtn.Location = new System.Drawing.Point(3, 238);
             this.panelCompleteFeedbackBtn.Name = "panelCompleteFeedbackBtn";
             this.panelCompleteFeedbackBtn.Size = new System.Drawing.Size(123, 430);
             this.panelCompleteFeedbackBtn.TabIndex = 1;
@@ -1404,7 +1404,7 @@
             this.selectBtn.TabIndex = 0;
             this.selectBtn.Text = "Select";
             this.selectBtn.UseVisualStyleBackColor = true;
-            this.selectBtn.Click += new System.EventHandler(this.selectBtn);
+            this.selectBtn.Click += new System.EventHandler(this.selectBtn_Click);
             // 
             // HrScreen
             // 
