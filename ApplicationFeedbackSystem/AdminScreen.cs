@@ -15,6 +15,8 @@ namespace ApplicationFeedbackSystem
     public partial class AdminScreen : Form
     {
         private bool validationSingleton = false;
+        private bool validateView = false;
+        private bool validateEdit = false;
         public AdminScreen()
         {
             InitializeComponent();
@@ -23,9 +25,6 @@ namespace ApplicationFeedbackSystem
             TemplateHandler tempHnd = TemplateHandler.TH_instance;
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
-
-        bool validateView = false;
-        bool validateEdit = false;
         //Hide and Show Panel Control for Admin initial Main Screen 
         private void AdminScreen_Load(object sender, EventArgs e)
         {

@@ -15,7 +15,7 @@ namespace ApplicationFeedbackSystem
         private StreamWriter writer;
 
         private static feedbackHandler fH_instance;
-        private static int counter = 0;
+        private int counter = 0;
 
         public static feedbackHandler TH_instance
         {

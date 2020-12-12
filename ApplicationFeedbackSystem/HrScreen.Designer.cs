@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.feedbackPrint = new System.Drawing.Printing.PrintDocument();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.ConvertPDF = new System.Drawing.Printing.PrintDocument();
             this.logoutPanel2 = new System.Windows.Forms.Panel();
             this.cancelLogOutButton = new System.Windows.Forms.Button();
             this.cLogOutButton = new System.Windows.Forms.Button();
@@ -148,9 +148,9 @@
             this.panelCompleteFeedbackBtn.SuspendLayout();
             this.SuspendLayout();
             // 
-            // feedbackPrint
+            // ConvertPDF
             // 
-            this.feedbackPrint.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.feedbackPrint_PrintPage);
+            this.ConvertPDF.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.ConvertPDF_PrintPage);
             // 
             // logoutPanel2
             // 
@@ -382,11 +382,11 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.ColumnHeadersHeight = 40;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.chk,
@@ -396,8 +396,8 @@
             this.dataGridView1.Location = new System.Drawing.Point(1, 140);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.RowTemplate.Height = 40;
             this.dataGridView1.Size = new System.Drawing.Size(866, 421);
             this.dataGridView1.TabIndex = 11;
@@ -1190,15 +1190,15 @@
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvList.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgvList.Location = new System.Drawing.Point(1, 139);
             this.dgvList.Margin = new System.Windows.Forms.Padding(4);
@@ -1242,7 +1242,7 @@
             this.panelHRBtn.Controls.Add(this.logoutBtn);
             this.panelHRBtn.Controls.Add(this.editBtn);
             this.panelHRBtn.Controls.Add(this.createBtn);
-            this.panelHRBtn.Location = new System.Drawing.Point(96, 169);
+            this.panelHRBtn.Location = new System.Drawing.Point(85, 156);
             this.panelHRBtn.Name = "panelHRBtn";
             this.panelHRBtn.Size = new System.Drawing.Size(116, 430);
             this.panelHRBtn.TabIndex = 2;
@@ -1489,7 +1489,7 @@
         private System.Windows.Forms.Button cancelLogOutButton;
         private System.Windows.Forms.Button cLogOutButton;
         private System.Windows.Forms.Label label1;
-        private System.Drawing.Printing.PrintDocument feedbackPrint;
+        private System.Drawing.Printing.PrintDocument ConvertPDF;
         private System.Windows.Forms.Button refreshMainBtn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.Button refreshBtn;

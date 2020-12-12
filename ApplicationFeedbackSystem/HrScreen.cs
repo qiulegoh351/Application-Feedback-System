@@ -16,9 +16,13 @@ namespace ApplicationFeedbackSystem
 {
     public partial class HrScreen : Form
     {
-        private bool validateA = false;
-        private bool validateB = false;
-        private bool validateC = false;
+        private bool validateCreateSingleton = false;
+        private bool validateSentEmailSingleton = false;
+        private bool validateExit = false;
+        private bool IsHeaderCheckBoxClicked = false;
+        private bool validateFeedback = false;
+        private bool validateCompleteFeedback = false;
+        private bool validateTitle = false;
         public HrScreen()
         {
             InitializeComponent();
@@ -30,10 +34,6 @@ namespace ApplicationFeedbackSystem
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
         CheckBox HeaderCheckBox = null;
-        bool IsHeaderCheckBoxClicked = false;
-        bool validateFeedback = false;
-        bool validateCompleteFeedback = false;
-
         //Hide and Show Control for initian HR Main Screen
         private void HrScreen_Load(object sender, EventArgs e)
         {
@@ -94,7 +94,7 @@ namespace ApplicationFeedbackSystem
         //Create Button -----HR Main Screen
         private void createBtn_Click(object sender, EventArgs e)
         {
-            validateA = false;
+            validateCreateSingleton = false;
             if (validateFeedback == true)
             {
                 panelCompleteFeedbackBtn.Hide();
@@ -134,7 +134,7 @@ namespace ApplicationFeedbackSystem
         //Complete Feedback list Button -----HR Main Screen
         private void editBtn_Click(object sender, EventArgs e)
         {
-            validateB = false;
+            validateSentEmailSingleton = false;
             panelHRBtn.Hide();
             panelCompleteFeedback.Show();
             panelFeedBtn.Hide();
@@ -178,7 +178,7 @@ namespace ApplicationFeedbackSystem
         {
             commentsTextBox.Clear();
         }
-        bool validateTitle = false;
+
         //Save Button ----Feedback Panel
         private void button3_Click(object sender, EventArgs e)
         {
@@ -207,8 +207,8 @@ namespace ApplicationFeedbackSystem
                 panelCompleteFeedbackBtn.Hide();
                 panelView.Hide();
                 panelViewBtn.Hide();
-                validateC = true;
-                feedbackPrint.Print();
+                validateExit = true;
+                ConvertPDF.Print();
 
                 DbConnector dbConn = DbConnector.Instance;
                 dbConn.connect();
@@ -231,14 +231,14 @@ namespace ApplicationFeedbackSystem
                 ADHandler.deleteATemplate(dbConn.getConn(), Ad);
 
                 feedbackHandler fbHr = feedbackHandler.TH_instance;
-                if (validateA == false)
+                if (validateCreateSingleton == false)
                 {
                     int countRecord = fbHr.addNewfeedback(dbConn.getConn(), fbp);
                     fbHr.Close();
                     MessageBox.Show(countRecord + "data has benn inserted into Feedback");
                     fbHr.Open();
                 }
-                else if (validateA == true)
+                else if (validateCreateSingleton == true)
                 {
                     fbHr.Close();
                 }
@@ -272,7 +272,7 @@ namespace ApplicationFeedbackSystem
                     panelViewBtn.Hide();
                 }else if (result == DialogResult.No) { }
             }
-            else if((validateC == true) || (commentsTextBox.Text == "") || (commentsTextBox.Text == null))
+            else if((validateExit == true) || (commentsTextBox.Text == "") || (commentsTextBox.Text == null))
             {
                 panelFeedBtn.Hide();
                 panelHRBtn.Hide();
@@ -290,20 +290,22 @@ namespace ApplicationFeedbackSystem
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
         //Feedback Print ----Feedback Panel
-        private void feedbackPrint_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void ConvertPDF_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             FeedBackPage afeedback = new FeedBackPage();
 
             afeedback.Code = int.Parse(eFirstNameTextBox.Text);
             afeedback.Interviewee = textBox1.Text;
             afeedback.Email = textBox2.Text;
-            if(suggestionBtn.Checked == true)
+            if (suggestionBtn.Checked == true)
             {
                 afeedback.Title = "Suggestion";
-            }else if(commentBtn.Checked == true)
+            }
+            else if (commentBtn.Checked == true)
             {
                 afeedback.Title = "Comment";
-            }else if(questionBtn.Checked == true)
+            }
+            else if (questionBtn.Checked == true)
             {
                 afeedback.Title = "Question";
             }
@@ -325,7 +327,7 @@ namespace ApplicationFeedbackSystem
         //Logout Button -----Feedback Panel
         private void button1_Click(object sender, EventArgs e)
         {
-            validateA = false;
+            validateCreateSingleton = false;
             if ((commentsTextBox.Text != "") || (commentsTextBox.Text == null))
             {
                 DialogResult result = MessageBox.Show("Are you sure want to Logout without saving the Feedback?",
@@ -404,7 +406,7 @@ namespace ApplicationFeedbackSystem
         //Back Button -----Complete Feedback List
         private void backBtn_Click(object sender, EventArgs e)
         {
-            validateB = false;
+            validateSentEmailSingleton = false;
             panelHRBtn.Show();
             panelCompleteFeedbackBtn.Hide();
             PanelViewTemplate.Show();
@@ -559,7 +561,7 @@ namespace ApplicationFeedbackSystem
                 cpFB.Email = lbToEmail.Text;
                 cpFB.Status = "Successful";
                 completeFeedbackHandler cpHand = completeFeedbackHandler.FH_instance;
-                if (validateB == false)
+                if (validateSentEmailSingleton == false)
                 {
                     
                     //cpHand.deleteCompleteRow(dbConn.getConn(), cpFB);
@@ -567,7 +569,7 @@ namespace ApplicationFeedbackSystem
                     cpHand.Close();
                     cpHand.Open();             
                 }
-                else if (validateB == true)
+                else if (validateSentEmailSingleton == true)
                 {
                     cpHand.Close();
                 }
@@ -582,7 +584,7 @@ namespace ApplicationFeedbackSystem
 
         private void TestBtn_Click(object sender, EventArgs e)
         {
-            validateB = false;
+            validateSentEmailSingleton = false;
             panelView.Hide();
             panelViewBtn.Hide();
             panelCompleteFeedbackBtn.Show();

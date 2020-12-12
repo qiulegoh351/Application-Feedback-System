@@ -23,9 +23,10 @@ namespace ApplicationFeedbackSystem
             dgvList.DataSource = tempHnd.listAllTemplate(dbConn.getConn());
         }
 
-        bool validateView = false;
+        private bool validateView = false;
+        private bool IsHeaderCheckBoxClicked = false;
         CheckBox HeaderCheckBox = null;
-        bool IsHeaderCheckBoxClicked = false;
+        
 
         //Hide and Show Panel Control for Manager initial Main Screen 
         private void ManagerScreen_Load(object sender, EventArgs e)
